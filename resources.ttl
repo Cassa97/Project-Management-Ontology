@@ -58,15 +58,26 @@ cr:Assignment
   rdfs:label "Assignment" ;
   rdfs:subClassOf owl:Thing ;
 .
+cr:CAM
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:MaterialResource ;
+  rdfs:label "CAM" ;
+  rdfs:range xsd:boolean ;
+.
 cr:Dimension
   rdf:type owl:Class ;
   rdfs:label "Dimension" ;
   rdfs:subClassOf owl:Thing ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:maxCardinality "10"^^xsd:nonNegativeInteger ;
       owl:onProperty cr:resourceDimension ;
     ] ;
+.
+cr:EquipmentResource
+  rdf:type owl:Class ;
+  rdfs:label "Equipment resource" ;
+  rdfs:subClassOf cr:Resource ;
 .
 cr:LabourResource
   rdf:type owl:Class ;
@@ -78,11 +89,30 @@ cr:MaterialResource
   rdfs:label "Material resource" ;
   rdfs:subClassOf cr:Resource ;
 .
+cr:PerformanceParameter
+  rdf:type owl:Class ;
+  rdfs:label "PerformanceParameter" ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "10"^^xsd:nonNegativeInteger ;
+      owl:onProperty cr:resourcePerformanceParameter ;
+    ] ;
+.
+cr:PhysicalParameter
+  rdf:type owl:Class ;
+  rdfs:label "PhysicalParameter" ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "10"^^xsd:nonNegativeInteger ;
+      owl:onProperty cr:resourcePhysicalParameter ;
+    ] ;
+.
 cr:Resource
   rdf:type owl:Class ;
   rdfs:comment "This class is used for providing information about a construction resource." ;
   rdfs:label "Resource" ;
-  rdfs:subClassOf owl:Thing ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
@@ -99,7 +129,96 @@ cr:Resource
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
       owl:onDataRange xsd:string ;
+      owl:onProperty cr:aspect ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty cr:finishing ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
       owl:onProperty cr:function ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty cr:furnishing ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty cr:keywords ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty cr:law ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty cr:objectStandard ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty cr:otherStandard ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty cr:use ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty cr:techSpecs ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty cr:escluded ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty cr:included ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty cr:measurementRules ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:boolean ;
+      owl:onProperty cr:CAM ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:integer ;
+      owl:onProperty cr:quantityUnifOfMeasure ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty cr:material ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -107,11 +226,71 @@ cr:Resource
       owl:onProperty cr:object ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty cr:unitOfMeasure ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+.
+cr:aspect
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:Resource ;
+  rdfs:label "aspect" ;
+  rdfs:range xsd:string ;
+.
+cr:escluded
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:Resource ;
+  rdfs:label "escluded" ;
+  rdfs:range xsd:string ;
+.
+cr:finishing
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:Resource ;
+  rdfs:label "finishing" ;
+  rdfs:range xsd:string ;
 .
 cr:function
   rdf:type owl:DatatypeProperty ;
   rdfs:domain cr:Resource ;
   rdfs:label "function" ;
+  rdfs:range xsd:string ;
+.
+cr:furnishing
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:Resource ;
+  rdfs:label "furnishing" ;
+  rdfs:range xsd:string ;
+.
+cr:included
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:Resource ;
+  rdfs:label "included" ;
+  rdfs:range xsd:string ;
+.
+cr:keywords
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:Resource ;
+  rdfs:label "keywords" ;
+  rdfs:range xsd:string ;
+.
+cr:law
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:Resource ;
+  rdfs:label "law" ;
+  rdfs:range xsd:string ;
+.
+cr:material
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:Resource ;
+  rdfs:label "material" ;
+  rdfs:range xsd:string ;
+.
+cr:measurementRules
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:Resource ;
+  rdfs:label "measurement rules" ;
   rdfs:range xsd:string ;
 .
 cr:object
@@ -120,11 +299,29 @@ cr:object
   rdfs:label "object" ;
   rdfs:range xsd:string ;
 .
+cr:objectStandard
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:Resource ;
+  rdfs:label "objectStandard" ;
+  rdfs:range xsd:string ;
+.
+cr:otherStandard
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:Resource ;
+  rdfs:label "other standard" ;
+  rdfs:range xsd:string ;
+.
 cr:parameter
   rdf:type owl:DatatypeProperty ;
   rdfs:domain cr:Dimension ;
   rdfs:label "parameter" ;
   rdfs:range xsd:string ;
+.
+cr:quantityUnifOfMeasure
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:Resource ;
+  rdfs:label "quantity unif of measure" ;
+  rdfs:range xsd:integer ;
 .
 cr:resourceDimension
   rdf:type owl:ObjectProperty ;
@@ -132,9 +329,45 @@ cr:resourceDimension
   rdfs:label "resource dimension" ;
   rdfs:range cr:Dimension ;
 .
+cr:resourcePerformanceParameter
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain cr:Resource ;
+  rdfs:label "resourcePerformanceParameter" ;
+  rdfs:range cr:PerformanceParameter ;
+.
+cr:resourcePhysicalParameter
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain cr:Resource ;
+  rdfs:label "resourcePhysicalParameter" ;
+  rdfs:range cr:PhysicalParameter ;
+.
+cr:techSpecs
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:Resource ;
+  rdfs:label "tech specs" ;
+  rdfs:range xsd:string ;
+.
 cr:type
   rdf:type owl:DatatypeProperty ;
   rdfs:domain cr:Resource ;
   rdfs:label "type" ;
   rdfs:range xsd:string ;
 .
+cr:unitOfMeasure
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:Resource ;
+  rdfs:label "unitOfMeasure" ;
+  rdfs:range xsd:string ;
+.
+cr:use
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:Resource ;
+  rdfs:label "use" ;
+  rdfs:range xsd:string ;
+.
+[
+  rdf:type owl:Restriction ;
+  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+  owl:onDataRange xsd:string ;
+  owl:onProperty cr:objectStandard ;
+].
