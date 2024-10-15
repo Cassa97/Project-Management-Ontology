@@ -58,8 +58,13 @@ cr:Assignment
   rdfs:label "Assignment" ;
   rdfs:subClassOf owl:Thing ;
 .
+cr:Block
+  rdf:type cr:ObjectType ;
+  rdfs:label "block" ;
+.
 cr:CAM
   rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:EquipmentResource ;
   rdfs:domain cr:MaterialResource ;
   rdfs:label "CAM" ;
   rdfs:range xsd:boolean ;
@@ -88,6 +93,11 @@ cr:MaterialResource
   rdf:type owl:Class ;
   rdfs:label "Material resource" ;
   rdfs:subClassOf cr:Resource ;
+.
+cr:ObjectType
+  rdf:type owl:Class ;
+  rdfs:label "object type" ;
+  rdfs:subClassOf owl:Thing ;
 .
 cr:PerformanceParameter
   rdf:type owl:Class ;
@@ -129,30 +139,6 @@ cr:Resource
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
       owl:onDataRange xsd:string ;
-      owl:onProperty cr:aspect ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:string ;
-      owl:onProperty cr:finishing ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:string ;
-      owl:onProperty cr:function ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:string ;
-      owl:onProperty cr:furnishing ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:string ;
       owl:onProperty cr:keywords ;
     ] ;
   rdfs:subClassOf [
@@ -163,26 +149,39 @@ cr:Resource
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
+      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
       owl:onDataRange xsd:string ;
-      owl:onProperty cr:objectStandard ;
+      owl:onProperty cr:aspect ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
+      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty cr:finishing ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty cr:function ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty cr:furnishing ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
       owl:onDataRange xsd:string ;
       owl:onProperty cr:otherStandard ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
+      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
       owl:onDataRange xsd:string ;
       owl:onProperty cr:use ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty cr:techSpecs ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -201,6 +200,12 @@ cr:Resource
       owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onDataRange xsd:string ;
       owl:onProperty cr:measurementRules ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty cr:techSpecs ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -229,13 +234,20 @@ cr:Resource
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:onDataRange xsd:string ;
-      owl:onProperty cr:unitOfMeasure ;
+      owl:onProperty cr:objectStandard ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty cr:simbol1 ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
 .
 cr:aspect
   rdf:type owl:DatatypeProperty ;
-  rdfs:domain cr:Resource ;
+  rdfs:domain cr:EquipmentResource ;
+  rdfs:domain cr:MaterialResource ;
   rdfs:label "aspect" ;
   rdfs:range xsd:string ;
 .
@@ -247,19 +259,20 @@ cr:escluded
 .
 cr:finishing
   rdf:type owl:DatatypeProperty ;
-  rdfs:domain cr:Resource ;
+  rdfs:domain cr:MaterialResource ;
   rdfs:label "finishing" ;
   rdfs:range xsd:string ;
 .
 cr:function
   rdf:type owl:DatatypeProperty ;
-  rdfs:domain cr:Resource ;
+  rdfs:domain cr:EquipmentResource ;
+  rdfs:domain cr:MaterialResource ;
   rdfs:label "function" ;
   rdfs:range xsd:string ;
 .
 cr:furnishing
   rdf:type owl:DatatypeProperty ;
-  rdfs:domain cr:Resource ;
+  rdfs:domain cr:MaterialResource ;
   rdfs:label "furnishing" ;
   rdfs:range xsd:string ;
 .
@@ -283,7 +296,8 @@ cr:law
 .
 cr:material
   rdf:type owl:DatatypeProperty ;
-  rdfs:domain cr:Resource ;
+  rdfs:domain cr:EquipmentResource ;
+  rdfs:domain cr:MaterialResource ;
   rdfs:label "material" ;
   rdfs:range xsd:string ;
 .
@@ -307,14 +321,25 @@ cr:objectStandard
 .
 cr:otherStandard
   rdf:type owl:DatatypeProperty ;
-  rdfs:domain cr:Resource ;
+  rdfs:domain cr:EquipmentResource ;
+  rdfs:domain cr:MaterialResource ;
   rdfs:label "other standard" ;
   rdfs:range xsd:string ;
 .
 cr:parameter
   rdf:type owl:DatatypeProperty ;
   rdfs:domain cr:Dimension ;
+  rdfs:domain cr:PerformanceParameter ;
+  rdfs:domain cr:PhysicalParameter ;
   rdfs:label "parameter" ;
+  rdfs:range xsd:string ;
+.
+cr:parameterStandard
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:Dimension ;
+  rdfs:domain cr:PerformanceParameter ;
+  rdfs:domain cr:PhysicalParameter ;
+  rdfs:label "parameterStandard" ;
   rdfs:range xsd:string ;
 .
 cr:quantityUnifOfMeasure
@@ -325,21 +350,40 @@ cr:quantityUnifOfMeasure
 .
 cr:resourceDimension
   rdf:type owl:ObjectProperty ;
-  rdfs:domain cr:Resource ;
+  rdfs:domain cr:EquipmentResource ;
+  rdfs:domain cr:MaterialResource ;
   rdfs:label "resource dimension" ;
   rdfs:range cr:Dimension ;
 .
 cr:resourcePerformanceParameter
   rdf:type owl:ObjectProperty ;
-  rdfs:domain cr:Resource ;
+  rdfs:domain cr:EquipmentResource ;
+  rdfs:domain cr:MaterialResource ;
   rdfs:label "resourcePerformanceParameter" ;
   rdfs:range cr:PerformanceParameter ;
 .
 cr:resourcePhysicalParameter
   rdf:type owl:ObjectProperty ;
-  rdfs:domain cr:Resource ;
+  rdfs:domain cr:EquipmentResource ;
+  rdfs:domain cr:MaterialResource ;
   rdfs:label "resourcePhysicalParameter" ;
   rdfs:range cr:PhysicalParameter ;
+.
+cr:simbol1
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:Dimension ;
+  rdfs:domain cr:PerformanceParameter ;
+  rdfs:domain cr:PhysicalParameter ;
+  rdfs:label "simbol1" ;
+  rdfs:range xsd:string ;
+.
+cr:simbol2
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:Dimension ;
+  rdfs:domain cr:PerformanceParameter ;
+  rdfs:domain cr:PhysicalParameter ;
+  rdfs:label "simbol2" ;
+  rdfs:range xsd:string ;
 .
 cr:techSpecs
   rdf:type owl:DatatypeProperty ;
@@ -353,17 +397,28 @@ cr:type
   rdfs:label "type" ;
   rdfs:range xsd:string ;
 .
-cr:unitOfMeasure
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain cr:Resource ;
-  rdfs:label "unitOfMeasure" ;
-  rdfs:range xsd:string ;
-.
 cr:use
   rdf:type owl:DatatypeProperty ;
-  rdfs:domain cr:Resource ;
+  rdfs:domain cr:EquipmentResource ;
+  rdfs:domain cr:MaterialResource ;
   rdfs:label "use" ;
   rdfs:range xsd:string ;
+.
+cr:value1
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:Dimension ;
+  rdfs:domain cr:PerformanceParameter ;
+  rdfs:domain cr:PhysicalParameter ;
+  rdfs:label "value1" ;
+  rdfs:range xsd:integer ;
+.
+cr:value2
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:Dimension ;
+  rdfs:domain cr:PerformanceParameter ;
+  rdfs:domain cr:PhysicalParameter ;
+  rdfs:label "value2" ;
+  rdfs:range xsd:integer ;
 .
 [
   rdf:type owl:Restriction ;
