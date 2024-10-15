@@ -73,6 +73,11 @@ cr:LabourResource
   rdfs:label "Labour resource" ;
   rdfs:subClassOf cr:Resource ;
 .
+cr:MaterialResource
+  rdf:type owl:Class ;
+  rdfs:label "Material resource" ;
+  rdfs:subClassOf cr:Resource ;
+.
 cr:Resource
   rdf:type owl:Class ;
   rdfs:comment "This class is used for providing information about a construction resource." ;
