@@ -41,7 +41,7 @@
           schema:identifier <https://www.inf.bi.ruhr-uni-bochum.de/iib/lehrstuhl/mitarbeiter/sven_zentgraf.html.en> ;
           schema:name "Politecnico di Milano" ;
         ] ;
-      schema:name "Jacopo Cassandor" ;
+      schema:name "Jacopo Cassandro" ;
     ] ;
   dc:description "The Construction Resources (CR) Ontology is based on concepts and principles . "@en ;
   dc:license <https://creativecommons.org/licenses/by/4.0/> ;
@@ -52,4 +52,84 @@
   vann:preferredNamespaceUri <http://w3id.org/cr#> ;
   owl:versionInfo "1.0" ;
   owl:versionInfo "Created with TopBraid Composer" ;
+.
+cr:Assignment
+  rdf:type owl:Class ;
+  rdfs:label "Assignment" ;
+  rdfs:subClassOf owl:Thing ;
+.
+cr:Dimension
+  rdf:type owl:Class ;
+  rdfs:label "Dimension" ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty cr:resourceDimension ;
+    ] ;
+.
+cr:LabourResource
+  rdf:type owl:Class ;
+  rdfs:label "Labour resource" ;
+  rdfs:subClassOf cr:Resource ;
+.
+cr:Resource
+  rdf:type owl:Class ;
+  rdfs:comment "This class is used for providing information about a construction resource." ;
+  rdfs:label "Resource" ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty cr:type ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
+      owl:onClass cr:Dimension ;
+      owl:onProperty cr:resourceDimension ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty cr:function ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty cr:object ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+.
+cr:function
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:Resource ;
+  rdfs:label "function" ;
+  rdfs:range xsd:string ;
+.
+cr:object
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:Resource ;
+  rdfs:label "object" ;
+  rdfs:range xsd:string ;
+.
+cr:parameter
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:Dimension ;
+  rdfs:label "parameter" ;
+  rdfs:range xsd:string ;
+.
+cr:resourceDimension
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain cr:Resource ;
+  rdfs:label "resource dimension" ;
+  rdfs:range cr:Dimension ;
+.
+cr:type
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:Resource ;
+  rdfs:label "type" ;
+  rdfs:range xsd:string ;
 .
