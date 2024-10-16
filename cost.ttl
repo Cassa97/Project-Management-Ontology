@@ -85,11 +85,6 @@ ci:Activity_TemporaryWork
   owl:disjointWith ci:Activity_ConstructionWork ;
   owl:disjointWith ci:Activity_ProductWork ;
 .
-ci:Assignment
-  rdf:type owl:Class ;
-  rdfs:label "Assignment" ;
-  rdfs:subClassOf owl:Thing ;
-.
 ci:Block
   rdf:type ci:ObjectType ;
   rdfs:label "block" ;
@@ -183,6 +178,7 @@ ci:ProductWork
 .
 ci:ProductionResult
   rdf:type owl:Class ;
+  rdfs:label "CostItem" ;
   rdfs:label "ProductionResult" ;
   rdfs:subClassOf owl:Thing ;
   rdfs:subClassOf [

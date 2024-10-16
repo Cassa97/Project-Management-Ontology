@@ -1,4 +1,5 @@
 # baseURI: http://w3id.org/cr
+# imports: http://w3id.org/ci
 
 @prefix cr: <https://w3id.org/cr#> .
 @prefix dc: <http://purl.org/dc/terms/> .
@@ -52,6 +53,7 @@
   dc:title "The Construction Resources (CR) Ontology"@en ;
   vann:preferredNamespacePrefix "cr" ;
   vann:preferredNamespaceUri <http://w3id.org/cr#> ;
+  owl:imports <http://w3id.org/ci> ;
   owl:versionInfo "0.1" ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
@@ -119,6 +121,20 @@ cr:CostItemToGeometryAssignment
   rdf:type owl:Class ;
   rdfs:label "Cost item to geometry assignment" ;
   rdfs:subClassOf cr:Assignment ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cr:refCostItem ;
+      owl:someValuesFrom <http://ifcowl.openbimstandards.org/IFC4_ADD2#IfcProduct> ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cr:refCostItem ;
+      owl:someValuesFrom <https://w3id.org/ci#ProductionResult> ;
+    ] ;
+  owl:disjointWith cr:ResourceToCostItemAssignment ;
+  owl:disjointWith cr:ResourceToGeometryAssignment ;
+  owl:disjointWith cr:ResourceToTaskAssignment ;
+  owl:disjointWith cr:TaskToGeometryAssignment ;
 .
 cr:DimensionParameter
   rdf:type owl:Class ;
@@ -444,16 +460,58 @@ cr:ResourceToCostItemAssignment
   rdf:type owl:Class ;
   rdfs:label "Resource to cost item assignment" ;
   rdfs:subClassOf cr:Assignment ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cr:refCostItem ;
+      owl:someValuesFrom <https://w3id.org/ci#ProductionResult> ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cr:refResource ;
+      owl:someValuesFrom cr:Resource ;
+    ] ;
+  owl:disjointWith cr:CostItemToGeometryAssignment ;
+  owl:disjointWith cr:ResourceToGeometryAssignment ;
+  owl:disjointWith cr:ResourceToTaskAssignment ;
+  owl:disjointWith cr:TaskToGeometryAssignment ;
 .
 cr:ResourceToGeometryAssignment
   rdf:type owl:Class ;
   rdfs:label "Resource to geometry assignment" ;
   rdfs:subClassOf cr:Assignment ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cr:refCostItem ;
+      owl:someValuesFrom <http://ifcowl.openbimstandards.org/IFC4_ADD2#IfcProduct> ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cr:refResource ;
+      owl:someValuesFrom cr:Resource ;
+    ] ;
+  owl:disjointWith cr:CostItemToGeometryAssignment ;
+  owl:disjointWith cr:ResourceToCostItemAssignment ;
+  owl:disjointWith cr:ResourceToTaskAssignment ;
+  owl:disjointWith cr:TaskToGeometryAssignment ;
 .
 cr:ResourceToTaskAssignment
   rdf:type owl:Class ;
   rdfs:label "Resource to task assignment" ;
   rdfs:subClassOf cr:Assignment ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cr:refResource ;
+      owl:someValuesFrom cr:Resource ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cr:refTask ;
+      owl:someValuesFrom dtc:Task ;
+    ] ;
+  owl:disjointWith cr:CostItemToGeometryAssignment ;
+  owl:disjointWith cr:ResourceToCostItemAssignment ;
+  owl:disjointWith cr:ResourceToGeometryAssignment ;
+  owl:disjointWith cr:TaskToGeometryAssignment ;
 .
 cr:Standard
   rdf:type owl:Class ;
@@ -488,6 +546,20 @@ cr:TaskToGeometryAssignment
   rdf:type owl:Class ;
   rdfs:label "Task to geometry assignment" ;
   rdfs:subClassOf cr:Assignment ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cr:refCostItem ;
+      owl:someValuesFrom <http://ifcowl.openbimstandards.org/IFC4_ADD2#IfcProduct> ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cr:refTask ;
+      owl:someValuesFrom dtc:Task ;
+    ] ;
+  owl:disjointWith cr:CostItemToGeometryAssignment ;
+  owl:disjointWith cr:ResourceToCostItemAssignment ;
+  owl:disjointWith cr:ResourceToGeometryAssignment ;
+  owl:disjointWith cr:ResourceToTaskAssignment ;
 .
 cr:accessory
   rdf:type owl:DatatypeProperty ;
@@ -680,6 +752,38 @@ cr:quantityUnitOfMeasure
   rdfs:domain cr:Resource ;
   rdfs:label "quantityUnitOfMeasure" ;
   rdfs:range xsd:integer ;
+.
+cr:ref
+  rdf:type owl:ObjectProperty ;
+  rdfs:label "ref" ;
+.
+cr:refCostItem
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain cr:Assignment ;
+  rdfs:label "ref cost item" ;
+  rdfs:range <https://w3id.org/ci#ProductionResult> ;
+  rdfs:subPropertyOf cr:ref ;
+.
+cr:refGeometry
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain cr:Assignment ;
+  rdfs:label "ref geometry" ;
+  rdfs:range <http://ifcowl.openbimstandards.org/IFC4_ADD2#IfcProduct> ;
+  rdfs:subPropertyOf cr:ref ;
+.
+cr:refResource
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain cr:Assignment ;
+  rdfs:label "ref resource" ;
+  rdfs:range cr:Resource ;
+  rdfs:subPropertyOf cr:ref ;
+.
+cr:refTask
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain cr:Assignment ;
+  rdfs:label "ref task" ;
+  rdfs:range <https://dtc-ontology.cms.ed.tum.de/ontology#Task> ;
+  rdfs:subPropertyOf cr:ref ;
 .
 cr:rent
   rdf:type owl:DatatypeProperty ;
