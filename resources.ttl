@@ -2,6 +2,7 @@
 
 @prefix cr: <https://w3id.org/cr#> .
 @prefix dc: <http://purl.org/dc/terms/> .
+@prefix dtc: <https://dtc-ontology.cms.ed.tum.de/ontology/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -51,7 +52,7 @@
   dc:title "The Construction Resources (CR) Ontology"@en ;
   vann:preferredNamespacePrefix "cr" ;
   vann:preferredNamespaceUri <http://w3id.org/cr#> ;
-  owl:versionInfo "1.0" ;
+  owl:versionInfo "0.1" ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
 cr:Assignment
@@ -95,13 +96,13 @@ cr:Consumption
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onDataRange xsd:string ;
-      owl:onProperty cr:parameterSimbol1 ;
+      owl:onProperty cr:parameterSymbol1 ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onDataRange xsd:string ;
-      owl:onProperty cr:parameterSimbol2 ;
+      owl:onProperty cr:parameterSymbol2 ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -189,6 +190,7 @@ cr:EquipmentResource
     ] ;
   owl:disjointWith cr:LabourResource ;
   owl:disjointWith cr:MaterialResource ;
+  owl:equivalentClass <https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedEquipment> ;
 .
 cr:LabourResource
   rdf:type owl:Class ;
@@ -202,6 +204,7 @@ cr:LabourResource
     ] ;
   owl:disjointWith cr:EquipmentResource ;
   owl:disjointWith cr:MaterialResource ;
+  owl:equivalentClass <https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedWorker> ;
 .
 cr:MaterialResource
   rdf:type owl:Class ;
@@ -275,6 +278,7 @@ cr:MaterialResource
     ] ;
   owl:disjointWith cr:EquipmentResource ;
   owl:disjointWith cr:LabourResource ;
+  owl:equivalentClass <https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedMaterial> ;
 .
 cr:ObjectType
   rdf:type owl:Class ;
@@ -313,13 +317,13 @@ cr:Parameter
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onDataRange xsd:string ;
-      owl:onProperty cr:parameterSimbol1 ;
+      owl:onProperty cr:parameterSymbol1 ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onDataRange xsd:string ;
-      owl:onProperty cr:parameterSimbol2 ;
+      owl:onProperty cr:parameterSymbol2 ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -416,6 +420,7 @@ cr:Resource
       owl:onProperty cr:object ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
+  owl:equivalentClass <https://dtc-ontology.cms.ed.tum.de/ontology#ResourceApplication> ;
 .
 cr:Standard
   rdf:type owl:Class ;
@@ -591,18 +596,18 @@ cr:omniclass
   rdfs:label "omniclass" ;
   rdfs:range xsd:string ;
 .
-cr:parameterSimbol1
+cr:parameterSymbol1
   rdf:type owl:DatatypeProperty ;
   rdfs:domain cr:Consumption ;
   rdfs:domain cr:Parameter ;
-  rdfs:label "parameterSimbol1" ;
+  rdfs:label "parameterSymbol1" ;
   rdfs:range xsd:string ;
 .
-cr:parameterSimbol2
+cr:parameterSymbol2
   rdf:type owl:DatatypeProperty ;
   rdfs:domain cr:Consumption ;
   rdfs:domain cr:Parameter ;
-  rdfs:label "parameterSimbol2" ;
+  rdfs:label "parameterSymbol2" ;
   rdfs:range xsd:string ;
 .
 cr:parameterType
