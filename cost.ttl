@@ -360,8 +360,16 @@ ci:WorkOfConstructionWork
   rdfs:label "WorkOfConstructionWork" ;
   rdfs:subClassOf ci:ConstructionWork ;
   rdfs:subClassOf ci:Work ;
+  owl:disjointWith ci:WorkOfProductWork ;
   owl:disjointWith ci:WorkOfTemporaryWork ;
-  owl:disjointWith ci:Work_ProductWork ;
+.
+ci:WorkOfProductWork
+  rdf:type owl:Class ;
+  rdfs:label "WorkOfProductWork" ;
+  rdfs:subClassOf ci:ProductWork ;
+  rdfs:subClassOf ci:Work ;
+  owl:disjointWith ci:WorkOfConstructionWork ;
+  owl:disjointWith ci:WorkOfTemporaryWork ;
 .
 ci:WorkOfTemporaryWork
   rdf:type owl:Class ;
@@ -369,15 +377,7 @@ ci:WorkOfTemporaryWork
   rdfs:subClassOf ci:TemporaryWorks ;
   rdfs:subClassOf ci:Work ;
   owl:disjointWith ci:WorkOfConstructionWork ;
-  owl:disjointWith ci:Work_ProductWork ;
-.
-ci:Work_ProductWork
-  rdf:type owl:Class ;
-  rdfs:label "Work_ProductWork" ;
-  rdfs:subClassOf ci:ProductWork ;
-  rdfs:subClassOf ci:Work ;
-  owl:disjointWith ci:WorkOfConstructionWork ;
-  owl:disjointWith ci:WorkOfTemporaryWork ;
+  owl:disjointWith ci:WorkOfProductWork ;
 .
 ci:aspect
   rdf:type owl:DatatypeProperty ;
