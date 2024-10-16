@@ -3,6 +3,7 @@
 @prefix cr: <https://w3id.org/cr#> .
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
@@ -66,6 +67,12 @@ cr:Consumption
   rdf:type owl:Class ;
   rdfs:label "Consumption" ;
   rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass qudt:Unit ;
+      owl:onProperty cr:hasUnit ;
+    ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
@@ -281,6 +288,12 @@ cr:Parameter
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass qudt:Unit ;
+      owl:onProperty cr:hasUnit ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onClass cr:Standard ;
       owl:onProperty cr:resourceParameterStandard ;
     ] ;
@@ -336,11 +349,6 @@ cr:Resource
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty cr:code ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty cr:descriptionGeneral ;
     ] ;
   rdfs:subClassOf [
@@ -374,6 +382,12 @@ cr:Resource
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
+      owl:onDataRange qudt:Unit ;
+      owl:onProperty cr:code ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
       owl:onDataRange xsd:integer ;
       owl:onProperty cr:quantityUnitOfMeasure ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
@@ -400,12 +414,6 @@ cr:Resource
       rdf:type owl:Restriction ;
       owl:onDataRange xsd:string ;
       owl:onProperty cr:object ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:onDataRange xsd:string ;
-      owl:onProperty cr:unitOfMeasure ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
 .
@@ -518,6 +526,21 @@ cr:gender
   rdfs:domain cr:Resource ;
   rdfs:label "gender" ;
   rdfs:range xsd:string ;
+.
+cr:hasSubResource
+  rdf:type owl:TransitiveProperty ;
+  rdfs:domain cr:Resource ;
+  rdfs:label "hasSubResource" ;
+  rdfs:range cr:Resource ;
+  owl:inverseOf cr:subRecourceOf ;
+.
+cr:hasUnit
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain cr:Consumption ;
+  rdfs:domain cr:Parameter ;
+  rdfs:domain cr:Resource ;
+  rdfs:label "hasUnit" ;
+  rdfs:range qudt:Unit ;
 .
 cr:included
   rdf:type owl:DatatypeProperty ;
@@ -693,6 +716,13 @@ cr:standardYear
   rdfs:label "standardYear" ;
   rdfs:range xsd:integer ;
 .
+cr:subRecourceOf
+  rdf:type owl:TransitiveProperty ;
+  rdfs:domain cr:Resource ;
+  rdfs:label "subRecourceOf" ;
+  rdfs:range cr:Resource ;
+  owl:inverseOf cr:hasSubResource ;
+.
 cr:techSpecs
   rdf:type owl:DatatypeProperty ;
   rdfs:domain cr:Resource ;
@@ -715,12 +745,6 @@ cr:uniformat
   rdf:type owl:DatatypeProperty ;
   rdfs:domain cr:Resource ;
   rdfs:label "uniformat" ;
-  rdfs:range xsd:string ;
-.
-cr:unitOfMeasure
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain cr:Resource ;
-  rdfs:label "unitOfMeasure" ;
   rdfs:range xsd:string ;
 .
 cr:use
