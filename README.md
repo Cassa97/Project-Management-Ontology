@@ -19,7 +19,9 @@ Markdown documentation created by [pyLODE](http://github.com/rdflib/pyLODE) 2.4
 * **Created**
   * 2024-12-12
 * **Version Information**
-  * Created with TopBraid Composer
+  * 0.1
+* **Imports**
+  * [http://w3id.org/ci](http://w3id.org/ci)
 * **License &amp; Rights**
   * [https://creativecommons.org/licenses/by/4.0/](https://creativecommons.org/licenses/by/4.0/)
   * &copy; 2024 by DABC, PoliMi
@@ -44,6 +46,7 @@ Markdown documentation created by [pyLODE](http://github.com/rdflib/pyLODE) 2.4
 ## Classes
 [Assignment](#Assignment),
 [Consumption](#Consumption),
+[Cost item to geometry assignment](#Costitemtogeometryassignment),
 [DimensionParameter](#DimensionParameter),
 [Equipment resource](#Equipmentresource),
 [Labour resource](#Labourresource),
@@ -53,9 +56,11 @@ Markdown documentation created by [pyLODE](http://github.com/rdflib/pyLODE) 2.4
 [PhysicalParameter](#PhysicalParameter),
 [Resource](#Resource),
 [Resource to cost item assignment](#Resourcetocostitemassignment),
+[Resource to geometry assignment](#Resourcetogeometryassignment),
 [Resource to task assignment](#Resourcetotaskassignment),
 [ResourceApplication](#ResourceApplication),
 [Standard](#Standard),
+[Task to geometry assignment](#Tasktogeometryassignment),
 [object type](#objecttype),
 ### ResourceApplication
 Property | Value
@@ -67,15 +72,22 @@ Property | Value
 --- | ---
 IRI | `https://w3id.org/cr#Assignment`
 Super-classes |[owl:Thing](http://www.w3.org/2002/07/owl#Thing) (c)<br />
-Sub-classes |[cr:ResourceToCostItemAssignment](https://w3id.org/cr#ResourceToCostItemAssignment) (c)<br />[cr:ResourceToTaskAssignment](https://w3id.org/cr#ResourceToTaskAssignment) (c)<br />
+Sub-classes |[cr:TaskToGeometryAssignment](https://w3id.org/cr#TaskToGeometryAssignment) (c)<br />[cr:ResourceToCostItemAssignment](https://w3id.org/cr#ResourceToCostItemAssignment) (c)<br />[cr:ResourceToGeometryAssignment](https://w3id.org/cr#ResourceToGeometryAssignment) (c)<br />[cr:CostItemToGeometryAssignment](https://w3id.org/cr#CostItemToGeometryAssignment) (c)<br />[cr:ResourceToTaskAssignment](https://w3id.org/cr#ResourceToTaskAssignment) (c)<br />
+In domain of |[cr:refCostItem](https://w3id.org/cr#refCostItem) (op)<br />[cr:refTask](https://w3id.org/cr#refTask) (op)<br />[cr:refResource](https://w3id.org/cr#refResource) (op)<br />[cr:refGeometry](https://w3id.org/cr#refGeometry) (op)<br />
 ### Consumption
 Property | Value
 --- | ---
 IRI | `https://w3id.org/cr#Consumption`
 Super-classes |[owl:Thing](http://www.w3.org/2002/07/owl#Thing) (c)<br />
-Restrictions |[cr:parameterValue1](https://w3id.org/cr#parameterValue1) (dp) **max** 1<br />[cr:hasUnit](https://w3id.org/cr#hasUnit) (op) **max** 1 [qudt:Unit](http://qudt.org/schema/qudt/Unit) (c)<br />[cr:parameterSymbol1](https://w3id.org/cr#parameterSymbol1) (dp) **max** 1<br />[cr:parameterValue2](https://w3id.org/cr#parameterValue2) (dp) **max** 1<br />[cr:parameterSymbol2](https://w3id.org/cr#parameterSymbol2) (dp) **max** 1<br />[cr:parameterType](https://w3id.org/cr#parameterType) (dp) **max** 1<br />[cr:resourceConsumption](https://w3id.org/cr#resourceConsumption) (op) **max** 1 [cr:Consumption](https://w3id.org/cr#Consumption) (c)<br />
-In domain of |[cr:parameterSymbol2](https://w3id.org/cr#parameterSymbol2) (dp)<br />[cr:parameterValue2](https://w3id.org/cr#parameterValue2) (dp)<br />[cr:parameterType](https://w3id.org/cr#parameterType) (dp)<br />[cr:parameterValue1](https://w3id.org/cr#parameterValue1) (dp)<br />[cr:hasUnit](https://w3id.org/cr#hasUnit) (op)<br />[cr:parameterSymbol1](https://w3id.org/cr#parameterSymbol1) (dp)<br />
+Restrictions |[cr:parameterValue1](https://w3id.org/cr#parameterValue1) (dp) **max** 1<br />[cr:hasUnit](https://w3id.org/cr#hasUnit) (op) **max** 1 [qudt:Unit](http://qudt.org/schema/qudt/Unit) (c)<br />[cr:resourceConsumption](https://w3id.org/cr#resourceConsumption) (op) **max** 1 [cr:Consumption](https://w3id.org/cr#Consumption) (c)<br />[cr:parameterSymbol1](https://w3id.org/cr#parameterSymbol1) (dp) **max** 1<br />[cr:parameterSymbol2](https://w3id.org/cr#parameterSymbol2) (dp) **max** 1<br />[cr:parameterType](https://w3id.org/cr#parameterType) (dp) **max** 1<br />[cr:parameterValue2](https://w3id.org/cr#parameterValue2) (dp) **max** 1<br />
+In domain of |[cr:parameterType](https://w3id.org/cr#parameterType) (dp)<br />[cr:parameterValue1](https://w3id.org/cr#parameterValue1) (dp)<br />[cr:hasUnit](https://w3id.org/cr#hasUnit) (op)<br />[cr:parameterValue2](https://w3id.org/cr#parameterValue2) (dp)<br />[cr:parameterSymbol2](https://w3id.org/cr#parameterSymbol2) (dp)<br />[cr:parameterSymbol1](https://w3id.org/cr#parameterSymbol1) (dp)<br />
 In range of |[cr:resourceConsumption](https://w3id.org/cr#resourceConsumption) (op)<br />
+### Cost item to geometry assignment
+Property | Value
+--- | ---
+IRI | `https://w3id.org/cr#CostItemToGeometryAssignment`
+Super-classes |[cr:Assignment](https://w3id.org/cr#Assignment) (c)<br />
+Restrictions |[cr:refCostItem](https://w3id.org/cr#refCostItem) (op) **some** [http://ifcowl.openbimstandards.org/IFC4_ADD2#IfcProduct](http://ifcowl.openbimstandards.org/IFC4_ADD2#IfcProduct) (c)<br />[cr:refCostItem](https://w3id.org/cr#refCostItem) (op) **some** [https://w3id.org/ci#ProductionResult](https://w3id.org/ci#ProductionResult) (c)<br />
 ### DimensionParameter
 Property | Value
 --- | ---
@@ -87,8 +99,8 @@ Property | Value
 --- | ---
 IRI | `https://w3id.org/cr#EquipmentResource`
 Super-classes |[cr:Resource](https://w3id.org/cr#Resource) (c)<br />
-Restrictions |[cr:accessory](https://w3id.org/cr#accessory) (dp) **exactly** 1<br />[cr:resourcePhysicalParameter](https://w3id.org/cr#resourcePhysicalParameter) (op) **max** 10 [cr:PhysicalParameter](https://w3id.org/cr#PhysicalParameter) (c)<br />[cr:resourceOtherStandard](https://w3id.org/cr#resourceOtherStandard) (op) **max** 5 [cr:Standard](https://w3id.org/cr#Standard) (c)<br />[cr:function](https://w3id.org/cr#function) (dp) **max** 5<br />[cr:rent](https://w3id.org/cr#rent) (dp) **exactly** 1<br />[cr:resourceDimensionParameter](https://w3id.org/cr#resourceDimensionParameter) (op) **max** 10 [cr:DimensionParameter](https://w3id.org/cr#DimensionParameter) (c)<br />[cr:resourcePerformanceParameter](https://w3id.org/cr#resourcePerformanceParameter) (op) **max** 10 [cr:PerformanceParameter](https://w3id.org/cr#PerformanceParameter) (c)<br />[cr:material](https://w3id.org/cr#material) (dp) **exactly** 1<br />[cr:resourceObjectStandard](https://w3id.org/cr#resourceObjectStandard) (op) **max** 1 [cr:Standard](https://w3id.org/cr#Standard) (c)<br />[cr:use](https://w3id.org/cr#use) (dp) **max** 5<br />[cr:minimunLevelLabourResource](https://w3id.org/cr#minimunLevelLabourResource) (dp) **max** 1<br />
-In domain of |[cr:resourcePerformanceParameter](https://w3id.org/cr#resourcePerformanceParameter) (op)<br />[cr:accessory](https://w3id.org/cr#accessory) (dp)<br />[cr:function](https://w3id.org/cr#function) (dp)<br />[cr:cam](https://w3id.org/cr#cam) (dp)<br />[cr:material](https://w3id.org/cr#material) (dp)<br />[cr:minimunLevelLabourResource](https://w3id.org/cr#minimunLevelLabourResource) (dp)<br />[cr:resourceDimensionParameter](https://w3id.org/cr#resourceDimensionParameter) (op)<br />[cr:rent](https://w3id.org/cr#rent) (dp)<br />[cr:resourceOtherStandard](https://w3id.org/cr#resourceOtherStandard) (op)<br />[cr:resourceObjectStandard](https://w3id.org/cr#resourceObjectStandard) (op)<br />[cr:resourcePhysicalParameter](https://w3id.org/cr#resourcePhysicalParameter) (op)<br />[cr:resourceConsumption](https://w3id.org/cr#resourceConsumption) (op)<br />[cr:aspect](https://w3id.org/cr#aspect) (dp)<br />[cr:use](https://w3id.org/cr#use) (dp)<br />[cr:yield](https://w3id.org/cr#yield) (dp)<br />
+Restrictions |[cr:resourcePhysicalParameter](https://w3id.org/cr#resourcePhysicalParameter) (op) **max** 10 [cr:PhysicalParameter](https://w3id.org/cr#PhysicalParameter) (c)<br />[cr:minimunLevelLabourResource](https://w3id.org/cr#minimunLevelLabourResource) (dp) **max** 1<br />[cr:accessory](https://w3id.org/cr#accessory) (dp) **exactly** 1<br />[cr:rent](https://w3id.org/cr#rent) (dp) **exactly** 1<br />[cr:material](https://w3id.org/cr#material) (dp) **exactly** 1<br />[cr:use](https://w3id.org/cr#use) (dp) **max** 5<br />[cr:resourcePerformanceParameter](https://w3id.org/cr#resourcePerformanceParameter) (op) **max** 10 [cr:PerformanceParameter](https://w3id.org/cr#PerformanceParameter) (c)<br />[cr:resourceObjectStandard](https://w3id.org/cr#resourceObjectStandard) (op) **max** 1 [cr:Standard](https://w3id.org/cr#Standard) (c)<br />[cr:resourceOtherStandard](https://w3id.org/cr#resourceOtherStandard) (op) **max** 5 [cr:Standard](https://w3id.org/cr#Standard) (c)<br />[cr:resourceDimensionParameter](https://w3id.org/cr#resourceDimensionParameter) (op) **max** 10 [cr:DimensionParameter](https://w3id.org/cr#DimensionParameter) (c)<br />[cr:function](https://w3id.org/cr#function) (dp) **max** 5<br />
+In domain of |[cr:resourceDimensionParameter](https://w3id.org/cr#resourceDimensionParameter) (op)<br />[cr:function](https://w3id.org/cr#function) (dp)<br />[cr:resourceOtherStandard](https://w3id.org/cr#resourceOtherStandard) (op)<br />[cr:resourceObjectStandard](https://w3id.org/cr#resourceObjectStandard) (op)<br />[cr:rent](https://w3id.org/cr#rent) (dp)<br />[cr:cam](https://w3id.org/cr#cam) (dp)<br />[cr:material](https://w3id.org/cr#material) (dp)<br />[cr:resourceConsumption](https://w3id.org/cr#resourceConsumption) (op)<br />[cr:minimunLevelLabourResource](https://w3id.org/cr#minimunLevelLabourResource) (dp)<br />[cr:resourcePhysicalParameter](https://w3id.org/cr#resourcePhysicalParameter) (op)<br />[cr:resourcePerformanceParameter](https://w3id.org/cr#resourcePerformanceParameter) (op)<br />[cr:yield](https://w3id.org/cr#yield) (dp)<br />[cr:use](https://w3id.org/cr#use) (dp)<br />[cr:aspect](https://w3id.org/cr#aspect) (dp)<br />[cr:accessory](https://w3id.org/cr#accessory) (dp)<br />
 ### Labour resource
 Property | Value
 --- | ---
@@ -101,8 +113,8 @@ Property | Value
 --- | ---
 IRI | `https://w3id.org/cr#MaterialResource`
 Super-classes |[cr:Resource](https://w3id.org/cr#Resource) (c)<br />
-Restrictions |[cr:material](https://w3id.org/cr#material) (dp) **exactly** 1<br />[cr:cam](https://w3id.org/cr#cam) (dp) **exactly** 1<br />[cr:resourcePhysicalParameter](https://w3id.org/cr#resourcePhysicalParameter) (op) **max** 10 [cr:PhysicalParameter](https://w3id.org/cr#PhysicalParameter) (c)<br />[cr:furnishing](https://w3id.org/cr#furnishing) (dp) **max** 5<br />[cr:use](https://w3id.org/cr#use) (dp) **max** 5<br />[cr:resourcePerformanceParameter](https://w3id.org/cr#resourcePerformanceParameter) (op) **max** 10 [cr:PerformanceParameter](https://w3id.org/cr#PerformanceParameter) (c)<br />[cr:function](https://w3id.org/cr#function) (dp) **max** 5<br />[cr:finishing](https://w3id.org/cr#finishing) (dp) **max** 5<br />[cr:resourceObjectStandard](https://w3id.org/cr#resourceObjectStandard) (op) **max** 1 [cr:Standard](https://w3id.org/cr#Standard) (c)<br />[cr:resourceOtherStandard](https://w3id.org/cr#resourceOtherStandard) (op) **max** 5 [cr:Standard](https://w3id.org/cr#Standard) (c)<br />[cr:resourceDimensionParameter](https://w3id.org/cr#resourceDimensionParameter) (op) **max** 10 [cr:DimensionParameter](https://w3id.org/cr#DimensionParameter) (c)<br />
-In domain of |[cr:function](https://w3id.org/cr#function) (dp)<br />[cr:resourcePerformanceParameter](https://w3id.org/cr#resourcePerformanceParameter) (op)<br />[cr:yield](https://w3id.org/cr#yield) (dp)<br />[cr:use](https://w3id.org/cr#use) (dp)<br />[cr:resourceConsumption](https://w3id.org/cr#resourceConsumption) (op)<br />[cr:furnishing](https://w3id.org/cr#furnishing) (dp)<br />[cr:resourceDimensionParameter](https://w3id.org/cr#resourceDimensionParameter) (op)<br />[cr:cam](https://w3id.org/cr#cam) (dp)<br />[cr:material](https://w3id.org/cr#material) (dp)<br />[cr:resourcePhysicalParameter](https://w3id.org/cr#resourcePhysicalParameter) (op)<br />[cr:resourceOtherStandard](https://w3id.org/cr#resourceOtherStandard) (op)<br />[cr:resourceObjectStandard](https://w3id.org/cr#resourceObjectStandard) (op)<br />[cr:aspect](https://w3id.org/cr#aspect) (dp)<br />[cr:finishing](https://w3id.org/cr#finishing) (dp)<br />
+Restrictions |[cr:use](https://w3id.org/cr#use) (dp) **max** 5<br />[cr:function](https://w3id.org/cr#function) (dp) **max** 5<br />[cr:furnishing](https://w3id.org/cr#furnishing) (dp) **max** 5<br />[cr:resourceOtherStandard](https://w3id.org/cr#resourceOtherStandard) (op) **max** 5 [cr:Standard](https://w3id.org/cr#Standard) (c)<br />[cr:resourceObjectStandard](https://w3id.org/cr#resourceObjectStandard) (op) **max** 1 [cr:Standard](https://w3id.org/cr#Standard) (c)<br />[cr:material](https://w3id.org/cr#material) (dp) **exactly** 1<br />[cr:finishing](https://w3id.org/cr#finishing) (dp) **max** 5<br />[cr:resourceDimensionParameter](https://w3id.org/cr#resourceDimensionParameter) (op) **max** 10 [cr:DimensionParameter](https://w3id.org/cr#DimensionParameter) (c)<br />[cr:cam](https://w3id.org/cr#cam) (dp) **exactly** 1<br />[cr:resourcePhysicalParameter](https://w3id.org/cr#resourcePhysicalParameter) (op) **max** 10 [cr:PhysicalParameter](https://w3id.org/cr#PhysicalParameter) (c)<br />[cr:resourcePerformanceParameter](https://w3id.org/cr#resourcePerformanceParameter) (op) **max** 10 [cr:PerformanceParameter](https://w3id.org/cr#PerformanceParameter) (c)<br />
+In domain of |[cr:furnishing](https://w3id.org/cr#furnishing) (dp)<br />[cr:function](https://w3id.org/cr#function) (dp)<br />[cr:resourceOtherStandard](https://w3id.org/cr#resourceOtherStandard) (op)<br />[cr:finishing](https://w3id.org/cr#finishing) (dp)<br />[cr:resourceObjectStandard](https://w3id.org/cr#resourceObjectStandard) (op)<br />[cr:resourcePhysicalParameter](https://w3id.org/cr#resourcePhysicalParameter) (op)<br />[cr:cam](https://w3id.org/cr#cam) (dp)<br />[cr:material](https://w3id.org/cr#material) (dp)<br />[cr:resourceConsumption](https://w3id.org/cr#resourceConsumption) (op)<br />[cr:use](https://w3id.org/cr#use) (dp)<br />[cr:aspect](https://w3id.org/cr#aspect) (dp)<br />[cr:yield](https://w3id.org/cr#yield) (dp)<br />[cr:resourcePerformanceParameter](https://w3id.org/cr#resourcePerformanceParameter) (op)<br />[cr:resourceDimensionParameter](https://w3id.org/cr#resourceDimensionParameter) (op)<br />
 ### object type
 Property | Value
 --- | ---
@@ -113,9 +125,9 @@ Property | Value
 --- | ---
 IRI | `https://w3id.org/cr#Parameter`
 Super-classes |[owl:Thing](http://www.w3.org/2002/07/owl#Thing) (c)<br />
-Restrictions |[cr:parameterType](https://w3id.org/cr#parameterType) (dp) **max** 1<br />[cr:hasUnit](https://w3id.org/cr#hasUnit) (op) **max** 1 [qudt:Unit](http://qudt.org/schema/qudt/Unit) (c)<br />[cr:parameterSymbol2](https://w3id.org/cr#parameterSymbol2) (dp) **max** 1<br />[cr:parameterSymbol1](https://w3id.org/cr#parameterSymbol1) (dp) **max** 1<br />[cr:resourceParameterStandard](https://w3id.org/cr#resourceParameterStandard) (op) **max** 1 [cr:Standard](https://w3id.org/cr#Standard) (c)<br />[cr:parameterValue1](https://w3id.org/cr#parameterValue1) (dp) **max** 1<br />[cr:parameterValue2](https://w3id.org/cr#parameterValue2) (dp) **max** 1<br />
-Sub-classes |[cr:PhysicalParameter](https://w3id.org/cr#PhysicalParameter) (c)<br />[cr:PerformanceParameter](https://w3id.org/cr#PerformanceParameter) (c)<br />[cr:DimensionParameter](https://w3id.org/cr#DimensionParameter) (c)<br />
-In domain of |[cr:parameterType](https://w3id.org/cr#parameterType) (dp)<br />[cr:parameterValue1](https://w3id.org/cr#parameterValue1) (dp)<br />[cr:hasUnit](https://w3id.org/cr#hasUnit) (op)<br />[cr:resourceParameterStandard](https://w3id.org/cr#resourceParameterStandard) (op)<br />[cr:parameterSymbol1](https://w3id.org/cr#parameterSymbol1) (dp)<br />[cr:parameterSymbol2](https://w3id.org/cr#parameterSymbol2) (dp)<br />[cr:parameterValue2](https://w3id.org/cr#parameterValue2) (dp)<br />
+Restrictions |[cr:parameterValue1](https://w3id.org/cr#parameterValue1) (dp) **max** 1<br />[cr:parameterSymbol2](https://w3id.org/cr#parameterSymbol2) (dp) **max** 1<br />[cr:resourceParameterStandard](https://w3id.org/cr#resourceParameterStandard) (op) **max** 1 [cr:Standard](https://w3id.org/cr#Standard) (c)<br />[cr:hasUnit](https://w3id.org/cr#hasUnit) (op) **max** 1 [qudt:Unit](http://qudt.org/schema/qudt/Unit) (c)<br />[cr:parameterType](https://w3id.org/cr#parameterType) (dp) **max** 1<br />[cr:parameterSymbol1](https://w3id.org/cr#parameterSymbol1) (dp) **max** 1<br />[cr:parameterValue2](https://w3id.org/cr#parameterValue2) (dp) **max** 1<br />
+Sub-classes |[cr:DimensionParameter](https://w3id.org/cr#DimensionParameter) (c)<br />[cr:PhysicalParameter](https://w3id.org/cr#PhysicalParameter) (c)<br />[cr:PerformanceParameter](https://w3id.org/cr#PerformanceParameter) (c)<br />
+In domain of |[cr:parameterSymbol2](https://w3id.org/cr#parameterSymbol2) (dp)<br />[cr:resourceParameterStandard](https://w3id.org/cr#resourceParameterStandard) (op)<br />[cr:parameterSymbol1](https://w3id.org/cr#parameterSymbol1) (dp)<br />[cr:parameterValue2](https://w3id.org/cr#parameterValue2) (dp)<br />[cr:parameterType](https://w3id.org/cr#parameterType) (dp)<br />[cr:parameterValue1](https://w3id.org/cr#parameterValue1) (dp)<br />[cr:hasUnit](https://w3id.org/cr#hasUnit) (op)<br />
 ### PerformanceParameter
 Property | Value
 --- | ---
@@ -133,32 +145,51 @@ Property | Value
 --- | ---
 IRI | `https://w3id.org/cr#Resource`
 Description | <p>This class is used for providing information about a construction resource.</p>
-Restrictions |[cr:descriptionDetail](https://w3id.org/cr#descriptionDetail) (dp) **max** 1<br />[cr:descriptionGeneral](https://w3id.org/cr#descriptionGeneral) (dp) **exactly** 1<br />[cr:object](https://w3id.org/cr#object) (dp) **exactly** 1<br />[cr:type](https://w3id.org/cr#type) (dp) **max** 1<br />[cr:quantityUnitOfMeasure](https://w3id.org/cr#quantityUnitOfMeasure) (dp) **exactly** 1<br />[cr:gender](https://w3id.org/cr#gender) (dp) **exactly** 1<br />[cr:hasUnit](https://w3id.org/cr#hasUnit) (op) **exactly** 1 [qudt:Unit](http://qudt.org/schema/qudt/Unit) (c)<br />[cr:keywords](https://w3id.org/cr#keywords) (dp) **max** 10<br />[cr:aspect](https://w3id.org/cr#aspect) (dp) **max** 5<br />[cr:law](https://w3id.org/cr#law) (dp) **max** 10<br />[cr:category](https://w3id.org/cr#category) (dp) **exactly** 1<br />[cr:family](https://w3id.org/cr#family) (dp) **exactly** 1<br />[cr:code](https://w3id.org/cr#code) (dp) **exactly** 1<br />
-Sub-classes |[cr:EquipmentResource](https://w3id.org/cr#EquipmentResource) (c)<br />[cr:LabourResource](https://w3id.org/cr#LabourResource) (c)<br />[cr:MaterialResource](https://w3id.org/cr#MaterialResource) (c)<br />
-In domain of |[cr:measurementRules](https://w3id.org/cr#measurementRules) (dp)<br />[cr:object](https://w3id.org/cr#object) (dp)<br />[cr:family](https://w3id.org/cr#family) (dp)<br />[cr:uniclass](https://w3id.org/cr#uniclass) (dp)<br />[cr:gender](https://w3id.org/cr#gender) (dp)<br />[cr:omniclass](https://w3id.org/cr#omniclass) (dp)<br />[cr:techSpecs](https://w3id.org/cr#techSpecs) (dp)<br />[cr:type](https://w3id.org/cr#type) (dp)<br />[cr:hasUnit](https://w3id.org/cr#hasUnit) (op)<br />[cr:keywords](https://w3id.org/cr#keywords) (dp)<br />[cr:law](https://w3id.org/cr#law) (dp)<br />[cr:category](https://w3id.org/cr#category) (dp)<br />[cr:uniformat](https://w3id.org/cr#uniformat) (dp)<br />[cr:subRecourceOf](https://w3id.org/cr#subRecourceOf)<br />[cr:included](https://w3id.org/cr#included) (dp)<br />[cr:descriptionGeneral](https://w3id.org/cr#descriptionGeneral) (dp)<br />[cr:escluded](https://w3id.org/cr#escluded) (dp)<br />[cr:quantityUnitOfMeasure](https://w3id.org/cr#quantityUnitOfMeasure) (dp)<br />[cr:code](https://w3id.org/cr#code) (dp)<br />[cr:descriptionDetail](https://w3id.org/cr#descriptionDetail) (dp)<br />[cr:hasSubResource](https://w3id.org/cr#hasSubResource)<br />
-In range of |[cr:subRecourceOf](https://w3id.org/cr#subRecourceOf)<br />[cr:hasSubResource](https://w3id.org/cr#hasSubResource)<br />
+Restrictions |[cr:descriptionGeneral](https://w3id.org/cr#descriptionGeneral) (dp) **exactly** 1<br />[cr:law](https://w3id.org/cr#law) (dp) **max** 10<br />[cr:code](https://w3id.org/cr#code) (dp) **exactly** 1<br />[cr:category](https://w3id.org/cr#category) (dp) **exactly** 1<br />[cr:quantityUnitOfMeasure](https://w3id.org/cr#quantityUnitOfMeasure) (dp) **exactly** 1<br />[cr:gender](https://w3id.org/cr#gender) (dp) **exactly** 1<br />[cr:object](https://w3id.org/cr#object) (dp) **exactly** 1<br />[cr:aspect](https://w3id.org/cr#aspect) (dp) **max** 5<br />[cr:hasUnit](https://w3id.org/cr#hasUnit) (op) **exactly** 1 [qudt:Unit](http://qudt.org/schema/qudt/Unit) (c)<br />[cr:family](https://w3id.org/cr#family) (dp) **exactly** 1<br />[cr:type](https://w3id.org/cr#type) (dp) **max** 1<br />[cr:keywords](https://w3id.org/cr#keywords) (dp) **max** 10<br />[cr:descriptionDetail](https://w3id.org/cr#descriptionDetail) (dp) **max** 1<br />
+Sub-classes |[cr:LabourResource](https://w3id.org/cr#LabourResource) (c)<br />[cr:MaterialResource](https://w3id.org/cr#MaterialResource) (c)<br />[cr:EquipmentResource](https://w3id.org/cr#EquipmentResource) (c)<br />
+In domain of |[cr:object](https://w3id.org/cr#object) (dp)<br />[cr:descriptionDetail](https://w3id.org/cr#descriptionDetail) (dp)<br />[cr:techSpecs](https://w3id.org/cr#techSpecs) (dp)<br />[cr:hasUnit](https://w3id.org/cr#hasUnit) (op)<br />[cr:keywords](https://w3id.org/cr#keywords) (dp)<br />[cr:escluded](https://w3id.org/cr#escluded) (dp)<br />[cr:category](https://w3id.org/cr#category) (dp)<br />[cr:subRecourceOf](https://w3id.org/cr#subRecourceOf)<br />[cr:quantityUnitOfMeasure](https://w3id.org/cr#quantityUnitOfMeasure) (dp)<br />[cr:measurementRules](https://w3id.org/cr#measurementRules) (dp)<br />[cr:omniclass](https://w3id.org/cr#omniclass) (dp)<br />[cr:uniformat](https://w3id.org/cr#uniformat) (dp)<br />[cr:uniclass](https://w3id.org/cr#uniclass) (dp)<br />[cr:included](https://w3id.org/cr#included) (dp)<br />[cr:code](https://w3id.org/cr#code) (dp)<br />[cr:family](https://w3id.org/cr#family) (dp)<br />[cr:law](https://w3id.org/cr#law) (dp)<br />[cr:descriptionGeneral](https://w3id.org/cr#descriptionGeneral) (dp)<br />[cr:hasSubResource](https://w3id.org/cr#hasSubResource)<br />[cr:gender](https://w3id.org/cr#gender) (dp)<br />[cr:type](https://w3id.org/cr#type) (dp)<br />
+In range of |[cr:hasSubResource](https://w3id.org/cr#hasSubResource)<br />[cr:subRecourceOf](https://w3id.org/cr#subRecourceOf)<br />[cr:refResource](https://w3id.org/cr#refResource) (op)<br />
 ### Resource to cost item assignment
 Property | Value
 --- | ---
 IRI | `https://w3id.org/cr#ResourceToCostItemAssignment`
 Super-classes |[cr:Assignment](https://w3id.org/cr#Assignment) (c)<br />
+Restrictions |[cr:refCostItem](https://w3id.org/cr#refCostItem) (op) **some** [https://w3id.org/ci#ProductionResult](https://w3id.org/ci#ProductionResult) (c)<br />[cr:refResource](https://w3id.org/cr#refResource) (op) **some** [cr:Resource](https://w3id.org/cr#Resource) (c)<br />
+### Resource to geometry assignment
+Property | Value
+--- | ---
+IRI | `https://w3id.org/cr#ResourceToGeometryAssignment`
+Super-classes |[cr:Assignment](https://w3id.org/cr#Assignment) (c)<br />
+Restrictions |[cr:refResource](https://w3id.org/cr#refResource) (op) **some** [cr:Resource](https://w3id.org/cr#Resource) (c)<br />[cr:refCostItem](https://w3id.org/cr#refCostItem) (op) **some** [http://ifcowl.openbimstandards.org/IFC4_ADD2#IfcProduct](http://ifcowl.openbimstandards.org/IFC4_ADD2#IfcProduct) (c)<br />
 ### Resource to task assignment
 Property | Value
 --- | ---
 IRI | `https://w3id.org/cr#ResourceToTaskAssignment`
 Super-classes |[cr:Assignment](https://w3id.org/cr#Assignment) (c)<br />
+Restrictions |[cr:refResource](https://w3id.org/cr#refResource) (op) **some** [cr:Resource](https://w3id.org/cr#Resource) (c)<br />[cr:refTask](https://w3id.org/cr#refTask) (op) **some** [dtc:Task](https://dtc-ontology.cms.ed.tum.de/ontology/Task) (c)<br />
 Sub-classes |[https://dtc-ontology.cms.ed.tum.de/ontology#ResourceApplication](https://dtc-ontology.cms.ed.tum.de/ontology#ResourceApplication) (c)<br />
 ### Standard
 Property | Value
 --- | ---
 IRI | `https://w3id.org/cr#Standard`
 Super-classes |[owl:Thing](http://www.w3.org/2002/07/owl#Thing) (c)<br />
-Restrictions |[cr:standardPart](https://w3id.org/cr#standardPart) (dp) **max** 1<br />[cr:standardBody](https://w3id.org/cr#standardBody) (dp) **max** 1<br />[cr:standardYear](https://w3id.org/cr#standardYear) (dp) **max** 1<br />[cr:standardNumber](https://w3id.org/cr#standardNumber) (dp) **max** 1<br />
-In domain of |[cr:standardPart](https://w3id.org/cr#standardPart) (dp)<br />[cr:standardNumber](https://w3id.org/cr#standardNumber) (dp)<br />[cr:standardBody](https://w3id.org/cr#standardBody) (dp)<br />[cr:standardYear](https://w3id.org/cr#standardYear) (dp)<br />
-In range of |[cr:resourceOtherStandard](https://w3id.org/cr#resourceOtherStandard) (op)<br />[cr:resourceObjectStandard](https://w3id.org/cr#resourceObjectStandard) (op)<br />[cr:resourceParameterStandard](https://w3id.org/cr#resourceParameterStandard) (op)<br />
+Restrictions |[cr:standardYear](https://w3id.org/cr#standardYear) (dp) **max** 1<br />[cr:standardNumber](https://w3id.org/cr#standardNumber) (dp) **max** 1<br />[cr:standardBody](https://w3id.org/cr#standardBody) (dp) **max** 1<br />[cr:standardPart](https://w3id.org/cr#standardPart) (dp) **max** 1<br />
+In domain of |[cr:standardBody](https://w3id.org/cr#standardBody) (dp)<br />[cr:standardPart](https://w3id.org/cr#standardPart) (dp)<br />[cr:standardNumber](https://w3id.org/cr#standardNumber) (dp)<br />[cr:standardYear](https://w3id.org/cr#standardYear) (dp)<br />
+In range of |[cr:resourceParameterStandard](https://w3id.org/cr#resourceParameterStandard) (op)<br />[cr:resourceObjectStandard](https://w3id.org/cr#resourceObjectStandard) (op)<br />[cr:resourceOtherStandard](https://w3id.org/cr#resourceOtherStandard) (op)<br />
+### Task to geometry assignment
+Property | Value
+--- | ---
+IRI | `https://w3id.org/cr#TaskToGeometryAssignment`
+Super-classes |[cr:Assignment](https://w3id.org/cr#Assignment) (c)<br />
+Restrictions |[cr:refCostItem](https://w3id.org/cr#refCostItem) (op) **some** [http://ifcowl.openbimstandards.org/IFC4_ADD2#IfcProduct](http://ifcowl.openbimstandards.org/IFC4_ADD2#IfcProduct) (c)<br />[cr:refTask](https://w3id.org/cr#refTask) (op) **some** [dtc:Task](https://dtc-ontology.cms.ed.tum.de/ontology/Task) (c)<br />
 
 ## Object Properties
 [hasUnit](#hasUnit),
+[ref](#ref),
+[ref cost item](#refcostitem),
+[ref geometry](#refgeometry),
+[ref resource](#refresource),
+[ref task](#reftask),
 [resourceConsumption](#resourceConsumption),
 [resourceDimensionParameter](#resourceDimensionParameter),
 [resourceObjectStandard](#resourceObjectStandard),
@@ -171,14 +202,51 @@ In range of |[cr:resourceOtherStandard](https://w3id.org/cr#resourceOtherStandar
 Property | Value
 --- | ---
 IRI | `https://w3id.org/cr#hasUnit`
-Domain(s) |[cr:Consumption](https://w3id.org/cr#Consumption) (c)<br />[cr:Parameter](https://w3id.org/cr#Parameter) (c)<br />[cr:Resource](https://w3id.org/cr#Resource) (c)<br />
+Domain(s) |[cr:Consumption](https://w3id.org/cr#Consumption) (c)<br />[cr:Resource](https://w3id.org/cr#Resource) (c)<br />[cr:Parameter](https://w3id.org/cr#Parameter) (c)<br />
 Range(s) |[qudt:Unit](http://qudt.org/schema/qudt/Unit) (c)<br />
+[](ref)
+### ref
+Property | Value
+--- | ---
+IRI | `https://w3id.org/cr#ref`
+[](refcostitem)
+### ref cost item
+Property | Value
+--- | ---
+IRI | `https://w3id.org/cr#refCostItem`
+Super-properties |[cr:ref](https://w3id.org/cr#ref) (op)<br />
+Domain(s) |[cr:Assignment](https://w3id.org/cr#Assignment) (c)<br />
+Range(s) |[https://w3id.org/ci#ProductionResult](https://w3id.org/ci#ProductionResult) (c)<br />
+[](refgeometry)
+### ref geometry
+Property | Value
+--- | ---
+IRI | `https://w3id.org/cr#refGeometry`
+Super-properties |[cr:ref](https://w3id.org/cr#ref) (op)<br />
+Domain(s) |[cr:Assignment](https://w3id.org/cr#Assignment) (c)<br />
+Range(s) |[http://ifcowl.openbimstandards.org/IFC4_ADD2#IfcProduct](http://ifcowl.openbimstandards.org/IFC4_ADD2#IfcProduct) (c)<br />
+[](refresource)
+### ref resource
+Property | Value
+--- | ---
+IRI | `https://w3id.org/cr#refResource`
+Super-properties |[cr:ref](https://w3id.org/cr#ref) (op)<br />
+Domain(s) |[cr:Assignment](https://w3id.org/cr#Assignment) (c)<br />
+Range(s) |[cr:Resource](https://w3id.org/cr#Resource) (c)<br />
+[](reftask)
+### ref task
+Property | Value
+--- | ---
+IRI | `https://w3id.org/cr#refTask`
+Super-properties |[cr:ref](https://w3id.org/cr#ref) (op)<br />
+Domain(s) |[cr:Assignment](https://w3id.org/cr#Assignment) (c)<br />
+Range(s) |[https://dtc-ontology.cms.ed.tum.de/ontology#Task](https://dtc-ontology.cms.ed.tum.de/ontology#Task) (c)<br />
 [](resourceConsumption)
 ### resourceConsumption
 Property | Value
 --- | ---
 IRI | `https://w3id.org/cr#resourceConsumption`
-Domain(s) |[cr:MaterialResource](https://w3id.org/cr#MaterialResource) (c)<br />[cr:EquipmentResource](https://w3id.org/cr#EquipmentResource) (c)<br />
+Domain(s) |[cr:EquipmentResource](https://w3id.org/cr#EquipmentResource) (c)<br />[cr:MaterialResource](https://w3id.org/cr#MaterialResource) (c)<br />
 Range(s) |[cr:Consumption](https://w3id.org/cr#Consumption) (c)<br />
 [](resourceDimensionParameter)
 ### resourceDimensionParameter
@@ -192,14 +260,14 @@ Range(s) |[cr:DimensionParameter](https://w3id.org/cr#DimensionParameter) (c)<br
 Property | Value
 --- | ---
 IRI | `https://w3id.org/cr#resourceObjectStandard`
-Domain(s) |[cr:EquipmentResource](https://w3id.org/cr#EquipmentResource) (c)<br />[cr:MaterialResource](https://w3id.org/cr#MaterialResource) (c)<br />
+Domain(s) |[cr:MaterialResource](https://w3id.org/cr#MaterialResource) (c)<br />[cr:EquipmentResource](https://w3id.org/cr#EquipmentResource) (c)<br />
 Range(s) |[cr:Standard](https://w3id.org/cr#Standard) (c)<br />
 [](resourceOtherStandard)
 ### resourceOtherStandard
 Property | Value
 --- | ---
 IRI | `https://w3id.org/cr#resourceOtherStandard`
-Domain(s) |[cr:MaterialResource](https://w3id.org/cr#MaterialResource) (c)<br />[cr:EquipmentResource](https://w3id.org/cr#EquipmentResource) (c)<br />
+Domain(s) |[cr:EquipmentResource](https://w3id.org/cr#EquipmentResource) (c)<br />[cr:MaterialResource](https://w3id.org/cr#MaterialResource) (c)<br />
 Range(s) |[cr:Standard](https://w3id.org/cr#Standard) (c)<br />
 [](resourceParameterStandard)
 ### resourceParameterStandard
@@ -213,7 +281,7 @@ Range(s) |[cr:Standard](https://w3id.org/cr#Standard) (c)<br />
 Property | Value
 --- | ---
 IRI | `https://w3id.org/cr#resourcePerformanceParameter`
-Domain(s) |[cr:MaterialResource](https://w3id.org/cr#MaterialResource) (c)<br />[cr:EquipmentResource](https://w3id.org/cr#EquipmentResource) (c)<br />
+Domain(s) |[cr:EquipmentResource](https://w3id.org/cr#EquipmentResource) (c)<br />[cr:MaterialResource](https://w3id.org/cr#MaterialResource) (c)<br />
 Range(s) |[cr:PerformanceParameter](https://w3id.org/cr#PerformanceParameter) (c)<br />
 [](resourcePhysicalParameter)
 ### resourcePhysicalParameter
@@ -275,14 +343,14 @@ Range(s) |[xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean) (c)<br />
 Property | Value
 --- | ---
 IRI | `https://w3id.org/cr#aspect`
-Domain(s) |[cr:MaterialResource](https://w3id.org/cr#MaterialResource) (c)<br />[cr:EquipmentResource](https://w3id.org/cr#EquipmentResource) (c)<br />
+Domain(s) |[cr:EquipmentResource](https://w3id.org/cr#EquipmentResource) (c)<br />[cr:MaterialResource](https://w3id.org/cr#MaterialResource) (c)<br />
 Range(s) |[xsd:string](http://www.w3.org/2001/XMLSchema#string) (c)<br />
 [](cam)
 ### cam
 Property | Value
 --- | ---
 IRI | `https://w3id.org/cr#cam`
-Domain(s) |[cr:MaterialResource](https://w3id.org/cr#MaterialResource) (c)<br />[cr:EquipmentResource](https://w3id.org/cr#EquipmentResource) (c)<br />
+Domain(s) |[cr:EquipmentResource](https://w3id.org/cr#EquipmentResource) (c)<br />[cr:MaterialResource](https://w3id.org/cr#MaterialResource) (c)<br />
 Range(s) |[xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean) (c)<br />
 [](category)
 ### category
@@ -380,7 +448,7 @@ Range(s) |[xsd:string](http://www.w3.org/2001/XMLSchema#string) (c)<br />
 Property | Value
 --- | ---
 IRI | `https://w3id.org/cr#material`
-Domain(s) |[cr:MaterialResource](https://w3id.org/cr#MaterialResource) (c)<br />[cr:EquipmentResource](https://w3id.org/cr#EquipmentResource) (c)<br />
+Domain(s) |[cr:EquipmentResource](https://w3id.org/cr#EquipmentResource) (c)<br />[cr:MaterialResource](https://w3id.org/cr#MaterialResource) (c)<br />
 Range(s) |[xsd:string](http://www.w3.org/2001/XMLSchema#string) (c)<br />
 [](measurementrules)
 ### measurement rules
@@ -422,14 +490,14 @@ Range(s) |[xsd:string](http://www.w3.org/2001/XMLSchema#string) (c)<br />
 Property | Value
 --- | ---
 IRI | `https://w3id.org/cr#parameterSymbol2`
-Domain(s) |[cr:Consumption](https://w3id.org/cr#Consumption) (c)<br />[cr:Parameter](https://w3id.org/cr#Parameter) (c)<br />
+Domain(s) |[cr:Parameter](https://w3id.org/cr#Parameter) (c)<br />[cr:Consumption](https://w3id.org/cr#Consumption) (c)<br />
 Range(s) |[xsd:string](http://www.w3.org/2001/XMLSchema#string) (c)<br />
 [](parameterType)
 ### parameterType
 Property | Value
 --- | ---
 IRI | `https://w3id.org/cr#parameterType`
-Domain(s) |[cr:Consumption](https://w3id.org/cr#Consumption) (c)<br />[cr:Parameter](https://w3id.org/cr#Parameter) (c)<br />
+Domain(s) |[cr:Parameter](https://w3id.org/cr#Parameter) (c)<br />[cr:Consumption](https://w3id.org/cr#Consumption) (c)<br />
 Range(s) |[xsd:string](http://www.w3.org/2001/XMLSchema#string) (c)<br />
 [](parameterValue1)
 ### parameterValue1
@@ -527,14 +595,14 @@ Range(s) |[xsd:string](http://www.w3.org/2001/XMLSchema#string) (c)<br />
 Property | Value
 --- | ---
 IRI | `https://w3id.org/cr#use`
-Domain(s) |[cr:MaterialResource](https://w3id.org/cr#MaterialResource) (c)<br />[cr:EquipmentResource](https://w3id.org/cr#EquipmentResource) (c)<br />
+Domain(s) |[cr:EquipmentResource](https://w3id.org/cr#EquipmentResource) (c)<br />[cr:MaterialResource](https://w3id.org/cr#MaterialResource) (c)<br />
 Range(s) |[xsd:string](http://www.w3.org/2001/XMLSchema#string) (c)<br />
 [](yield)
 ### yield
 Property | Value
 --- | ---
 IRI | `https://w3id.org/cr#yield`
-Domain(s) |[cr:MaterialResource](https://w3id.org/cr#MaterialResource) (c)<br />[cr:EquipmentResource](https://w3id.org/cr#EquipmentResource) (c)<br />
+Domain(s) |[cr:EquipmentResource](https://w3id.org/cr#EquipmentResource) (c)<br />[cr:MaterialResource](https://w3id.org/cr#MaterialResource) (c)<br />
 Range(s) |[xsd:string](http://www.w3.org/2001/XMLSchema#string) (c)<br />
 
 ## Named Individuals
