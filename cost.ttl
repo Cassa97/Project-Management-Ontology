@@ -1,0 +1,626 @@
+# baseURI: http://w3id.org/ci
+# imports: http://w3id.org/cr
+
+@prefix ci: <https://w3id.org/ci#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://w3id.org/ci>
+  rdf:type owl:Ontology ;
+  dc:contributor [
+      rdf:type schema:Person ;
+      schema:email <mailto:philipp.hagedorn-n6v@rub.de> ;
+      schema:identifier <https://orcid.org/0000-0002-6249-243X> ;
+      schema:memberOf [
+          schema:identifier <https://www.inf.bi.ruhr-uni-bochum.de/iib/lehrstuhl/mitarbeiter/philipp_hagedorn.html.en> ;
+          schema:name "Politecnico di Milano" ;
+        ] ;
+      schema:name "Claudio Mirarchi" ;
+    ] ;
+  dc:contributor [
+      rdf:type schema:Person ;
+      schema:email <mailto:philipp.hagedorn-n6v@rub.de> ;
+      schema:identifier <https://orcid.org/0000-0002-6249-243X> ;
+      schema:memberOf [
+          schema:identifier <https://www.inf.bi.ruhr-uni-bochum.de/iib/lehrstuhl/mitarbeiter/philipp_hagedorn.html.en> ;
+          schema:name "Ruhr University Bochum" ;
+        ] ;
+      schema:name "Philipp Hagedorn" ;
+    ] ;
+  dc:created "2024-12-12"^^xsd:date ;
+  dc:creator [
+      rdf:type schema:Person ;
+      schema:email <mailto:jacopo.cassandro@polimi.it> ;
+      schema:identifier <https://orcid.org/0000-0001-6058-7614> ;
+      schema:memberOf [
+          schema:identifier <https://www.inf.bi.ruhr-uni-bochum.de/iib/lehrstuhl/mitarbeiter/sven_zentgraf.html.en> ;
+          schema:name "Politecnico di Milano" ;
+        ] ;
+      schema:name "Jacopo Cassandro" ;
+    ] ;
+  dc:description "The Construction Resources (CR) Ontology is based on concepts and principles . "@en ;
+  dc:license <https://creativecommons.org/licenses/by/4.0/> ;
+  dc:rights "Copyright 2024 by DABC, PoliMi" ;
+  dc:source <https://linkedbuildingdata.net/ldac2024/files/papers/LDAC2024_Camera_8.pdf> ;
+  dc:title "The Construction Resources (CR) Ontology"@en ;
+  vann:preferredNamespacePrefix "cr" ;
+  vann:preferredNamespaceUri <http://w3id.org/ci#> ;
+  owl:imports <http://w3id.org/cr> ;
+  owl:versionInfo "1.0" ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+ci:Activity
+  rdf:type owl:Class ;
+  rdfs:label "Activity" ;
+  rdfs:subClassOf owl:Thing ;
+.
+ci:Activity_ConstructionWork
+  rdf:type owl:Class ;
+  rdfs:label "Activity_ConstructionWork" ;
+  rdfs:subClassOf ci:Activity ;
+  rdfs:subClassOf ci:ConstructionWork ;
+  owl:disjointWith ci:Activity_ProductWork ;
+  owl:disjointWith ci:Activity_TemporaryWork ;
+.
+ci:Activity_ProductWork
+  rdf:type owl:Class ;
+  rdfs:label "Activity_ProductWork" ;
+  rdfs:subClassOf ci:Activity ;
+  rdfs:subClassOf ci:ProductWork ;
+  owl:disjointWith ci:Activity_ConstructionWork ;
+  owl:disjointWith ci:Activity_TemporaryWork ;
+.
+ci:Activity_TemporaryWork
+  rdf:type owl:Class ;
+  rdfs:label "Activity_TemporaryWork" ;
+  rdfs:subClassOf ci:Activity ;
+  rdfs:subClassOf ci:TemporaryWorks ;
+  owl:disjointWith ci:Activity_ConstructionWork ;
+  owl:disjointWith ci:Activity_ProductWork ;
+.
+ci:Assignment
+  rdf:type owl:Class ;
+  rdfs:label "Assignment" ;
+  rdfs:subClassOf owl:Thing ;
+.
+ci:Block
+  rdf:type ci:ObjectType ;
+  rdfs:label "block" ;
+.
+ci:ConstructionWork
+  rdf:type owl:Class ;
+  rdfs:label "ConstructionWork" ;
+  rdfs:subClassOf ci:ProductionResult ;
+  owl:disjointWith ci:ProductWork ;
+  owl:disjointWith ci:TemporaryWorks ;
+.
+ci:DimensionParameter
+  rdf:type owl:Class ;
+  rdfs:label "DimensionParameter" ;
+  rdfs:subClassOf ci:Parameter ;
+  owl:disjointWith ci:PerformanceParameter ;
+  owl:disjointWith ci:PhysicalParameter ;
+.
+ci:ObjectType
+  rdf:type owl:Class ;
+  rdfs:label "object type" ;
+  rdfs:subClassOf owl:Thing ;
+.
+ci:Parameter
+  rdf:type owl:Class ;
+  rdfs:label "Parameter" ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass qudt:Unit ;
+      owl:onProperty ci:hasUnit ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass ci:Standard ;
+      owl:onProperty ci:resourceParameterStandard ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:integer ;
+      owl:onProperty ci:parameterValue1 ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:integer ;
+      owl:onProperty ci:parameterValue2 ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:parameterSimbol1 ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:parameterSimbol2 ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:parameterType ;
+    ] ;
+.
+ci:PerformanceParameter
+  rdf:type owl:Class ;
+  rdfs:label "PerformanceParameter" ;
+  rdfs:subClassOf ci:Parameter ;
+  owl:disjointWith ci:DimensionParameter ;
+  owl:disjointWith ci:PhysicalParameter ;
+.
+ci:PhysicalParameter
+  rdf:type owl:Class ;
+  rdfs:label "PhysicalParameter" ;
+  rdfs:subClassOf ci:Parameter ;
+  owl:disjointWith ci:DimensionParameter ;
+  owl:disjointWith ci:PerformanceParameter ;
+.
+ci:ProductWork
+  rdf:type owl:Class ;
+  rdfs:label "ProductWork" ;
+  rdfs:subClassOf ci:ProductionResult ;
+  owl:disjointWith ci:ConstructionWork ;
+  owl:disjointWith ci:TemporaryWorks ;
+.
+ci:ProductionResult
+  rdf:type owl:Class ;
+  rdfs:label "ProductionResult" ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass ci:Standard ;
+      owl:onProperty ci:resourceObjectStandard ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:descriptionDetail ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:type ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:keywords ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:function ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:use ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:integer ;
+      owl:onProperty ci:quantityUnitOfMeasure ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:category ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:code ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:descriptionGeneral ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:family ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:gender ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:object ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+.
+ci:Standard
+  rdf:type owl:Class ;
+  rdfs:label "Standard" ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:integer ;
+      owl:onProperty ci:standardNumber ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:integer ;
+      owl:onProperty ci:standardPart ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:integer ;
+      owl:onProperty ci:standardYear ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:standardBody ;
+    ] ;
+.
+ci:TemporaryWorks
+  rdf:type owl:Class ;
+  rdfs:label "TemporaryWorks" ;
+  rdfs:subClassOf ci:ProductionResult ;
+  owl:disjointWith ci:ConstructionWork ;
+  owl:disjointWith ci:ProductWork ;
+.
+ci:Work
+  rdf:type owl:Class ;
+  rdfs:label "Work" ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:boolean ;
+      owl:onProperty ci:cam ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
+      owl:onClass ci:DimensionParameter ;
+      owl:onProperty ci:resourceDimensionParameter ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
+      owl:onClass ci:PerformanceParameter ;
+      owl:onProperty ci:resourcePerformanceParameter ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
+      owl:onClass ci:PhysicalParameter ;
+      owl:onProperty ci:resourcePhysicalParameter ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:law ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
+      owl:onClass ci:Standard ;
+      owl:onProperty ci:resourceOtherStandard ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:aspect ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:finishing ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:material ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+.
+ci:Work_ConstructionWork
+  rdf:type owl:Class ;
+  rdfs:label "Work_ConstructionWork" ;
+  rdfs:subClassOf ci:ConstructionWork ;
+  rdfs:subClassOf ci:Work ;
+  owl:disjointWith ci:Work_ProductWork ;
+  owl:disjointWith ci:Work_TemporaryWork ;
+.
+ci:Work_ProductWork
+  rdf:type owl:Class ;
+  rdfs:label "Work_ProductWork" ;
+  rdfs:subClassOf ci:ProductWork ;
+  rdfs:subClassOf ci:Work ;
+  owl:disjointWith ci:Work_ConstructionWork ;
+  owl:disjointWith ci:Work_TemporaryWork ;
+.
+ci:Work_TemporaryWork
+  rdf:type owl:Class ;
+  rdfs:label "Work_TemporaryWork" ;
+  rdfs:subClassOf ci:TemporaryWorks ;
+  rdfs:subClassOf ci:Work ;
+  owl:disjointWith ci:Work_ConstructionWork ;
+  owl:disjointWith ci:Work_ProductWork ;
+.
+ci:aspect
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ci:Work ;
+  rdfs:label "aspect" ;
+  rdfs:range xsd:string ;
+.
+ci:cam
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ci:Work ;
+  rdfs:label "cam" ;
+  rdfs:range xsd:boolean ;
+.
+ci:category
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ci:ProductionResult ;
+  rdfs:label "category" ;
+  rdfs:range xsd:string ;
+.
+ci:code
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ci:ProductionResult ;
+  rdfs:label "code" ;
+  rdfs:range xsd:string ;
+.
+ci:descriptionDetail
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ci:ProductionResult ;
+  rdfs:label "descriptionDetail" ;
+  rdfs:range xsd:string ;
+.
+ci:descriptionGeneral
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ci:ProductionResult ;
+  rdfs:label "descriptionGeneral" ;
+  rdfs:range xsd:string ;
+.
+ci:escluded
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ci:ProductionResult ;
+  rdfs:label "escluded" ;
+  rdfs:range xsd:string ;
+.
+ci:family
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ci:ProductionResult ;
+  rdfs:label "family" ;
+  rdfs:range xsd:string ;
+.
+ci:finishing
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ci:Work ;
+  rdfs:label "finishing" ;
+  rdfs:range xsd:string ;
+.
+ci:function
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ci:ProductionResult ;
+  rdfs:label "function" ;
+  rdfs:range xsd:string ;
+.
+ci:gender
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ci:ProductionResult ;
+  rdfs:label "gender" ;
+  rdfs:range xsd:string ;
+.
+ci:hasUnit
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain ci:Parameter ;
+  rdfs:domain ci:ProductionResult ;
+  rdfs:label "hasUnit" ;
+  rdfs:range qudt:Unit ;
+.
+ci:included
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ci:ProductionResult ;
+  rdfs:label "included" ;
+  rdfs:range xsd:string ;
+.
+ci:keywords
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ci:ProductionResult ;
+  rdfs:label "keywords" ;
+  rdfs:range xsd:string ;
+.
+ci:law
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ci:Work ;
+  rdfs:label "law" ;
+  rdfs:range xsd:string ;
+.
+ci:material
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ci:Work ;
+  rdfs:label "material" ;
+  rdfs:range xsd:string ;
+.
+ci:measurementRules
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ci:ProductionResult ;
+  rdfs:label "measurementRules" ;
+  rdfs:range xsd:string ;
+.
+ci:object
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ci:ProductionResult ;
+  rdfs:label "object" ;
+  rdfs:range xsd:string ;
+.
+ci:omniclass
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ci:ProductionResult ;
+  rdfs:label "omniclass" ;
+  rdfs:range xsd:string ;
+.
+ci:parameterSimbol1
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ci:Parameter ;
+  rdfs:label "parameterSimbol1" ;
+  rdfs:range xsd:string ;
+.
+ci:parameterSimbol2
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ci:Parameter ;
+  rdfs:label "parameterSimbol2" ;
+  rdfs:range xsd:string ;
+.
+ci:parameterType
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ci:Parameter ;
+  rdfs:label "parameterType" ;
+  rdfs:range xsd:string ;
+.
+ci:parameterValue1
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ci:Parameter ;
+  rdfs:label "parameterValue1" ;
+  rdfs:range xsd:integer ;
+.
+ci:parameterValue2
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ci:Parameter ;
+  rdfs:label "parameterValue2" ;
+  rdfs:range xsd:integer ;
+.
+ci:quantityUnitOfMeasure
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ci:ProductionResult ;
+  rdfs:label "quantityUnitOfMeasure" ;
+  rdfs:range xsd:integer ;
+.
+ci:resourceDimensionParameter
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain ci:Work ;
+  rdfs:label "resourceDimensionParameter" ;
+  rdfs:range ci:DimensionParameter ;
+.
+ci:resourceObjectStandard
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain ci:ProductionResult ;
+  rdfs:label "resourceObjectStandard" ;
+  rdfs:range ci:Standard ;
+.
+ci:resourceOtherStandard
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain ci:ProductionResult ;
+  rdfs:label "resourceOtherStandard" ;
+  rdfs:range ci:Standard ;
+.
+ci:resourceParameterStandard
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain ci:Parameter ;
+  rdfs:label "resourceParameterStandard" ;
+  rdfs:range ci:Standard ;
+.
+ci:resourcePerformanceParameter
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain ci:Work ;
+  rdfs:label "resourcePerformanceParameter" ;
+  rdfs:range ci:PerformanceParameter ;
+.
+ci:resourcePhysicalParameter
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain ci:Work ;
+  rdfs:label "resourcePhysicalParameter" ;
+  rdfs:range ci:PhysicalParameter ;
+.
+ci:standardBody
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ci:Standard ;
+  rdfs:label "standardBody" ;
+  rdfs:range xsd:string ;
+.
+ci:standardNumber
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ci:Standard ;
+  rdfs:label "standardNumber" ;
+  rdfs:range xsd:integer ;
+.
+ci:standardPart
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ci:Standard ;
+  rdfs:label "standardPart" ;
+  rdfs:range xsd:integer ;
+.
+ci:standardYear
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ci:Standard ;
+  rdfs:label "standardYear" ;
+  rdfs:range xsd:integer ;
+.
+ci:techSpecs
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ci:ProductionResult ;
+  rdfs:label "tech specs" ;
+  rdfs:range xsd:string ;
+.
+ci:type
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ci:ProductionResult ;
+  rdfs:label "type" ;
+  rdfs:range xsd:string ;
+.
+ci:uniclass
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ci:ProductionResult ;
+  rdfs:label "uniclass" ;
+  rdfs:range xsd:string ;
+.
+ci:uniformat
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ci:ProductionResult ;
+  rdfs:label "uniformat" ;
+  rdfs:range xsd:string ;
+.
+ci:use
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ci:ProductionResult ;
+  rdfs:label "use" ;
+  rdfs:range xsd:string ;
+.
