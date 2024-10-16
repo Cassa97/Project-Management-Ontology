@@ -301,7 +301,7 @@
         <dt>Created</dt>
         <dd>2024-12-12</dd>
         <dt>Version Information</dt>
-        <dd>1.0</dd>
+        <dd>Created with TopBraid Composer</dd>
         <dt>License &amp; Rights</dt>
         <dd>
             <a href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a><br />
@@ -345,6 +345,7 @@
         <li><a href="#PerformanceParameter">PerformanceParameter</a></li>
         <li><a href="#PhysicalParameter">PhysicalParameter</a></li>
         <li><a href="#Resource">Resource</a></li>
+        <li><a href="#objecttype">object type</a></li>
     </ul>
     <div class="entity class" id="Assignment">
         <h3>Assignment<sup title="class" class="sup-c">c</sup></h3>
@@ -383,7 +384,12 @@
             <tr>
                 <th>In domain of</th>
                 <td>
+                    <a href="https://w3id.org/cr#value1">cr:value1</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#simbol1">cr:simbol1</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#parameterStandard">cr:parameterStandard</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="https://w3id.org/cr#parameter">cr:parameter</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#value2">cr:value2</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#simbol2">cr:simbol2</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -405,6 +411,33 @@
                 <th>Super-classes</th>
                 <td>
                     <a href="https://w3id.org/cr#Resource">cr:Resource</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="https://w3id.org/cr#resourcePhysicalParameter">cr:resourcePhysicalParameter</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 10 <a href="https://w3id.org/cr#PhysicalParameter">cr:PhysicalParameter</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cr#material">cr:material</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="https://w3id.org/cr#function">cr:function</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 5<br/>
+                    <a href="https://w3id.org/cr#otherStandard">cr:otherStandard</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 5<br/>
+                    <a href="https://w3id.org/cr#use">cr:use</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 5<br/>
+                    <a href="https://w3id.org/cr#resourcePerformanceParameter">cr:resourcePerformanceParameter</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 10 <a href="https://w3id.org/cr#PerformanceParameter">cr:PerformanceParameter</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cr#resourceDimension">cr:resourceDimension</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 10 <a href="https://w3id.org/cr#Dimension">cr:Dimension</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="https://w3id.org/cr#resourcePhysicalParameter">cr:resourcePhysicalParameter</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/cr#resourceDimension">cr:resourceDimension</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/cr#yield">cr:yield</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#resourcePerformanceParameter">cr:resourcePerformanceParameter</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/cr#function">cr:function</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#otherStandard">cr:otherStandard</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#material">cr:material</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#aspect">cr:aspect</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#CAM">cr:CAM</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#use">cr:use</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                 </td>
             </tr>
         </table>
@@ -438,9 +471,50 @@
                 </td>
             </tr>
             <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="https://w3id.org/cr#resourceDimension">cr:resourceDimension</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 10 <a href="https://w3id.org/cr#Dimension">cr:Dimension</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cr#furnishing">cr:furnishing</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 5<br/>
+                    <a href="https://w3id.org/cr#finishing">cr:finishing</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 5<br/>
+                    <a href="https://w3id.org/cr#use">cr:use</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 5<br/>
+                    <a href="https://w3id.org/cr#resourcePerformanceParameter">cr:resourcePerformanceParameter</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 10 <a href="https://w3id.org/cr#PerformanceParameter">cr:PerformanceParameter</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cr#CAM">cr:CAM</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="https://w3id.org/cr#resourcePhysicalParameter">cr:resourcePhysicalParameter</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 10 <a href="https://w3id.org/cr#PhysicalParameter">cr:PhysicalParameter</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cr#function">cr:function</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 5<br/>
+                    <a href="https://w3id.org/cr#material">cr:material</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="https://w3id.org/cr#otherStandard">cr:otherStandard</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 5<br/>
+                </td>
+            </tr>
+            <tr>
                 <th>In domain of</th>
                 <td>
+                    <a href="https://w3id.org/cr#function">cr:function</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#resourcePerformanceParameter">cr:resourcePerformanceParameter</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/cr#yield">cr:yield</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#otherStandard">cr:otherStandard</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#material">cr:material</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="https://w3id.org/cr#CAM">cr:CAM</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#furnishing">cr:furnishing</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#aspect">cr:aspect</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#finishing">cr:finishing</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#use">cr:use</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#resourcePhysicalParameter">cr:resourcePhysicalParameter</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/cr#resourceDimension">cr:resourceDimension</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="objecttype">
+        <h3>object type<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/cr#ObjectType</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -462,6 +536,17 @@
                 <th>Restrictions</th>
                 <td>
                     <a href="https://w3id.org/cr#resourcePerformanceParameter">cr:resourcePerformanceParameter</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 10<br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="https://w3id.org/cr#value2">cr:value2</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#simbol1">cr:simbol1</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#parameter">cr:parameter</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#simbol2">cr:simbol2</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#value1">cr:value1</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#parameterStandard">cr:parameterStandard</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -492,6 +577,17 @@
                 </td>
             </tr>
             <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="https://w3id.org/cr#simbol1">cr:simbol1</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#parameterStandard">cr:parameterStandard</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#value2">cr:value2</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#parameter">cr:parameter</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#simbol2">cr:simbol2</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#value1">cr:value1</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                </td>
+            </tr>
+            <tr>
                 <th>In range of</th>
                 <td>
                     <a href="https://w3id.org/cr#resourcePhysicalParameter">cr:resourcePhysicalParameter</a><sup class="sup-op" title="object property">op</sup><br/>
@@ -515,26 +611,17 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="https://w3id.org/cr#included">cr:included</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">min</span> 1<br/>
-                    <a href="https://w3id.org/cr#quantityUnifOfMeasure">cr:quantityUnifOfMeasure</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="https://w3id.org/cr#use">cr:use</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 10<br/>
-                    <a href="https://w3id.org/cr#CAM">cr:CAM</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="https://w3id.org/cr#resourceDimension">cr:resourceDimension</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 10 <a href="https://w3id.org/cr#Dimension">cr:Dimension</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/cr#escluded">cr:escluded</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">min</span> 1<br/>
-                    <a href="https://w3id.org/cr#objectStandard">cr:objectStandard</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 10<br/>
+                    <a href="https://w3id.org/cr#objectStandard">cr:objectStandard</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
                     <a href="https://w3id.org/cr#object">cr:object</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="https://w3id.org/cr#otherStandard">cr:otherStandard</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 10<br/>
-                    <a href="https://w3id.org/cr#keywords">cr:keywords</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 10<br/>
-                    <a href="https://w3id.org/cr#law">cr:law</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 10<br/>
-                    <a href="https://w3id.org/cr#furnishing">cr:furnishing</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 10<br/>
                     <a href="https://w3id.org/cr#techSpecs">cr:techSpecs</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">min</span> 1<br/>
-                    <a href="https://w3id.org/cr#type">cr:type</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="https://w3id.org/cr#aspect">cr:aspect</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 10<br/>
-                    <a href="https://w3id.org/cr#finishing">cr:finishing</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 10<br/>
-                    <a href="https://w3id.org/cr#material">cr:material</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
                     <a href="https://w3id.org/cr#measurementRules">cr:measurementRules</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">min</span> 1<br/>
-                    <a href="https://w3id.org/cr#function">cr:function</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 10<br/>
-                    <a href="https://w3id.org/cr#unitOfMeasure">cr:unitOfMeasure</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="https://w3id.org/cr#quantityUnifOfMeasure">cr:quantityUnifOfMeasure</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="https://w3id.org/cr#aspect">cr:aspect</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 5<br/>
+                    <a href="https://w3id.org/cr#escluded">cr:escluded</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">min</span> 1<br/>
+                    <a href="https://w3id.org/cr#law">cr:law</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 10<br/>
+                    <a href="https://w3id.org/cr#included">cr:included</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">min</span> 1<br/>
+                    <a href="https://w3id.org/cr#type">cr:type</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="https://w3id.org/cr#keywords">cr:keywords</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 10<br/>
                 </td>
             </tr>
             <tr>
@@ -548,27 +635,19 @@
             <tr>
                 <th>In domain of</th>
                 <td>
+                    <a href="https://w3id.org/cr#omniclass">cr:omniclass</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#uniformat">cr:uniformat</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#keywords">cr:keywords</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#uniclass">cr:uniclass</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#included">cr:included</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#techSpecs">cr:techSpecs</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#objectStandard">cr:objectStandard</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="https://w3id.org/cr#escluded">cr:escluded</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#object">cr:object</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#law">cr:law</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#measurementRules">cr:measurementRules</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="https://w3id.org/cr#type">cr:type</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="https://w3id.org/cr#quantityUnifOfMeasure">cr:quantityUnifOfMeasure</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/cr#resourcePerformanceParameter">cr:resourcePerformanceParameter</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/cr#objectStandard">cr:objectStandard</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/cr#object">cr:object</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/cr#unitOfMeasure">cr:unitOfMeasure</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/cr#resourceDimension">cr:resourceDimension</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/cr#finishing">cr:finishing</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/cr#resourcePhysicalParameter">cr:resourcePhysicalParameter</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/cr#furnishing">cr:furnishing</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/cr#law">cr:law</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/cr#use">cr:use</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/cr#aspect">cr:aspect</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/cr#techSpecs">cr:techSpecs</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/cr#measurementRules">cr:measurementRules</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/cr#function">cr:function</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/cr#keywords">cr:keywords</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/cr#otherStandard">cr:otherStandard</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/cr#material">cr:material</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/cr#included">cr:included</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                 </td>
             </tr>
         </table>
@@ -591,7 +670,8 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="https://w3id.org/cr#Resource">cr:Resource</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/cr#EquipmentResource">cr:EquipmentResource</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/cr#MaterialResource">cr:MaterialResource</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -612,7 +692,8 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="https://w3id.org/cr#Resource">cr:Resource</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/cr#MaterialResource">cr:MaterialResource</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/cr#EquipmentResource">cr:EquipmentResource</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -633,7 +714,8 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="https://w3id.org/cr#Resource">cr:Resource</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/cr#EquipmentResource">cr:EquipmentResource</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/cr#MaterialResource">cr:MaterialResource</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -662,13 +744,21 @@
         <li><a href="#measurementrules">measurement rules</a></li>
         <li><a href="#object">object</a></li>
         <li><a href="#objectStandard">objectStandard</a></li>
+        <li><a href="#omniclass">omniclass</a></li>
         <li><a href="#otherstandard">other standard</a></li>
         <li><a href="#parameter">parameter</a></li>
+        <li><a href="#parameterStandard">parameterStandard</a></li>
         <li><a href="#quantityunifofmeasure">quantity unif of measure</a></li>
+        <li><a href="#simbol1">simbol1</a></li>
+        <li><a href="#simbol2">simbol2</a></li>
         <li><a href="#techspecs">tech specs</a></li>
         <li><a href="#type">type</a></li>
-        <li><a href="#unitOfMeasure">unitOfMeasure</a></li>
+        <li><a href="#uniclass">uniclass</a></li>
+        <li><a href="#uniformat">uniformat</a></li>
         <li><a href="#use">use</a></li>
+        <li><a href="#value1">value1</a></li>
+        <li><a href="#value2">value2</a></li>
+        <li><a href="#yield">yield</a></li>
     </ul>
     <div class="entity property" id="CAM">
         <h3>CAM<sup title="datatype property" class="sup-dp">dp</sup></h3>
@@ -681,6 +771,7 @@
                 <th>Domain(s)</th>
                 <td>
                     <a href="https://w3id.org/cr#MaterialResource">cr:MaterialResource</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/cr#EquipmentResource">cr:EquipmentResource</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -701,7 +792,8 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="https://w3id.org/cr#Resource">cr:Resource</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/cr#MaterialResource">cr:MaterialResource</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/cr#EquipmentResource">cr:EquipmentResource</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -743,7 +835,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="https://w3id.org/cr#Resource">cr:Resource</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/cr#MaterialResource">cr:MaterialResource</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -764,7 +856,8 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="https://w3id.org/cr#Resource">cr:Resource</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/cr#EquipmentResource">cr:EquipmentResource</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/cr#MaterialResource">cr:MaterialResource</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -785,7 +878,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="https://w3id.org/cr#Resource">cr:Resource</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/cr#MaterialResource">cr:MaterialResource</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -869,7 +962,8 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="https://w3id.org/cr#Resource">cr:Resource</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/cr#EquipmentResource">cr:EquipmentResource</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/cr#MaterialResource">cr:MaterialResource</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -943,6 +1037,27 @@
             </tr>
         </table>
     </div>
+    <div class="entity property" id="omniclass">
+        <h3>omniclass<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/cr#omniclass</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/cr#Resource">cr:Resource</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
     <div class="entity property" id="otherstandard">
         <h3>other standard<sup title="datatype property" class="sup-dp">dp</sup></h3>
         <table>
@@ -953,7 +1068,8 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="https://w3id.org/cr#Resource">cr:Resource</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/cr#EquipmentResource">cr:EquipmentResource</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/cr#MaterialResource">cr:MaterialResource</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -975,6 +1091,31 @@
                 <th>Domain(s)</th>
                 <td>
                     <a href="https://w3id.org/cr#Dimension">cr:Dimension</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/cr#PerformanceParameter">cr:PerformanceParameter</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/cr#PhysicalParameter">cr:PhysicalParameter</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="parameterStandard">
+        <h3>parameterStandard<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/cr#parameterStandard</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/cr#PhysicalParameter">cr:PhysicalParameter</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/cr#Dimension">cr:Dimension</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/cr#PerformanceParameter">cr:PerformanceParameter</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1002,6 +1143,52 @@
                 <th>Range(s)</th>
                 <td>
                     <a href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="simbol1">
+        <h3>simbol1<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/cr#simbol1</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/cr#PhysicalParameter">cr:PhysicalParameter</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/cr#Dimension">cr:Dimension</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/cr#PerformanceParameter">cr:PerformanceParameter</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="simbol2">
+        <h3>simbol2<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/cr#simbol2</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/cr#PerformanceParameter">cr:PerformanceParameter</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/cr#PhysicalParameter">cr:PhysicalParameter</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/cr#Dimension">cr:Dimension</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
@@ -1048,12 +1235,33 @@
             </tr>
         </table>
     </div>
-    <div class="entity property" id="unitOfMeasure">
-        <h3>unitOfMeasure<sup title="datatype property" class="sup-dp">dp</sup></h3>
+    <div class="entity property" id="uniclass">
+        <h3>uniclass<sup title="datatype property" class="sup-dp">dp</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>https://w3id.org/cr#unitOfMeasure</code></td>
+                <td><code>https://w3id.org/cr#uniclass</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/cr#Resource">cr:Resource</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="uniformat">
+        <h3>uniformat<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/cr#uniformat</code></td>
             </tr>
             <tr>
                 <th>Domain(s)</th>
@@ -1079,7 +1287,76 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="https://w3id.org/cr#Resource">cr:Resource</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/cr#MaterialResource">cr:MaterialResource</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/cr#EquipmentResource">cr:EquipmentResource</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="value1">
+        <h3>value1<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/cr#value1</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/cr#PhysicalParameter">cr:PhysicalParameter</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/cr#Dimension">cr:Dimension</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/cr#PerformanceParameter">cr:PerformanceParameter</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="value2">
+        <h3>value2<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/cr#value2</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/cr#PhysicalParameter">cr:PhysicalParameter</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/cr#Dimension">cr:Dimension</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/cr#PerformanceParameter">cr:PerformanceParameter</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="yield">
+        <h3>yield<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/cr#yield</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/cr#MaterialResource">cr:MaterialResource</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/cr#EquipmentResource">cr:EquipmentResource</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
