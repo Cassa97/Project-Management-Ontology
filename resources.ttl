@@ -2,6 +2,7 @@
 
 @prefix cr: <https://w3id.org/cr#> .
 @prefix dc: <http://purl.org/dc/terms/> .
+@prefix dtc: <https://dtc-ontology.cms.ed.tum.de/ontology/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -15,11 +16,11 @@
   rdf:type owl:Ontology ;
   dc:contributor [
       rdf:type schema:Person ;
-      schema:email <mailto:philipp.hagedorn-n6v@rub.de> ;
-      schema:identifier <https://orcid.org/0000-0002-6249-243X> ;
+      schema:email <mailto:claudio.mirarchi@polimi.it> ;
+      schema:identifier <https://orcid.org/0000-0002-9288-8662> ;
       schema:memberOf [
-          schema:identifier <https://www.inf.bi.ruhr-uni-bochum.de/iib/lehrstuhl/mitarbeiter/philipp_hagedorn.html.en> ;
-          schema:name "Politecnico di Milano" ;
+          schema:identifier <https://www.dabc.polimi.it/persona/claudio-mirarchi/> ;
+          schema:name "Politecnico di Milano, Dipartimento ABC" ;
         ] ;
       schema:name "Claudio Mirarchi" ;
     ] ;
@@ -29,7 +30,7 @@
       schema:identifier <https://orcid.org/0000-0002-6249-243X> ;
       schema:memberOf [
           schema:identifier <https://www.inf.bi.ruhr-uni-bochum.de/iib/lehrstuhl/mitarbeiter/philipp_hagedorn.html.en> ;
-          schema:name "Ruhr University Bochum" ;
+          schema:name "Ruhr University Bochum, Computing in Engineering" ;
         ] ;
       schema:name "Philipp Hagedorn" ;
     ] ;
@@ -37,9 +38,9 @@
   dc:creator [
       rdf:type schema:Person ;
       schema:email <mailto:jacopo.cassandro@polimi.it> ;
-      schema:identifier <https://orcid.org/0000-0001-6058-7614> ;
+      schema:identifier <https://orcid.org/0000-0002-1487-8178> ;
       schema:memberOf [
-          schema:identifier <https://www.inf.bi.ruhr-uni-bochum.de/iib/lehrstuhl/mitarbeiter/sven_zentgraf.html.en> ;
+          schema:identifier <https://www.dabc.polimi.it/persona/jacopo-cassandro/> ;
           schema:name "Politecnico di Milano" ;
         ] ;
       schema:name "Jacopo Cassandro" ;
@@ -51,8 +52,12 @@
   dc:title "The Construction Resources (CR) Ontology"@en ;
   vann:preferredNamespacePrefix "cr" ;
   vann:preferredNamespaceUri <http://w3id.org/cr#> ;
-  owl:versionInfo "1.0" ;
+  owl:versionInfo "0.1" ;
   owl:versionInfo "Created with TopBraid Composer" ;
+.
+<https://dtc-ontology.cms.ed.tum.de/ontology#ResourceApplication>
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf cr:ResourceToTaskAssignment ;
 .
 cr:Assignment
   rdf:type owl:Class ;
@@ -95,13 +100,13 @@ cr:Consumption
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onDataRange xsd:string ;
-      owl:onProperty cr:parameterSimbol1 ;
+      owl:onProperty cr:parameterSymbol1 ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onDataRange xsd:string ;
-      owl:onProperty cr:parameterSimbol2 ;
+      owl:onProperty cr:parameterSymbol2 ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -137,7 +142,7 @@ cr:EquipmentResource
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
       owl:onClass cr:DimensionParameter ;
-      owl:onProperty cr:resourceDimension ;
+      owl:onProperty cr:resourceDimensionParameter ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -189,6 +194,7 @@ cr:EquipmentResource
     ] ;
   owl:disjointWith cr:LabourResource ;
   owl:disjointWith cr:MaterialResource ;
+  owl:equivalentClass <https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedEquipment> ;
 .
 cr:LabourResource
   rdf:type owl:Class ;
@@ -202,6 +208,7 @@ cr:LabourResource
     ] ;
   owl:disjointWith cr:EquipmentResource ;
   owl:disjointWith cr:MaterialResource ;
+  owl:equivalentClass <https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedWorker> ;
 .
 cr:MaterialResource
   rdf:type owl:Class ;
@@ -217,7 +224,7 @@ cr:MaterialResource
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
       owl:onClass cr:DimensionParameter ;
-      owl:onProperty cr:resourceDimension ;
+      owl:onProperty cr:resourceDimensionParameter ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -275,6 +282,7 @@ cr:MaterialResource
     ] ;
   owl:disjointWith cr:EquipmentResource ;
   owl:disjointWith cr:LabourResource ;
+  owl:equivalentClass <https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedMaterial> ;
 .
 cr:ObjectType
   rdf:type owl:Class ;
@@ -313,13 +321,13 @@ cr:Parameter
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onDataRange xsd:string ;
-      owl:onProperty cr:parameterSimbol1 ;
+      owl:onProperty cr:parameterSymbol1 ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onDataRange xsd:string ;
-      owl:onProperty cr:parameterSimbol2 ;
+      owl:onProperty cr:parameterSymbol2 ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -348,12 +356,8 @@ cr:Resource
   rdfs:label "Resource" ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty cr:descriptionGeneral ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
       owl:onProperty cr:descriptionDetail ;
     ] ;
   rdfs:subClassOf [
@@ -382,8 +386,8 @@ cr:Resource
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:onDataRange qudt:Unit ;
-      owl:onProperty cr:code ;
+      owl:onClass qudt:Unit ;
+      owl:onProperty cr:hasUnit ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
@@ -396,6 +400,18 @@ cr:Resource
       rdf:type owl:Restriction ;
       owl:onDataRange xsd:string ;
       owl:onProperty cr:category ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty cr:code ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty cr:descriptionGeneral ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
@@ -416,6 +432,17 @@ cr:Resource
       owl:onProperty cr:object ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
+  owl:equivalentClass <https://dtc-ontology.cms.ed.tum.de/ontology#Resource> ;
+.
+cr:ResourceToCostItemAssignment
+  rdf:type owl:Class ;
+  rdfs:label "Resource to cost item assignment" ;
+  rdfs:subClassOf cr:Assignment ;
+.
+cr:ResourceToTaskAssignment
+  rdf:type owl:Class ;
+  rdfs:label "Resource to task assignment" ;
+  rdfs:subClassOf cr:Assignment ;
 .
 cr:Standard
   rdf:type owl:Class ;
@@ -591,18 +618,18 @@ cr:omniclass
   rdfs:label "omniclass" ;
   rdfs:range xsd:string ;
 .
-cr:parameterSimbol1
+cr:parameterSymbol1
   rdf:type owl:DatatypeProperty ;
   rdfs:domain cr:Consumption ;
   rdfs:domain cr:Parameter ;
-  rdfs:label "parameterSimbol1" ;
+  rdfs:label "parameterSymbol1" ;
   rdfs:range xsd:string ;
 .
-cr:parameterSimbol2
+cr:parameterSymbol2
   rdf:type owl:DatatypeProperty ;
   rdfs:domain cr:Consumption ;
   rdfs:domain cr:Parameter ;
-  rdfs:label "parameterSimbol2" ;
+  rdfs:label "parameterSymbol2" ;
   rdfs:range xsd:string ;
 .
 cr:parameterType
@@ -651,11 +678,11 @@ cr:resourceConsumption
   rdfs:label "resourceConsumption" ;
   rdfs:range cr:Consumption ;
 .
-cr:resourceDimension
+cr:resourceDimensionParameter
   rdf:type owl:ObjectProperty ;
   rdfs:domain cr:EquipmentResource ;
   rdfs:domain cr:MaterialResource ;
-  rdfs:label "resourceDimension" ;
+  rdfs:label "resourceDimensionParameter" ;
   rdfs:range cr:DimensionParameter ;
 .
 cr:resourceObjectStandard
