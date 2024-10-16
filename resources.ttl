@@ -103,52 +103,12 @@ cr:Consumption
       owl:onProperty cr:parameterType ;
     ] ;
 .
-cr:Dimension
+cr:DimensionParameter
   rdf:type owl:Class ;
-  rdfs:label "Dimension" ;
-  rdfs:subClassOf owl:Thing ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass cr:Standard ;
-      owl:onProperty cr:resourceParameterStandard ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:integer ;
-      owl:onProperty cr:parameterValue1 ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:integer ;
-      owl:onProperty cr:parameterValue2 ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:string ;
-      owl:onProperty cr:parameterSimbol1 ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:string ;
-      owl:onProperty cr:parameterSimbol2 ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:string ;
-      owl:onProperty cr:parameterType ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
-      owl:onClass cr:Dimension ;
-      owl:onProperty cr:resourceDimension ;
-    ] ;
+  rdfs:label "DimensionParameter" ;
+  rdfs:subClassOf cr:Parameter ;
+  owl:disjointWith cr:PerformanceParameter ;
+  owl:disjointWith cr:PhysicalParameter ;
 .
 cr:EquipmentResource
   rdf:type owl:Class ;
@@ -169,7 +129,7 @@ cr:EquipmentResource
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
-      owl:onClass cr:Dimension ;
+      owl:onClass cr:DimensionParameter ;
       owl:onProperty cr:resourceDimension ;
     ] ;
   rdfs:subClassOf [
@@ -220,11 +180,21 @@ cr:EquipmentResource
       owl:onProperty cr:material ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
+  owl:disjointWith cr:LabourResource ;
+  owl:disjointWith cr:MaterialResource ;
 .
 cr:LabourResource
   rdf:type owl:Class ;
   rdfs:label "Labour resource" ;
   rdfs:subClassOf cr:Resource ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty cr:qualificationLevel ;
+    ] ;
+  owl:disjointWith cr:EquipmentResource ;
+  owl:disjointWith cr:MaterialResource ;
 .
 cr:MaterialResource
   rdf:type owl:Class ;
@@ -239,7 +209,7 @@ cr:MaterialResource
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
-      owl:onClass cr:Dimension ;
+      owl:onClass cr:DimensionParameter ;
       owl:onProperty cr:resourceDimension ;
     ] ;
   rdfs:subClassOf [
@@ -296,15 +266,17 @@ cr:MaterialResource
       owl:onProperty cr:material ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
+  owl:disjointWith cr:EquipmentResource ;
+  owl:disjointWith cr:LabourResource ;
 .
 cr:ObjectType
   rdf:type owl:Class ;
   rdfs:label "object type" ;
   rdfs:subClassOf owl:Thing ;
 .
-cr:PerformanceParameter
+cr:Parameter
   rdf:type owl:Class ;
-  rdfs:label "PerformanceParameter" ;
+  rdfs:label "Parameter" ;
   rdfs:subClassOf owl:Thing ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -342,100 +314,20 @@ cr:PerformanceParameter
       owl:onDataRange xsd:string ;
       owl:onProperty cr:parameterType ;
     ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
-      owl:onClass cr:PerformanceParameter ;
-      owl:onProperty cr:resourcePerformanceParameter ;
-    ] ;
+.
+cr:PerformanceParameter
+  rdf:type owl:Class ;
+  rdfs:label "PerformanceParameter" ;
+  rdfs:subClassOf cr:Parameter ;
+  owl:disjointWith cr:DimensionParameter ;
+  owl:disjointWith cr:PhysicalParameter ;
 .
 cr:PhysicalParameter
   rdf:type owl:Class ;
   rdfs:label "PhysicalParameter" ;
-  rdfs:subClassOf owl:Thing ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass cr:Standard ;
-      owl:onProperty cr:resourceParameterStandard ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:integer ;
-      owl:onProperty cr:parameterValue1 ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:integer ;
-      owl:onProperty cr:parameterValue2 ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:string ;
-      owl:onProperty cr:parameterSimbol1 ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:string ;
-      owl:onProperty cr:parameterSimbol2 ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:string ;
-      owl:onProperty cr:parameterType ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
-      owl:onClass cr:PhysicalParameter ;
-      owl:onProperty cr:resourcePhysicalParameter ;
-    ] ;
-.
-cr:PowerConsumption
-  rdf:type owl:Class ;
-  rdfs:label "PowerConsumption" ;
-  rdfs:subClassOf owl:Thing ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass cr:PowerConsumption ;
-      owl:onProperty cr:resourcePowerConsumption ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:integer ;
-      owl:onProperty cr:parameterValue1 ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:integer ;
-      owl:onProperty cr:parameterValue2 ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:string ;
-      owl:onProperty cr:parameterSimbol1 ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:string ;
-      owl:onProperty cr:parameterSimbol2 ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:string ;
-      owl:onProperty cr:parameterType ;
-    ] ;
+  rdfs:subClassOf cr:Parameter ;
+  owl:disjointWith cr:DimensionParameter ;
+  owl:disjointWith cr:PerformanceParameter ;
 .
 cr:Resource
   rdf:type owl:Class ;
@@ -508,6 +400,12 @@ cr:Resource
       rdf:type owl:Restriction ;
       owl:onDataRange xsd:string ;
       owl:onProperty cr:object ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty cr:unitOfMeasure ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
 .
@@ -673,52 +571,43 @@ cr:omniclass
 cr:parameterSimbol1
   rdf:type owl:DatatypeProperty ;
   rdfs:domain cr:Consumption ;
-  rdfs:domain cr:Dimension ;
-  rdfs:domain cr:PerformanceParameter ;
-  rdfs:domain cr:PhysicalParameter ;
-  rdfs:domain cr:PowerConsumption ;
+  rdfs:domain cr:Parameter ;
   rdfs:label "parameterSimbol1" ;
   rdfs:range xsd:string ;
 .
 cr:parameterSimbol2
   rdf:type owl:DatatypeProperty ;
   rdfs:domain cr:Consumption ;
-  rdfs:domain cr:Dimension ;
-  rdfs:domain cr:PerformanceParameter ;
-  rdfs:domain cr:PhysicalParameter ;
-  rdfs:domain cr:PowerConsumption ;
+  rdfs:domain cr:Parameter ;
   rdfs:label "parameterSimbol2" ;
   rdfs:range xsd:string ;
 .
 cr:parameterType
   rdf:type owl:DatatypeProperty ;
   rdfs:domain cr:Consumption ;
-  rdfs:domain cr:Dimension ;
-  rdfs:domain cr:PerformanceParameter ;
-  rdfs:domain cr:PhysicalParameter ;
-  rdfs:domain cr:PowerConsumption ;
+  rdfs:domain cr:Parameter ;
   rdfs:label "parameterType" ;
   rdfs:range xsd:string ;
 .
 cr:parameterValue1
   rdf:type owl:DatatypeProperty ;
   rdfs:domain cr:Consumption ;
-  rdfs:domain cr:Dimension ;
-  rdfs:domain cr:PerformanceParameter ;
-  rdfs:domain cr:PhysicalParameter ;
-  rdfs:domain cr:PowerConsumption ;
+  rdfs:domain cr:Parameter ;
   rdfs:label "parameterValue1" ;
   rdfs:range xsd:integer ;
 .
 cr:parameterValue2
   rdf:type owl:DatatypeProperty ;
   rdfs:domain cr:Consumption ;
-  rdfs:domain cr:Dimension ;
-  rdfs:domain cr:PerformanceParameter ;
-  rdfs:domain cr:PhysicalParameter ;
-  rdfs:domain cr:PowerConsumption ;
+  rdfs:domain cr:Parameter ;
   rdfs:label "parameterValue2" ;
   rdfs:range xsd:integer ;
+.
+cr:qualificationLevel
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:LabourResource ;
+  rdfs:label "qualificationLevel" ;
+  rdfs:range xsd:string ;
 .
 cr:quantityUnitOfMeasure
   rdf:type owl:DatatypeProperty ;
@@ -744,7 +633,7 @@ cr:resourceDimension
   rdfs:domain cr:EquipmentResource ;
   rdfs:domain cr:MaterialResource ;
   rdfs:label "resourceDimension" ;
-  rdfs:range cr:Dimension ;
+  rdfs:range cr:DimensionParameter ;
 .
 cr:resourceObjectStandard
   rdf:type owl:ObjectProperty ;
@@ -762,9 +651,7 @@ cr:resourceOtherStandard
 .
 cr:resourceParameterStandard
   rdf:type owl:ObjectProperty ;
-  rdfs:domain cr:Dimension ;
-  rdfs:domain cr:PerformanceParameter ;
-  rdfs:domain cr:PhysicalParameter ;
+  rdfs:domain cr:Parameter ;
   rdfs:label "resourceParameterStandard" ;
   rdfs:range cr:Standard ;
 .
@@ -781,12 +668,6 @@ cr:resourcePhysicalParameter
   rdfs:domain cr:MaterialResource ;
   rdfs:label "resourcePhysicalParameter" ;
   rdfs:range cr:PhysicalParameter ;
-.
-cr:resourcePowerConsumption
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain cr:EquipmentResource ;
-  rdfs:label "resourcePowerConsumption" ;
-  rdfs:range cr:PowerConsumption ;
 .
 cr:standardBody
   rdf:type owl:DatatypeProperty ;
