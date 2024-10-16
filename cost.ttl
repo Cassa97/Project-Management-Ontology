@@ -61,29 +61,29 @@ ci:Activity
   rdfs:label "Activity" ;
   rdfs:subClassOf owl:Thing ;
 .
-ci:Activity_ConstructionWork
+ci:ActivityOfConstructionWork
   rdf:type owl:Class ;
-  rdfs:label "Activity_ConstructionWork" ;
+  rdfs:label "ActivityOfConstructionWork" ;
   rdfs:subClassOf ci:Activity ;
   rdfs:subClassOf ci:ConstructionWork ;
-  owl:disjointWith ci:Activity_ProductWork ;
-  owl:disjointWith ci:Activity_TemporaryWork ;
+  owl:disjointWith ci:ActivityOfProductWork ;
+  owl:disjointWith ci:ActivityOfTemporaryWork ;
 .
-ci:Activity_ProductWork
+ci:ActivityOfProductWork
   rdf:type owl:Class ;
-  rdfs:label "Activity_ProductWork" ;
+  rdfs:label "ActivityOfProductWork" ;
   rdfs:subClassOf ci:Activity ;
   rdfs:subClassOf ci:ProductWork ;
-  owl:disjointWith ci:Activity_ConstructionWork ;
-  owl:disjointWith ci:Activity_TemporaryWork ;
+  owl:disjointWith ci:ActivityOfConstructionWork ;
+  owl:disjointWith ci:ActivityOfTemporaryWork ;
 .
-ci:Activity_TemporaryWork
+ci:ActivityOfTemporaryWork
   rdf:type owl:Class ;
-  rdfs:label "Activity_TemporaryWork" ;
+  rdfs:label "ActivityOfTemporaryWork" ;
   rdfs:subClassOf ci:Activity ;
   rdfs:subClassOf ci:TemporaryWorks ;
-  owl:disjointWith ci:Activity_ConstructionWork ;
-  owl:disjointWith ci:Activity_ProductWork ;
+  owl:disjointWith ci:ActivityOfConstructionWork ;
+  owl:disjointWith ci:ActivityOfProductWork ;
 .
 ci:Assignment
   rdf:type owl:Class ;
@@ -359,29 +359,29 @@ ci:Work
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
 .
-ci:Work_ConstructionWork
+ci:WorkOfConstructionWork
   rdf:type owl:Class ;
-  rdfs:label "Work_ConstructionWork" ;
+  rdfs:label "WorkOfConstructionWork" ;
   rdfs:subClassOf ci:ConstructionWork ;
   rdfs:subClassOf ci:Work ;
+  owl:disjointWith ci:WorkOfTemporaryWork ;
   owl:disjointWith ci:Work_ProductWork ;
-  owl:disjointWith ci:Work_TemporaryWork ;
+.
+ci:WorkOfTemporaryWork
+  rdf:type owl:Class ;
+  rdfs:label "WorkOfTemporaryWork" ;
+  rdfs:subClassOf ci:TemporaryWorks ;
+  rdfs:subClassOf ci:Work ;
+  owl:disjointWith ci:WorkOfConstructionWork ;
+  owl:disjointWith ci:Work_ProductWork ;
 .
 ci:Work_ProductWork
   rdf:type owl:Class ;
   rdfs:label "Work_ProductWork" ;
   rdfs:subClassOf ci:ProductWork ;
   rdfs:subClassOf ci:Work ;
-  owl:disjointWith ci:Work_ConstructionWork ;
-  owl:disjointWith ci:Work_TemporaryWork ;
-.
-ci:Work_TemporaryWork
-  rdf:type owl:Class ;
-  rdfs:label "Work_TemporaryWork" ;
-  rdfs:subClassOf ci:TemporaryWorks ;
-  rdfs:subClassOf ci:Work ;
-  owl:disjointWith ci:Work_ConstructionWork ;
-  owl:disjointWith ci:Work_ProductWork ;
+  owl:disjointWith ci:WorkOfConstructionWork ;
+  owl:disjointWith ci:WorkOfTemporaryWork ;
 .
 ci:aspect
   rdf:type owl:DatatypeProperty ;
