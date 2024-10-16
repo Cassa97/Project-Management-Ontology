@@ -115,6 +115,11 @@ cr:Consumption
       owl:onProperty cr:parameterType ;
     ] ;
 .
+cr:CostItemToGeometryAssignment
+  rdf:type owl:Class ;
+  rdfs:label "Cost item to geometry assignment" ;
+  rdfs:subClassOf cr:Assignment ;
+.
 cr:DimensionParameter
   rdf:type owl:Class ;
   rdfs:label "DimensionParameter" ;
@@ -354,6 +359,7 @@ cr:Resource
   rdf:type owl:Class ;
   rdfs:comment "This class is used for providing information about a construction resource." ;
   rdfs:label "Resource" ;
+  rdfs:seeAlso <https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifckernel/lexical/ifcresource.htm> ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
@@ -439,6 +445,11 @@ cr:ResourceToCostItemAssignment
   rdfs:label "Resource to cost item assignment" ;
   rdfs:subClassOf cr:Assignment ;
 .
+cr:ResourceToGeometryAssignment
+  rdf:type owl:Class ;
+  rdfs:label "Resource to geometry assignment" ;
+  rdfs:subClassOf cr:Assignment ;
+.
 cr:ResourceToTaskAssignment
   rdf:type owl:Class ;
   rdfs:label "Resource to task assignment" ;
@@ -472,6 +483,11 @@ cr:Standard
       owl:onDataRange xsd:string ;
       owl:onProperty cr:standardBody ;
     ] ;
+.
+cr:TaskToGeometryAssignment
+  rdf:type owl:Class ;
+  rdfs:label "Task to geometry assignment" ;
+  rdfs:subClassOf cr:Assignment ;
 .
 cr:accessory
   rdf:type owl:DatatypeProperty ;
