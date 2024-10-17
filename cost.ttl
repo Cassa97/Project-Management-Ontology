@@ -66,6 +66,11 @@ ci:ActivityOfConstructionWork
   rdfs:label "ActivityOfConstructionWork" ;
   rdfs:subClassOf ci:Activity ;
   rdfs:subClassOf ci:ConstructionWork ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ci:family_activity ;
+    ] ;
   owl:disjointWith ci:ActivityOfProductWork ;
   owl:disjointWith ci:ActivityOfTemporaryWork ;
 .
@@ -92,7 +97,91 @@ ci:Block
 ci:ConstructionWork
   rdf:type owl:Class ;
   rdfs:label "ConstructionWork" ;
-  rdfs:subClassOf ci:ProductionResult ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass ci:Standard ;
+      owl:onProperty ci:resourceObjectStandard ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:descriptionDetail ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:type ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:keywords ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:function ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:use ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:decimal ;
+      owl:onProperty ci:unitPrice ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:integer ;
+      owl:onProperty ci:quantityUnitOfMeasure ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:category ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:code ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:descriptionGeneral ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:family ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:gender ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:object ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
   owl:disjointWith ci:ProductWork ;
   owl:disjointWith ci:TemporaryWorks ;
 .
@@ -172,7 +261,7 @@ ci:PhysicalParameter
 ci:ProductWork
   rdf:type owl:Class ;
   rdfs:label "ProductWork" ;
-  rdfs:subClassOf ci:ProductionResult ;
+  rdfs:subClassOf owl:Thing ;
   owl:disjointWith ci:ConstructionWork ;
   owl:disjointWith ci:TemporaryWorks ;
 .
@@ -181,84 +270,6 @@ ci:ProductionResult
   rdfs:label "CostItem" ;
   rdfs:label "ProductionResult" ;
   rdfs:subClassOf owl:Thing ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass ci:Standard ;
-      owl:onProperty ci:resourceObjectStandard ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:string ;
-      owl:onProperty ci:descriptionDetail ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:string ;
-      owl:onProperty ci:type ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:string ;
-      owl:onProperty ci:keywords ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:string ;
-      owl:onProperty ci:function ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:string ;
-      owl:onProperty ci:use ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:onDataRange xsd:integer ;
-      owl:onProperty ci:quantityUnitOfMeasure ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:onDataRange xsd:string ;
-      owl:onProperty ci:category ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:onDataRange xsd:string ;
-      owl:onProperty ci:code ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:onDataRange xsd:string ;
-      owl:onProperty ci:descriptionGeneral ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:onDataRange xsd:string ;
-      owl:onProperty ci:family ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:onDataRange xsd:string ;
-      owl:onProperty ci:gender ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:onDataRange xsd:string ;
-      owl:onProperty ci:object ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
 .
 ci:Standard
   rdf:type owl:Class ;
@@ -292,7 +303,7 @@ ci:Standard
 ci:TemporaryWorks
   rdf:type owl:Class ;
   rdfs:label "TemporaryWorks" ;
-  rdfs:subClassOf ci:ProductionResult ;
+  rdfs:subClassOf owl:Thing ;
   owl:disjointWith ci:ConstructionWork ;
   owl:disjointWith ci:ProductWork ;
 .
@@ -360,6 +371,11 @@ ci:WorkOfConstructionWork
   rdfs:label "WorkOfConstructionWork" ;
   rdfs:subClassOf ci:ConstructionWork ;
   rdfs:subClassOf ci:Work ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ci:family_work ;
+    ] ;
   owl:disjointWith ci:WorkOfProductWork ;
   owl:disjointWith ci:WorkOfTemporaryWork ;
 .
@@ -426,6 +442,20 @@ ci:family
   rdfs:domain ci:ProductionResult ;
   rdfs:label "family" ;
   rdfs:range xsd:string ;
+.
+ci:family_activity
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ci:ActivityOfConstructionWork ;
+  rdfs:label "family_activity" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf ci:family ;
+.
+ci:family_work
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ci:WorkOfConstructionWork ;
+  rdfs:label "family_work" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf ci:family ;
 .
 ci:finishing
   rdf:type owl:DatatypeProperty ;
@@ -613,6 +643,12 @@ ci:uniformat
   rdfs:domain ci:ProductionResult ;
   rdfs:label "uniformat" ;
   rdfs:range xsd:string ;
+.
+ci:unitPrice
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ci:ProductionResult ;
+  rdfs:label "unit price" ;
+  rdfs:range xsd:decimal ;
 .
 ci:use
   rdf:type owl:DatatypeProperty ;
