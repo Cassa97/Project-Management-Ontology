@@ -1,0 +1,9 @@
+@base <http://example.com/base/> .
+@prefix ci: <http://www.w3.id.org/ci#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ci:Modify a ci:FamilyOfActivity;
+  rdfs:label "Modify"@en, "Modifica"@it .
+
+ci:Production a ci:FamilyOfActivity;
+  rdfs:label "Production"@en, "Produzione"@it .

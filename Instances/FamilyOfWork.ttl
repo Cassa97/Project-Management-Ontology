@@ -1,0 +1,36 @@
+@base <http://example.com/base/> .
+@prefix ci: <http://www.w3.id.org/cr#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ci:CivilEngineer a ci:FamilyOfWork;
+  rdfs:label "CivilEngineer"@en, "Ingegneria Civile"@it .
+
+ci:Architecture a ci:FamilyOfWork;
+  rdfs:label "Architecture"@en, "Architettura"@it .
+
+ci:Landscape a ci:FamilyOfWork;
+  rdfs:label "Landscape"@en, "VerdeEPaesaggio"@it .
+
+ci:IdraulicEngineer a ci:FamilyOfWork;
+  rdfs:label "IdraulicEngineer"@en, "IngegneriaIdraulica"@it .
+
+ci:Land a ci:FamilyOfWork;
+  rdfs:label "Land"@en, "Suolo"@it .
+
+ci:StructuralEngineer a ci:FamilyOfWork;
+  rdfs:label "StructuralEngineer"@en, "IngegneriaStrutturale"@it .
+
+ci:MechanicalEngineer a ci:FamilyOfWork;
+  rdfs:label "MechanicalEngineer"@en, "IngegneriaMeccanica"@it .
+
+ci:ElectricalEngineer a ci:FamilyOfWork;
+  rdfs:label "ElectricalEngineer"@en, "IngegneriaElettrica"@it .
+
+ci:FireSafety a ci:FamilyOfWork;
+  rdfs:label "FireSafety"@en, "Antincendio"@it .
+
+ci:Furniture a ci:FamilyOfWork;
+  rdfs:label "Furniture"@en, "Arredo"@it .
+
+ci:PrefabricatedStructuresForConcrete a ci:FamilyOfWork;
+  rdfs:label "PrefabricatedStructuresForConcrete"@en, "PrefabbricatiPerStruttureInCls"@it .

@@ -1,0 +1,15 @@
+@base <http://example.com/base/> .
+@prefix ci: <http://www.w3.id.org/ci#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ci:Environment a ci:FamilyOfCostComponent;
+  rdfs:label "Environment"@en;
+  rdfs:label "Ambiente"@it .
+
+ci:Infrastructure a ci:FamilyOfCostComponent;
+  rdfs:label "Infrastructure"@en;
+  rdfs:label "Infrastrutture"@it .
+
+ci:Construction a ci:FamilyOfCostComponent;
+  rdfs:label "Construction"@en;
+  rdfs:label "Edilizia"@it .
