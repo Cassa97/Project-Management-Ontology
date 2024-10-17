@@ -1,0 +1,1050 @@
+@base <http://example.com/base/> .
+@prefix cr: <http://www.w3.id.org/cr#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+cr:accessorio%20elettronico a cr:ObjectType;
+  rdfs:label "accessorio elettronico"@it .
+
+cr:accumulatore a cr:ObjectType;
+  rdfs:label "accumulatore"@it .
+
+cr:adattatore a cr:ObjectType;
+  rdfs:label "adattatore"@it .
+
+cr:additivo a cr:ObjectType;
+  rdfs:label "additivo"@it .
+
+cr:adesivo a cr:ObjectType;
+  rdfs:label "adesivo"@it .
+
+cr:aeratore a cr:ObjectType;
+  rdfs:label "aeratore"@it .
+
+cr:aggregato a cr:ObjectType;
+  rdfs:label "aggregato"@it .
+
+cr:alzata a cr:ObjectType;
+  rdfs:label "alzata"@it .
+
+cr:ancora%20terminale a cr:ObjectType;
+  rdfs:label "ancora terminale"@it .
+
+cr:ancoraggio a cr:ObjectType;
+  rdfs:label "ancoraggio"@it .
+
+cr:anello a cr:ObjectType;
+  rdfs:label "anello"@it .
+
+cr:angolo a cr:ObjectType;
+  rdfs:label "angolo"@it .
+
+cr:anta a cr:ObjectType;
+  rdfs:label "anta"@it .
+
+cr:apparato%20di%20distribuzione%20palette a cr:ObjectType;
+  rdfs:label "apparato di distribuzione palette"@it .
+
+cr:arcareccio a cr:ObjectType;
+  rdfs:label "arcareccio"@it .
+
+cr:assorbitore a cr:ObjectType;
+  rdfs:label "assorbitore"@it .
+
+cr:attacco a cr:ObjectType;
+  rdfs:label "attacco"@it .
+
+cr:attenuatore%20d%27urto a cr:ObjectType;
+  rdfs:label "attenuatore d'urto"@it .
+
+cr:attrezzatura%20sportiva a cr:ObjectType;
+  rdfs:label "attrezzatura sportiva"@it .
+
+cr:bacheca a cr:ObjectType;
+  rdfs:label "bacheca"@it .
+
+cr:banda%20perimetrale a cr:ObjectType;
+  rdfs:label "banda perimetrale"@it .
+
+cr:bandella a cr:ObjectType;
+  rdfs:label "bandella"@it .
+
+cr:barra a cr:ObjectType;
+  rdfs:label "barra"@it .
+
+cr:barriera%20paramassi a cr:ObjectType;
+  rdfs:label "barriera paramassi"@it .
+
+cr:barriera%20stradale a cr:ObjectType;
+  rdfs:label "barriera stradale"@it .
+
+cr:basamento a cr:ObjectType;
+  rdfs:label "basamento"@it .
+
+cr:base a cr:ObjectType;
+  rdfs:label "base"@it .
+
+cr:biorete a cr:ObjectType;
+  rdfs:label "biorete"@it .
+
+cr:biostuoia a cr:ObjectType;
+  rdfs:label "biostuoia"@it .
+
+cr:biotessile a cr:ObjectType;
+  rdfs:label "biotessile"@it .
+
+cr:blocco a cr:ObjectType;
+  rdfs:label "blocco"@it .
+
+cr:blocco%20partenza a cr:ObjectType;
+  rdfs:label "blocco partenza"@it .
+
+cr:bobina a cr:ObjectType;
+  rdfs:label "bobina"@it .
+
+cr:bocchettone a cr:ObjectType;
+  rdfs:label "bocchettone"@it .
+
+cr:bombola a cr:ObjectType;
+  rdfs:label "bombola"@it .
+
+cr:bordatura a cr:ObjectType;
+  rdfs:label "bordatura"@it .
+
+cr:caditoia a cr:ObjectType;
+  rdfs:label "caditoia"@it .
+
+cr:calco a cr:ObjectType;
+  rdfs:label "calco"@it .
+
+cr:calotta a cr:ObjectType;
+  rdfs:label "calotta"@it .
+
+cr:camera%20d%27ispezione a cr:ObjectType;
+  rdfs:label "camera d'ispezione"@it .
+
+cr:cameretta%20prefabbricata a cr:ObjectType;
+  rdfs:label "cameretta prefabbricata"@it .
+
+cr:camicia a cr:ObjectType;
+  rdfs:label "camicia"@it .
+
+cr:canale a cr:ObjectType;
+  rdfs:label "canale"@it .
+
+cr:canale%20di%20gronda a cr:ObjectType;
+  rdfs:label "canale di gronda"@it .
+
+cr:cancello a cr:ObjectType;
+  rdfs:label "cancello"@it .
+
+cr:canna a cr:ObjectType;
+  rdfs:label "canna"@it .
+
+cr:cardine a cr:ObjectType;
+  rdfs:label "cardine"@it .
+
+cr:carta a cr:ObjectType;
+  rdfs:label "carta"@it .
+
+cr:cartello a cr:ObjectType;
+  rdfs:label "cartello"@it .
+
+cr:carter a cr:ObjectType;
+  rdfs:label "carter"@it .
+
+cr:cartuccia a cr:ObjectType;
+  rdfs:label "cartuccia"@it .
+
+cr:casetta%20per%20orti a cr:ObjectType;
+  rdfs:label "casetta per orti"@it .
+
+cr:cassero%20a%20perdere a cr:ObjectType;
+  rdfs:label "cassero a perdere"@it .
+
+cr:cassonetto a cr:ObjectType;
+  rdfs:label "cassonetto"@it .
+
+cr:catena a cr:ObjectType;
+  rdfs:label "catena"@it .
+
+cr:cavo a cr:ObjectType;
+  rdfs:label "cavo"@it .
+
+cr:centralina%20elettrica a cr:ObjectType;
+  rdfs:label "centralina elettrica"@it .
+
+cr:cestello a cr:ObjectType;
+  rdfs:label "cestello"@it .
+
+cr:cestino%20porta-rifiuti a cr:ObjectType;
+  rdfs:label "cestino porta-rifiuti"@it .
+
+cr:cestone%20nido a cr:ObjectType;
+  rdfs:label "cestone nido"@it .
+
+cr:chiusino a cr:ObjectType;
+  rdfs:label "chiusino"@it .
+
+cr:cicogna a cr:ObjectType;
+  rdfs:label "cicogna"@it .
+
+cr:cielino a cr:ObjectType;
+  rdfs:label "cielino"@it .
+
+cr:cimasa a cr:ObjectType;
+  rdfs:label "cimasa"@it .
+
+cr:cinerario a cr:ObjectType;
+  rdfs:label "cinerario"@it .
+
+cr:cippo a cr:ObjectType;
+  rdfs:label "cippo"@it .
+
+cr:collante a cr:ObjectType;
+  rdfs:label "collante"@it .
+
+cr:collare a cr:ObjectType;
+  rdfs:label "collare"@it .
+
+cr:colmo a cr:ObjectType;
+  rdfs:label "colmo"@it .
+
+cr:comignolo a cr:ObjectType;
+  rdfs:label "comignolo"@it .
+
+cr:concime a cr:ObjectType;
+  rdfs:label "concime"@it .
+
+cr:confezione%20di%20ricarica a cr:ObjectType;
+  rdfs:label "confezione di ricarica"@it .
+
+cr:connettore a cr:ObjectType;
+  rdfs:label "connettore"@it .
+
+cr:cono%20erogatore a cr:ObjectType;
+  rdfs:label "cono erogatore"@it .
+
+cr:cono%20segnalatore a cr:ObjectType;
+  rdfs:label "cono segnalatore"@it .
+
+cr:contenitore a cr:ObjectType;
+  rdfs:label "contenitore"@it .
+
+cr:coperchio a cr:ObjectType;
+  rdfs:label "coperchio"@it .
+
+cr:copertina a cr:ObjectType;
+  rdfs:label "copertina"@it .
+
+cr:coprifilo a cr:ObjectType;
+  rdfs:label "coprifilo"@it .
+
+cr:coprigiunti a cr:ObjectType;
+  rdfs:label "coprigiunti"@it .
+
+cr:coprigiunto a cr:ObjectType;
+  rdfs:label "coprigiunto"@it .
+
+cr:cordolo a cr:ObjectType;
+  rdfs:label "cordolo"@it .
+
+cr:cordone a cr:ObjectType;
+  rdfs:label "cordone"@it .
+
+cr:cornice a cr:ObjectType;
+  rdfs:label "cornice"@it .
+
+cr:corpo a cr:ObjectType;
+  rdfs:label "corpo"@it .
+
+cr:corpo%20serratura a cr:ObjectType;
+  rdfs:label "corpo serratura"@it .
+
+cr:corrente%20orizzontale a cr:ObjectType;
+  rdfs:label "corrente orizzontale"@it .
+
+cr:corrimano a cr:ObjectType;
+  rdfs:label "corrimano"@it .
+
+cr:cubetto a cr:ObjectType;
+  rdfs:label "cubetto"@it .
+
+cr:cunetta a cr:ObjectType;
+  rdfs:label "cunetta"@it .
+
+cr:cupola a cr:ObjectType;
+  rdfs:label "cupola"@it .
+
+cr:davanzale a cr:ObjectType;
+  rdfs:label "davanzale"@it .
+
+cr:delineatore a cr:ObjectType;
+  rdfs:label "delineatore"@it .
+
+cr:detergente a cr:ObjectType;
+  rdfs:label "detergente"@it .
+
+cr:diffusore a cr:ObjectType;
+  rdfs:label "diffusore"@it .
+
+cr:disarmante a cr:ObjectType;
+  rdfs:label "disarmante"@it .
+
+cr:diserbante a cr:ObjectType;
+  rdfs:label "diserbante"@it .
+
+cr:disinfettante a cr:ObjectType;
+  rdfs:label "disinfettante"@it .
+
+cr:dispositivo%20anticaduta a cr:ObjectType;
+  rdfs:label "dispositivo anticaduta"@it .
+
+cr:dispositivo%20antivandalo a cr:ObjectType;
+  rdfs:label "dispositivo antivandalo"@it .
+
+cr:dispositivo%20di%20apertura a cr:ObjectType;
+  rdfs:label "dispositivo di apertura"@it .
+
+cr:dispositivo%20elettronico a cr:ObjectType;
+  rdfs:label "dispositivo elettronico"@it .
+
+cr:dispositivo%20rifrangente a cr:ObjectType;
+  rdfs:label "dispositivo rifrangente"@it .
+
+cr:dissuasore a cr:ObjectType;
+  rdfs:label "dissuasore"@it .
+
+cr:distributore%20automatico a cr:ObjectType;
+  rdfs:label "distributore automatico"@it .
+
+cr:doccia a cr:ObjectType;
+  rdfs:label "doccia"@it .
+
+cr:doga a cr:ObjectType;
+  rdfs:label "doga"@it .
+
+cr:elemento%20strutturale a cr:ObjectType;
+  rdfs:label "elemento strutturale"@it .
+
+cr:embrice a cr:ObjectType;
+  rdfs:label "embrice"@it .
+
+cr:emulsione a cr:ObjectType;
+  rdfs:label "emulsione"@it .
+
+cr:estintore a cr:ObjectType;
+  rdfs:label "estintore"@it .
+
+cr:falso%20telaio a cr:ObjectType;
+  rdfs:label "falso telaio"@it .
+
+cr:fascia%20di%20contorno a cr:ObjectType;
+  rdfs:label "fascia di contorno"@it .
+
+cr:fermaneve a cr:ObjectType;
+  rdfs:label "fermaneve"@it .
+
+cr:ferramenta a cr:ObjectType;
+  rdfs:label "ferramenta"@it .
+
+cr:fibra a cr:ObjectType;
+  rdfs:label "fibra"@it .
+
+cr:filo a cr:ObjectType;
+  rdfs:label "filo"@it .
+
+cr:filtro a cr:ObjectType;
+  rdfs:label "filtro"@it .
+
+cr:finestra a cr:ObjectType;
+  rdfs:label "finestra"@it .
+
+cr:foglio a cr:ObjectType;
+  rdfs:label "foglio"@it .
+
+cr:fondello a cr:ObjectType;
+  rdfs:label "fondello"@it .
+
+cr:fondo a cr:ObjectType;
+  rdfs:label "fondo"@it .
+
+cr:fossa a cr:ObjectType;
+  rdfs:label "fossa"@it .
+
+cr:frangisole a cr:ObjectType;
+  rdfs:label "frangisole"@it .
+
+cr:frontale%20di%20testata a cr:ObjectType;
+  rdfs:label "frontale di testata"@it .
+
+cr:fune a cr:ObjectType;
+  rdfs:label "fune"@it .
+
+cr:gabbia a cr:ObjectType;
+  rdfs:label "gabbia"@it .
+
+cr:gamba a cr:ObjectType;
+  rdfs:label "gamba"@it .
+
+cr:geocomposito a cr:ObjectType;
+  rdfs:label "geocomposito"@it .
+
+cr:geogriglia a cr:ObjectType;
+  rdfs:label "geogriglia"@it .
+
+cr:geomembrana a cr:ObjectType;
+  rdfs:label "geomembrana"@it .
+
+cr:geostuoia a cr:ObjectType;
+  rdfs:label "geostuoia"@it .
+
+cr:geotessile a cr:ObjectType;
+  rdfs:label "geotessile"@it .
+
+cr:gioco a cr:ObjectType;
+  rdfs:label "gioco"@it .
+
+cr:giunto a cr:ObjectType;
+  rdfs:label "giunto"@it .
+
+cr:gomma a cr:ObjectType;
+  rdfs:label "gomma"@it .
+
+cr:gradino a cr:ObjectType;
+  rdfs:label "gradino"@it .
+
+cr:griglia a cr:ObjectType;
+  rdfs:label "griglia"@it .
+
+cr:guaina a cr:ObjectType;
+  rdfs:label "guaina"@it .
+
+cr:guarnizione a cr:ObjectType;
+  rdfs:label "guarnizione"@it .
+
+cr:idrante a cr:ObjectType;
+  rdfs:label "idrante"@it .
+
+cr:imbotte a cr:ObjectType;
+  rdfs:label "imbotte"@it .
+
+cr:impasto%20preconfezionato a cr:ObjectType;
+  rdfs:label "impasto preconfezionato"@it .
+
+cr:impianto%20fotovoltaico a cr:ObjectType;
+  rdfs:label "impianto fotovoltaico"@it .
+
+cr:impianto%20sequenziale a cr:ObjectType;
+  rdfs:label "impianto sequenziale"@it .
+
+cr:impianto%20solare%20termico a cr:ObjectType;
+  rdfs:label "impianto solare termico"@it .
+
+cr:indurente a cr:ObjectType;
+  rdfs:label "indurente"@it .
+
+cr:innesto a cr:ObjectType;
+  rdfs:label "innesto"@it .
+
+cr:insetticida a cr:ObjectType;
+  rdfs:label "insetticida"@it .
+
+cr:involucro a cr:ObjectType;
+  rdfs:label "involucro"@it .
+
+cr:irrigatore a cr:ObjectType;
+  rdfs:label "irrigatore"@it .
+
+cr:lama a cr:ObjectType;
+  rdfs:label "lama"@it .
+
+cr:lamiera a cr:ObjectType;
+  rdfs:label "lamiera"@it .
+
+cr:lamina a cr:ObjectType;
+  rdfs:label "lamina"@it .
+
+cr:laminato a cr:ObjectType;
+  rdfs:label "laminato"@it .
+
+cr:lastra a cr:ObjectType;
+  rdfs:label "lastra"@it .
+
+cr:lastra%20predalles a cr:ObjectType;
+  rdfs:label "lastra predalles"@it .
+
+cr:legante a cr:ObjectType;
+  rdfs:label "legante"@it .
+
+cr:lente a cr:ObjectType;
+  rdfs:label "lente"@it .
+
+cr:listello a cr:ObjectType;
+  rdfs:label "listello"@it .
+
+cr:listello%20isolante a cr:ObjectType;
+  rdfs:label "listello isolante"@it .
+
+cr:listone a cr:ObjectType;
+  rdfs:label "listone"@it .
+
+cr:loculo a cr:ObjectType;
+  rdfs:label "loculo"@it .
+
+cr:longherone a cr:ObjectType;
+  rdfs:label "longherone"@it .
+
+cr:manichetta a cr:ObjectType;
+  rdfs:label "manichetta"@it .
+
+cr:manicotto a cr:ObjectType;
+  rdfs:label "manicotto"@it .
+
+cr:maniglia a cr:ObjectType;
+  rdfs:label "maniglia"@it .
+
+cr:maniglione a cr:ObjectType;
+  rdfs:label "maniglione"@it .
+
+cr:manometro a cr:ObjectType;
+  rdfs:label "manometro"@it .
+
+cr:manto a cr:ObjectType;
+  rdfs:label "manto"@it .
+
+cr:massello a cr:ObjectType;
+  rdfs:label "massello"@it .
+
+cr:masso a cr:ObjectType;
+  rdfs:label "masso"@it .
+
+cr:materiale%20per%20restauro a cr:ObjectType;
+  rdfs:label "materiale per restauro"@it .
+
+cr:mattonella a cr:ObjectType;
+  rdfs:label "mattonella"@it .
+
+cr:membrana a cr:ObjectType;
+  rdfs:label "membrana"@it .
+
+cr:mensola a cr:ObjectType;
+  rdfs:label "mensola"@it .
+
+cr:microfibra a cr:ObjectType;
+  rdfs:label "microfibra"@it .
+
+cr:microrete a cr:ObjectType;
+  rdfs:label "microrete"@it .
+
+cr:miscuglio a cr:ObjectType;
+  rdfs:label "miscuglio"@it .
+
+cr:misuratore%20velocita a cr:ObjectType;
+  rdfs:label "misuratore velocita"@it .
+
+cr:molla a cr:ObjectType;
+  rdfs:label "molla"@it .
+
+<http://www.w3.org/cr#monoblocco%20finestra/portafinestra> a cr:ObjectType;
+  rdfs:label "monoblocco finestra/portafinestra"@it .
+
+cr:monoblocco%20lucernario a cr:ObjectType;
+  rdfs:label "monoblocco lucernario"@it .
+
+cr:montante a cr:ObjectType;
+  rdfs:label "montante"@it .
+
+cr:nastro a cr:ObjectType;
+  rdfs:label "nastro"@it .
+
+cr:orditura a cr:ObjectType;
+  rdfs:label "orditura"@it .
+
+cr:ossario a cr:ObjectType;
+  rdfs:label "ossario"@it .
+
+cr:pacciame a cr:ObjectType;
+  rdfs:label "pacciame"@it .
+
+cr:palancola a cr:ObjectType;
+  rdfs:label "palancola"@it .
+
+cr:paletta a cr:ObjectType;
+  rdfs:label "paletta"@it .
+
+cr:palo a cr:ObjectType;
+  rdfs:label "palo"@it .
+
+cr:panchina a cr:ObjectType;
+  rdfs:label "panchina"@it .
+
+cr:pannello a cr:ObjectType;
+  rdfs:label "pannello"@it .
+
+cr:pannello%20drenante a cr:ObjectType;
+  rdfs:label "pannello drenante"@it .
+
+cr:pannello%20fotovoltaico a cr:ObjectType;
+  rdfs:label "pannello fotovoltaico"@it .
+
+cr:pannello%20solare a cr:ObjectType;
+  rdfs:label "pannello solare"@it .
+
+cr:parapetto a cr:ObjectType;
+  rdfs:label "parapetto"@it .
+
+cr:paraspigolo a cr:ObjectType;
+  rdfs:label "paraspigolo"@it .
+
+cr:pavimento a cr:ObjectType;
+  rdfs:label "pavimento"@it .
+
+cr:pedata a cr:ObjectType;
+  rdfs:label "pedata"@it .
+
+cr:pellicola a cr:ObjectType;
+  rdfs:label "pellicola"@it .
+
+cr:pergola a cr:ObjectType;
+  rdfs:label "pergola"@it .
+
+cr:perlina a cr:ObjectType;
+  rdfs:label "perlina"@it .
+
+cr:persiana a cr:ObjectType;
+  rdfs:label "persiana"@it .
+
+cr:pezzo%20speciale a cr:ObjectType;
+  rdfs:label "pezzo speciale"@it .
+
+cr:piano%20da%20calpestio a cr:ObjectType;
+  rdfs:label "piano da calpestio"@it .
+
+cr:piano%20da%20gioco a cr:ObjectType;
+  rdfs:label "piano da gioco"@it .
+
+cr:pianta a cr:ObjectType;
+  rdfs:label "pianta"@it .
+
+cr:piantana a cr:ObjectType;
+  rdfs:label "piantana"@it .
+
+cr:piastra a cr:ObjectType;
+  rdfs:label "piastra"@it .
+
+cr:piastra%20di%20fondo a cr:ObjectType;
+  rdfs:label "piastra di fondo"@it .
+
+cr:piastrella a cr:ObjectType;
+  rdfs:label "piastrella"@it .
+
+cr:piastrella%20galleggiante a cr:ObjectType;
+  rdfs:label "piastrella galleggiante"@it .
+
+cr:piatto a cr:ObjectType;
+  rdfs:label "piatto"@it .
+
+cr:piedritto a cr:ObjectType;
+  rdfs:label "piedritto"@it .
+
+cr:pietra a cr:ObjectType;
+  rdfs:label "pietra"@it .
+
+cr:pietrame a cr:ObjectType;
+  rdfs:label "pietrame"@it .
+
+cr:pigmento a cr:ObjectType;
+  rdfs:label "pigmento"@it .
+
+cr:pila%20di%20scarico a cr:ObjectType;
+  rdfs:label "pila di scarico"@it .
+
+cr:pittura a cr:ObjectType;
+  rdfs:label "pittura"@it .
+
+cr:pompa a cr:ObjectType;
+  rdfs:label "pompa"@it .
+
+cr:ponte a cr:ObjectType;
+  rdfs:label "ponte"@it .
+
+cr:porta a cr:ObjectType;
+  rdfs:label "porta"@it .
+
+cr:porta%20da%20calcio a cr:ObjectType;
+  rdfs:label "porta da calcio"@it .
+
+cr:portabicicletta a cr:ObjectType;
+  rdfs:label "portabicicletta"@it .
+
+cr:portafinestra a cr:ObjectType;
+  rdfs:label "portafinestra"@it .
+
+cr:portoncino a cr:ObjectType;
+  rdfs:label "portoncino"@it .
+
+cr:posacenere a cr:ObjectType;
+  rdfs:label "posacenere"@it .
+
+cr:pozzetto a cr:ObjectType;
+  rdfs:label "pozzetto"@it .
+
+cr:premiscelato a cr:ObjectType;
+  rdfs:label "premiscelato"@it .
+
+cr:presa%20arrampicata a cr:ObjectType;
+  rdfs:label "presa arrampicata"@it .
+
+cr:primer a cr:ObjectType;
+  rdfs:label "primer"@it .
+
+cr:profilato a cr:ObjectType;
+  rdfs:label "profilato"@it .
+
+cr:profilo a cr:ObjectType;
+  rdfs:label "profilo"@it .
+
+cr:prolunga a cr:ObjectType;
+  rdfs:label "prolunga"@it .
+
+cr:protezione a cr:ObjectType;
+  rdfs:label "protezione"@it .
+
+cr:punta a cr:ObjectType;
+  rdfs:label "punta"@it .
+
+cr:raccordo a cr:ObjectType;
+  rdfs:label "raccordo"@it .
+
+cr:rastrelliera a cr:ObjectType;
+  rdfs:label "rastrelliera"@it .
+
+cr:recinzione a cr:ObjectType;
+  rdfs:label "recinzione"@it .
+
+cr:regolatore%20di%20pressione a cr:ObjectType;
+  rdfs:label "regolatore di pressione"@it .
+
+cr:resina a cr:ObjectType;
+  rdfs:label "resina"@it .
+
+cr:rete a cr:ObjectType;
+  rdfs:label "rete"@it .
+
+cr:rete%20di%20intercettazione a cr:ObjectType;
+  rdfs:label "rete di intercettazione"@it .
+
+cr:retroriflettore%20catadiottrico a cr:ObjectType;
+  rdfs:label "retroriflettore catadiottrico"@it .
+
+cr:riduttore%20di%20pressione a cr:ObjectType;
+  rdfs:label "riduttore di pressione"@it .
+
+cr:riduttore%20di%20tensione a cr:ObjectType;
+  rdfs:label "riduttore di tensione"@it .
+
+cr:rubinetto a cr:ObjectType;
+  rdfs:label "rubinetto"@it .
+
+cr:sacchetti a cr:ObjectType;
+  rdfs:label "sacchetti"@it .
+
+cr:sacchetto%20antincendio a cr:ObjectType;
+  rdfs:label "sacchetto antincendio"@it .
+
+cr:sagoma a cr:ObjectType;
+  rdfs:label "sagoma"@it .
+
+cr:scala a cr:ObjectType;
+  rdfs:label "scala"@it .
+
+cr:scaletta a cr:ObjectType;
+  rdfs:label "scaletta"@it .
+
+cr:scheda%20elettronica a cr:ObjectType;
+  rdfs:label "scheda elettronica"@it .
+
+cr:scivolo a cr:ObjectType;
+  rdfs:label "scivolo"@it .
+
+cr:seduta a cr:ObjectType;
+  rdfs:label "seduta"@it .
+
+cr:segato a cr:ObjectType;
+  rdfs:label "segato"@it .
+
+cr:sfere%20di%20chiusura a cr:ObjectType;
+  rdfs:label "sfere di chiusura"@it .
+
+cr:sigillante a cr:ObjectType;
+  rdfs:label "sigillante"@it .
+
+cr:sigillo a cr:ObjectType;
+  rdfs:label "sigillo"@it .
+
+cr:sistema a cr:ObjectType;
+  rdfs:label "sistema"@it .
+
+cr:sistema%20di%20assorbimento%20di%20energia a cr:ObjectType;
+  rdfs:label "sistema di assorbimento di energia"@it .
+
+cr:slide a cr:ObjectType;
+  rdfs:label "slide"@it .
+
+cr:smalto a cr:ObjectType;
+  rdfs:label "smalto"@it .
+
+cr:soglia a cr:ObjectType;
+  rdfs:label "soglia"@it .
+
+cr:solenoide a cr:ObjectType;
+  rdfs:label "solenoide"@it .
+
+cr:solvente a cr:ObjectType;
+  rdfs:label "solvente"@it .
+
+cr:sopraluce a cr:ObjectType;
+  rdfs:label "sopraluce"@it .
+
+cr:sospensione a cr:ObjectType;
+  rdfs:label "sospensione"@it .
+
+cr:sostanze%20chimiche a cr:ObjectType;
+  rdfs:label "sostanze chimiche"@it .
+
+cr:sostegno a cr:ObjectType;
+  rdfs:label "sostegno"@it .
+
+cr:sottocolmo a cr:ObjectType;
+  rdfs:label "sottocolmo"@it .
+
+cr:spalla a cr:ObjectType;
+  rdfs:label "spalla"@it .
+
+cr:specchio%20stradale a cr:ObjectType;
+  rdfs:label "specchio stradale"@it .
+
+cr:sportello a cr:ObjectType;
+  rdfs:label "sportello"@it .
+
+cr:sportello%20d%27ispezione a cr:ObjectType;
+  rdfs:label "sportello d'ispezione"@it .
+
+cr:staccaparato a cr:ObjectType;
+  rdfs:label "staccaparato"@it .
+
+cr:staffa a cr:ObjectType;
+  rdfs:label "staffa"@it .
+
+cr:strato%20di%20fondo a cr:ObjectType;
+  rdfs:label "strato di fondo"@it .
+
+cr:strato%20intermedio a cr:ObjectType;
+  rdfs:label "strato intermedio"@it .
+
+cr:strato%20superficiale a cr:ObjectType;
+  rdfs:label "strato superficiale"@it .
+
+cr:striscia%20antiscivolo a cr:ObjectType;
+  rdfs:label "striscia antiscivolo"@it .
+
+cr:struttura a cr:ObjectType;
+  rdfs:label "struttura"@it .
+
+cr:struttura%20campo%20sportivo a cr:ObjectType;
+  rdfs:label "struttura campo sportivo"@it .
+
+cr:struttura%20climbing a cr:ObjectType;
+  rdfs:label "struttura climbing"@it .
+
+cr:struttura%20di%20collegamento a cr:ObjectType;
+  rdfs:label "struttura di collegamento"@it .
+
+cr:struttura%20modulare a cr:ObjectType;
+  rdfs:label "struttura modulare"@it .
+
+cr:struttura%20pista%20da%20skate a cr:ObjectType;
+  rdfs:label "struttura pista da skate"@it .
+
+cr:substrato a cr:ObjectType;
+  rdfs:label "substrato"@it .
+
+cr:supporto a cr:ObjectType;
+  rdfs:label "supporto"@it .
+
+cr:tamponamento a cr:ObjectType;
+  rdfs:label "tamponamento"@it .
+
+cr:tapparella a cr:ObjectType;
+  rdfs:label "tapparella"@it .
+
+cr:tappezzeria a cr:ObjectType;
+  rdfs:label "tappezzeria"@it .
+
+cr:tassello a cr:ObjectType;
+  rdfs:label "tassello"@it .
+
+cr:tavella a cr:ObjectType;
+  rdfs:label "tavella"@it .
+
+cr:tavellone a cr:ObjectType;
+  rdfs:label "tavellone"@it .
+
+cr:tavola a cr:ObjectType;
+  rdfs:label "tavola"@it .
+
+cr:tavolo a cr:ObjectType;
+  rdfs:label "tavolo"@it .
+
+cr:tegola a cr:ObjectType;
+  rdfs:label "tegola"@it .
+
+cr:telaio a cr:ObjectType;
+  rdfs:label "telaio"@it .
+
+cr:telaio%20fisso a cr:ObjectType;
+  rdfs:label "telaio fisso"@it .
+
+cr:telaio%20mobile a cr:ObjectType;
+  rdfs:label "telaio mobile"@it .
+
+cr:telo a cr:ObjectType;
+  rdfs:label "telo"@it .
+
+cr:tenda a cr:ObjectType;
+  rdfs:label "tenda"@it .
+
+cr:terminale%20barriera a cr:ObjectType;
+  rdfs:label "terminale barriera"@it .
+
+cr:tessuto a cr:ObjectType;
+  rdfs:label "tessuto"@it .
+
+cr:testina a cr:ObjectType;
+  rdfs:label "testina"@it .
+
+cr:tirante a cr:ObjectType;
+  rdfs:label "tirante"@it .
+
+cr:traliccio a cr:ObjectType;
+  rdfs:label "traliccio"@it .
+
+cr:trampolino a cr:ObjectType;
+  rdfs:label "trampolino"@it .
+
+cr:transenna a cr:ObjectType;
+  rdfs:label "transenna"@it .
+
+cr:trave a cr:ObjectType;
+  rdfs:label "trave"@it .
+
+cr:traverso a cr:ObjectType;
+  rdfs:label "traverso"@it .
+
+cr:travetto a cr:ObjectType;
+  rdfs:label "travetto"@it .
+
+cr:tubo a cr:ObjectType;
+  rdfs:label "tubo"@it .
+
+cr:turapori a cr:ObjectType;
+  rdfs:label "turapori"@it .
+
+cr:turbina a cr:ObjectType;
+  rdfs:label "turbina"@it .
+
+cr:ugello a cr:ObjectType;
+  rdfs:label "ugello"@it .
+
+cr:unità%20di%20programmazione a cr:ObjectType;
+  rdfs:label "unità di programmazione"@it .
+
+cr:valvola a cr:ObjectType;
+  rdfs:label "valvola"@it .
+
+cr:vasca a cr:ObjectType;
+  rdfs:label "vasca"@it .
+
+cr:vaso a cr:ObjectType;
+  rdfs:label "vaso"@it .
+
+cr:vernice a cr:ObjectType;
+  rdfs:label "vernice"@it .
+
+cr:vetratura a cr:ObjectType;
+  rdfs:label "vetratura"@it .
+
+cr:zanzariera a cr:ObjectType;
+  rdfs:label "zanzariera"@it .
+
+cr:zoccolino a cr:ObjectType;
+  rdfs:label "zoccolino"@it .
+
+cr:armadio a cr:ObjectType;
+  rdfs:label "armadio"@it .
+
+cr:assorbitore%20di%20energia a cr:ObjectType;
+  rdfs:label "assorbitore di energia"@it .
+
+cr:frizione a cr:ObjectType;
+  rdfs:label "frizione"@it .
+
+cr:serbatoio a cr:ObjectType;
+  rdfs:label "serbatoio"@it .
+
+cr:serratura a cr:ObjectType;
+  rdfs:label "serratura"@it .
+
+cr:elemento%20prismatico a cr:ObjectType;
+  rdfs:label "elemento prismatico"@it .
+
+cr:feltro a cr:ObjectType;
+  rdfs:label "feltro"@it .
+
+cr:fiocco a cr:ObjectType;
+  rdfs:label "fiocco"@it .
+
+cr:granulo a cr:ObjectType;
+  rdfs:label "granulo"@it .
+
+cr:rete%20da%20calcio a cr:ObjectType;
+  rdfs:label "rete da calcio"@it .
+
+cr:rotolo a cr:ObjectType;
+  rdfs:label "rotolo"@it .
+
+cr:striscia a cr:ObjectType;
+  rdfs:label "striscia"@it .
+
+cr:sistema%20di%20ancoraggio a cr:ObjectType;
+  rdfs:label "sistema di ancoraggio"@it .
+
+cr:sistema%20di%20fissaggio a cr:ObjectType;
+  rdfs:label "sistema di fissaggio"@it .
+
+cr:terreno a cr:ObjectType;
+  rdfs:label "terreno"@it .
+
+cr:sistema%20porta a cr:ObjectType;
+  rdfs:label "sistema porta"@it .
+
+cr:sistema%20murario a cr:ObjectType;
+  rdfs:label "sistema murario"@it .
+
+cr:legname a cr:ObjectType;
+  rdfs:label "legname"@it .
+
+cr:sistema%20solaio a cr:ObjectType;
+  rdfs:label "sistema solaio"@it .
+
+cr:strato%20di%20sottofondo a cr:ObjectType;
+  rdfs:label "strato di sottofondo"@it .
+
+cr:sistema%20di%20controsoffittatura a cr:ObjectType;
+  rdfs:label "sistema di controsoffittatura"@it .
+
+<http://www.w3.org/cr#sistema%20finestra/portafinestra> a cr:ObjectType;
+  rdfs:label "sistema finestra/portafinestra"@it .
+
+cr:tettoia-pensilina a cr:ObjectType;
+  rdfs:label "tettoia-pensilina"@it .
