@@ -130,6 +130,11 @@ ci:Activity
       owl:onProperty ci:descriptionGeneral ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty ci:hasSubComponent ;
+      owl:someValuesFrom ci:TemporaryWork ;
+    ] ;
 .
 ci:Architecture
   rdf:type ci:FamilyOfWork ;
@@ -246,12 +251,6 @@ ci:ConstructionWork
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:onClass ci:Activity ;
-      owl:onProperty ci:hasActivity ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
       owl:onClass ci:WorkOfConstructionWork ;
       owl:onProperty ci:hasWork ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
@@ -268,6 +267,12 @@ ci:CostComponent
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onDataRange xsd:string ;
       owl:onProperty ci:descriptionDetail ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass ci:Activity ;
+      owl:onProperty ci:hasActivity ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -643,12 +648,6 @@ ci:ProductWork
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:onClass ci:Activity ;
-      owl:onProperty ci:hasActivity ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
       owl:onClass ci:WorkOfProductWork ;
       owl:onProperty ci:hasWork ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
@@ -721,12 +720,6 @@ ci:TemporaryWork
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onClass ci:TypeOfTemporaryWork ;
       owl:onProperty ci:hasType ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:onClass ci:Activity ;
-      owl:onProperty ci:hasActivity ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -997,6 +990,16 @@ ci:WorkOfConstructionWork
       owl:onProperty ci:hasObject ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty ci:hasSubComponent ;
+      owl:someValuesFrom ci:ConstructionWork ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty ci:hasSubComponent ;
+      owl:someValuesFrom ci:ProductWork ;
+    ] ;
   owl:disjointWith ci:WorkOfProductWork ;
   owl:disjointWith ci:WorkOfTemporaryWork ;
 .
@@ -1238,6 +1241,13 @@ ci:hasPhysicalParameter
   rdfs:domain ci:Work ;
   rdfs:label "hasPhysicalParameter" ;
   rdfs:range ci:PhysicalParameter ;
+.
+ci:hasSubComponent
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain ci:Activity ;
+  rdfs:domain ci:Work ;
+  rdfs:label "hasSubComponent" ;
+  rdfs:range ci:CostComponent ;
 .
 ci:hasType
   rdf:type owl:ObjectProperty ;
