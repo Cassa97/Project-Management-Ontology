@@ -145,6 +145,12 @@ ci:Aspect
   rdf:type owl:Class ;
   rdfs:label "Aspect" ;
   rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
+      owl:onClass ci:Aspect ;
+      owl:onProperty ci:hasAspect ;
+    ] ;
 .
 ci:AspectOfWorkOfConstructionWork
   rdf:type owl:Class ;
@@ -398,6 +404,12 @@ ci:Finishing
   rdf:type owl:Class ;
   rdfs:label "Finishing" ;
   rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
+      owl:onClass ci:Finishing ;
+      owl:onProperty ci:hasFinishing ;
+    ] ;
 .
 ci:FinishingOfWorkOfConstructionWork
   rdf:type owl:Class ;
@@ -423,6 +435,12 @@ ci:Function
   rdf:type owl:Class ;
   rdfs:label "Function" ;
   rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
+      owl:onClass ci:Function ;
+      owl:onProperty ci:hasFunction ;
+    ] ;
 .
 ci:FunctionOfActivity
   rdf:type owl:Class ;
@@ -465,6 +483,12 @@ ci:Gender
   rdf:type owl:Class ;
   rdfs:label "Gender" ;
   rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass ci:Gender ;
+      owl:onProperty ci:hasGender ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
 .
 ci:IdraulicEngineer
   rdf:type ci:FamilyOfWork ;
@@ -497,6 +521,12 @@ ci:Material
   rdf:type owl:Class ;
   rdfs:label "Material" ;
   rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass ci:Material ;
+      owl:onProperty ci:hasMaterial ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
 .
 ci:MechanicalEngineer
   rdf:type ci:FamilyOfWork ;
