@@ -79,14 +79,14 @@ ci:Activity
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
-      owl:onClass ci:FunctionOfActivity ;
-      owl:onProperty cterm:hasFunction ;
+      owl:onClass ci:UseOfActivity ;
+      owl:onProperty ci:hasUse ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
-      owl:onClass ci:UseOfActivity ;
-      owl:onProperty ci:hasUse ;
+      owl:onClass cterm:FunctionOfActivity ;
+      owl:onProperty cterm:hasFunction ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -239,7 +239,7 @@ ci:CostComponent
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:onProperty ci:IsPartOf ;
+      owl:onProperty ci:isPartOf ;
       owl:someValuesFrom ci:CostItem ;
     ] ;
 .
@@ -297,13 +297,6 @@ ci:Gender
       owl:onProperty ci:hasGender ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
-.
-ci:IsPartOf
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain ci:CostComponent ;
-  rdfs:label "IsPartOf" ;
-  rdfs:range ci:CostItem ;
-  rdfs:range ci:ProductionResult ;
 .
 ci:Material
   rdf:type owl:Class ;
@@ -1042,6 +1035,13 @@ ci:included
   rdfs:domain ci:CostComponent ;
   rdfs:label "included" ;
   rdfs:range xsd:string ;
+.
+ci:isPartOf
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain ci:CostComponent ;
+  rdfs:label "IsPartOf" ;
+  rdfs:range ci:CostItem ;
+  rdfs:range ci:ProductionResult ;
 .
 ci:keywords
   rdf:type owl:DatatypeProperty ;
