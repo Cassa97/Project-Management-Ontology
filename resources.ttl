@@ -206,12 +206,6 @@ cr:EquipmentResource
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:onClass cr:ObjectOfEquipment ;
-      owl:onProperty cr:hasObject ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
       owl:onClass cterm:CategoryOfEquipment ;
       owl:onProperty cterm:hasCategory ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
@@ -220,6 +214,12 @@ cr:EquipmentResource
       rdf:type owl:Restriction ;
       owl:onClass cterm:FamilyOfEquipment ;
       owl:onProperty cterm:hasFamily ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass cterm:ObjectOfEquipment ;
+      owl:onProperty cterm:hasObject ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
@@ -283,12 +283,6 @@ cr:LabourResource
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:onClass cr:ObjectOfLabour ;
-      owl:onProperty cr:hasObject ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
       owl:onClass cterm:CategoryOfLabour ;
       owl:onProperty cterm:hasCategory ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
@@ -297,6 +291,12 @@ cr:LabourResource
       rdf:type owl:Restriction ;
       owl:onClass cterm:FamilyOfLabour ;
       owl:onProperty cterm:hasFamily ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass cterm:ObjectOfLabour ;
+      owl:onProperty cterm:hasObject ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   owl:disjointWith cr:EquipmentResource ;
@@ -386,12 +386,6 @@ cr:MaterialResource
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:onClass cr:ObjectOfMaterial ;
-      owl:onProperty cr:hasObject ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
       owl:onClass cterm:CategoryOfMaterial ;
       owl:onProperty cterm:hasCategory ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
@@ -404,6 +398,12 @@ cr:MaterialResource
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
+      owl:onClass cterm:ObjectOfMaterial ;
+      owl:onProperty cterm:hasObject ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
       owl:onDataRange xsd:boolean ;
       owl:onProperty cr:cam ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
@@ -411,32 +411,6 @@ cr:MaterialResource
   owl:disjointWith cr:EquipmentResource ;
   owl:disjointWith cr:LabourResource ;
   owl:equivalentClass <https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedMaterial> ;
-.
-cr:Object
-  rdf:type owl:Class ;
-  rdfs:label "oObject" ;
-  rdfs:subClassOf owl:Thing ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:onClass cr:Object ;
-      owl:onProperty cr:hasObject ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-.
-cr:ObjectOfEquipment
-  rdf:type owl:Class ;
-  rdfs:label "Object of equipment" ;
-  rdfs:subClassOf cr:Object ;
-.
-cr:ObjectOfLabour
-  rdf:type owl:Class ;
-  rdfs:label "Object of labour" ;
-  rdfs:subClassOf cr:Object ;
-.
-cr:ObjectOfMaterial
-  rdf:type owl:Class ;
-  rdfs:label "Object of material" ;
-  rdfs:subClassOf cr:Object ;
 .
 cr:Parameter
   rdf:type owl:Class ;
@@ -729,12 +703,6 @@ cr:hasMaterial
   rdfs:domain cr:MaterialResource ;
   rdfs:label "hasMaterial" ;
   rdfs:range cr:Material ;
-.
-cr:hasObject
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain cr:Resource ;
-  rdfs:label "hasObject" ;
-  rdfs:range cr:Object ;
 .
 cr:hasObjectStandard
   rdf:type owl:ObjectProperty ;

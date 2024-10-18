@@ -61,6 +61,7 @@
   owl:versionInfo "0.1" ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
+
 cterm:Architecture
   rdf:type owl:NamedIndividual ;
   rdf:type cterm:FamilyOfWork ;
@@ -357,6 +358,77 @@ cterm:Modify
   rdfs:label "Modify"@en ;
   rdfs:label "Änderung"@de ;
 .
+cterm:Object
+  rdf:type owl:Class ;
+  rdfs:label "Object" ;
+  rdfs:subClassOf cterm:Terminology ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass cterm:Object ;
+      owl:onProperty cterm:hasObject ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+.
+cterm:ObjectOfActivity
+  rdf:type owl:Class ;
+  rdfs:label "ObjectOfActivity" ;
+  rdfs:subClassOf cterm:Object ;
+  owl:disjointWith cterm:ObjectOfCostComponent ;
+  owl:disjointWith cterm:ObjectOfWorkOfConstructionWork ;
+  owl:disjointWith cterm:ObjectOfWorkOfProductWork ;
+  owl:disjointWith cterm:ObjectOfWorkOfTemporaryWork ;
+.
+cterm:ObjectOfCostComponent
+  rdf:type owl:Class ;
+  rdfs:label "ObjectOfCostComponent" ;
+  rdfs:subClassOf cterm:Object ;
+  owl:disjointWith cterm:ObjectOfActivity ;
+  owl:disjointWith cterm:ObjectOfWorkOfConstructionWork ;
+  owl:disjointWith cterm:ObjectOfWorkOfProductWork ;
+  owl:disjointWith cterm:ObjectOfWorkOfTemporaryWork ;
+.
+cterm:ObjectOfEquipment
+  rdf:type owl:Class ;
+  rdfs:label "Object of equipment" ;
+  rdfs:subClassOf cterm:Object ;
+.
+cterm:ObjectOfLabour
+  rdf:type owl:Class ;
+  rdfs:label "Object of labour" ;
+  rdfs:subClassOf cterm:Object ;
+.
+cterm:ObjectOfMaterial
+  rdf:type owl:Class ;
+  rdfs:label "Object of material" ;
+  rdfs:subClassOf cterm:Object ;
+.
+cterm:ObjectOfWorkOfConstructionWork
+  rdf:type owl:Class ;
+  rdfs:label "ObjectOfWorkOfConstructionWork" ;
+  rdfs:subClassOf cterm:Object ;
+  owl:disjointWith cterm:ObjectOfActivity ;
+  owl:disjointWith cterm:ObjectOfCostComponent ;
+  owl:disjointWith cterm:ObjectOfWorkOfProductWork ;
+  owl:disjointWith cterm:ObjectOfWorkOfTemporaryWork ;
+.
+cterm:ObjectOfWorkOfProductWork
+  rdf:type owl:Class ;
+  rdfs:label "ObjectOfWorkOfProductWork" ;
+  rdfs:subClassOf cterm:Object ;
+  owl:disjointWith cterm:ObjectOfActivity ;
+  owl:disjointWith cterm:ObjectOfCostComponent ;
+  owl:disjointWith cterm:ObjectOfWorkOfConstructionWork ;
+  owl:disjointWith cterm:ObjectOfWorkOfTemporaryWork ;
+.
+cterm:ObjectOfWorkOfTemporaryWork
+  rdf:type owl:Class ;
+  rdfs:label "ObjectOfWorkOfTemporaryWork" ;
+  rdfs:subClassOf cterm:Object ;
+  owl:disjointWith cterm:ObjectOfActivity ;
+  owl:disjointWith cterm:ObjectOfCostComponent ;
+  owl:disjointWith cterm:ObjectOfWorkOfConstructionWork ;
+  owl:disjointWith cterm:ObjectOfWorkOfProductWork ;
+.
 cterm:PrefabricatedStructuresForConcrete
   rdf:type owl:NamedIndividual ;
   rdf:type cterm:FamilyOfWork ;
@@ -574,6 +646,15 @@ cterm:hasFunction
   rdfs:domain cr:MaterialResource ;
   rdfs:label "hasFunction" ;
   rdfs:range cterm:Function ;
+.
+cterm:hasObject
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain cr:Resource ;
+    rdfs:domain ci:Activity ;
+  rdfs:domain ci:CostComponent ;
+  rdfs:domain ci:Work ;
+  rdfs:label "hasObject" ;
+  rdfs:range cterm:Object ;
 .
 cterm:hasType
   rdf:type owl:ObjectProperty ;
