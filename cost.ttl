@@ -1,5 +1,4 @@
 # baseURI: http://w3id.org/ci
-# imports: http://w3id.org/cr
 
 @prefix ci: <https://w3id.org/ci#> .
 @prefix dc: <http://purl.org/dc/terms/> .
@@ -52,7 +51,6 @@
   dc:title "The Construction Resources (CR) Ontology"@en ;
   vann:preferredNamespacePrefix "cr" ;
   vann:preferredNamespaceUri <http://w3id.org/ci#> ;
-  owl:imports <http://w3id.org/cr> ;
   owl:versionInfo "1.0" ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
@@ -132,27 +130,6 @@ ci:Activity
       owl:onProperty ci:descriptionGeneral ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
-.
-ci:ActivityOfConstructionWork
-  rdf:type owl:Class ;
-  rdfs:label "ActivityOfConstructionWork" ;
-  rdfs:subClassOf ci:Activity ;
-  owl:disjointWith ci:ActivityOfProductWork ;
-  owl:disjointWith ci:ActivityOfTemporaryWork ;
-.
-ci:ActivityOfProductWork
-  rdf:type owl:Class ;
-  rdfs:label "ActivityOfProductWork" ;
-  rdfs:subClassOf ci:Activity ;
-  owl:disjointWith ci:ActivityOfConstructionWork ;
-  owl:disjointWith ci:ActivityOfTemporaryWork ;
-.
-ci:ActivityOfTemporaryWork
-  rdf:type owl:Class ;
-  rdfs:label "ActivityOfTemporaryWork" ;
-  rdfs:subClassOf ci:Activity ;
-  owl:disjointWith ci:ActivityOfConstructionWork ;
-  owl:disjointWith ci:ActivityOfProductWork ;
 .
 ci:Architecture
   rdf:type ci:FamilyOfWork ;
@@ -254,7 +231,7 @@ ci:Construction
 ci:ConstructionWork
   rdf:type owl:Class ;
   rdfs:label "ConstructionWork" ;
-  rdfs:subClassOf <https://w3id.org/cr#CostComponent> ;
+  rdfs:subClassOf ci:CostComponent ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
@@ -269,7 +246,7 @@ ci:ConstructionWork
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:onClass ci:ActivityOfConstructionWork ;
+      owl:onClass ci:Activity ;
       owl:onProperty ci:hasActivity ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
@@ -282,6 +259,76 @@ ci:ConstructionWork
   owl:disjointWith ci:ProductWork ;
   owl:disjointWith ci:TemporaryWork ;
 .
+ci:CostComponent
+  rdf:type owl:Class ;
+  rdfs:label "CostComponent" ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:descriptionDetail ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass ci:CategoryOfCostComponent ;
+      owl:onProperty ci:hasCategory ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass ci:FamilyOfCostComponent ;
+      owl:onProperty ci:hasFamily ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass ci:Gender ;
+      owl:onProperty ci:hasGender ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass ci:Material ;
+      owl:onProperty ci:hasMaterial ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass ci:ObjectOfCostComponent ;
+      owl:onProperty ci:hasObject ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:decimal ;
+      owl:onProperty ci:unitPrice ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:integer ;
+      owl:onProperty ci:quantityUnitOfMeasure ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:code ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:descriptionGeneral ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty ci:IsPartOf ;
+      owl:someValuesFrom ci:CostItem ;
+    ] ;
+.
 ci:CostItem
   rdf:type owl:Class ;
   rdfs:label "CostItem" ;
@@ -289,7 +336,7 @@ ci:CostItem
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:onProperty ci:hasPart ;
-      owl:someValuesFrom <https://w3id.org/cr#CostComponent> ;
+      owl:someValuesFrom ci:CostComponent ;
     ] ;
   owl:equivalentClass ci:ProductionResult ;
 .
@@ -426,7 +473,7 @@ ci:Infrastructure
 .
 ci:IsPartOf
   rdf:type owl:ObjectProperty ;
-  rdfs:domain <https://w3id.org/cr#CostComponent> ;
+  rdfs:domain ci:CostComponent ;
   rdfs:label "IsPartOf" ;
   rdfs:range ci:CostItem ;
   rdfs:range ci:ProductionResult ;
@@ -581,7 +628,7 @@ ci:PrefabricatedStructuresForConcrete
 ci:ProductWork
   rdf:type owl:Class ;
   rdfs:label "ProductWork" ;
-  rdfs:subClassOf <https://w3id.org/cr#CostComponent> ;
+  rdfs:subClassOf ci:CostComponent ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
@@ -596,7 +643,7 @@ ci:ProductWork
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:onClass ci:ActivityOfProductWork ;
+      owl:onClass ci:Activity ;
       owl:onProperty ci:hasActivity ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
@@ -621,7 +668,7 @@ ci:ProductionResult
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:onProperty ci:hasPart ;
-      owl:someValuesFrom <https://w3id.org/cr#CostComponent> ;
+      owl:someValuesFrom ci:CostComponent ;
     ] ;
   owl:equivalentClass ci:CostItem ;
 .
@@ -662,7 +709,7 @@ ci:StructuralEngineer
 ci:TemporaryWork
   rdf:type owl:Class ;
   rdfs:label "TemporaryWork" ;
-  rdfs:subClassOf <https://w3id.org/cr#CostComponent> ;
+  rdfs:subClassOf ci:CostComponent ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
@@ -677,7 +724,7 @@ ci:TemporaryWork
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:onClass ci:ActivityOfTemporaryWork ;
+      owl:onClass ci:Activity ;
       owl:onProperty ci:hasActivity ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
@@ -829,19 +876,19 @@ ci:Work
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
       owl:onClass ci:DimensionParameter ;
-      owl:onProperty ci:resourceDimensionParameter ;
+      owl:onProperty ci:hasDimensionParameter ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
       owl:onClass ci:PerformanceParameter ;
-      owl:onProperty ci:resourcePerformanceParameter ;
+      owl:onProperty ci:hasPerformanceParameter ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
       owl:onClass ci:PhysicalParameter ;
-      owl:onProperty ci:resourcePhysicalParameter ;
+      owl:onProperty ci:hasPhysicalParameter ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -1059,31 +1106,31 @@ ci:cam
 .
 ci:code
   rdf:type owl:DatatypeProperty ;
-  rdfs:domain <https://w3id.org/cr#CostComponent> ;
+  rdfs:domain ci:CostComponent ;
   rdfs:label "code" ;
   rdfs:range xsd:string ;
 .
 ci:descriptionDetail
   rdf:type owl:DatatypeProperty ;
-  rdfs:domain <https://w3id.org/cr#CostComponent> ;
+  rdfs:domain ci:CostComponent ;
   rdfs:label "descriptionDetail" ;
   rdfs:range xsd:string ;
 .
 ci:descriptionGeneral
   rdf:type owl:DatatypeProperty ;
-  rdfs:domain <https://w3id.org/cr#CostComponent> ;
+  rdfs:domain ci:CostComponent ;
   rdfs:label "descriptionGeneral" ;
   rdfs:range xsd:string ;
 .
 ci:escluded
   rdf:type owl:DatatypeProperty ;
-  rdfs:domain <https://w3id.org/cr#CostComponent> ;
+  rdfs:domain ci:CostComponent ;
   rdfs:label "escluded" ;
   rdfs:range xsd:string ;
 .
 ci:hasActivity
   rdf:type owl:ObjectProperty ;
-  rdfs:domain <https://w3id.org/cr#CostComponent> ;
+  rdfs:domain ci:CostComponent ;
   rdfs:label "hasActivity" ;
   rdfs:range ci:Activity ;
 .
@@ -1096,16 +1143,22 @@ ci:hasAspect
 ci:hasCategory
   rdf:type owl:ObjectProperty ;
   rdfs:domain ci:Activity ;
+  rdfs:domain ci:CostComponent ;
   rdfs:domain ci:Work ;
-  rdfs:domain <https://w3id.org/cr#CostComponent> ;
   rdfs:label "hasCategory" ;
   rdfs:range ci:Category ;
+.
+ci:hasDimensionParameter
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain ci:Work ;
+  rdfs:label "hasDimensionParameter" ;
+  rdfs:range ci:DimensionParameter ;
 .
 ci:hasFamily
   rdf:type owl:ObjectProperty ;
   rdfs:domain ci:Activity ;
+  rdfs:domain ci:CostComponent ;
   rdfs:domain ci:Work ;
-  rdfs:domain <https://w3id.org/cr#CostComponent> ;
   rdfs:label "hasFamily" ;
   rdfs:range ci:Family ;
 .
@@ -1125,39 +1178,39 @@ ci:hasFunction
 ci:hasGender
   rdf:type owl:ObjectProperty ;
   rdfs:domain ci:Activity ;
+  rdfs:domain ci:CostComponent ;
   rdfs:domain ci:Work ;
-  rdfs:domain <https://w3id.org/cr#CostComponent> ;
   rdfs:label "hasGender" ;
   rdfs:range ci:Gender ;
 .
 ci:hasMaterial
   rdf:type owl:ObjectProperty ;
+  rdfs:domain ci:CostComponent ;
   rdfs:domain ci:Work ;
-  rdfs:domain <https://w3id.org/cr#CostComponent> ;
   rdfs:label "hasMaterial" ;
   rdfs:range ci:Material ;
 .
 ci:hasObject
   rdf:type owl:ObjectProperty ;
   rdfs:domain ci:Activity ;
+  rdfs:domain ci:CostComponent ;
   rdfs:domain ci:Work ;
-  rdfs:domain <https://w3id.org/cr#CostComponent> ;
   rdfs:label "hasObject" ;
   rdfs:range ci:Object ;
 .
 ci:hasObjectStandard
   rdf:type owl:ObjectProperty ;
   rdfs:domain ci:Activity ;
+  rdfs:domain ci:CostComponent ;
   rdfs:domain ci:Work ;
-  rdfs:domain <https://w3id.org/cr#CostComponent> ;
   rdfs:label "hasObjectStandard" ;
   rdfs:range ci:Standard ;
 .
 ci:hasOtherStandard
   rdf:type owl:ObjectProperty ;
   rdfs:domain ci:Activity ;
+  rdfs:domain ci:CostComponent ;
   rdfs:domain ci:Work ;
-  rdfs:domain <https://w3id.org/cr#CostComponent> ;
   rdfs:label "hasOtherStandard" ;
   rdfs:range ci:Standard ;
 .
@@ -1172,22 +1225,34 @@ ci:hasPart
   rdfs:domain ci:CostItem ;
   rdfs:domain ci:ProductionResult ;
   rdfs:label "hasPart" ;
-  rdfs:range <https://w3id.org/cr#CostComponent> ;
+  rdfs:range ci:CostComponent ;
+.
+ci:hasPerformanceParameter
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain ci:Work ;
+  rdfs:label "hasPerformanceParameter" ;
+  rdfs:range ci:PerformanceParameter ;
+.
+ci:hasPhysicalParameter
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain ci:Work ;
+  rdfs:label "hasPhysicalParameter" ;
+  rdfs:range ci:PhysicalParameter ;
 .
 ci:hasType
   rdf:type owl:ObjectProperty ;
   rdfs:domain ci:Activity ;
+  rdfs:domain ci:CostComponent ;
   rdfs:domain ci:Work ;
-  rdfs:domain <https://w3id.org/cr#CostComponent> ;
   rdfs:label "hasType" ;
   rdfs:range ci:Type ;
 .
 ci:hasUnit
   rdf:type owl:ObjectProperty ;
   rdfs:domain ci:Activity ;
+  rdfs:domain ci:CostComponent ;
   rdfs:domain ci:Parameter ;
   rdfs:domain ci:Work ;
-  rdfs:domain <https://w3id.org/cr#CostComponent> ;
   rdfs:label "hasUnit" ;
   rdfs:range qudt:Unit ;
 .
@@ -1200,13 +1265,13 @@ ci:hasUse
 .
 ci:hasWork
   rdf:type owl:ObjectProperty ;
-  rdfs:domain <https://w3id.org/cr#CostComponent> ;
+  rdfs:domain ci:CostComponent ;
   rdfs:label "hasWork" ;
   rdfs:range ci:Work ;
 .
 ci:included
   rdf:type owl:DatatypeProperty ;
-  rdfs:domain <https://w3id.org/cr#CostComponent> ;
+  rdfs:domain ci:CostComponent ;
   rdfs:label "included" ;
   rdfs:range xsd:string ;
 .
@@ -1225,13 +1290,13 @@ ci:law
 .
 ci:measurementRules
   rdf:type owl:DatatypeProperty ;
-  rdfs:domain <https://w3id.org/cr#CostComponent> ;
+  rdfs:domain ci:CostComponent ;
   rdfs:label "measurementRules" ;
   rdfs:range xsd:string ;
 .
 ci:omniclass
   rdf:type owl:DatatypeProperty ;
-  rdfs:domain <https://w3id.org/cr#CostComponent> ;
+  rdfs:domain ci:CostComponent ;
   rdfs:label "omniclass" ;
   rdfs:range xsd:string ;
 .
@@ -1267,27 +1332,9 @@ ci:parameterValue2
 .
 ci:quantityUnitOfMeasure
   rdf:type owl:DatatypeProperty ;
-  rdfs:domain <https://w3id.org/cr#CostComponent> ;
+  rdfs:domain ci:CostComponent ;
   rdfs:label "quantityUnitOfMeasure" ;
   rdfs:range xsd:integer ;
-.
-ci:resourceDimensionParameter
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain ci:Work ;
-  rdfs:label "resourceDimensionParameter" ;
-  rdfs:range ci:DimensionParameter ;
-.
-ci:resourcePerformanceParameter
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain ci:Work ;
-  rdfs:label "resourcePerformanceParameter" ;
-  rdfs:range ci:PerformanceParameter ;
-.
-ci:resourcePhysicalParameter
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain ci:Work ;
-  rdfs:label "resourcePhysicalParameter" ;
-  rdfs:range ci:PhysicalParameter ;
 .
 ci:standardBody
   rdf:type owl:DatatypeProperty ;
@@ -1315,95 +1362,25 @@ ci:standardYear
 .
 ci:techSpecs
   rdf:type owl:DatatypeProperty ;
-  rdfs:domain <https://w3id.org/cr#CostComponent> ;
+  rdfs:domain ci:CostComponent ;
   rdfs:label "tech specs" ;
   rdfs:range xsd:string ;
 .
 ci:uniclass
   rdf:type owl:DatatypeProperty ;
-  rdfs:domain <https://w3id.org/cr#CostComponent> ;
+  rdfs:domain ci:CostComponent ;
   rdfs:label "uniclass" ;
   rdfs:range xsd:string ;
 .
 ci:uniformat
   rdf:type owl:DatatypeProperty ;
-  rdfs:domain <https://w3id.org/cr#CostComponent> ;
+  rdfs:domain ci:CostComponent ;
   rdfs:label "uniformat" ;
   rdfs:range xsd:string ;
 .
 ci:unitPrice
   rdf:type owl:DatatypeProperty ;
-  rdfs:domain <https://w3id.org/cr#CostComponent> ;
+  rdfs:domain ci:CostComponent ;
   rdfs:label "unit price" ;
   rdfs:range xsd:decimal ;
-.
-<https://w3id.org/cr#CostComponent>
-  rdf:type owl:Class ;
-  rdfs:label "Cost component" ;
-  rdfs:subClassOf owl:Thing ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:string ;
-      owl:onProperty ci:descriptionDetail ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:onClass ci:CategoryOfCostComponent ;
-      owl:onProperty ci:hasCategory ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:onClass ci:FamilyOfCostComponent ;
-      owl:onProperty ci:hasFamily ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:onClass ci:Gender ;
-      owl:onProperty ci:hasGender ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:onClass ci:Material ;
-      owl:onProperty ci:hasMaterial ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:onClass ci:ObjectOfCostComponent ;
-      owl:onProperty ci:hasObject ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:onDataRange xsd:decimal ;
-      owl:onProperty ci:unitPrice ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:onDataRange xsd:integer ;
-      owl:onProperty ci:quantityUnitOfMeasure ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:onDataRange xsd:string ;
-      owl:onProperty ci:code ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:onDataRange xsd:string ;
-      owl:onProperty ci:descriptionGeneral ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:onProperty ci:IsPartOf ;
-      owl:someValuesFrom ci:CostItem ;
-    ] ;
 .
