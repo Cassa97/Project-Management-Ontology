@@ -109,7 +109,7 @@ ci:Activity
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:onClass cterm:FamilyOfActivity ;
-      owl:onProperty ci:hasFamily ;
+      owl:onProperty cterm:hasFamily ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
@@ -210,7 +210,7 @@ ci:CostComponent
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:onClass cterm:FamilyOfCostComponent ;
-      owl:onProperty ci:hasFamily ;
+      owl:onProperty cterm:hasFamily ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
@@ -703,7 +703,7 @@ ci:Work
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:onClass cterm:FamilyOfWork ;
-      owl:onProperty ci:hasFamily ;
+      owl:onProperty cterm:hasFamily ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
