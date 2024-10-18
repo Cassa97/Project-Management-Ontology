@@ -61,6 +61,11 @@
   owl:versionInfo "0.1" ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
+ci:Type
+  rdf:type owl:Class ;
+  rdfs:label "Type" ;
+  rdfs:subClassOf owl:Thing ;
+.
 cterm:Architecture
   rdf:type owl:NamedIndividual ;
   rdf:type cterm:FamilyOfWork ;
@@ -375,6 +380,109 @@ cterm:Terminology
   rdfs:label "Terminology" ;
   rdfs:subClassOf owl:Thing ;
 .
+cterm:Type
+  rdf:type owl:Class ;
+  rdfs:label "Type" ;
+  rdfs:subClassOf cterm:Terminology ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass cterm:Type ;
+      owl:onProperty cterm:hasType ;
+    ] ;
+.
+cterm:TypeOfActivity
+  rdf:type owl:Class ;
+  rdfs:label "TypeOfActivity" ;
+  rdfs:subClassOf cterm:Type ;
+  owl:disjointWith cterm:TypeOfConstructionWork ;
+  owl:disjointWith cterm:TypeOfProductWork ;
+  owl:disjointWith cterm:TypeOfTemporaryWork ;
+  owl:disjointWith cterm:TypeOfWorkOfConstructionWork ;
+  owl:disjointWith cterm:TypeOfWorkOfProductWork ;
+  owl:disjointWith cterm:TypeOfWorkOfTemporaryWork ;
+.
+cterm:TypeOfConstructionWork
+  rdf:type owl:Class ;
+  rdfs:label "Type of construction work" ;
+  rdfs:subClassOf cterm:Type ;
+  owl:disjointWith cterm:TypeOfActivity ;
+  owl:disjointWith cterm:TypeOfProductWork ;
+  owl:disjointWith cterm:TypeOfTemporaryWork ;
+  owl:disjointWith cterm:TypeOfWorkOfConstructionWork ;
+  owl:disjointWith cterm:TypeOfWorkOfProductWork ;
+  owl:disjointWith cterm:TypeOfWorkOfTemporaryWork ;
+.
+cterm:TypeOfEquipment
+  rdf:type owl:Class ;
+  rdfs:label "Type of equipment" ;
+  rdfs:subClassOf cterm:Type ;
+.
+cterm:TypeOfLabour
+  rdf:type owl:Class ;
+  rdfs:label "Type of labour" ;
+  rdfs:subClassOf cterm:Type ;
+.
+cterm:TypeOfMaterial
+  rdf:type owl:Class ;
+  rdfs:label "Type of material" ;
+  rdfs:subClassOf cterm:Type ;
+.
+cterm:TypeOfProductWork
+  rdf:type owl:Class ;
+  rdfs:label "TypeOfProductWork" ;
+  rdfs:subClassOf cterm:Type ;
+  owl:disjointWith cterm:TypeOfActivity ;
+  owl:disjointWith cterm:TypeOfConstructionWork ;
+  owl:disjointWith cterm:TypeOfTemporaryWork ;
+  owl:disjointWith cterm:TypeOfWorkOfConstructionWork ;
+  owl:disjointWith cterm:TypeOfWorkOfProductWork ;
+  owl:disjointWith cterm:TypeOfWorkOfTemporaryWork ;
+.
+cterm:TypeOfTemporaryWork
+  rdf:type owl:Class ;
+  rdfs:label "TypeOfTemporaryWork" ;
+  rdfs:subClassOf cterm:Type ;
+  owl:disjointWith cterm:TypeOfActivity ;
+  owl:disjointWith cterm:TypeOfConstructionWork ;
+  owl:disjointWith cterm:TypeOfProductWork ;
+  owl:disjointWith cterm:TypeOfWorkOfConstructionWork ;
+  owl:disjointWith cterm:TypeOfWorkOfProductWork ;
+  owl:disjointWith cterm:TypeOfWorkOfTemporaryWork ;
+.
+cterm:TypeOfWorkOfConstructionWork
+  rdf:type owl:Class ;
+  rdfs:label "TypeOfWorkOfConstructionWork" ;
+  rdfs:subClassOf cterm:Type ;
+  owl:disjointWith cterm:TypeOfActivity ;
+  owl:disjointWith cterm:TypeOfConstructionWork ;
+  owl:disjointWith cterm:TypeOfProductWork ;
+  owl:disjointWith cterm:TypeOfTemporaryWork ;
+  owl:disjointWith cterm:TypeOfWorkOfProductWork ;
+  owl:disjointWith cterm:TypeOfWorkOfTemporaryWork ;
+.
+cterm:TypeOfWorkOfProductWork
+  rdf:type owl:Class ;
+  rdfs:label "TypeOfWorkOfProductWork" ;
+  rdfs:subClassOf cterm:Type ;
+  owl:disjointWith cterm:TypeOfActivity ;
+  owl:disjointWith cterm:TypeOfConstructionWork ;
+  owl:disjointWith cterm:TypeOfProductWork ;
+  owl:disjointWith cterm:TypeOfTemporaryWork ;
+  owl:disjointWith cterm:TypeOfWorkOfConstructionWork ;
+  owl:disjointWith cterm:TypeOfWorkOfTemporaryWork ;
+.
+cterm:TypeOfWorkOfTemporaryWork
+  rdf:type owl:Class ;
+  rdfs:label "TypeOfWorkOfTemporaryWork" ;
+  rdfs:subClassOf cterm:Type ;
+  owl:disjointWith cterm:TypeOfActivity ;
+  owl:disjointWith cterm:TypeOfConstructionWork ;
+  owl:disjointWith cterm:TypeOfProductWork ;
+  owl:disjointWith cterm:TypeOfTemporaryWork ;
+  owl:disjointWith cterm:TypeOfWorkOfConstructionWork ;
+  owl:disjointWith cterm:TypeOfWorkOfProductWork ;
+.
 cterm:hasAspect
   rdf:type owl:ObjectProperty ;
   rdfs:domain ci:Work ;
@@ -409,4 +517,13 @@ cterm:hasFunction
   rdfs:domain cr:MaterialResource ;
   rdfs:label "hasFunction" ;
   rdfs:range cterm:Function ;
+.
+cterm:hasType
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain ci:Activity ;
+  rdfs:domain ci:CostComponent ;
+  rdfs:domain ci:Work ;
+  rdfs:domain cr:Resource ;
+  rdfs:label "hasType" ;
+  rdfs:range cterm:Type ;
 .

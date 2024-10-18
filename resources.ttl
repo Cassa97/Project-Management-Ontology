@@ -518,8 +518,8 @@ cr:Resource
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass cr:Type ;
-      owl:onProperty cr:hasType ;
+      owl:onClass cterm:Type ;
+      owl:onProperty cterm:hasType ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -653,32 +653,6 @@ cr:TaskToGeometryAssignment
   owl:disjointWith cr:CostItemToGeometryAssignment ;
   owl:disjointWith cr:ResourceToCostItemAssignment ;
   owl:disjointWith cr:ResourceToTaskAssignment ;
-.
-cr:Type
-  rdf:type owl:Class ;
-  rdfs:label "Type" ;
-  rdfs:subClassOf owl:Thing ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass cr:Type ;
-      owl:onProperty cr:hasType ;
-    ] ;
-.
-cr:TypeOfEquipment
-  rdf:type owl:Class ;
-  rdfs:label "Type of equipment" ;
-  rdfs:subClassOf cr:Type ;
-.
-cr:TypeOfLabour
-  rdf:type owl:Class ;
-  rdfs:label "Type of labour" ;
-  rdfs:subClassOf cr:Type ;
-.
-cr:TypeOfMaterial
-  rdf:type owl:Class ;
-  rdfs:label "Type of material" ;
-  rdfs:subClassOf cr:Type ;
 .
 cr:Use
   rdf:type owl:Class ;
@@ -823,12 +797,6 @@ cr:hasSubResource
   rdfs:label "hasSubResource" ;
   rdfs:range cr:Resource ;
   owl:inverseOf cr:subRecourceOf ;
-.
-cr:hasType
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain cr:Resource ;
-  rdfs:label "hasType" ;
-  rdfs:range cr:Type ;
 .
 cr:hasUnit
   rdf:type owl:ObjectProperty ;

@@ -67,8 +67,8 @@ ci:Activity
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass ci:TypeOfActivity ;
-      owl:onProperty ci:hasType ;
+      owl:onClass cterm:TypeOfActivity ;
+      owl:onProperty cterm:hasType ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -155,8 +155,8 @@ ci:ConstructionWork
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass ci:TypeOfConstructionWork ;
-      owl:onProperty ci:hasType ;
+      owl:onClass cterm:TypeOfConstructionWork ;
+      owl:onProperty cterm:hasType ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -439,8 +439,8 @@ ci:ProductWork
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass ci:TypeOfProductWork ;
-      owl:onProperty ci:hasType ;
+      owl:onClass cterm:TypeOfProductWork ;
+      owl:onProperty cterm:hasType ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -504,8 +504,8 @@ ci:TemporaryWork
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass ci:TypeOfTemporaryWork ;
-      owl:onProperty ci:hasType ;
+      owl:onClass cterm:TypeOfTemporaryWork ;
+      owl:onProperty cterm:hasType ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -515,88 +515,6 @@ ci:TemporaryWork
     ] ;
   owl:disjointWith ci:ConstructionWork ;
   owl:disjointWith ci:ProductWork ;
-.
-ci:Type
-  rdf:type owl:Class ;
-  rdfs:label "Type" ;
-  rdfs:subClassOf owl:Thing ;
-.
-ci:TypeOfActivity
-  rdf:type owl:Class ;
-  rdfs:label "TypeOfActivity" ;
-  rdfs:subClassOf ci:Type ;
-  owl:disjointWith ci:TypeOfConstructionWork ;
-  owl:disjointWith ci:TypeOfProductWork ;
-  owl:disjointWith ci:TypeOfTemporaryWork ;
-  owl:disjointWith ci:TypeOfWorkOfConstructionWork ;
-  owl:disjointWith ci:TypeOfWorkOfProductWork ;
-  owl:disjointWith ci:TypeOfWorkOfTemporaryWork ;
-.
-ci:TypeOfConstructionWork
-  rdf:type owl:Class ;
-  rdfs:label "Type of construction work" ;
-  rdfs:subClassOf ci:Type ;
-  owl:disjointWith ci:TypeOfActivity ;
-  owl:disjointWith ci:TypeOfProductWork ;
-  owl:disjointWith ci:TypeOfTemporaryWork ;
-  owl:disjointWith ci:TypeOfWorkOfConstructionWork ;
-  owl:disjointWith ci:TypeOfWorkOfProductWork ;
-  owl:disjointWith ci:TypeOfWorkOfTemporaryWork ;
-.
-ci:TypeOfProductWork
-  rdf:type owl:Class ;
-  rdfs:label "TypeOfProductWork" ;
-  rdfs:subClassOf ci:Type ;
-  owl:disjointWith ci:TypeOfActivity ;
-  owl:disjointWith ci:TypeOfConstructionWork ;
-  owl:disjointWith ci:TypeOfTemporaryWork ;
-  owl:disjointWith ci:TypeOfWorkOfConstructionWork ;
-  owl:disjointWith ci:TypeOfWorkOfProductWork ;
-  owl:disjointWith ci:TypeOfWorkOfTemporaryWork ;
-.
-ci:TypeOfTemporaryWork
-  rdf:type owl:Class ;
-  rdfs:label "TypeOfTemporaryWork" ;
-  rdfs:subClassOf ci:Type ;
-  owl:disjointWith ci:TypeOfActivity ;
-  owl:disjointWith ci:TypeOfConstructionWork ;
-  owl:disjointWith ci:TypeOfProductWork ;
-  owl:disjointWith ci:TypeOfWorkOfConstructionWork ;
-  owl:disjointWith ci:TypeOfWorkOfProductWork ;
-  owl:disjointWith ci:TypeOfWorkOfTemporaryWork ;
-.
-ci:TypeOfWorkOfConstructionWork
-  rdf:type owl:Class ;
-  rdfs:label "TypeOfWorkOfConstructionWork" ;
-  rdfs:subClassOf ci:Type ;
-  owl:disjointWith ci:TypeOfActivity ;
-  owl:disjointWith ci:TypeOfConstructionWork ;
-  owl:disjointWith ci:TypeOfProductWork ;
-  owl:disjointWith ci:TypeOfTemporaryWork ;
-  owl:disjointWith ci:TypeOfWorkOfProductWork ;
-  owl:disjointWith ci:TypeOfWorkOfTemporaryWork ;
-.
-ci:TypeOfWorkOfProductWork
-  rdf:type owl:Class ;
-  rdfs:label "TypeOfWorkOfProductWork" ;
-  rdfs:subClassOf ci:Type ;
-  owl:disjointWith ci:TypeOfActivity ;
-  owl:disjointWith ci:TypeOfConstructionWork ;
-  owl:disjointWith ci:TypeOfProductWork ;
-  owl:disjointWith ci:TypeOfTemporaryWork ;
-  owl:disjointWith ci:TypeOfWorkOfConstructionWork ;
-  owl:disjointWith ci:TypeOfWorkOfTemporaryWork ;
-.
-ci:TypeOfWorkOfTemporaryWork
-  rdf:type owl:Class ;
-  rdfs:label "TypeOfWorkOfTemporaryWork" ;
-  rdfs:subClassOf ci:Type ;
-  owl:disjointWith ci:TypeOfActivity ;
-  owl:disjointWith ci:TypeOfConstructionWork ;
-  owl:disjointWith ci:TypeOfProductWork ;
-  owl:disjointWith ci:TypeOfTemporaryWork ;
-  owl:disjointWith ci:TypeOfWorkOfConstructionWork ;
-  owl:disjointWith ci:TypeOfWorkOfProductWork ;
 .
 ci:Use
   rdf:type owl:Class ;
@@ -731,14 +649,14 @@ ci:WorkOfConstructionWork
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass ci:TypeOfWorkOfConstructionWork ;
-      owl:onProperty ci:hasType ;
+      owl:onClass cterm:FunctionOfWorkOfConstructionWork ;
+      owl:onProperty cterm:hasFunction ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass cterm:FunctionOfWorkOfConstructionWork ;
-      owl:onProperty cterm:hasFunction ;
+      owl:onClass cterm:TypeOfWorkOfConstructionWork ;
+      owl:onProperty cterm:hasType ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -790,14 +708,14 @@ ci:WorkOfProductWork
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass ci:TypeOfWorkOfProductWork ;
-      owl:onProperty ci:hasType ;
+      owl:onClass cterm:FunctionOfWorkOfProductWork ;
+      owl:onProperty cterm:hasFunction ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass cterm:FunctionOfWorkOfProductWork ;
-      owl:onProperty cterm:hasFunction ;
+      owl:onClass cterm:TypeOfWorkOfProductWork ;
+      owl:onProperty cterm:hasType ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -868,14 +786,14 @@ ci:WorkOfTemporaryWork
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:onClass ci:TypeOfWorkOfTemporaryWork ;
-      owl:onProperty ci:hasType ;
+      owl:onClass cterm:CategoryOfWorkOfTemporaryWork ;
+      owl:onProperty cterm:hasCategory ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:onClass cterm:CategoryOfWorkOfTemporaryWork ;
-      owl:onProperty cterm:hasCategory ;
+      owl:onClass cterm:TypeOfWorkOfTemporaryWork ;
+      owl:onProperty cterm:hasType ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   owl:disjointWith ci:WorkOfConstructionWork ;
@@ -999,14 +917,6 @@ ci:hasSubComponent
   rdfs:domain ci:WorkOfConstructionWork ;
   rdfs:label "hasSubComponent" ;
   rdfs:range ci:CostComponent ;
-.
-ci:hasType
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain ci:Activity ;
-  rdfs:domain ci:CostComponent ;
-  rdfs:domain ci:Work ;
-  rdfs:label "hasType" ;
-  rdfs:range ci:Type ;
 .
 ci:hasUnit
   rdf:type owl:ObjectProperty ;
@@ -1151,4 +1061,12 @@ ci:unitPrice
   rdfs:domain ci:CostComponent ;
   rdfs:label "unit price" ;
   rdfs:range xsd:decimal ;
+.
+cterm:hasType
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain ci:Activity ;
+  rdfs:domain ci:CostComponent ;
+  rdfs:domain ci:Work ;
+  rdfs:label "hasType" ;
+  rdfs:range ci:Type ;
 .
