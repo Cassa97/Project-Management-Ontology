@@ -1,6 +1,10 @@
 # baseURI: http://w3id.org/ci
+# imports: http://w3id.org/cr
+# imports: http://w3id.org/cterm
 
 @prefix ci: <https://w3id.org/ci#> .
+@prefix cr: <https://w3id.org/cr#> .
+@prefix cterm: <https://w3id.org/cterm#> .
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix qudt: <http://qudt.org/schema/qudt/> .
@@ -51,6 +55,8 @@
   dc:title "The Construction Resources (CR) Ontology"@en ;
   vann:preferredNamespacePrefix "cr" ;
   vann:preferredNamespaceUri <http://w3id.org/ci#> ;
+  owl:imports <http://w3id.org/cr> ;
+  owl:imports <http://w3id.org/cterm> ;
   owl:versionInfo "1.0" ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
@@ -84,12 +90,6 @@ ci:Activity
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:onClass ci:CategoryOfActivity ;
-      owl:onProperty ci:hasCategory ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
       owl:onClass ci:FamilyOfActivity ;
       owl:onProperty ci:hasFamily ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
@@ -104,6 +104,12 @@ ci:Activity
       rdf:type owl:Restriction ;
       owl:onClass ci:ObjectOfActivity ;
       owl:onProperty ci:hasObject ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass cterm:CategoryOfActivity ;
+      owl:onProperty cterm:hasCategory ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
@@ -140,94 +146,6 @@ ci:Architecture
   rdf:type ci:FamilyOfWork ;
   rdfs:label "Architecture"@en ;
   rdfs:label "Architettura"@it ;
-.
-ci:Aspect
-  rdf:type owl:Class ;
-  rdfs:label "Aspect" ;
-  rdfs:subClassOf owl:Thing ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
-      owl:onClass ci:Aspect ;
-      owl:onProperty ci:hasAspect ;
-    ] ;
-.
-ci:AspectOfWorkOfConstructionWork
-  rdf:type owl:Class ;
-  rdfs:label "AspectOfWorkOfConstructionWork" ;
-  rdfs:subClassOf ci:Aspect ;
-  owl:disjointWith ci:AspectOfWorkOfProductWork ;
-  owl:disjointWith ci:AspectOfWorkOfTemporaryWork ;
-.
-ci:AspectOfWorkOfProductWork
-  rdf:type owl:Class ;
-  rdfs:label "AspectOfWorkOfProductWork" ;
-  rdfs:subClassOf ci:Aspect ;
-  owl:disjointWith ci:AspectOfWorkOfConstructionWork ;
-  owl:disjointWith ci:AspectOfWorkOfTemporaryWork ;
-.
-ci:AspectOfWorkOfTemporaryWork
-  rdf:type owl:Class ;
-  rdfs:label "AspectOfWorkOfTemporaryWork" ;
-  rdfs:subClassOf ci:Aspect ;
-  owl:disjointWith ci:AspectOfWorkOfConstructionWork ;
-  owl:disjointWith ci:AspectOfWorkOfProductWork ;
-.
-ci:Category
-  rdf:type owl:Class ;
-  rdfs:label "Category" ;
-  rdfs:subClassOf owl:Thing ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:onClass ci:Category ;
-      owl:onProperty ci:hasCategory ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-.
-ci:CategoryOfActivity
-  rdf:type owl:Class ;
-  rdfs:label "CategoryOfActivity" ;
-  rdfs:subClassOf ci:Category ;
-  owl:disjointWith ci:CategoryOfCostComponent ;
-  owl:disjointWith ci:CategoryOfWorkOfConstructionWork ;
-  owl:disjointWith ci:CategoryOfWorkOfProductWork ;
-  owl:disjointWith ci:CategoryOfWorkOfTemporaryWork ;
-.
-ci:CategoryOfCostComponent
-  rdf:type owl:Class ;
-  rdfs:label "CategoryOfCostComponent" ;
-  rdfs:subClassOf ci:Category ;
-  owl:disjointWith ci:CategoryOfActivity ;
-  owl:disjointWith ci:CategoryOfWorkOfConstructionWork ;
-  owl:disjointWith ci:CategoryOfWorkOfProductWork ;
-  owl:disjointWith ci:CategoryOfWorkOfTemporaryWork ;
-.
-ci:CategoryOfWorkOfConstructionWork
-  rdf:type owl:Class ;
-  rdfs:label "CategoryOfWorkOfConstructionWork" ;
-  rdfs:subClassOf ci:Category ;
-  owl:disjointWith ci:CategoryOfActivity ;
-  owl:disjointWith ci:CategoryOfCostComponent ;
-  owl:disjointWith ci:CategoryOfWorkOfTemporaryWork ;
-  owl:equivalentClass ci:CategoryOfWorkOfProductWork ;
-.
-ci:CategoryOfWorkOfProductWork
-  rdf:type owl:Class ;
-  rdfs:label "CategoryOfWorkOfProductWork" ;
-  rdfs:subClassOf ci:Category ;
-  owl:disjointWith ci:CategoryOfActivity ;
-  owl:disjointWith ci:CategoryOfCostComponent ;
-  owl:disjointWith ci:CategoryOfWorkOfTemporaryWork ;
-  owl:equivalentClass ci:CategoryOfWorkOfConstructionWork ;
-.
-ci:CategoryOfWorkOfTemporaryWork
-  rdf:type owl:Class ;
-  rdfs:label "CategoryOfWorkOfTemporaryWork" ;
-  rdfs:subClassOf ci:Category ;
-  owl:disjointWith ci:CategoryOfActivity ;
-  owl:disjointWith ci:CategoryOfCostComponent ;
-  owl:disjointWith ci:CategoryOfWorkOfConstructionWork ;
-  owl:disjointWith ci:CategoryOfWorkOfProductWork ;
 .
 ci:CivilEngineer
   rdf:type ci:FamilyOfWork ;
@@ -282,12 +200,6 @@ ci:CostComponent
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:onClass ci:CategoryOfCostComponent ;
-      owl:onProperty ci:hasCategory ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
       owl:onClass ci:FamilyOfCostComponent ;
       owl:onProperty ci:hasFamily ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
@@ -308,6 +220,12 @@ ci:CostComponent
       rdf:type owl:Restriction ;
       owl:onClass ci:ObjectOfCostComponent ;
       owl:onProperty ci:hasObject ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass cterm:CategoryOfCostComponent ;
+      owl:onProperty cterm:hasCategory ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
@@ -987,12 +905,6 @@ ci:WorkOfConstructionWork
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
-      owl:onClass ci:AspectOfWorkOfConstructionWork ;
-      owl:onProperty ci:hasAspect ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
       owl:onClass ci:FinishingOfWorkOfConstructionWork ;
       owl:onProperty ci:hasFinishing ;
     ] ;
@@ -1004,14 +916,20 @@ ci:WorkOfConstructionWork
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:onClass ci:CategoryOfWorkOfConstructionWork ;
-      owl:onProperty ci:hasCategory ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
+      owl:onClass cterm:AspectOfWorkOfConstructionWork ;
+      owl:onProperty cterm:hasAspect ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:onClass ci:ObjectOfWorkOfConstructionWork ;
       owl:onProperty ci:hasObject ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass cterm:CategoryOfWorkOfConstructionWork ;
+      owl:onProperty cterm:hasCategory ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
@@ -1046,12 +964,6 @@ ci:WorkOfProductWork
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
-      owl:onClass ci:AspectOfWorkOfProductWork ;
-      owl:onProperty ci:hasAspect ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
       owl:onClass ci:FinishingOfWorkOfProductWork ;
       owl:onProperty ci:hasFinishing ;
     ] ;
@@ -1063,14 +975,20 @@ ci:WorkOfProductWork
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:onClass ci:CategoryOfWorkOfProductWork ;
-      owl:onProperty ci:hasCategory ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
+      owl:onClass cterm:AspectOfWorkOfProductWork ;
+      owl:onProperty cterm:hasAspect ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:onClass ci:ObjectOfWorkOfProductWork ;
       owl:onProperty ci:hasObject ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass cterm:CategoryOfWorkOfProductWork ;
+      owl:onProperty cterm:hasCategory ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   owl:disjointWith ci:WorkOfConstructionWork ;
@@ -1089,12 +1007,6 @@ ci:WorkOfTemporaryWork
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
-      owl:onClass ci:AspectOfWorkOfTemporaryWork ;
-      owl:onProperty ci:hasAspect ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
       owl:onClass ci:FinishingOfWorkOfTemporaryWork ;
       owl:onProperty ci:hasFinishing ;
     ] ;
@@ -1106,9 +1018,9 @@ ci:WorkOfTemporaryWork
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:onClass ci:CategoryOfWorkOfTemporaryWork ;
-      owl:onProperty ci:hasCategory ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
+      owl:onClass cterm:AspectOfWorkOfTemporaryWork ;
+      owl:onProperty cterm:hasAspect ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -1120,6 +1032,12 @@ ci:WorkOfTemporaryWork
       rdf:type owl:Restriction ;
       owl:onClass ci:TypeOfWorkOfTemporaryWork ;
       owl:onProperty ci:hasType ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass cterm:CategoryOfWorkOfTemporaryWork ;
+      owl:onProperty cterm:hasCategory ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   owl:disjointWith ci:WorkOfConstructionWork ;
@@ -1160,20 +1078,6 @@ ci:hasActivity
   rdfs:domain ci:CostComponent ;
   rdfs:label "hasActivity" ;
   rdfs:range ci:Activity ;
-.
-ci:hasAspect
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain ci:Work ;
-  rdfs:label "hasAspect" ;
-  rdfs:range ci:Aspect ;
-.
-ci:hasCategory
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain ci:Activity ;
-  rdfs:domain ci:CostComponent ;
-  rdfs:domain ci:Work ;
-  rdfs:label "hasCategory" ;
-  rdfs:range ci:Category ;
 .
 ci:hasDimensionParameter
   rdf:type owl:ObjectProperty ;
@@ -1418,3 +1322,4 @@ ci:unitPrice
   rdfs:label "unit price" ;
   rdfs:range xsd:decimal ;
 .
+

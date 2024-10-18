@@ -1,7 +1,9 @@
 # baseURI: http://w3id.org/cr
 # imports: http://w3id.org/ci
 
+@prefix ci: <https://w3id.org/ci#> .
 @prefix cr: <https://w3id.org/cr#> .
+@prefix cterm: <https://w3id.org/cterm#> .
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix dtc: <https://dtc-ontology.cms.ed.tum.de/ontology/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -61,57 +63,10 @@
   rdf:type rdfs:Class ;
   rdfs:subClassOf cr:ResourceToTaskAssignment ;
 .
-cr:Aspect
-  rdf:type owl:Class ;
-  rdfs:label "Aspect" ;
-  rdfs:subClassOf owl:Thing ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
-      owl:onClass cr:Aspect ;
-      owl:onProperty cr:hasAspect ;
-    ] ;
-.
-cr:AspectOfEquipment
-  rdf:type owl:Class ;
-  rdfs:label "AspectOfEquipment" ;
-  rdfs:subClassOf cr:Aspect ;
-.
-cr:AspectOfMaterial
-  rdf:type owl:Class ;
-  rdfs:label "AspectOfMaterial" ;
-  rdfs:subClassOf cr:Aspect ;
-.
 cr:Assignment
   rdf:type owl:Class ;
   rdfs:label "Assignment" ;
   rdfs:subClassOf owl:Thing ;
-.
-cr:Category
-  rdf:type owl:Class ;
-  rdfs:label "Category" ;
-  rdfs:subClassOf owl:Thing ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:onClass cr:Category ;
-      owl:onProperty cr:hasCategory ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-.
-cr:CategoryOfEquipment
-  rdf:type owl:Class ;
-  rdfs:label "Category of equipment" ;
-  rdfs:subClassOf cr:Category ;
-.
-cr:CategoryOfLabour
-  rdf:type owl:Class ;
-  rdfs:label "Category of labour" ;
-  rdfs:subClassOf cr:Category ;
-.
-cr:CategoryOfMaterial
-  rdf:type owl:Class ;
-  rdfs:label "Category of material" ;
-  rdfs:subClassOf cr:Category ;
 .
 cr:Consumption
   rdf:type owl:Class ;
@@ -172,7 +127,7 @@ cr:CostItemToGeometryAssignment
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:onProperty cr:refCostItem ;
-      owl:someValuesFrom <https://w3id.org/ci#ProductionResult> ;
+      owl:someValuesFrom ci:ProductionResult ;
     ] ;
   owl:disjointWith cr:ResourceToCostItemAssignment ;
   owl:disjointWith cr:ResourceToTaskAssignment ;
@@ -222,12 +177,6 @@ cr:EquipmentResource
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
-      owl:onClass cr:AspectOfEquipment ;
-      owl:onProperty cr:hasAspect ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
       owl:onClass cr:FunctionOfEquipment ;
       owl:onProperty cr:hasFunction ;
     ] ;
@@ -245,9 +194,9 @@ cr:EquipmentResource
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:onClass cr:CategoryOfEquipment ;
-      owl:onProperty cr:hasCategory ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
+      owl:onClass cterm:AspectOfEquipment ;
+      owl:onProperty cterm:hasAspect ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -265,6 +214,12 @@ cr:EquipmentResource
       rdf:type owl:Restriction ;
       owl:onClass cr:ObjectOfEquipment ;
       owl:onProperty cr:hasObject ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass cterm:CategoryOfEquipment ;
+      owl:onProperty cterm:hasCategory ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
@@ -375,12 +330,6 @@ cr:LabourResource
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:onClass cr:CategoryOfLabour ;
-      owl:onProperty cr:hasCategory ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
       owl:onClass cr:FamilyOfLabour ;
       owl:onProperty cr:hasFamily ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
@@ -389,6 +338,12 @@ cr:LabourResource
       rdf:type owl:Restriction ;
       owl:onClass cr:ObjectOfLabour ;
       owl:onProperty cr:hasObject ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass cterm:CategoryOfLabour ;
+      owl:onProperty cterm:hasCategory ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   owl:disjointWith cr:EquipmentResource ;
@@ -437,12 +392,6 @@ cr:MaterialResource
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
-      owl:onClass cr:AspectOfMaterial ;
-      owl:onProperty cr:hasAspect ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
       owl:onClass cr:Finishing ;
       owl:onProperty cr:hasFinishing ;
     ] ;
@@ -472,9 +421,9 @@ cr:MaterialResource
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:onClass cr:CategoryOfMaterial ;
-      owl:onProperty cr:hasCategory ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
+      owl:onClass cterm:AspectOfMaterial ;
+      owl:onProperty cterm:hasAspect ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -492,6 +441,12 @@ cr:MaterialResource
       rdf:type owl:Restriction ;
       owl:onClass cr:ObjectOfMaterial ;
       owl:onProperty cr:hasObject ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass cterm:CategoryOfMaterial ;
+      owl:onProperty cterm:hasCategory ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
@@ -670,7 +625,7 @@ cr:ResourceToCostItemAssignment
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:onProperty cr:refCostItem ;
-      owl:someValuesFrom <https://w3id.org/ci#ProductionResult> ;
+      owl:someValuesFrom ci:ProductionResult ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -824,19 +779,6 @@ cr:escluded
   rdfs:label "escluded" ;
   rdfs:range xsd:string ;
 .
-cr:hasAspect
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain cr:EquipmentResource ;
-  rdfs:domain cr:MaterialResource ;
-  rdfs:label "hasAspect" ;
-  rdfs:range cr:Aspect ;
-.
-cr:hasCategory
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain cr:Resource ;
-  rdfs:label "hasCategory" ;
-  rdfs:range <https://w3id.org/ci#Category> ;
-.
 cr:hasConsumption
   rdf:type owl:ObjectProperty ;
   rdfs:domain cr:EquipmentResource ;
@@ -880,7 +822,7 @@ cr:hasGender
   rdf:type owl:ObjectProperty ;
   rdfs:domain cr:Resource ;
   rdfs:label "hasGender" ;
-  rdfs:range <https://w3id.org/ci#Gender> ;
+  rdfs:range ci:Gender ;
 .
 cr:hasMaterial
   rdf:type owl:ObjectProperty ;
@@ -1048,7 +990,7 @@ cr:refCostItem
   rdf:type owl:ObjectProperty ;
   rdfs:domain cr:Assignment ;
   rdfs:label "ref cost item" ;
-  rdfs:range <https://w3id.org/ci#ProductionResult> ;
+  rdfs:range ci:ProductionResult ;
   rdfs:subPropertyOf cr:ref ;
 .
 cr:refGeometry
@@ -1134,3 +1076,4 @@ cr:yield
   rdfs:label "yield" ;
   rdfs:range xsd:string ;
 .
+

@@ -1,0 +1,204 @@
+# baseURI: http://w3id.org/cterm
+# imports: http://w3id.org/ci
+# imports: http://w3id.org/cr
+
+@prefix ci: <https://w3id.org/ci#> .
+@prefix cr: <https://w3id.org/cr#> .
+@prefix cterm: <https://w3id.org/cterm#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix dtc: <https://dtc-ontology.cms.ed.tum.de/ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://w3id.org/cterm>
+  rdf:type owl:Ontology ;
+  dc:contributor [
+      rdf:type schema:Person ;
+      schema:email <mailto:claudio.mirarchi@polimi.it> ;
+      schema:identifier <https://orcid.org/0000-0002-9288-8662> ;
+      schema:memberOf [
+          schema:identifier <https://www.dabc.polimi.it/persona/claudio-mirarchi/> ;
+          schema:name "Politecnico di Milano, Dipartimento ABC" ;
+        ] ;
+      schema:name "Claudio Mirarchi" ;
+    ] ;
+  dc:contributor [
+      rdf:type schema:Person ;
+      schema:email <mailto:philipp.hagedorn-n6v@rub.de> ;
+      schema:identifier <https://orcid.org/0000-0002-6249-243X> ;
+      schema:memberOf [
+          schema:identifier <https://www.inf.bi.ruhr-uni-bochum.de/iib/lehrstuhl/mitarbeiter/philipp_hagedorn.html.en> ;
+          schema:name "Ruhr University Bochum, Computing in Engineering" ;
+        ] ;
+      schema:name "Philipp Hagedorn" ;
+    ] ;
+  dc:created "2024-12-12"^^xsd:date ;
+  dc:creator [
+      rdf:type schema:Person ;
+      schema:email <mailto:jacopo.cassandro@polimi.it> ;
+      schema:identifier <https://orcid.org/0000-0002-1487-8178> ;
+      schema:memberOf [
+          schema:identifier <https://www.dabc.polimi.it/persona/jacopo-cassandro/> ;
+          schema:name "Politecnico di Milano" ;
+        ] ;
+      schema:name "Jacopo Cassandro" ;
+    ] ;
+  dc:description "The Construction Terminology (CTERM) Ontology is based on concepts and principles ... "@en ;
+  dc:license <https://creativecommons.org/licenses/by/4.0/> ;
+  dc:rights "Copyright 2024 by DABC, PoliMi" ;
+  dc:source <https://linkedbuildingdata.net/ldac2024/files/papers/LDAC2024_Camera_8.pdf> ;
+  dc:title "The Construction Terminology (CTERM) Ontology"@en ;
+  vann:preferredNamespacePrefix "cterm" ;
+  vann:preferredNamespaceUri <http://w3id.org/cterm#> ;
+  owl:imports <http://w3id.org/ci> ;
+  owl:imports <http://w3id.org/cr> ;
+  owl:versionInfo "0.1" ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+
+cr:hasCategory
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain cr:Resource ;
+  rdfs:label "hasCategory" ;
+  rdfs:range ci:Category ;
+.
+cterm:Aspect
+  rdf:type owl:Class ;
+  rdfs:label "Aspect" ;
+  rdfs:subClassOf cterm:Terminology ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
+      owl:onClass cterm:Aspect ;
+      owl:onProperty cterm:hasAspect ;
+    ] ;
+.
+cterm:AspectOfEquipment
+  rdf:type owl:Class ;
+  rdfs:label "AspectOfEquipment" ;
+  rdfs:subClassOf cterm:Aspect ;
+.
+cterm:AspectOfMaterial
+  rdf:type owl:Class ;
+  rdfs:label "AspectOfMaterial" ;
+  rdfs:subClassOf cterm:Aspect ;
+.
+cterm:AspectOfWorkOfConstructionWork
+  rdf:type owl:Class ;
+  rdfs:label "AspectOfWorkOfConstructionWork" ;
+  rdfs:subClassOf cterm:Aspect ;
+  owl:disjointWith cterm:AspectOfWorkOfProductWork ;
+  owl:disjointWith cterm:AspectOfWorkOfTemporaryWork ;
+.
+cterm:AspectOfWorkOfProductWork
+  rdf:type owl:Class ;
+  rdfs:label "AspectOfWorkOfProductWork" ;
+  rdfs:subClassOf cterm:Aspect ;
+  owl:disjointWith cterm:AspectOfWorkOfConstructionWork ;
+  owl:disjointWith cterm:AspectOfWorkOfTemporaryWork ;
+.
+cterm:AspectOfWorkOfTemporaryWork
+  rdf:type owl:Class ;
+  rdfs:label "AspectOfWorkOfTemporaryWork" ;
+  rdfs:subClassOf cterm:Aspect ;
+  owl:disjointWith cterm:AspectOfWorkOfConstructionWork ;
+  owl:disjointWith cterm:AspectOfWorkOfProductWork ;
+.
+cterm:Category
+  rdf:type owl:Class ;
+  rdfs:label "Category" ;
+  rdfs:subClassOf cterm:Terminology ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass cterm:Category ;
+      owl:onProperty cterm:hasCategory ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+.
+cterm:CategoryOfActivity
+  rdf:type owl:Class ;
+  rdfs:label "CategoryOfActivity" ;
+  rdfs:subClassOf cterm:Category ;
+  owl:disjointWith cterm:CategoryOfCostComponent ;
+  owl:disjointWith cterm:CategoryOfWorkOfConstructionWork ;
+  owl:disjointWith cterm:CategoryOfWorkOfProductWork ;
+  owl:disjointWith cterm:CategoryOfWorkOfTemporaryWork ;
+.
+cterm:CategoryOfCostComponent
+  rdf:type owl:Class ;
+  rdfs:label "CategoryOfCostComponent" ;
+  rdfs:subClassOf cterm:Category ;
+  owl:disjointWith cterm:CategoryOfActivity ;
+  owl:disjointWith cterm:CategoryOfWorkOfConstructionWork ;
+  owl:disjointWith cterm:CategoryOfWorkOfProductWork ;
+  owl:disjointWith cterm:CategoryOfWorkOfTemporaryWork ;
+.
+cterm:CategoryOfEquipment
+  rdf:type owl:Class ;
+  rdfs:label "Category of equipment" ;
+  rdfs:subClassOf cterm:Category ;
+.
+cterm:CategoryOfLabour
+  rdf:type owl:Class ;
+  rdfs:label "Category of labour" ;
+  rdfs:subClassOf cterm:Category ;
+.
+cterm:CategoryOfMaterial
+  rdf:type owl:Class ;
+  rdfs:label "Category of material" ;
+  rdfs:subClassOf cterm:Category ;
+.
+cterm:CategoryOfWorkOfConstructionWork
+  rdf:type owl:Class ;
+  rdfs:label "CategoryOfWorkOfConstructionWork" ;
+  rdfs:subClassOf cterm:Category ;
+  owl:disjointWith cterm:CategoryOfActivity ;
+  owl:disjointWith cterm:CategoryOfCostComponent ;
+  owl:disjointWith cterm:CategoryOfWorkOfTemporaryWork ;
+  owl:equivalentClass cterm:CategoryOfWorkOfProductWork ;
+.
+cterm:CategoryOfWorkOfProductWork
+  rdf:type owl:Class ;
+  rdfs:label "CategoryOfWorkOfProductWork" ;
+  rdfs:subClassOf cterm:Category ;
+  owl:disjointWith cterm:CategoryOfActivity ;
+  owl:disjointWith cterm:CategoryOfCostComponent ;
+  owl:disjointWith cterm:CategoryOfWorkOfTemporaryWork ;
+  owl:equivalentClass cterm:CategoryOfWorkOfConstructionWork ;
+.
+cterm:CategoryOfWorkOfTemporaryWork
+  rdf:type owl:Class ;
+  rdfs:label "CategoryOfWorkOfTemporaryWork" ;
+  rdfs:subClassOf cterm:Category ;
+  owl:disjointWith cterm:CategoryOfActivity ;
+  owl:disjointWith cterm:CategoryOfCostComponent ;
+  owl:disjointWith cterm:CategoryOfWorkOfConstructionWork ;
+  owl:disjointWith cterm:CategoryOfWorkOfProductWork ;
+.
+cterm:Terminology
+  rdf:type owl:Class ;
+  rdfs:label "Terminology" ;
+  rdfs:subClassOf owl:Thing ;
+.
+cterm:hasAspect
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain ci:Work ;
+  rdfs:domain cr:EquipmentResource ;
+  rdfs:domain cr:MaterialResource ;
+  rdfs:label "hasAspect" ;
+  rdfs:range cterm:Aspect ;
+.
+cterm:hasCategory
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain ci:Activity ;
+  rdfs:domain ci:CostComponent ;
+  rdfs:domain ci:Work ;
+  rdfs:label "hasCategory" ;
+  rdfs:range cterm:Category ;
+.
