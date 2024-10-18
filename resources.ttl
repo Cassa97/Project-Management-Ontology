@@ -177,12 +177,6 @@ cr:EquipmentResource
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
-      owl:onClass cr:FunctionOfEquipment ;
-      owl:onProperty cr:hasFunction ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
       owl:onClass cr:Standard ;
       owl:onProperty cr:hasOtherStandard ;
     ] ;
@@ -200,9 +194,9 @@ cr:EquipmentResource
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:onClass cr:FamilyOfEquipment ;
-      owl:onProperty cr:hasFamily ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
+      owl:onClass cterm:FunctionOfEquipment ;
+      owl:onProperty cterm:hasFunction ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -224,6 +218,12 @@ cr:EquipmentResource
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
+      owl:onClass cterm:FamilyOfEquipment ;
+      owl:onProperty cterm:hasFamily ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
       owl:onDataRange xsd:boolean ;
       owl:onProperty cr:accessory ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
@@ -238,32 +238,6 @@ cr:EquipmentResource
   owl:disjointWith cr:MaterialResource ;
   owl:equivalentClass <https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedEquipment> ;
 .
-cr:Family
-  rdf:type owl:Class ;
-  rdfs:label "Family" ;
-  rdfs:subClassOf owl:Thing ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:onClass cr:Family ;
-      owl:onProperty cr:hasFamily ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-.
-cr:FamilyOfEquipment
-  rdf:type owl:Class ;
-  rdfs:label "Family of equipment" ;
-  rdfs:subClassOf cr:Family ;
-.
-cr:FamilyOfLabour
-  rdf:type owl:Class ;
-  rdfs:label "Family of labour" ;
-  rdfs:subClassOf cr:Family ;
-.
-cr:FamilyOfMaterial
-  rdf:type owl:Class ;
-  rdfs:label "Family of material" ;
-  rdfs:subClassOf cr:Family ;
-.
 cr:Finishing
   rdf:type owl:Class ;
   rdfs:label "Finishing" ;
@@ -274,27 +248,6 @@ cr:Finishing
       owl:onClass cr:Finishing ;
       owl:onProperty cr:hasFinishing ;
     ] ;
-.
-cr:Function
-  rdf:type owl:Class ;
-  rdfs:label "Function" ;
-  rdfs:subClassOf owl:Thing ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
-      owl:onClass cr:Function ;
-      owl:onProperty cr:hasFunction ;
-    ] ;
-.
-cr:FunctionOfEquipment
-  rdf:type owl:Class ;
-  rdfs:label "Function of equipment" ;
-  rdfs:subClassOf cr:Function ;
-.
-cr:FunctionOfMaterial
-  rdf:type owl:Class ;
-  rdfs:label "Function of material" ;
-  rdfs:subClassOf cr:Function ;
 .
 cr:Furnishing
   rdf:type owl:Class ;
@@ -330,12 +283,6 @@ cr:LabourResource
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:onClass cr:FamilyOfLabour ;
-      owl:onProperty cr:hasFamily ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
       owl:onClass cr:ObjectOfLabour ;
       owl:onProperty cr:hasObject ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
@@ -344,6 +291,12 @@ cr:LabourResource
       rdf:type owl:Restriction ;
       owl:onClass cterm:CategoryOfLabour ;
       owl:onProperty cterm:hasCategory ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass cterm:FamilyOfLabour ;
+      owl:onProperty cterm:hasFamily ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   owl:disjointWith cr:EquipmentResource ;
@@ -398,12 +351,6 @@ cr:MaterialResource
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
-      owl:onClass cr:FunctionOfMaterial ;
-      owl:onProperty cr:hasFunction ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
       owl:onClass cr:Furnishing ;
       owl:onProperty cr:hasFurnishing ;
     ] ;
@@ -427,9 +374,9 @@ cr:MaterialResource
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:onClass cr:FamilyOfMaterial ;
-      owl:onProperty cr:hasFamily ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
+      owl:onClass cterm:FunctionOfMaterial ;
+      owl:onProperty cterm:hasFunction ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -447,6 +394,12 @@ cr:MaterialResource
       rdf:type owl:Restriction ;
       owl:onClass cterm:CategoryOfMaterial ;
       owl:onProperty cterm:hasCategory ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass cterm:FamilyOfMaterial ;
+      owl:onProperty cterm:hasFamily ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
@@ -793,24 +746,11 @@ cr:hasDimensionParameter
   rdfs:label "hasDimensionParameter" ;
   rdfs:range cr:DimensionParameter ;
 .
-cr:hasFamily
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain cr:Resource ;
-  rdfs:label "hasFamily" ;
-  rdfs:range cr:Family ;
-.
 cr:hasFinishing
   rdf:type owl:ObjectProperty ;
   rdfs:domain cr:MaterialResource ;
   rdfs:label "hasFinishing" ;
   rdfs:range cr:Finishing ;
-.
-cr:hasFunction
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain cr:EquipmentResource ;
-  rdfs:domain cr:MaterialResource ;
-  rdfs:label "hasFunction" ;
-  rdfs:range cr:Function ;
 .
 cr:hasFurnishing
   rdf:type owl:ObjectProperty ;
@@ -1076,4 +1016,3 @@ cr:yield
   rdfs:label "yield" ;
   rdfs:range xsd:string ;
 .
-

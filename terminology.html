@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>The Construction Terminology (CTERM) Ontology</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    
+    <style>
+        #pylode {
+            position: fixed;
+            top: 130px;
+            left: -60px;
+            font-size: small;
+            transform: rotate(-90deg);
+            color: grey;
+        }
+        #pylode a {
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+            color: #005A9C;
+        }
+        #pylode a:hover {
+            color: #333;
+        }
+
+        .cardinality {
+            font-style: italic;
+            color: #aa00aa;
+        }
+
+        dt {
+            font-weight: bold;
+            padding: 5px 0 5px 0;
+        }
+
+        ul.hlist {
+            list-style-type: none;
+            border: 1px solid navy;
+            padding:5px;
+            background-color: #F4FFFF;
+        }
+
+        ul.hierarchy {
+            border: 1px solid navy;
+            padding: 5px 25px 5px 25px;
+            background-color: #F4FFFF;
+        }
+
+
+        ul.hlist li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        .entity {
+            border: 1px solid navy;
+            margin:5px 0 5px 0;
+            padding: 5px;
+        }
+
+        .entity th {
+            width: 150px;
+            vertical-align: top;
+        }
+
+        .entity th,
+        .entity td {
+            padding-bottom: 20px;
+        }
+
+        .entity table th {
+            text-align: left;
+        }
+
+        section#overview img {
+            max-width: 1000px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            text-align: left
+        }
+        h1, h2, h3 {
+            color: #005A9C; background: white
+        }
+        h1 {
+            font: 170% sans-serif;
+            line-height: 110%;
+        }
+        h2 {
+            font: 140% sans-serif;
+            margin-top:40px;
+        }
+        h3 {
+            font: 120% sans-serif;
+            margin-top: 3px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid navy;
+        }
+        h4 { font: bold 100% sans-serif }
+        h5 { font: italic 100% sans-serif }
+        h6 { font: small-caps 100% sans-serif }
+
+
+        body {
+            padding: 2em 70px 2em 70px;
+            margin: 0;
+            font-family: sans-serif;
+            color: black;
+            background: white;
+            background-position: top left;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            text-align: justify;
+        }
+
+        section {
+            max-width: 1500px;
+        }
+
+        .figure {
+            margin-bottom: 20px;
+        }
+
+        :link { color: #00C; background: transparent }
+        :visited { color: #609; background: transparent }
+        a:active { color: #C00; background: transparent }
+
+        .sup-c,
+        .sup-op,
+        .sup-fp,
+        .sup-dp,
+        .sup-ap,
+        .sup-p,
+        .sup-ni,
+        .sup-cp,
+        .sup-cl {
+            cursor:help;
+            margin-left: 3px;
+        }
+
+        .sup-c {
+            color:orange;
+        }
+
+        .sup-op {
+            color:navy;
+        }
+
+        .sup-fp {
+            color:lightskyblue;
+        }
+
+        .sup-dp {
+            color:green;
+        }
+
+        .sup-ap {
+            color:darkred;
+        }
+
+        .sup-p {
+            color:black;
+        }
+
+        .sup-ni {
+            color:brown;
+        }
+
+        .sup-cp {
+            color:orange;
+        }
+
+        .sup-cl {
+            color:darkred;
+        }
+
+        code {
+            font-size: large;
+            color: darkred;
+        }
+
+    </style>
+    
+    <script type="application/ld+json">
+      [
+  {
+    "@id": "http://w3id.org/cterm",
+    "@type": [
+      "https://schema.org/DefinedTermSet"
+    ],
+    "https://schema.org/description": [
+      {
+        "@value": "<p>The Construction Terminology (CTERM) Ontology is based on concepts and principles ... </p>"
+      }
+    ],
+    "https://schema.org/license": [
+      {
+        "@id": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "The Construction Terminology (CTERM) Ontology"
+      }
+    ],
+    "https://schema.org/rights": [
+      {
+        "@value": "&copy; 2024 by DABC, PoliMi"
+      }
+    ]
+  }
+]
+    </script>
+</head>
+<body>
+  <div id="pylode">made by <a href="http://github.com/rdflib/pyLODE">
+    <span style="color:#329545;">p</span><span style="color:#f9cb33;">y</span>LODE</a>
+    <span style="font-size:smaller;">2.4</span>
+  </div>
+  <h1>The Construction Terminology (CTERM) Ontology</h1>
+<section id="metadata">
+    <h2 style="display:none;">Metadata</h2>
+    <dl>
+        <dt>IRI</dt>
+        <dd><code>http://w3id.org/cterm</code></dd>
+        <dt>Creator(s)</dt>
+        <dd>
+            
+    <a href="https://orcid.org/0000-0002-1487-8178">Jacopo Cassandro</a>
+    <a href="https://orcid.org/0000-0002-1487-8178"><svg width="15px" height="15px" viewBox="0 0 72 72" version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Orcid logo</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="hero" transform="translate(-924.000000, -72.000000)" fill-rule="nonzero">
+            <g id="Group-4">
+                <g id="vector_iD_icon" transform="translate(924.000000, 72.000000)">
+                    <path d="M72,36 C72,55.884375 55.884375,72 36,72 C16.115625,72 0,55.884375 0,36 C0,16.115625 16.115625,0 36,0 C55.884375,0 72,16.115625 72,36 Z" id="Path" fill="#A6CE39"></path>
+                    <g id="Group" transform="translate(18.868966, 12.910345)" fill="#FFFFFF">
+                        <polygon id="Path" points="5.03734929 39.1250878 0.695429861 39.1250878 0.695429861 9.14431787 5.03734929 9.14431787 5.03734929 22.6930505 5.03734929 39.1250878"></polygon>
+                        <path d="M11.409257,9.14431787 L23.1380784,9.14431787 C34.303014,9.14431787 39.2088191,17.0664074 39.2088191,24.1486995 C39.2088191,31.846843 33.1470485,39.1530811 23.1944669,39.1530811 L11.409257,39.1530811 L11.409257,9.14431787 Z M15.7511765,35.2620194 L22.6587756,35.2620194 C32.49858,35.2620194 34.7541226,27.8438084 34.7541226,24.1486995 C34.7541226,18.1301509 30.8915059,13.0353795 22.4332213,13.0353795 L15.7511765,13.0353795 L15.7511765,35.2620194 Z" id="Shape"></path>
+                        <path d="M5.71401206,2.90182329 C5.71401206,4.441452 4.44526937,5.72914146 2.86638958,5.72914146 C1.28750978,5.72914146 0.0187670918,4.441452 0.0187670918,2.90182329 C0.0187670918,1.33420133 1.28750978,0.0745051096 2.86638958,0.0745051096 C4.44526937,0.0745051096 5.71401206,1.36219458 5.71401206,2.90182329 Z" id="Path"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg></a>
+    (<a href="mailto:jacopo.cassandro@polimi.it">jacopo.cassandro@polimi.it</a>) of 
+    <a href="https://www.dabc.polimi.it/persona/jacopo-cassandro/">Politecnico di Milano</a><br/>
+        </dd>
+        <dt>Contributors(s)</dt>
+        <dd>
+            
+    <a href="https://orcid.org/0000-0002-6249-243X">Philipp Hagedorn</a>
+    <a href="https://orcid.org/0000-0002-6249-243X"><svg width="15px" height="15px" viewBox="0 0 72 72" version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Orcid logo</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="hero" transform="translate(-924.000000, -72.000000)" fill-rule="nonzero">
+            <g id="Group-4">
+                <g id="vector_iD_icon" transform="translate(924.000000, 72.000000)">
+                    <path d="M72,36 C72,55.884375 55.884375,72 36,72 C16.115625,72 0,55.884375 0,36 C0,16.115625 16.115625,0 36,0 C55.884375,0 72,16.115625 72,36 Z" id="Path" fill="#A6CE39"></path>
+                    <g id="Group" transform="translate(18.868966, 12.910345)" fill="#FFFFFF">
+                        <polygon id="Path" points="5.03734929 39.1250878 0.695429861 39.1250878 0.695429861 9.14431787 5.03734929 9.14431787 5.03734929 22.6930505 5.03734929 39.1250878"></polygon>
+                        <path d="M11.409257,9.14431787 L23.1380784,9.14431787 C34.303014,9.14431787 39.2088191,17.0664074 39.2088191,24.1486995 C39.2088191,31.846843 33.1470485,39.1530811 23.1944669,39.1530811 L11.409257,39.1530811 L11.409257,9.14431787 Z M15.7511765,35.2620194 L22.6587756,35.2620194 C32.49858,35.2620194 34.7541226,27.8438084 34.7541226,24.1486995 C34.7541226,18.1301509 30.8915059,13.0353795 22.4332213,13.0353795 L15.7511765,13.0353795 L15.7511765,35.2620194 Z" id="Shape"></path>
+                        <path d="M5.71401206,2.90182329 C5.71401206,4.441452 4.44526937,5.72914146 2.86638958,5.72914146 C1.28750978,5.72914146 0.0187670918,4.441452 0.0187670918,2.90182329 C0.0187670918,1.33420133 1.28750978,0.0745051096 2.86638958,0.0745051096 C4.44526937,0.0745051096 5.71401206,1.36219458 5.71401206,2.90182329 Z" id="Path"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg></a>
+    (<a href="mailto:philipp.hagedorn-n6v@rub.de">philipp.hagedorn-n6v@rub.de</a>) of 
+    <a href="https://www.inf.bi.ruhr-uni-bochum.de/iib/lehrstuhl/mitarbeiter/philipp_hagedorn.html.en">Ruhr University Bochum, Computing in Engineering</a><br/>
+            
+    <a href="https://orcid.org/0000-0002-9288-8662">Claudio Mirarchi</a>
+    <a href="https://orcid.org/0000-0002-9288-8662"><svg width="15px" height="15px" viewBox="0 0 72 72" version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Orcid logo</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="hero" transform="translate(-924.000000, -72.000000)" fill-rule="nonzero">
+            <g id="Group-4">
+                <g id="vector_iD_icon" transform="translate(924.000000, 72.000000)">
+                    <path d="M72,36 C72,55.884375 55.884375,72 36,72 C16.115625,72 0,55.884375 0,36 C0,16.115625 16.115625,0 36,0 C55.884375,0 72,16.115625 72,36 Z" id="Path" fill="#A6CE39"></path>
+                    <g id="Group" transform="translate(18.868966, 12.910345)" fill="#FFFFFF">
+                        <polygon id="Path" points="5.03734929 39.1250878 0.695429861 39.1250878 0.695429861 9.14431787 5.03734929 9.14431787 5.03734929 22.6930505 5.03734929 39.1250878"></polygon>
+                        <path d="M11.409257,9.14431787 L23.1380784,9.14431787 C34.303014,9.14431787 39.2088191,17.0664074 39.2088191,24.1486995 C39.2088191,31.846843 33.1470485,39.1530811 23.1944669,39.1530811 L11.409257,39.1530811 L11.409257,9.14431787 Z M15.7511765,35.2620194 L22.6587756,35.2620194 C32.49858,35.2620194 34.7541226,27.8438084 34.7541226,24.1486995 C34.7541226,18.1301509 30.8915059,13.0353795 22.4332213,13.0353795 L15.7511765,13.0353795 L15.7511765,35.2620194 Z" id="Shape"></path>
+                        <path d="M5.71401206,2.90182329 C5.71401206,4.441452 4.44526937,5.72914146 2.86638958,5.72914146 C1.28750978,5.72914146 0.0187670918,4.441452 0.0187670918,2.90182329 C0.0187670918,1.33420133 1.28750978,0.0745051096 2.86638958,0.0745051096 C4.44526937,0.0745051096 5.71401206,1.36219458 5.71401206,2.90182329 Z" id="Path"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg></a>
+    (<a href="mailto:claudio.mirarchi@polimi.it">claudio.mirarchi@polimi.it</a>) of 
+    <a href="https://www.dabc.polimi.it/persona/claudio-mirarchi/">Politecnico di Milano, Dipartimento ABC</a><br/>
+        </dd>
+        <dt>Created</dt>
+        <dd>2024-12-12</dd>
+        <dt>Version Information</dt>
+        <dd>0.1</dd>
+        <dt>Imports</dt>
+        <dd>
+            <a href="http://w3id.org/ci">http://w3id.org/ci</a><br/>
+            <a href="http://w3id.org/cr">http://w3id.org/cr</a><br/>
+        </dd>
+        <dt>License &amp; Rights</dt>
+        <dd>
+            <a href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a><br />
+            &copy; 2024 by DABC, PoliMi
+        </dd>
+        <dt>Source</dt>
+        <dd><a href="https://linkedbuildingdata.net/ldac2024/files/papers/LDAC2024_Camera_8.pdf">https://linkedbuildingdata.net/ldac2024/files/papers/LDAC2024_Camera_8.pdf</a></dd>
+        <dt>Ontology RDF</dt>
+        <dd><a href="terminology.ttl">RDF (turtle)</a></dd>
+    </dl>
+    <h2>Description</h2>
+    <div id="description">
+        <p>The Construction Terminology (CTERM) Ontology is based on concepts and principles ... </p>
+    </div>
+</section>
+<section id="toc">
+    <h2>Table of Contents</h2>
+    <ol>
+        <li><a href="#classes">Classes</a></li>
+        <li><a href="#objectproperties">Object Properties</a></li>
+        <li><a href="#namedindividuals">Named Individuals</a></li>
+        <li><a href="#namespaces">Namespaces</a></li>
+        <li><a href="#legend">Legend</a></li>
+    </ol>
+</section>
+<section id="overview">
+    <h2>Overview</h2>
+    <div class="figure">
+        <div style="width:500px; height:50px; background-color: lightgrey; border:solid 2px grey; padding:10px;margin-bottom:5px; text-align:center;">Pictures say 1,000 words</div>
+        <div class="caption"><strong>Figure 1:</strong> Ontology overview</div>
+    </div>
+</section>
+  <section id="classes">
+    <h2>Classes <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#Aspect">Aspect</a></li>
+        <li><a href="#AspectOfEquipment">AspectOfEquipment</a></li>
+        <li><a href="#AspectOfMaterial">AspectOfMaterial</a></li>
+        <li><a href="#AspectOfWorkOfConstructionWork">AspectOfWorkOfConstructionWork</a></li>
+        <li><a href="#AspectOfWorkOfProductWork">AspectOfWorkOfProductWork</a></li>
+        <li><a href="#AspectOfWorkOfTemporaryWork">AspectOfWorkOfTemporaryWork</a></li>
+        <li><a href="#Category">Category</a></li>
+        <li><a href="#Categoryofequipment">Category of equipment</a></li>
+        <li><a href="#Categoryoflabour">Category of labour</a></li>
+        <li><a href="#Categoryofmaterial">Category of material</a></li>
+        <li><a href="#CategoryOfActivity">CategoryOfActivity</a></li>
+        <li><a href="#CategoryOfCostComponent">CategoryOfCostComponent</a></li>
+        <li><a href="#CategoryOfWorkOfConstructionWork">CategoryOfWorkOfConstructionWork</a></li>
+        <li><a href="#CategoryOfWorkOfProductWork">CategoryOfWorkOfProductWork</a></li>
+        <li><a href="#CategoryOfWorkOfTemporaryWork">CategoryOfWorkOfTemporaryWork</a></li>
+        <li><a href="#Family">Family</a></li>
+        <li><a href="#Family1">Family</a></li>
+        <li><a href="#Familyofequipment">Family of equipment</a></li>
+        <li><a href="#Familyoflabour">Family of labour</a></li>
+        <li><a href="#Familyofmaterial">Family of material</a></li>
+        <li><a href="#FamilyOfActivity">FamilyOfActivity</a></li>
+        <li><a href="#FamilyOfCostComponent">FamilyOfCostComponent</a></li>
+        <li><a href="#FamilyOfWork">FamilyOfWork</a></li>
+        <li><a href="#Terminology">Terminology</a></li>
+    </ul>
+    <div class="entity class" id="Family">
+        <h3>Family<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#Family</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="https://w3id.org/cterm#hasFamily">cterm:hasFamily</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/ci#Family">ci:Family</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Aspect">
+        <h3>Aspect<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/cterm#Aspect</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/cterm#Terminology">cterm:Terminology</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="https://w3id.org/cterm#hasAspect">cterm:hasAspect</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 5 <a href="https://w3id.org/cterm#Aspect">cterm:Aspect</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="https://w3id.org/cterm#AspectOfEquipment">cterm:AspectOfEquipment</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cterm#AspectOfWorkOfProductWork">cterm:AspectOfWorkOfProductWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cterm#AspectOfWorkOfTemporaryWork">cterm:AspectOfWorkOfTemporaryWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cterm#AspectOfWorkOfConstructionWork">cterm:AspectOfWorkOfConstructionWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cterm#AspectOfMaterial">cterm:AspectOfMaterial</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="https://w3id.org/cterm#hasAspect">cterm:hasAspect</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="AspectOfEquipment">
+        <h3>AspectOfEquipment<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/cterm#AspectOfEquipment</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/cterm#Aspect">cterm:Aspect</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="AspectOfMaterial">
+        <h3>AspectOfMaterial<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/cterm#AspectOfMaterial</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/cterm#Aspect">cterm:Aspect</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="AspectOfWorkOfConstructionWork">
+        <h3>AspectOfWorkOfConstructionWork<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/cterm#AspectOfWorkOfConstructionWork</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/cterm#Aspect">cterm:Aspect</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="AspectOfWorkOfProductWork">
+        <h3>AspectOfWorkOfProductWork<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/cterm#AspectOfWorkOfProductWork</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/cterm#Aspect">cterm:Aspect</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="AspectOfWorkOfTemporaryWork">
+        <h3>AspectOfWorkOfTemporaryWork<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/cterm#AspectOfWorkOfTemporaryWork</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/cterm#Aspect">cterm:Aspect</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Category">
+        <h3>Category<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/cterm#Category</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/cterm#Terminology">cterm:Terminology</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="https://w3id.org/cterm#hasCategory">cterm:hasCategory</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/cterm#Category">cterm:Category</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="https://w3id.org/cterm#CategoryOfEquipment">cterm:CategoryOfEquipment</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cterm#CategoryOfWorkOfTemporaryWork">cterm:CategoryOfWorkOfTemporaryWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cterm#CategoryOfWorkOfConstructionWork">cterm:CategoryOfWorkOfConstructionWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cterm#CategoryOfCostComponent">cterm:CategoryOfCostComponent</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cterm#CategoryOfMaterial">cterm:CategoryOfMaterial</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cterm#CategoryOfActivity">cterm:CategoryOfActivity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cterm#CategoryOfWorkOfProductWork">cterm:CategoryOfWorkOfProductWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cterm#CategoryOfLabour">cterm:CategoryOfLabour</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="https://w3id.org/cterm#hasCategory">cterm:hasCategory</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="CategoryOfActivity">
+        <h3>CategoryOfActivity<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/cterm#CategoryOfActivity</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/cterm#Category">cterm:Category</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="CategoryOfCostComponent">
+        <h3>CategoryOfCostComponent<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/cterm#CategoryOfCostComponent</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/cterm#Category">cterm:Category</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Categoryofequipment">
+        <h3>Category of equipment<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/cterm#CategoryOfEquipment</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/cterm#Category">cterm:Category</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Categoryoflabour">
+        <h3>Category of labour<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/cterm#CategoryOfLabour</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/cterm#Category">cterm:Category</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Categoryofmaterial">
+        <h3>Category of material<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/cterm#CategoryOfMaterial</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/cterm#Category">cterm:Category</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="CategoryOfWorkOfConstructionWork">
+        <h3>CategoryOfWorkOfConstructionWork<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/cterm#CategoryOfWorkOfConstructionWork</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/cterm#Category">cterm:Category</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="CategoryOfWorkOfProductWork">
+        <h3>CategoryOfWorkOfProductWork<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/cterm#CategoryOfWorkOfProductWork</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/cterm#Category">cterm:Category</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="CategoryOfWorkOfTemporaryWork">
+        <h3>CategoryOfWorkOfTemporaryWork<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/cterm#CategoryOfWorkOfTemporaryWork</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/cterm#Category">cterm:Category</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Family1">
+        <h3>Family<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/cterm#Family</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/cterm#Terminology">cterm:Terminology</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="https://w3id.org/cterm#hasFamily">cterm:hasFamily</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/cterm#Family">cterm:Family</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="https://w3id.org/cterm#FamilyOfLabour">cterm:FamilyOfLabour</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cterm#FamilyOfWork">cterm:FamilyOfWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cterm#FamilyOfEquipment">cterm:FamilyOfEquipment</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cterm#FamilyOfActivity">cterm:FamilyOfActivity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cterm#FamilyOfMaterial">cterm:FamilyOfMaterial</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cterm#FamilyOfCostComponent">cterm:FamilyOfCostComponent</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="https://w3id.org/cterm#hasFamily">cterm:hasFamily</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="FamilyOfActivity">
+        <h3>FamilyOfActivity<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/cterm#FamilyOfActivity</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/cterm#Family">cterm:Family</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="FamilyOfCostComponent">
+        <h3>FamilyOfCostComponent<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/cterm#FamilyOfCostComponent</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/cterm#Family">cterm:Family</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Familyofequipment">
+        <h3>Family of equipment<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/cterm#FamilyOfEquipment</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/cterm#Family">cterm:Family</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Familyoflabour">
+        <h3>Family of labour<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/cterm#FamilyOfLabour</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/cterm#Family">cterm:Family</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Familyofmaterial">
+        <h3>Family of material<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/cterm#FamilyOfMaterial</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/cterm#Family">cterm:Family</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="FamilyOfWork">
+        <h3>FamilyOfWork<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/cterm#FamilyOfWork</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/cterm#Family">cterm:Family</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Terminology">
+        <h3>Terminology<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/cterm#Terminology</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="https://w3id.org/cterm#Aspect">cterm:Aspect</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cterm#Family">cterm:Family</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cterm#Category">cterm:Category</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+<section id="objectproperties">
+    <h2>Object Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#hasCategory">hasCategory</a></li>
+        <li><a href="#hasAspect">hasAspect</a></li>
+        <li><a href="#hasCategory1">hasCategory</a></li>
+        <li><a href="#hasFamily">hasFamily</a></li>
+    </ul>
+    <div class="entity property" id="hasCategory">
+        <h3>hasCategory<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/cr#hasCategory</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/cr#Resource">cr:Resource</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/ci#Category">ci:Category</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasAspect">
+        <h3>hasAspect<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/cterm#hasAspect</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/ci#Work">ci:Work</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/cr#MaterialResource">cr:MaterialResource</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/cr#EquipmentResource">cr:EquipmentResource</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/cterm#Aspect">cterm:Aspect</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasCategory1">
+        <h3>hasCategory<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/cterm#hasCategory</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/ci#Work">ci:Work</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/ci#CostComponent">ci:CostComponent</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/ci#Activity">ci:Activity</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/cterm#Category">cterm:Category</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasFamily">
+        <h3>hasFamily<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/cterm#hasFamily</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/ci#Activity">ci:Activity</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/ci#Work">ci:Work</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/cr#Resource">cr:Resource</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/ci#CostComponent">ci:CostComponent</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/cterm#Family">cterm:Family</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+  
+  <section id="namedindividuals">
+    <h2>Named Individuals <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#Architettura">Architettura</a></li>
+        <li><a href="#CivilEngineer">CivilEngineer</a></li>
+        <li><a href="#Construction">Construction</a></li>
+        <li><a href="#ElectricalEngineer">ElectricalEngineer</a></li>
+        <li><a href="#Environment">Environment</a></li>
+        <li><a href="#FireSafety">FireSafety</a></li>
+        <li><a href="#Furniture">Furniture</a></li>
+        <li><a href="#Infrastrutture">Infrastrutture</a></li>
+        <li><a href="#IngegneriaIdraulica">IngegneriaIdraulica</a></li>
+        <li><a href="#IngegneriaMeccanica">IngegneriaMeccanica</a></li>
+        <li><a href="#Land">Land</a></li>
+        <li><a href="#Landscape">Landscape</a></li>
+        <li><a href="#Modify">Modify</a></li>
+        <li><a href="#PrefabbricatiPerStruttureInCls">PrefabbricatiPerStruttureInCls</a></li>
+        <li><a href="#Production">Production</a></li>
+        <li><a href="#StructuralEngineer">StructuralEngineer</a></li>
+    </ul>
+    <div class="entity named_individual" id="Architettura">
+        <h3>Architettura<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/cterm#Architecture
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/cterm#FamilyOfWork">cterm:FamilyOfWork</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="CivilEngineer">
+        <h3>CivilEngineer<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/cterm#CivilEngineer
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/cterm#FamilyOfWork">cterm:FamilyOfWork</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="Construction">
+        <h3>Construction<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/cterm#Construction
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/cterm#FamilyOfCostComponent">cterm:FamilyOfCostComponent</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="ElectricalEngineer">
+        <h3>ElectricalEngineer<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/cterm#ElectricalEngineer
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/cterm#FamilyOfWork">cterm:FamilyOfWork</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="Environment">
+        <h3>Environment<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/cterm#Environment
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/cterm#FamilyOfCostComponent">cterm:FamilyOfCostComponent</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="FireSafety">
+        <h3>FireSafety<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/cterm#FireSafety
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/cterm#FamilyOfWork">cterm:FamilyOfWork</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="Furniture">
+        <h3>Furniture<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/cterm#Furniture
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/cterm#FamilyOfWork">cterm:FamilyOfWork</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="IngegneriaIdraulica">
+        <h3>IngegneriaIdraulica<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/cterm#IdraulicEngineer
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/cterm#FamilyOfWork">cterm:FamilyOfWork</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="Infrastrutture">
+        <h3>Infrastrutture<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/cterm#Infrastructure
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/cterm#FamilyOfCostComponent">cterm:FamilyOfCostComponent</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="Land">
+        <h3>Land<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/cterm#Land
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/cterm#FamilyOfWork">cterm:FamilyOfWork</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="Landscape">
+        <h3>Landscape<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/cterm#Landscape
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/cterm#FamilyOfWork">cterm:FamilyOfWork</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="IngegneriaMeccanica">
+        <h3>IngegneriaMeccanica<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/cterm#MechanicalEngineer
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/cterm#FamilyOfWork">cterm:FamilyOfWork</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="Modify">
+        <h3>Modify<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/cterm#Modify
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/cterm#FamilyOfActivity">cterm:FamilyOfActivity</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="PrefabbricatiPerStruttureInCls">
+        <h3>PrefabbricatiPerStruttureInCls<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/cterm#PrefabricatedStructuresForConcrete
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/cterm#FamilyOfWork">cterm:FamilyOfWork</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="Production">
+        <h3>Production<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/cterm#Production
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/cterm#FamilyOfActivity">cterm:FamilyOfActivity</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="StructuralEngineer">
+        <h3>StructuralEngineer<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/cterm#StructuralEngineer
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/cterm#FamilyOfWork">cterm:FamilyOfWork</a><br/>
+            </dd>
+        </table>
+    </div>
+</section>
+  
+  <section id="namespaces">
+    <h2>Namespaces <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <dl>
+        <dt>ci</dt>
+        <dd><code>https://w3id.org/ci#</code></dd>
+        <dt>cr</dt>
+        <dd><code>https://w3id.org/cr#</code></dd>
+        <dt>cterm</dt>
+        <dd><code>https://w3id.org/cterm#</code></dd>
+        <dt>dc</dt>
+        <dd><code>http://purl.org/dc/terms/</code></dd>
+        <dt>dtc</dt>
+        <dd><code>https://dtc-ontology.cms.ed.tum.de/ontology/</code></dd>
+        <dt>owl</dt>
+        <dd><code>http://www.w3.org/2002/07/owl#</code></dd>
+        <dt>prov</dt>
+        <dd><code>http://www.w3.org/ns/prov#</code></dd>
+        <dt>qudt</dt>
+        <dd><code>http://qudt.org/schema/qudt/</code></dd>
+        <dt>rdf</dt>
+        <dd><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></dd>
+        <dt>rdfs</dt>
+        <dd><code>http://www.w3.org/2000/01/rdf-schema#</code></dd>
+        <dt>sdo</dt>
+        <dd><code>https://schema.org/</code></dd>
+        <dt>skos</dt>
+        <dd><code>http://www.w3.org/2004/02/skos/core#</code></dd>
+        <dt>vann</dt>
+        <dd><code>http://purl.org/vocab/vann/</code></dd>
+        <dt>vs</dt>
+        <dd><code>http://www.w3.org/2003/06/sw-vocab-status/ns#</code></dd>
+        <dt>xml</dt>
+        <dd><code>http://www.w3.org/XML/1998/namespace</code></dd>
+        <dt>xsd</dt>
+        <dd><code>http://www.w3.org/2001/XMLSchema#</code></dd>
+    </dl>
+</section>
+  <section id="legend">
+      <h2>Legend</h2>
+      <table class="entity">
+          <tr><td><sup class="sup-c" title="Classes">c</sup></td><td>Classes</td></tr>
+          <tr><td><sup class="sup-op" title="Object Properties">op</sup></td><td>Object Properties</td></tr>
+          <tr><td><sup class="sup-fp" title="Functional Properties">fp</sup></td><td>Functional Properties</td></tr>
+          <tr><td><sup class="sup-dp" title="Data Properties">dp</sup></td><td>Data Properties</td></tr>
+          <tr><td><sup class="sup-ap" title="Annotation Properties">dp</sup></td><td>Annotation Properties</td></tr>
+          <tr><td><sup class="sup-p" title="Properties">p</sup></td><td>Properties</td></tr>
+          <tr><td><sup class="sup-ni" title="Named Individuals">ni</sup></td><td>Named Individuals</td></tr>
+      </table>
+  </section>
+</body>
+</html>

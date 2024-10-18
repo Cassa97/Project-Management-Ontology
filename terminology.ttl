@@ -61,12 +61,11 @@
   owl:versionInfo "0.1" ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
-
-cr:hasCategory
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain cr:Resource ;
-  rdfs:label "hasCategory" ;
-  rdfs:range ci:Category ;
+cterm:Architecture
+  rdf:type owl:NamedIndividual ;
+  rdf:type cterm:FamilyOfWork ;
+  rdfs:label "Architecture"@en ;
+  rdfs:label "Architettura"@it ;
 .
 cterm:Aspect
   rdf:type owl:Class ;
@@ -181,6 +180,196 @@ cterm:CategoryOfWorkOfTemporaryWork
   owl:disjointWith cterm:CategoryOfWorkOfConstructionWork ;
   owl:disjointWith cterm:CategoryOfWorkOfProductWork ;
 .
+cterm:CivilEngineer
+  rdf:type owl:NamedIndividual ;
+  rdf:type cterm:FamilyOfWork ;
+  rdfs:label "CivilEngineer"@en ;
+  rdfs:label "Ingegneria Civile"@it ;
+.
+cterm:Construction
+  rdf:type owl:NamedIndividual ;
+  rdf:type cterm:FamilyOfCostComponent ;
+  rdfs:label "Construction"@en ;
+  rdfs:label "Edilizia"@it ;
+.
+cterm:ElectricalEngineer
+  rdf:type owl:NamedIndividual ;
+  rdf:type cterm:FamilyOfWork ;
+  rdfs:label "ElectricalEngineer"@en ;
+  rdfs:label "IngegneriaElettrica"@it ;
+.
+cterm:Environment
+  rdf:type owl:NamedIndividual ;
+  rdf:type cterm:FamilyOfCostComponent ;
+  rdfs:label "Ambiente"@it ;
+  rdfs:label "Environment"@en ;
+.
+cterm:Family
+  rdf:type owl:Class ;
+  rdfs:label "Family" ;
+  rdfs:subClassOf cterm:Terminology ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass cterm:Family ;
+      owl:onProperty cterm:hasFamily ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+.
+cterm:FamilyOfActivity
+  rdf:type owl:Class ;
+  rdfs:label "FamilyOfActivity" ;
+  rdfs:subClassOf cterm:Family ;
+  owl:disjointWith cterm:FamilyOfCostComponent ;
+  owl:disjointWith cterm:FamilyOfWork ;
+.
+cterm:FamilyOfCostComponent
+  rdf:type owl:Class ;
+  rdfs:label "FamilyOfCostComponent" ;
+  rdfs:subClassOf cterm:Family ;
+  owl:disjointWith cterm:FamilyOfActivity ;
+  owl:disjointWith cterm:FamilyOfWork ;
+.
+cterm:FamilyOfEquipment
+  rdf:type owl:Class ;
+  rdfs:label "Family of equipment" ;
+  rdfs:subClassOf cterm:Family ;
+.
+cterm:FamilyOfLabour
+  rdf:type owl:Class ;
+  rdfs:label "Family of labour" ;
+  rdfs:subClassOf cterm:Family ;
+.
+cterm:FamilyOfMaterial
+  rdf:type owl:Class ;
+  rdfs:label "Family of material" ;
+  rdfs:subClassOf cterm:Family ;
+.
+cterm:FamilyOfWork
+  rdf:type owl:Class ;
+  rdfs:label "FamilyOfWork" ;
+  rdfs:subClassOf cterm:Family ;
+  owl:disjointWith cterm:FamilyOfActivity ;
+  owl:disjointWith cterm:FamilyOfCostComponent ;
+.
+cterm:FireSafety
+  rdf:type owl:NamedIndividual ;
+  rdf:type cterm:FamilyOfWork ;
+  rdfs:label "Antincendio"@it ;
+  rdfs:label "FireSafety"@en ;
+.
+cterm:Function
+  rdf:type owl:Class ;
+  rdfs:label "Function" ;
+  rdfs:subClassOf cterm:Terminology ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
+      owl:onClass cterm:Function ;
+      owl:onProperty cterm:hasFunction ;
+    ] ;
+.
+cterm:FunctionOfActivity
+  rdf:type owl:Class ;
+  rdfs:label "FunctionOfActivity" ;
+  rdfs:subClassOf cterm:Function ;
+  owl:disjointWith cterm:FunctionOfWorkOfConstructionWork ;
+  owl:disjointWith cterm:FunctionOfWorkOfProductWork ;
+  owl:disjointWith cterm:FunctionOfWorkOfTemporaryWork ;
+.
+cterm:FunctionOfEquipment
+  rdf:type owl:Class ;
+  rdfs:label "Function of equipment" ;
+  rdfs:subClassOf cterm:Function ;
+.
+cterm:FunctionOfMaterial
+  rdf:type owl:Class ;
+  rdfs:label "Function of material" ;
+  rdfs:subClassOf cterm:Function ;
+.
+cterm:FunctionOfWorkOfConstructionWork
+  rdf:type owl:Class ;
+  rdfs:label "FunctionOfWorkOfConstructionWork" ;
+  rdfs:subClassOf cterm:Function ;
+  owl:disjointWith cterm:FunctionOfActivity ;
+  owl:disjointWith cterm:FunctionOfWorkOfProductWork ;
+  owl:disjointWith cterm:FunctionOfWorkOfTemporaryWork ;
+.
+cterm:FunctionOfWorkOfProductWork
+  rdf:type owl:Class ;
+  rdfs:label "FunctionOfWorkOfProductWork" ;
+  rdfs:subClassOf cterm:Function ;
+  owl:disjointWith cterm:FunctionOfActivity ;
+  owl:disjointWith cterm:FunctionOfWorkOfConstructionWork ;
+  owl:disjointWith cterm:FunctionOfWorkOfTemporaryWork ;
+.
+cterm:FunctionOfWorkOfTemporaryWork
+  rdf:type owl:Class ;
+  rdfs:label "FunctionOfWorkOfTemporaryWork" ;
+  rdfs:subClassOf cterm:Function ;
+  owl:disjointWith cterm:FunctionOfActivity ;
+  owl:disjointWith cterm:FunctionOfWorkOfConstructionWork ;
+  owl:disjointWith cterm:FunctionOfWorkOfProductWork ;
+.
+cterm:Furniture
+  rdf:type owl:NamedIndividual ;
+  rdf:type cterm:FamilyOfWork ;
+  rdfs:label "Arredo"@it ;
+  rdfs:label "Furniture"@en ;
+.
+cterm:IdraulicEngineer
+  rdf:type owl:NamedIndividual ;
+  rdf:type cterm:FamilyOfWork ;
+  rdfs:label "IdraulicEngineer"@en ;
+  rdfs:label "IngegneriaIdraulica"@it ;
+.
+cterm:Infrastructure
+  rdf:type owl:NamedIndividual ;
+  rdf:type cterm:FamilyOfCostComponent ;
+  rdfs:label "Infrastructure"@en ;
+  rdfs:label "Infrastrutture"@it ;
+.
+cterm:Land
+  rdf:type owl:NamedIndividual ;
+  rdf:type cterm:FamilyOfWork ;
+  rdfs:label "Land"@en ;
+  rdfs:label "Suolo"@it ;
+.
+cterm:Landscape
+  rdf:type owl:NamedIndividual ;
+  rdf:type cterm:FamilyOfWork ;
+  rdfs:label "Landscape"@en ;
+  rdfs:label "VerdeEPaesaggio"@it ;
+.
+cterm:MechanicalEngineer
+  rdf:type owl:NamedIndividual ;
+  rdf:type cterm:FamilyOfWork ;
+  rdfs:label "IngegneriaMeccanica"@it ;
+  rdfs:label "MechanicalEngineer"@en ;
+.
+cterm:Modify
+  rdf:type owl:NamedIndividual ;
+  rdf:type cterm:FamilyOfActivity ;
+  rdfs:label "Modifica"@it ;
+  rdfs:label "Modify"@en ;
+.
+cterm:PrefabricatedStructuresForConcrete
+  rdf:type owl:NamedIndividual ;
+  rdf:type cterm:FamilyOfWork ;
+  rdfs:label "PrefabbricatiPerStruttureInCls"@it ;
+  rdfs:label "PrefabricatedStructuresForConcrete"@en ;
+.
+cterm:Production
+  rdf:type owl:NamedIndividual ;
+  rdf:type cterm:FamilyOfActivity ;
+  rdfs:label "Production"@en ;
+  rdfs:label "Produzione"@it ;
+.
+cterm:StructuralEngineer
+  rdf:type owl:NamedIndividual ;
+  rdf:type cterm:FamilyOfWork ;
+  rdfs:label "IngegneriaStrutturale"@it ;
+  rdfs:label "StructuralEngineer"@en ;
+.
 cterm:Terminology
   rdf:type owl:Class ;
   rdfs:label "Terminology" ;
@@ -199,6 +388,25 @@ cterm:hasCategory
   rdfs:domain ci:Activity ;
   rdfs:domain ci:CostComponent ;
   rdfs:domain ci:Work ;
+  rdfs:domain cr:Resource ;
   rdfs:label "hasCategory" ;
   rdfs:range cterm:Category ;
+.
+cterm:hasFamily
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain ci:Activity ;
+  rdfs:domain ci:CostComponent ;
+  rdfs:domain ci:Work ;
+  rdfs:domain cr:Resource ;
+  rdfs:label "hasFamily" ;
+  rdfs:range cterm:Family ;
+.
+cterm:hasFunction
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain ci:Activity ;
+  rdfs:domain ci:Work ;
+  rdfs:domain cr:EquipmentResource ;
+  rdfs:domain cr:MaterialResource ;
+  rdfs:label "hasFunction" ;
+  rdfs:range cterm:Function ;
 .

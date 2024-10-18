@@ -80,19 +80,13 @@ ci:Activity
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
       owl:onClass ci:FunctionOfActivity ;
-      owl:onProperty ci:hasFunction ;
+      owl:onProperty cterm:hasFunction ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
       owl:onClass ci:UseOfActivity ;
       owl:onProperty ci:hasUse ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:onClass ci:FamilyOfActivity ;
-      owl:onProperty ci:hasFamily ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -110,6 +104,12 @@ ci:Activity
       rdf:type owl:Restriction ;
       owl:onClass cterm:CategoryOfActivity ;
       owl:onProperty cterm:hasCategory ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass cterm:FamilyOfActivity ;
+      owl:onProperty ci:hasFamily ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
@@ -141,21 +141,6 @@ ci:Activity
       owl:onProperty ci:hasSubComponent ;
       owl:someValuesFrom ci:TemporaryWork ;
     ] ;
-.
-ci:Architecture
-  rdf:type ci:FamilyOfWork ;
-  rdfs:label "Architecture"@en ;
-  rdfs:label "Architettura"@it ;
-.
-ci:CivilEngineer
-  rdf:type ci:FamilyOfWork ;
-  rdfs:label "CivilEngineer"@en ;
-  rdfs:label "Ingegneria Civile"@it ;
-.
-ci:Construction
-  rdf:type ci:FamilyOfCostComponent ;
-  rdfs:label "Construction"@en ;
-  rdfs:label "Edilizia"@it ;
 .
 ci:ConstructionWork
   rdf:type owl:Class ;
@@ -200,12 +185,6 @@ ci:CostComponent
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:onClass ci:FamilyOfCostComponent ;
-      owl:onProperty ci:hasFamily ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
       owl:onClass ci:Gender ;
       owl:onProperty ci:hasGender ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
@@ -226,6 +205,12 @@ ci:CostComponent
       rdf:type owl:Restriction ;
       owl:onClass cterm:CategoryOfCostComponent ;
       owl:onProperty cterm:hasCategory ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass cterm:FamilyOfCostComponent ;
+      owl:onProperty ci:hasFamily ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
@@ -276,48 +261,6 @@ ci:DimensionParameter
   owl:disjointWith ci:PerformanceParameter ;
   owl:disjointWith ci:PhysicalParameter ;
 .
-ci:ElectricalEngineer
-  rdf:type ci:FamilyOfWork ;
-  rdfs:label "ElectricalEngineer"@en ;
-  rdfs:label "IngegneriaElettrica"@it ;
-.
-ci:Environment
-  rdf:type ci:FamilyOfCostComponent ;
-  rdfs:label "Ambiente"@it ;
-  rdfs:label "Environment"@en ;
-.
-ci:Family
-  rdf:type owl:Class ;
-  rdfs:label "Family" ;
-  rdfs:subClassOf owl:Thing ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:onClass ci:Family ;
-      owl:onProperty ci:hasFamily ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-.
-ci:FamilyOfActivity
-  rdf:type owl:Class ;
-  rdfs:label "FamilyOfActivity" ;
-  rdfs:subClassOf ci:Family ;
-  owl:disjointWith ci:FamilyOfCostComponent ;
-  owl:disjointWith ci:FamilyOfWork ;
-.
-ci:FamilyOfCostComponent
-  rdf:type owl:Class ;
-  rdfs:label "FamilyOfCostComponent" ;
-  rdfs:subClassOf ci:Family ;
-  owl:disjointWith ci:FamilyOfActivity ;
-  owl:disjointWith ci:FamilyOfWork ;
-.
-ci:FamilyOfWork
-  rdf:type owl:Class ;
-  rdfs:label "FamilyOfWork" ;
-  rdfs:subClassOf ci:Family ;
-  owl:disjointWith ci:FamilyOfActivity ;
-  owl:disjointWith ci:FamilyOfCostComponent ;
-.
 ci:Finishing
   rdf:type owl:Class ;
   rdfs:label "Finishing" ;
@@ -344,59 +287,6 @@ ci:FinishingOfWorkOfTemporaryWork
   rdfs:label "FinishingOfWorkOfTemporaryWork" ;
   rdfs:subClassOf ci:Finishing ;
 .
-ci:FireSafety
-  rdf:type ci:FamilyOfWork ;
-  rdfs:label "Antincendio"@it ;
-  rdfs:label "FireSafety"@en ;
-.
-ci:Function
-  rdf:type owl:Class ;
-  rdfs:label "Function" ;
-  rdfs:subClassOf owl:Thing ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
-      owl:onClass ci:Function ;
-      owl:onProperty ci:hasFunction ;
-    ] ;
-.
-ci:FunctionOfActivity
-  rdf:type owl:Class ;
-  rdfs:label "FunctionOfActivity" ;
-  rdfs:subClassOf ci:Function ;
-  owl:disjointWith ci:FunctionOfWorkOfConstructionWork ;
-  owl:disjointWith ci:FunctionOfWorkOfProductWork ;
-  owl:disjointWith ci:FunctionOfWorkOfTemporaryWork ;
-.
-ci:FunctionOfWorkOfConstructionWork
-  rdf:type owl:Class ;
-  rdfs:label "FunctionOfWorkOfConstructionWork" ;
-  rdfs:subClassOf ci:Function ;
-  owl:disjointWith ci:FunctionOfActivity ;
-  owl:disjointWith ci:FunctionOfWorkOfProductWork ;
-  owl:disjointWith ci:FunctionOfWorkOfTemporaryWork ;
-.
-ci:FunctionOfWorkOfProductWork
-  rdf:type owl:Class ;
-  rdfs:label "FunctionOfWorkOfProductWork" ;
-  rdfs:subClassOf ci:Function ;
-  owl:disjointWith ci:FunctionOfActivity ;
-  owl:disjointWith ci:FunctionOfWorkOfConstructionWork ;
-  owl:disjointWith ci:FunctionOfWorkOfTemporaryWork ;
-.
-ci:FunctionOfWorkOfTemporaryWork
-  rdf:type owl:Class ;
-  rdfs:label "FunctionOfWorkOfTemporaryWork" ;
-  rdfs:subClassOf ci:Function ;
-  owl:disjointWith ci:FunctionOfActivity ;
-  owl:disjointWith ci:FunctionOfWorkOfConstructionWork ;
-  owl:disjointWith ci:FunctionOfWorkOfProductWork ;
-.
-ci:Furniture
-  rdf:type ci:FamilyOfWork ;
-  rdfs:label "Arredo"@it ;
-  rdfs:label "Furniture"@en ;
-.
 ci:Gender
   rdf:type owl:Class ;
   rdfs:label "Gender" ;
@@ -408,32 +298,12 @@ ci:Gender
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
 .
-ci:IdraulicEngineer
-  rdf:type ci:FamilyOfWork ;
-  rdfs:label "IdraulicEngineer"@en ;
-  rdfs:label "IngegneriaIdraulica"@it ;
-.
-ci:Infrastructure
-  rdf:type ci:FamilyOfCostComponent ;
-  rdfs:label "Infrastructure"@en ;
-  rdfs:label "Infrastrutture"@it ;
-.
 ci:IsPartOf
   rdf:type owl:ObjectProperty ;
   rdfs:domain ci:CostComponent ;
   rdfs:label "IsPartOf" ;
   rdfs:range ci:CostItem ;
   rdfs:range ci:ProductionResult ;
-.
-ci:Land
-  rdf:type ci:FamilyOfWork ;
-  rdfs:label "Land"@en ;
-  rdfs:label "Suolo"@it ;
-.
-ci:Landscape
-  rdf:type ci:FamilyOfWork ;
-  rdfs:label "Landscape"@en ;
-  rdfs:label "VerdeEPaesaggio"@it ;
 .
 ci:Material
   rdf:type owl:Class ;
@@ -445,16 +315,6 @@ ci:Material
       owl:onProperty ci:hasMaterial ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
-.
-ci:MechanicalEngineer
-  rdf:type ci:FamilyOfWork ;
-  rdfs:label "IngegneriaMeccanica"@it ;
-  rdfs:label "MechanicalEngineer"@en ;
-.
-ci:Modify
-  rdf:type ci:FamilyOfActivity ;
-  rdfs:label "Modifica"@it ;
-  rdfs:label "Modify"@en ;
 .
 ci:Object
   rdf:type owl:Class ;
@@ -573,11 +433,6 @@ ci:PhysicalParameter
   owl:disjointWith ci:DimensionParameter ;
   owl:disjointWith ci:PerformanceParameter ;
 .
-ci:PrefabricatedStructuresForConcrete
-  rdf:type ci:FamilyOfWork ;
-  rdfs:label "PrefabbricatiPerStruttureInCls"@it ;
-  rdfs:label "PrefabricatedStructuresForConcrete"@en ;
-.
 ci:ProductWork
   rdf:type owl:Class ;
   rdfs:label "ProductWork" ;
@@ -602,11 +457,6 @@ ci:ProductWork
     ] ;
   owl:disjointWith ci:ConstructionWork ;
   owl:disjointWith ci:TemporaryWork ;
-.
-ci:Production
-  rdf:type ci:FamilyOfActivity ;
-  rdfs:label "Production"@en ;
-  rdfs:label "Produzione"@it ;
 .
 ci:ProductionResult
   rdf:type owl:Class ;
@@ -647,11 +497,6 @@ ci:Standard
       owl:onDataRange xsd:string ;
       owl:onProperty ci:standardBody ;
     ] ;
-.
-ci:StructuralEngineer
-  rdf:type ci:FamilyOfWork ;
-  rdfs:label "IngegneriaStrutturale"@it ;
-  rdfs:label "StructuralEngineer"@en ;
 .
 ci:TemporaryWork
   rdf:type owl:Class ;
@@ -845,12 +690,6 @@ ci:Work
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:onClass ci:FamilyOfWork ;
-      owl:onProperty ci:hasFamily ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
       owl:onClass ci:Gender ;
       owl:onProperty ci:hasGender ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
@@ -859,6 +698,12 @@ ci:Work
       rdf:type owl:Restriction ;
       owl:onClass ci:Material ;
       owl:onProperty ci:hasMaterial ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass cterm:FamilyOfWork ;
+      owl:onProperty ci:hasFamily ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
@@ -893,14 +738,14 @@ ci:WorkOfConstructionWork
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass ci:FunctionOfWorkOfConstructionWork ;
-      owl:onProperty ci:hasFunction ;
+      owl:onClass ci:TypeOfWorkOfConstructionWork ;
+      owl:onProperty ci:hasType ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass ci:TypeOfWorkOfConstructionWork ;
-      owl:onProperty ci:hasType ;
+      owl:onClass cterm:FunctionOfWorkOfConstructionWork ;
+      owl:onProperty cterm:hasFunction ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -952,14 +797,14 @@ ci:WorkOfProductWork
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass ci:FunctionOfWorkOfProductWork ;
-      owl:onProperty ci:hasFunction ;
+      owl:onClass ci:TypeOfWorkOfProductWork ;
+      owl:onProperty ci:hasType ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass ci:TypeOfWorkOfProductWork ;
-      owl:onProperty ci:hasType ;
+      owl:onClass cterm:FunctionOfWorkOfProductWork ;
+      owl:onProperty cterm:hasFunction ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -1001,8 +846,8 @@ ci:WorkOfTemporaryWork
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass ci:FunctionOfWorkOfTemporaryWork ;
-      owl:onProperty ci:hasFunction ;
+      owl:onClass cterm:FunctionOfWorkOfTemporaryWork ;
+      owl:onProperty cterm:hasFunction ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -1085,26 +930,11 @@ ci:hasDimensionParameter
   rdfs:label "hasDimensionParameter" ;
   rdfs:range ci:DimensionParameter ;
 .
-ci:hasFamily
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain ci:Activity ;
-  rdfs:domain ci:CostComponent ;
-  rdfs:domain ci:Work ;
-  rdfs:label "hasFamily" ;
-  rdfs:range ci:Family ;
-.
 ci:hasFinishing
   rdf:type owl:ObjectProperty ;
   rdfs:domain ci:Work ;
   rdfs:label "hasFinishing" ;
   rdfs:range ci:Finishing ;
-.
-ci:hasFunction
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain ci:Activity ;
-  rdfs:domain ci:Work ;
-  rdfs:label "hasFunction" ;
-  rdfs:range ci:Function ;
 .
 ci:hasGender
   rdf:type owl:ObjectProperty ;
@@ -1322,4 +1152,3 @@ ci:unitPrice
   rdfs:label "unit price" ;
   rdfs:range xsd:decimal ;
 .
-

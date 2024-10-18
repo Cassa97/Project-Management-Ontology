@@ -301,10 +301,11 @@
         <dt>Created</dt>
         <dd>2024-12-12</dd>
         <dt>Version Information</dt>
-        <dd>Created with TopBraid Composer</dd>
+        <dd>1.0</dd>
         <dt>Imports</dt>
         <dd>
             <a href="http://w3id.org/cr">http://w3id.org/cr</a><br/>
+            <a href="http://w3id.org/cterm">http://w3id.org/cterm</a><br/>
         </dd>
         <dt>License &amp; Rights</dt>
         <dd>
@@ -342,23 +343,55 @@
     <h2>Classes <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
     <ul class="hlist">
         <li><a href="#Activity">Activity</a></li>
-        <li><a href="#ActivityOfConstructionWork">ActivityOfConstructionWork</a></li>
-        <li><a href="#ActivityOfProductWork">ActivityOfProductWork</a></li>
-        <li><a href="#ActivityOfTemporaryWork">ActivityOfTemporaryWork</a></li>
         <li><a href="#ConstructionWork">ConstructionWork</a></li>
+        <li><a href="#CostComponent">CostComponent</a></li>
+        <li><a href="#CostItem">CostItem</a></li>
         <li><a href="#DimensionParameter">DimensionParameter</a></li>
+        <li><a href="#Family">Family</a></li>
+        <li><a href="#FamilyOfActivity">FamilyOfActivity</a></li>
+        <li><a href="#FamilyOfCostComponent">FamilyOfCostComponent</a></li>
+        <li><a href="#FamilyOfWork">FamilyOfWork</a></li>
+        <li><a href="#Finishing">Finishing</a></li>
+        <li><a href="#FinishingOfWorkOfConstructionWork">FinishingOfWorkOfConstructionWork</a></li>
+        <li><a href="#FinishingOfWorkOfProductWork">FinishingOfWorkOfProductWork</a></li>
+        <li><a href="#FinishingOfWorkOfTemporaryWork">FinishingOfWorkOfTemporaryWork</a></li>
+        <li><a href="#Function">Function</a></li>
+        <li><a href="#FunctionOfActivity">FunctionOfActivity</a></li>
+        <li><a href="#FunctionOfWorkOfConstructionWork">FunctionOfWorkOfConstructionWork</a></li>
+        <li><a href="#FunctionOfWorkOfProductWork">FunctionOfWorkOfProductWork</a></li>
+        <li><a href="#FunctionOfWorkOfTemporaryWork">FunctionOfWorkOfTemporaryWork</a></li>
+        <li><a href="#Gender">Gender</a></li>
+        <li><a href="#Material">Material</a></li>
+        <li><a href="#Object">Object</a></li>
+        <li><a href="#ObjectOfActivity">ObjectOfActivity</a></li>
+        <li><a href="#ObjectOfCostComponent">ObjectOfCostComponent</a></li>
+        <li><a href="#ObjectOfWorkOfConstructionWork">ObjectOfWorkOfConstructionWork</a></li>
+        <li><a href="#ObjectOfWorkOfProductWork">ObjectOfWorkOfProductWork</a></li>
+        <li><a href="#ObjectOfWorkOfTemporaryWork">ObjectOfWorkOfTemporaryWork</a></li>
         <li><a href="#Parameter">Parameter</a></li>
         <li><a href="#PerformanceParameter">PerformanceParameter</a></li>
         <li><a href="#PhysicalParameter">PhysicalParameter</a></li>
         <li><a href="#ProductWork">ProductWork</a></li>
         <li><a href="#ProductionResult">ProductionResult</a></li>
         <li><a href="#Standard">Standard</a></li>
-        <li><a href="#TemporaryWorks">TemporaryWorks</a></li>
+        <li><a href="#TemporaryWork">TemporaryWork</a></li>
+        <li><a href="#Type">Type</a></li>
+        <li><a href="#Typeofconstructionwork">Type of construction work</a></li>
+        <li><a href="#TypeOfActivity">TypeOfActivity</a></li>
+        <li><a href="#TypeOfProductWork">TypeOfProductWork</a></li>
+        <li><a href="#TypeOfTemporaryWork">TypeOfTemporaryWork</a></li>
+        <li><a href="#TypeOfWorkOfConstructionWork">TypeOfWorkOfConstructionWork</a></li>
+        <li><a href="#TypeOfWorkOfProductWork">TypeOfWorkOfProductWork</a></li>
+        <li><a href="#TypeOfWorkOfTemporaryWork">TypeOfWorkOfTemporaryWork</a></li>
+        <li><a href="#Use">Use</a></li>
+        <li><a href="#UseOfActivity">UseOfActivity</a></li>
+        <li><a href="#UseOfWorkOfConstructionWork">UseOfWorkOfConstructionWork</a></li>
+        <li><a href="#UseOfWorkOfProductWork">UseOfWorkOfProductWork</a></li>
+        <li><a href="#UseOfWorkOfTemporaryWork">UseOfWorkOfTemporaryWork</a></li>
         <li><a href="#Work">Work</a></li>
         <li><a href="#WorkOfConstructionWork">WorkOfConstructionWork</a></li>
         <li><a href="#WorkOfProductWork">WorkOfProductWork</a></li>
         <li><a href="#WorkOfTemporaryWork">WorkOfTemporaryWork</a></li>
-        <li><a href="#objecttype">object type</a></li>
     </ul>
     <div class="entity class" id="Activity">
         <h3>Activity<sup title="class" class="sup-c">c</sup></h3>
@@ -374,59 +407,43 @@
                 </td>
             </tr>
             <tr>
-                <th>Sub-classes</th>
+                <th>Restrictions</th>
                 <td>
-                    <a href="https://w3id.org/ci#ActivityOfConstructionWork">ci:ActivityOfConstructionWork</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/ci#ActivityOfProductWork">ci:ActivityOfProductWork</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/ci#ActivityOfTemporaryWork">ci:ActivityOfTemporaryWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#hasType">ci:hasType</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="https://w3id.org/ci#TypeOfActivity">ci:TypeOfActivity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#quantityUnitOfMeasure">ci:quantityUnitOfMeasure</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="https://w3id.org/ci#hasObject">ci:hasObject</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/ci#ObjectOfActivity">ci:ObjectOfActivity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#hasFunction">ci:hasFunction</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 5 <a href="https://w3id.org/ci#FunctionOfActivity">ci:FunctionOfActivity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#code">ci:code</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="https://w3id.org/ci#hasUse">ci:hasUse</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 5 <a href="https://w3id.org/ci#UseOfActivity">ci:UseOfActivity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#descriptionDetail">ci:descriptionDetail</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="https://w3id.org/ci#unitPrice">ci:unitPrice</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="https://w3id.org/cterm#hasCategory">cterm:hasCategory</a> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/cterm#CategoryOfActivity">cterm:CategoryOfActivity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#descriptionGeneral">ci:descriptionGeneral</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="https://w3id.org/ci#hasGender">ci:hasGender</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/ci#Gender">ci:Gender</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#hasFamily">ci:hasFamily</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/ci#FamilyOfActivity">ci:FamilyOfActivity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#hasSubComponent">ci:hasSubComponent</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="https://w3id.org/ci#TemporaryWork">ci:TemporaryWork</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
-        </table>
-    </div>
-    <div class="entity class" id="ActivityOfConstructionWork">
-        <h3>ActivityOfConstructionWork<sup title="class" class="sup-c">c</sup></h3>
-        <table>
             <tr>
-                <th>IRI</th>
-                <td><code>https://w3id.org/ci#ActivityOfConstructionWork</code></td>
-            </tr>
-            <tr>
-                <th>Super-classes</th>
+                <th>In domain of</th>
                 <td>
-                    <a href="https://w3id.org/ci#Activity">ci:Activity</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/ci#ConstructionWork">ci:ConstructionWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#hasType">ci:hasType</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/ci#hasSubComponent">ci:hasSubComponent</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/ci#hasUse">ci:hasUse</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/ci#hasUnit">ci:hasUnit</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/ci#hasFunction">ci:hasFunction</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/ci#hasGender">ci:hasGender</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/ci#hasOtherStandard">ci:hasOtherStandard</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/ci#hasFamily">ci:hasFamily</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/ci#hasObjectStandard">ci:hasObjectStandard</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/ci#hasObject">ci:hasObject</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/ci#keywords">ci:keywords</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                 </td>
             </tr>
-        </table>
-    </div>
-    <div class="entity class" id="ActivityOfProductWork">
-        <h3>ActivityOfProductWork<sup title="class" class="sup-c">c</sup></h3>
-        <table>
             <tr>
-                <th>IRI</th>
-                <td><code>https://w3id.org/ci#ActivityOfProductWork</code></td>
-            </tr>
-            <tr>
-                <th>Super-classes</th>
+                <th>In range of</th>
                 <td>
-                    <a href="https://w3id.org/ci#Activity">ci:Activity</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/ci#ProductWork">ci:ProductWork</a><sup class="sup-c" title="class">c</sup><br/>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity class" id="ActivityOfTemporaryWork">
-        <h3>ActivityOfTemporaryWork<sup title="class" class="sup-c">c</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td><code>https://w3id.org/ci#ActivityOfTemporaryWork</code></td>
-            </tr>
-            <tr>
-                <th>Super-classes</th>
-                <td>
-                    <a href="https://w3id.org/ci#Activity">ci:Activity</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/ci#TemporaryWorks">ci:TemporaryWorks</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#hasActivity">ci:hasActivity</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -441,14 +458,123 @@
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="https://w3id.org/ci#ProductionResult">ci:ProductionResult</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#CostComponent">ci:CostComponent</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="https://w3id.org/ci#hasObjectStandard">ci:hasObjectStandard</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="https://w3id.org/ci#Standard">ci:Standard</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#hasType">ci:hasType</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="https://w3id.org/ci#TypeOfConstructionWork">ci:TypeOfConstructionWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#hasWork">ci:hasWork</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/ci#WorkOfConstructionWork">ci:WorkOfConstructionWork</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="CostComponent">
+        <h3>CostComponent<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#CostComponent</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="https://w3id.org/ci#hasFamily">ci:hasFamily</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/ci#FamilyOfCostComponent">ci:FamilyOfCostComponent</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cterm#hasCategory">cterm:hasCategory</a> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/cterm#CategoryOfCostComponent">cterm:CategoryOfCostComponent</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#hasActivity">ci:hasActivity</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/ci#Activity">ci:Activity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#unitPrice">ci:unitPrice</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="https://w3id.org/ci#hasObject">ci:hasObject</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/ci#ObjectOfCostComponent">ci:ObjectOfCostComponent</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#descriptionGeneral">ci:descriptionGeneral</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="https://w3id.org/ci#hasGender">ci:hasGender</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/ci#Gender">ci:Gender</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#hasMaterial">ci:hasMaterial</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/ci#Material">ci:Material</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#quantityUnitOfMeasure">ci:quantityUnitOfMeasure</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="https://w3id.org/ci#descriptionDetail">ci:descriptionDetail</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="https://w3id.org/ci#code">ci:code</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="https://w3id.org/ci#IsPartOf">ci:IsPartOf</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="https://w3id.org/ci#CostItem">ci:CostItem</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="https://w3id.org/ci#WorkOfConstructionWork">ci:WorkOfConstructionWork</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/ci#ActivityOfConstructionWork">ci:ActivityOfConstructionWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#ConstructionWork">ci:ConstructionWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#TemporaryWork">ci:TemporaryWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#ProductWork">ci:ProductWork</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="https://w3id.org/ci#uniclass">ci:uniclass</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/ci#hasWork">ci:hasWork</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/ci#hasObject">ci:hasObject</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/ci#descriptionGeneral">ci:descriptionGeneral</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/ci#hasOtherStandard">ci:hasOtherStandard</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/ci#IsPartOf">ci:IsPartOf</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/ci#hasObjectStandard">ci:hasObjectStandard</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/ci#hasMaterial">ci:hasMaterial</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/ci#hasActivity">ci:hasActivity</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/ci#uniformat">ci:uniformat</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/ci#hasFamily">ci:hasFamily</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/ci#unitPrice">ci:unitPrice</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/ci#included">ci:included</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/ci#descriptionDetail">ci:descriptionDetail</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/ci#quantityUnitOfMeasure">ci:quantityUnitOfMeasure</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/ci#hasUnit">ci:hasUnit</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/ci#hasGender">ci:hasGender</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/ci#omniclass">ci:omniclass</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/ci#techSpecs">ci:techSpecs</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/ci#escluded">ci:escluded</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/ci#hasType">ci:hasType</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/ci#code">ci:code</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/ci#measurementRules">ci:measurementRules</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="https://w3id.org/ci#hasSubComponent">ci:hasSubComponent</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/ci#hasPart">ci:hasPart</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="CostItem">
+        <h3>CostItem<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#CostItem</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="https://w3id.org/ci#hasPart">ci:hasPart</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="https://w3id.org/ci#CostComponent">ci:CostComponent</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="https://w3id.org/ci#hasPart">ci:hasPart</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="https://w3id.org/ci#IsPartOf">ci:IsPartOf</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -469,22 +595,429 @@
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="https://w3id.org/ci#resourceDimensionParameter">ci:resourceDimensionParameter</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/ci#hasDimensionParameter">ci:hasDimensionParameter</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
     </div>
-    <div class="entity class" id="objecttype">
-        <h3>object type<sup title="class" class="sup-c">c</sup></h3>
+    <div class="entity class" id="Family">
+        <h3>Family<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>https://w3id.org/ci#ObjectType</code></td>
+                <td><code>https://w3id.org/ci#Family</code></td>
             </tr>
             <tr>
                 <th>Super-classes</th>
                 <td>
                     <a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="https://w3id.org/ci#hasFamily">ci:hasFamily</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/ci#Family">ci:Family</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="https://w3id.org/ci#FamilyOfWork">ci:FamilyOfWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#FamilyOfCostComponent">ci:FamilyOfCostComponent</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#FamilyOfActivity">ci:FamilyOfActivity</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="https://w3id.org/ci#hasFamily">ci:hasFamily</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="FamilyOfActivity">
+        <h3>FamilyOfActivity<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#FamilyOfActivity</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/ci#Family">ci:Family</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="FamilyOfCostComponent">
+        <h3>FamilyOfCostComponent<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#FamilyOfCostComponent</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/ci#Family">ci:Family</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="FamilyOfWork">
+        <h3>FamilyOfWork<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#FamilyOfWork</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/ci#Family">ci:Family</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Finishing">
+        <h3>Finishing<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#Finishing</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="https://w3id.org/ci#hasFinishing">ci:hasFinishing</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 5 <a href="https://w3id.org/ci#Finishing">ci:Finishing</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="https://w3id.org/ci#FinishingOfWorkOfTemporaryWork">ci:FinishingOfWorkOfTemporaryWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#FinishingOfWorkOfProductWork">ci:FinishingOfWorkOfProductWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#FinishingOfWorkOfConstructionWork">ci:FinishingOfWorkOfConstructionWork</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="https://w3id.org/ci#hasFinishing">ci:hasFinishing</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="FinishingOfWorkOfConstructionWork">
+        <h3>FinishingOfWorkOfConstructionWork<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#FinishingOfWorkOfConstructionWork</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/ci#Finishing">ci:Finishing</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="FinishingOfWorkOfProductWork">
+        <h3>FinishingOfWorkOfProductWork<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#FinishingOfWorkOfProductWork</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/ci#Finishing">ci:Finishing</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="FinishingOfWorkOfTemporaryWork">
+        <h3>FinishingOfWorkOfTemporaryWork<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#FinishingOfWorkOfTemporaryWork</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/ci#Finishing">ci:Finishing</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Function">
+        <h3>Function<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#Function</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="https://w3id.org/ci#hasFunction">ci:hasFunction</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 5 <a href="https://w3id.org/ci#Function">ci:Function</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="https://w3id.org/ci#FunctionOfWorkOfTemporaryWork">ci:FunctionOfWorkOfTemporaryWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#FunctionOfActivity">ci:FunctionOfActivity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#FunctionOfWorkOfConstructionWork">ci:FunctionOfWorkOfConstructionWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#FunctionOfWorkOfProductWork">ci:FunctionOfWorkOfProductWork</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="https://w3id.org/ci#hasFunction">ci:hasFunction</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="FunctionOfActivity">
+        <h3>FunctionOfActivity<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#FunctionOfActivity</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/ci#Function">ci:Function</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="FunctionOfWorkOfConstructionWork">
+        <h3>FunctionOfWorkOfConstructionWork<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#FunctionOfWorkOfConstructionWork</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/ci#Function">ci:Function</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="FunctionOfWorkOfProductWork">
+        <h3>FunctionOfWorkOfProductWork<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#FunctionOfWorkOfProductWork</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/ci#Function">ci:Function</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="FunctionOfWorkOfTemporaryWork">
+        <h3>FunctionOfWorkOfTemporaryWork<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#FunctionOfWorkOfTemporaryWork</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/ci#Function">ci:Function</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Gender">
+        <h3>Gender<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#Gender</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="https://w3id.org/ci#hasGender">ci:hasGender</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/ci#Gender">ci:Gender</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="https://w3id.org/ci#hasGender">ci:hasGender</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Material">
+        <h3>Material<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#Material</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="https://w3id.org/ci#hasMaterial">ci:hasMaterial</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/ci#Material">ci:Material</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="https://w3id.org/ci#hasMaterial">ci:hasMaterial</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Object">
+        <h3>Object<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#Object</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="https://w3id.org/ci#hasObject">ci:hasObject</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/ci#Object">ci:Object</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="https://w3id.org/ci#ObjectOfCostComponent">ci:ObjectOfCostComponent</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#ObjectOfWorkOfTemporaryWork">ci:ObjectOfWorkOfTemporaryWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#ObjectOfActivity">ci:ObjectOfActivity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#ObjectOfWorkOfProductWork">ci:ObjectOfWorkOfProductWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#ObjectOfWorkOfConstructionWork">ci:ObjectOfWorkOfConstructionWork</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="https://w3id.org/ci#hasObject">ci:hasObject</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="ObjectOfActivity">
+        <h3>ObjectOfActivity<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#ObjectOfActivity</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/ci#Object">ci:Object</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="ObjectOfCostComponent">
+        <h3>ObjectOfCostComponent<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#ObjectOfCostComponent</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/ci#Object">ci:Object</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="ObjectOfWorkOfConstructionWork">
+        <h3>ObjectOfWorkOfConstructionWork<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#ObjectOfWorkOfConstructionWork</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/ci#Object">ci:Object</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="ObjectOfWorkOfProductWork">
+        <h3>ObjectOfWorkOfProductWork<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#ObjectOfWorkOfProductWork</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/ci#Object">ci:Object</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="ObjectOfWorkOfTemporaryWork">
+        <h3>ObjectOfWorkOfTemporaryWork<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#ObjectOfWorkOfTemporaryWork</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/ci#Object">ci:Object</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -505,33 +1038,33 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="https://w3id.org/ci#parameterValue2">ci:parameterValue2</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="https://w3id.org/ci#parameterSimbol2">ci:parameterSimbol2</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="https://w3id.org/ci#parameterType">ci:parameterType</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="https://w3id.org/ci#hasParameterStandard">ci:hasParameterStandard</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="https://w3id.org/ci#Standard">ci:Standard</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/ci#parameterSimbol1">ci:parameterSimbol1</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="https://w3id.org/ci#parameterValue1">ci:parameterValue1</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="https://w3id.org/ci#resourceParameterStandard">ci:resourceParameterStandard</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="https://w3id.org/ci#Standard">ci:Standard</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#parameterSimbol2">ci:parameterSimbol2</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
                     <a href="https://w3id.org/ci#hasUnit">ci:hasUnit</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://qudt.org/schema/qudt/Unit">qudt:Unit</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#parameterValue2">ci:parameterValue2</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="https://w3id.org/ci#parameterType">ci:parameterType</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="https://w3id.org/ci#parameterValue1">ci:parameterValue1</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
                 </td>
             </tr>
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="https://w3id.org/ci#PhysicalParameter">ci:PhysicalParameter</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/ci#PerformanceParameter">ci:PerformanceParameter</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#PhysicalParameter">ci:PhysicalParameter</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/ci#DimensionParameter">ci:DimensionParameter</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In domain of</th>
                 <td>
+                    <a href="https://w3id.org/ci#hasUnit">ci:hasUnit</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/ci#parameterValue1">ci:parameterValue1</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/ci#parameterSimbol1">ci:parameterSimbol1</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/ci#parameterValue2">ci:parameterValue2</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="https://w3id.org/ci#parameterSimbol2">ci:parameterSimbol2</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="https://w3id.org/ci#parameterType">ci:parameterType</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/ci#parameterValue2">ci:parameterValue2</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/ci#resourceParameterStandard">ci:resourceParameterStandard</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/ci#hasUnit">ci:hasUnit</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/ci#parameterSimbol1">ci:parameterSimbol1</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/ci#hasParameterStandard">ci:hasParameterStandard</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -552,7 +1085,7 @@
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="https://w3id.org/ci#resourcePerformanceParameter">ci:resourcePerformanceParameter</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/ci#hasPerformanceParameter">ci:hasPerformanceParameter</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -573,7 +1106,7 @@
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="https://w3id.org/ci#resourcePhysicalParameter">ci:resourcePhysicalParameter</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/ci#hasPhysicalParameter">ci:hasPhysicalParameter</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -588,14 +1121,15 @@
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="https://w3id.org/ci#ProductionResult">ci:ProductionResult</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#CostComponent">ci:CostComponent</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
-                <th>Sub-classes</th>
+                <th>Restrictions</th>
                 <td>
-                    <a href="https://w3id.org/ci#WorkOfProductWork">ci:WorkOfProductWork</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/ci#ActivityOfProductWork">ci:ActivityOfProductWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#hasWork">ci:hasWork</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/ci#WorkOfProductWork">ci:WorkOfProductWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#hasType">ci:hasType</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="https://w3id.org/ci#TypeOfProductWork">ci:TypeOfProductWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#hasObjectStandard">ci:hasObjectStandard</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="https://w3id.org/ci#Standard">ci:Standard</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -616,54 +1150,19 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="https://w3id.org/ci#resourceObjectStandard">ci:resourceObjectStandard</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="https://w3id.org/ci#Standard">ci:Standard</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/ci#code">ci:code</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="https://w3id.org/ci#gender">ci:gender</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="https://w3id.org/ci#category">ci:category</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="https://w3id.org/ci#quantityUnitOfMeasure">ci:quantityUnitOfMeasure</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="https://w3id.org/ci#descriptionDetail">ci:descriptionDetail</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="https://w3id.org/ci#type">ci:type</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="https://w3id.org/ci#function">ci:function</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 5<br/>
-                    <a href="https://w3id.org/ci#descriptionGeneral">ci:descriptionGeneral</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="https://w3id.org/ci#family">ci:family</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="https://w3id.org/ci#keywords">ci:keywords</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 10<br/>
-                    <a href="https://w3id.org/ci#object">ci:object</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="https://w3id.org/ci#use">ci:use</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 5<br/>
-                </td>
-            </tr>
-            <tr>
-                <th>Sub-classes</th>
-                <td>
-                    <a href="https://w3id.org/ci#TemporaryWorks">ci:TemporaryWorks</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/ci#ProductWork">ci:ProductWork</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/ci#ConstructionWork">ci:ConstructionWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#hasPart">ci:hasPart</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="https://w3id.org/ci#CostComponent">ci:CostComponent</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="https://w3id.org/ci#measurementRules">ci:measurementRules</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/ci#quantityUnitOfMeasure">ci:quantityUnitOfMeasure</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/ci#omniclass">ci:omniclass</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/ci#descriptionGeneral">ci:descriptionGeneral</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/ci#included">ci:included</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/ci#family">ci:family</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/ci#resourceObjectStandard">ci:resourceObjectStandard</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/ci#resourceOtherStandard">ci:resourceOtherStandard</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/ci#object">ci:object</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/ci#keywords">ci:keywords</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/ci#uniclass">ci:uniclass</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/ci#techSpecs">ci:techSpecs</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/ci#use">ci:use</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/ci#descriptionDetail">ci:descriptionDetail</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/ci#function">ci:function</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/ci#category">ci:category</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/ci#hasUnit">ci:hasUnit</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/ci#code">ci:code</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/ci#uniformat">ci:uniformat</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/ci#escluded">ci:escluded</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/ci#gender">ci:gender</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/ci#type">ci:type</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/ci#hasPart">ci:hasPart</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="https://w3id.org/ci#IsPartOf">ci:IsPartOf</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -684,49 +1183,278 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
+                    <a href="https://w3id.org/ci#standardYear">ci:standardYear</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
                     <a href="https://w3id.org/ci#standardNumber">ci:standardNumber</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
                     <a href="https://w3id.org/ci#standardPart">ci:standardPart</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
                     <a href="https://w3id.org/ci#standardBody">ci:standardBody</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="https://w3id.org/ci#standardYear">ci:standardYear</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
                 </td>
             </tr>
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="https://w3id.org/ci#standardPart">ci:standardPart</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/ci#standardBody">ci:standardBody</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/ci#standardNumber">ci:standardNumber</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="https://w3id.org/ci#standardYear">ci:standardYear</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/ci#standardBody">ci:standardBody</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/ci#standardPart">ci:standardPart</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/ci#standardNumber">ci:standardNumber</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="https://w3id.org/ci#resourceParameterStandard">ci:resourceParameterStandard</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/ci#resourceObjectStandard">ci:resourceObjectStandard</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/ci#resourceOtherStandard">ci:resourceOtherStandard</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/ci#hasParameterStandard">ci:hasParameterStandard</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/ci#hasObjectStandard">ci:hasObjectStandard</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/ci#hasOtherStandard">ci:hasOtherStandard</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
     </div>
-    <div class="entity class" id="TemporaryWorks">
-        <h3>TemporaryWorks<sup title="class" class="sup-c">c</sup></h3>
+    <div class="entity class" id="TemporaryWork">
+        <h3>TemporaryWork<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>https://w3id.org/ci#TemporaryWorks</code></td>
+                <td><code>https://w3id.org/ci#TemporaryWork</code></td>
             </tr>
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="https://w3id.org/ci#ProductionResult">ci:ProductionResult</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#CostComponent">ci:CostComponent</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="https://w3id.org/ci#hasObjectStandard">ci:hasObjectStandard</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="https://w3id.org/ci#Standard">ci:Standard</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#hasType">ci:hasType</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="https://w3id.org/ci#TypeOfTemporaryWork">ci:TypeOfTemporaryWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#hasWork">ci:hasWork</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/ci#WorkOfTemporaryWork">ci:WorkOfTemporaryWork</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Type">
+        <h3>Type<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#Type</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="https://w3id.org/ci#ActivityOfTemporaryWork">ci:ActivityOfTemporaryWork</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/ci#WorkOfTemporaryWork">ci:WorkOfTemporaryWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#TypeOfConstructionWork">ci:TypeOfConstructionWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#TypeOfWorkOfTemporaryWork">ci:TypeOfWorkOfTemporaryWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#TypeOfProductWork">ci:TypeOfProductWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#TypeOfActivity">ci:TypeOfActivity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#TypeOfWorkOfConstructionWork">ci:TypeOfWorkOfConstructionWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#TypeOfWorkOfProductWork">ci:TypeOfWorkOfProductWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#TypeOfTemporaryWork">ci:TypeOfTemporaryWork</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="https://w3id.org/ci#hasType">ci:hasType</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="TypeOfActivity">
+        <h3>TypeOfActivity<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#TypeOfActivity</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/ci#Type">ci:Type</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Typeofconstructionwork">
+        <h3>Type of construction work<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#TypeOfConstructionWork</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/ci#Type">ci:Type</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="TypeOfProductWork">
+        <h3>TypeOfProductWork<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#TypeOfProductWork</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/ci#Type">ci:Type</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="TypeOfTemporaryWork">
+        <h3>TypeOfTemporaryWork<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#TypeOfTemporaryWork</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/ci#Type">ci:Type</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="TypeOfWorkOfConstructionWork">
+        <h3>TypeOfWorkOfConstructionWork<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#TypeOfWorkOfConstructionWork</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/ci#Type">ci:Type</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="TypeOfWorkOfProductWork">
+        <h3>TypeOfWorkOfProductWork<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#TypeOfWorkOfProductWork</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/ci#Type">ci:Type</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="TypeOfWorkOfTemporaryWork">
+        <h3>TypeOfWorkOfTemporaryWork<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#TypeOfWorkOfTemporaryWork</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/ci#Type">ci:Type</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Use">
+        <h3>Use<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#Use</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="https://w3id.org/ci#UseOfActivity">ci:UseOfActivity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#UseOfWorkOfConstructionWork">ci:UseOfWorkOfConstructionWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#UseOfWorkOfProductWork">ci:UseOfWorkOfProductWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#UseOfWorkOfTemporaryWork">ci:UseOfWorkOfTemporaryWork</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="https://w3id.org/ci#hasUse">ci:hasUse</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="UseOfActivity">
+        <h3>UseOfActivity<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#UseOfActivity</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/ci#Use">ci:Use</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="UseOfWorkOfConstructionWork">
+        <h3>UseOfWorkOfConstructionWork<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#UseOfWorkOfConstructionWork</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/ci#Use">ci:Use</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="UseOfWorkOfProductWork">
+        <h3>UseOfWorkOfProductWork<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#UseOfWorkOfProductWork</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/ci#Use">ci:Use</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="UseOfWorkOfTemporaryWork">
+        <h3>UseOfWorkOfTemporaryWork<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#UseOfWorkOfTemporaryWork</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/ci#Use">ci:Use</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -747,36 +1475,56 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="https://w3id.org/ci#resourceDimensionParameter">ci:resourceDimensionParameter</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 10 <a href="https://w3id.org/ci#DimensionParameter">ci:DimensionParameter</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/ci#finishing">ci:finishing</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 5<br/>
-                    <a href="https://w3id.org/ci#material">ci:material</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="https://w3id.org/ci#resourceOtherStandard">ci:resourceOtherStandard</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 5 <a href="https://w3id.org/ci#Standard">ci:Standard</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/ci#cam">ci:cam</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="https://w3id.org/ci#resourcePerformanceParameter">ci:resourcePerformanceParameter</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 10 <a href="https://w3id.org/ci#PerformanceParameter">ci:PerformanceParameter</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/ci#aspect">ci:aspect</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 5<br/>
                     <a href="https://w3id.org/ci#law">ci:law</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 10<br/>
-                    <a href="https://w3id.org/ci#resourcePhysicalParameter">ci:resourcePhysicalParameter</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 10 <a href="https://w3id.org/ci#PhysicalParameter">ci:PhysicalParameter</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#hasPhysicalParameter">ci:hasPhysicalParameter</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 10 <a href="https://w3id.org/ci#PhysicalParameter">ci:PhysicalParameter</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#hasFamily">ci:hasFamily</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/ci#FamilyOfWork">ci:FamilyOfWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#unitPrice">ci:unitPrice</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="https://w3id.org/ci#hasPerformanceParameter">ci:hasPerformanceParameter</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 10 <a href="https://w3id.org/ci#PerformanceParameter">ci:PerformanceParameter</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#hasOtherStandard">ci:hasOtherStandard</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 5 <a href="https://w3id.org/ci#Standard">ci:Standard</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#quantityUnitOfMeasure">ci:quantityUnitOfMeasure</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="https://w3id.org/ci#hasMaterial">ci:hasMaterial</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/ci#Material">ci:Material</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#descriptionGeneral">ci:descriptionGeneral</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="https://w3id.org/ci#cam">ci:cam</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="https://w3id.org/ci#hasDimensionParameter">ci:hasDimensionParameter</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 10 <a href="https://w3id.org/ci#DimensionParameter">ci:DimensionParameter</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#hasGender">ci:hasGender</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/ci#Gender">ci:Gender</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#code">ci:code</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="https://w3id.org/ci#descriptionDetail">ci:descriptionDetail</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
                 </td>
             </tr>
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="https://w3id.org/ci#WorkOfTemporaryWork">ci:WorkOfTemporaryWork</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/ci#WorkOfConstructionWork">ci:WorkOfConstructionWork</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/ci#WorkOfProductWork">ci:WorkOfProductWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#WorkOfConstructionWork">ci:WorkOfConstructionWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#WorkOfTemporaryWork">ci:WorkOfTemporaryWork</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="https://w3id.org/ci#resourcePhysicalParameter">ci:resourcePhysicalParameter</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/ci#hasFunction">ci:hasFunction</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/ci#hasOtherStandard">ci:hasOtherStandard</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/ci#hasGender">ci:hasGender</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/ci#hasObjectStandard">ci:hasObjectStandard</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/ci#hasMaterial">ci:hasMaterial</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/ci#hasUse">ci:hasUse</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/ci#hasObject">ci:hasObject</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/ci#hasFamily">ci:hasFamily</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/ci#hasFinishing">ci:hasFinishing</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/ci#hasPerformanceParameter">ci:hasPerformanceParameter</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/ci#hasDimensionParameter">ci:hasDimensionParameter</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/ci#hasType">ci:hasType</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/ci#keywords">ci:keywords</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/ci#hasUnit">ci:hasUnit</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/ci#cam">ci:cam</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/ci#material">ci:material</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/ci#finishing">ci:finishing</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/ci#aspect">ci:aspect</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/ci#hasPhysicalParameter">ci:hasPhysicalParameter</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/ci#law">ci:law</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/ci#resourceDimensionParameter">ci:resourceDimensionParameter</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/ci#resourcePerformanceParameter">ci:resourcePerformanceParameter</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="https://w3id.org/ci#hasWork">ci:hasWork</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -791,8 +1539,27 @@
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="https://w3id.org/ci#ConstructionWork">ci:ConstructionWork</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/ci#Work">ci:Work</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="https://w3id.org/ci#hasObject">ci:hasObject</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/ci#ObjectOfWorkOfConstructionWork">ci:ObjectOfWorkOfConstructionWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#hasFunction">ci:hasFunction</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="https://w3id.org/ci#FunctionOfWorkOfConstructionWork">ci:FunctionOfWorkOfConstructionWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cterm#hasAspect">cterm:hasAspect</a> <span class="cardinality">max</span> 5 <a href="https://w3id.org/cterm#AspectOfWorkOfConstructionWork">cterm:AspectOfWorkOfConstructionWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#hasFinishing">ci:hasFinishing</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 5 <a href="https://w3id.org/ci#FinishingOfWorkOfConstructionWork">ci:FinishingOfWorkOfConstructionWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#hasUse">ci:hasUse</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 5 <a href="https://w3id.org/ci#UseOfWorkOfConstructionWork">ci:UseOfWorkOfConstructionWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#hasSubComponent">ci:hasSubComponent</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="https://w3id.org/ci#ConstructionWork">ci:ConstructionWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#hasType">ci:hasType</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="https://w3id.org/ci#TypeOfWorkOfConstructionWork">ci:TypeOfWorkOfConstructionWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#hasSubComponent">ci:hasSubComponent</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="https://w3id.org/ci#ProductWork">ci:ProductWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cterm#hasCategory">cterm:hasCategory</a> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/cterm#CategoryOfWorkOfConstructionWork">cterm:CategoryOfWorkOfConstructionWork</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="https://w3id.org/ci#hasSubComponent">ci:hasSubComponent</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -807,8 +1574,19 @@
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="https://w3id.org/ci#ProductWork">ci:ProductWork</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/ci#Work">ci:Work</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="https://w3id.org/cterm#hasAspect">cterm:hasAspect</a> <span class="cardinality">max</span> 5 <a href="https://w3id.org/cterm#AspectOfWorkOfProductWork">cterm:AspectOfWorkOfProductWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#hasUse">ci:hasUse</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 5 <a href="https://w3id.org/ci#UseOfWorkOfProductWork">ci:UseOfWorkOfProductWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#hasFunction">ci:hasFunction</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="https://w3id.org/ci#FunctionOfWorkOfProductWork">ci:FunctionOfWorkOfProductWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#hasFinishing">ci:hasFinishing</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 5 <a href="https://w3id.org/ci#FinishingOfWorkOfProductWork">ci:FinishingOfWorkOfProductWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#hasObject">ci:hasObject</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/ci#ObjectOfWorkOfProductWork">ci:ObjectOfWorkOfProductWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cterm#hasCategory">cterm:hasCategory</a> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/cterm#CategoryOfWorkOfProductWork">cterm:CategoryOfWorkOfProductWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#hasType">ci:hasType</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="https://w3id.org/ci#TypeOfWorkOfProductWork">ci:TypeOfWorkOfProductWork</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -824,7 +1602,18 @@
                 <th>Super-classes</th>
                 <td>
                     <a href="https://w3id.org/ci#Work">ci:Work</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/ci#TemporaryWorks">ci:TemporaryWorks</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="https://w3id.org/ci#hasUse">ci:hasUse</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 5 <a href="https://w3id.org/ci#UseOfWorkOfTemporaryWork">ci:UseOfWorkOfTemporaryWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cterm#hasAspect">cterm:hasAspect</a> <span class="cardinality">max</span> 5 <a href="https://w3id.org/cterm#AspectOfWorkOfTemporaryWork">cterm:AspectOfWorkOfTemporaryWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#hasFunction">ci:hasFunction</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="https://w3id.org/ci#FunctionOfWorkOfTemporaryWork">ci:FunctionOfWorkOfTemporaryWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cterm#hasCategory">cterm:hasCategory</a> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/cterm#CategoryOfWorkOfTemporaryWork">cterm:CategoryOfWorkOfTemporaryWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#hasFinishing">ci:hasFinishing</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 5 <a href="https://w3id.org/ci#FinishingOfWorkOfTemporaryWork">ci:FinishingOfWorkOfTemporaryWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#hasType">ci:hasType</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/ci#TypeOfWorkOfTemporaryWork">ci:TypeOfWorkOfTemporaryWork</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/ci#hasObject">ci:hasObject</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/ci#ObjectOfWorkOfTemporaryWork">ci:ObjectOfWorkOfTemporaryWork</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -833,42 +1622,76 @@
 <section id="objectproperties">
     <h2>Object Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
     <ul class="hlist">
+        <li><a href="#IsPartOf">IsPartOf</a></li>
+        <li><a href="#hasActivity">hasActivity</a></li>
+        <li><a href="#hasDimensionParameter">hasDimensionParameter</a></li>
+        <li><a href="#hasFamily">hasFamily</a></li>
+        <li><a href="#hasFinishing">hasFinishing</a></li>
+        <li><a href="#hasFunction">hasFunction</a></li>
+        <li><a href="#hasGender">hasGender</a></li>
+        <li><a href="#hasMaterial">hasMaterial</a></li>
+        <li><a href="#hasObject">hasObject</a></li>
+        <li><a href="#hasObjectStandard">hasObjectStandard</a></li>
+        <li><a href="#hasOtherStandard">hasOtherStandard</a></li>
+        <li><a href="#hasParameterStandard">hasParameterStandard</a></li>
+        <li><a href="#hasPart">hasPart</a></li>
+        <li><a href="#hasPerformanceParameter">hasPerformanceParameter</a></li>
+        <li><a href="#hasPhysicalParameter">hasPhysicalParameter</a></li>
+        <li><a href="#hasSubComponent">hasSubComponent</a></li>
+        <li><a href="#hasType">hasType</a></li>
         <li><a href="#hasUnit">hasUnit</a></li>
-        <li><a href="#resourceDimensionParameter">resourceDimensionParameter</a></li>
-        <li><a href="#resourceObjectStandard">resourceObjectStandard</a></li>
-        <li><a href="#resourceOtherStandard">resourceOtherStandard</a></li>
-        <li><a href="#resourceParameterStandard">resourceParameterStandard</a></li>
-        <li><a href="#resourcePerformanceParameter">resourcePerformanceParameter</a></li>
-        <li><a href="#resourcePhysicalParameter">resourcePhysicalParameter</a></li>
+        <li><a href="#hasUse">hasUse</a></li>
+        <li><a href="#hasWork">hasWork</a></li>
     </ul>
-    <div class="entity property" id="hasUnit">
-        <h3>hasUnit<sup title="object property" class="sup-op">op</sup></h3>
+    <div class="entity property" id="IsPartOf">
+        <h3>IsPartOf<sup title="object property" class="sup-op">op</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>https://w3id.org/ci#hasUnit</code></td>
+                <td><code>https://w3id.org/ci#IsPartOf</code></td>
             </tr>
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="https://w3id.org/ci#ProductionResult">ci:ProductionResult</a><sup class="sup-c" title="class">c</sup>
-                    <a href="https://w3id.org/ci#Parameter">ci:Parameter</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/ci#CostComponent">ci:CostComponent</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
                 <th>Range(s)</th>
                 <td>
-                    <a href="http://qudt.org/schema/qudt/Unit">qudt:Unit</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/ci#CostItem">ci:CostItem</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/ci#ProductionResult">ci:ProductionResult</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
     </div>
-    <div class="entity property" id="resourceDimensionParameter">
-        <h3>resourceDimensionParameter<sup title="object property" class="sup-op">op</sup></h3>
+    <div class="entity property" id="hasActivity">
+        <h3>hasActivity<sup title="object property" class="sup-op">op</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>https://w3id.org/ci#resourceDimensionParameter</code></td>
+                <td><code>https://w3id.org/ci#hasActivity</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/ci#CostComponent">ci:CostComponent</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/ci#Activity">ci:Activity</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasDimensionParameter">
+        <h3>hasDimensionParameter<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#hasDimensionParameter</code></td>
             </tr>
             <tr>
                 <th>Domain(s)</th>
@@ -884,17 +1707,153 @@
             </tr>
         </table>
     </div>
-    <div class="entity property" id="resourceObjectStandard">
-        <h3>resourceObjectStandard<sup title="object property" class="sup-op">op</sup></h3>
+    <div class="entity property" id="hasFamily">
+        <h3>hasFamily<sup title="object property" class="sup-op">op</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>https://w3id.org/ci#resourceObjectStandard</code></td>
+                <td><code>https://w3id.org/ci#hasFamily</code></td>
             </tr>
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="https://w3id.org/ci#ProductionResult">ci:ProductionResult</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/ci#CostComponent">ci:CostComponent</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/ci#Activity">ci:Activity</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/ci#Work">ci:Work</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/ci#Family">ci:Family</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasFinishing">
+        <h3>hasFinishing<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#hasFinishing</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/ci#Work">ci:Work</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/ci#Finishing">ci:Finishing</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasFunction">
+        <h3>hasFunction<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#hasFunction</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/ci#Work">ci:Work</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/ci#Activity">ci:Activity</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/ci#Function">ci:Function</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasGender">
+        <h3>hasGender<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#hasGender</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/ci#Activity">ci:Activity</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/ci#Work">ci:Work</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/ci#CostComponent">ci:CostComponent</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/ci#Gender">ci:Gender</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasMaterial">
+        <h3>hasMaterial<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#hasMaterial</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/ci#Work">ci:Work</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/ci#CostComponent">ci:CostComponent</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/ci#Material">ci:Material</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasObject">
+        <h3>hasObject<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#hasObject</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/ci#Activity">ci:Activity</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/ci#Work">ci:Work</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/ci#CostComponent">ci:CostComponent</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/ci#Object">ci:Object</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasObjectStandard">
+        <h3>hasObjectStandard<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#hasObjectStandard</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/ci#CostComponent">ci:CostComponent</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/ci#Activity">ci:Activity</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/ci#Work">ci:Work</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -905,17 +1864,19 @@
             </tr>
         </table>
     </div>
-    <div class="entity property" id="resourceOtherStandard">
-        <h3>resourceOtherStandard<sup title="object property" class="sup-op">op</sup></h3>
+    <div class="entity property" id="hasOtherStandard">
+        <h3>hasOtherStandard<sup title="object property" class="sup-op">op</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>https://w3id.org/ci#resourceOtherStandard</code></td>
+                <td><code>https://w3id.org/ci#hasOtherStandard</code></td>
             </tr>
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="https://w3id.org/ci#ProductionResult">ci:ProductionResult</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/ci#Activity">ci:Activity</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/ci#Work">ci:Work</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/ci#CostComponent">ci:CostComponent</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -926,12 +1887,12 @@
             </tr>
         </table>
     </div>
-    <div class="entity property" id="resourceParameterStandard">
-        <h3>resourceParameterStandard<sup title="object property" class="sup-op">op</sup></h3>
+    <div class="entity property" id="hasParameterStandard">
+        <h3>hasParameterStandard<sup title="object property" class="sup-op">op</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>https://w3id.org/ci#resourceParameterStandard</code></td>
+                <td><code>https://w3id.org/ci#hasParameterStandard</code></td>
             </tr>
             <tr>
                 <th>Domain(s)</th>
@@ -947,12 +1908,34 @@
             </tr>
         </table>
     </div>
-    <div class="entity property" id="resourcePerformanceParameter">
-        <h3>resourcePerformanceParameter<sup title="object property" class="sup-op">op</sup></h3>
+    <div class="entity property" id="hasPart">
+        <h3>hasPart<sup title="object property" class="sup-op">op</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>https://w3id.org/ci#resourcePerformanceParameter</code></td>
+                <td><code>https://w3id.org/ci#hasPart</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/ci#CostItem">ci:CostItem</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/ci#ProductionResult">ci:ProductionResult</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/ci#CostComponent">ci:CostComponent</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasPerformanceParameter">
+        <h3>hasPerformanceParameter<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#hasPerformanceParameter</code></td>
             </tr>
             <tr>
                 <th>Domain(s)</th>
@@ -968,12 +1951,12 @@
             </tr>
         </table>
     </div>
-    <div class="entity property" id="resourcePhysicalParameter">
-        <h3>resourcePhysicalParameter<sup title="object property" class="sup-op">op</sup></h3>
+    <div class="entity property" id="hasPhysicalParameter">
+        <h3>hasPhysicalParameter<sup title="object property" class="sup-op">op</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>https://w3id.org/ci#resourcePhysicalParameter</code></td>
+                <td><code>https://w3id.org/ci#hasPhysicalParameter</code></td>
             </tr>
             <tr>
                 <th>Domain(s)</th>
@@ -989,28 +1972,132 @@
             </tr>
         </table>
     </div>
+    <div class="entity property" id="hasSubComponent">
+        <h3>hasSubComponent<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#hasSubComponent</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/ci#Activity">ci:Activity</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/ci#WorkOfConstructionWork">ci:WorkOfConstructionWork</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/ci#CostComponent">ci:CostComponent</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasType">
+        <h3>hasType<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#hasType</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/ci#Activity">ci:Activity</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/ci#Work">ci:Work</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/ci#CostComponent">ci:CostComponent</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/ci#Type">ci:Type</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasUnit">
+        <h3>hasUnit<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#hasUnit</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/ci#Activity">ci:Activity</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/ci#Work">ci:Work</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/ci#Parameter">ci:Parameter</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/ci#CostComponent">ci:CostComponent</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://qudt.org/schema/qudt/Unit">qudt:Unit</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasUse">
+        <h3>hasUse<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#hasUse</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/ci#Activity">ci:Activity</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/ci#Work">ci:Work</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/ci#Use">ci:Use</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasWork">
+        <h3>hasWork<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/ci#hasWork</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/ci#CostComponent">ci:CostComponent</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/ci#Work">ci:Work</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
 </section>
 
 <section id="datatypeproperties">
     <h2>Datatype Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
     <ul class="hlist">
-        <li><a href="#aspect">aspect</a></li>
         <li><a href="#cam">cam</a></li>
-        <li><a href="#category">category</a></li>
         <li><a href="#code">code</a></li>
         <li><a href="#descriptionDetail">descriptionDetail</a></li>
         <li><a href="#descriptionGeneral">descriptionGeneral</a></li>
         <li><a href="#escluded">escluded</a></li>
-        <li><a href="#family">family</a></li>
-        <li><a href="#finishing">finishing</a></li>
-        <li><a href="#function">function</a></li>
-        <li><a href="#gender">gender</a></li>
         <li><a href="#included">included</a></li>
         <li><a href="#keywords">keywords</a></li>
         <li><a href="#law">law</a></li>
-        <li><a href="#material">material</a></li>
         <li><a href="#measurementRules">measurementRules</a></li>
-        <li><a href="#object">object</a></li>
         <li><a href="#omniclass">omniclass</a></li>
         <li><a href="#parameterSimbol1">parameterSimbol1</a></li>
         <li><a href="#parameterSimbol2">parameterSimbol2</a></li>
@@ -1023,32 +2110,10 @@
         <li><a href="#standardPart">standardPart</a></li>
         <li><a href="#standardYear">standardYear</a></li>
         <li><a href="#techspecs">tech specs</a></li>
-        <li><a href="#type">type</a></li>
         <li><a href="#uniclass">uniclass</a></li>
         <li><a href="#uniformat">uniformat</a></li>
-        <li><a href="#use">use</a></li>
+        <li><a href="#unitprice">unit price</a></li>
     </ul>
-    <div class="entity property" id="aspect">
-        <h3>aspect<sup title="datatype property" class="sup-dp">dp</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td><code>https://w3id.org/ci#aspect</code></td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="https://w3id.org/ci#Work">ci:Work</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
     <div class="entity property" id="cam">
         <h3>cam<sup title="datatype property" class="sup-dp">dp</sup></h3>
         <table>
@@ -1070,27 +2135,6 @@
             </tr>
         </table>
     </div>
-    <div class="entity property" id="category">
-        <h3>category<sup title="datatype property" class="sup-dp">dp</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td><code>https://w3id.org/ci#category</code></td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="https://w3id.org/ci#ProductionResult">ci:ProductionResult</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
     <div class="entity property" id="code">
         <h3>code<sup title="datatype property" class="sup-dp">dp</sup></h3>
         <table>
@@ -1101,7 +2145,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="https://w3id.org/ci#ProductionResult">ci:ProductionResult</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/ci#CostComponent">ci:CostComponent</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1122,7 +2166,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="https://w3id.org/ci#ProductionResult">ci:ProductionResult</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/ci#CostComponent">ci:CostComponent</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1143,7 +2187,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="https://w3id.org/ci#ProductionResult">ci:ProductionResult</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/ci#CostComponent">ci:CostComponent</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1164,91 +2208,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="https://w3id.org/ci#ProductionResult">ci:ProductionResult</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="family">
-        <h3>family<sup title="datatype property" class="sup-dp">dp</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td><code>https://w3id.org/ci#family</code></td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="https://w3id.org/ci#ProductionResult">ci:ProductionResult</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="finishing">
-        <h3>finishing<sup title="datatype property" class="sup-dp">dp</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td><code>https://w3id.org/ci#finishing</code></td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="https://w3id.org/ci#Work">ci:Work</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="function">
-        <h3>function<sup title="datatype property" class="sup-dp">dp</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td><code>https://w3id.org/ci#function</code></td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="https://w3id.org/ci#ProductionResult">ci:ProductionResult</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="gender">
-        <h3>gender<sup title="datatype property" class="sup-dp">dp</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td><code>https://w3id.org/ci#gender</code></td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="https://w3id.org/ci#ProductionResult">ci:ProductionResult</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/ci#CostComponent">ci:CostComponent</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1269,7 +2229,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="https://w3id.org/ci#ProductionResult">ci:ProductionResult</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/ci#CostComponent">ci:CostComponent</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1290,7 +2250,8 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="https://w3id.org/ci#ProductionResult">ci:ProductionResult</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/ci#Activity">ci:Activity</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/ci#Work">ci:Work</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1322,27 +2283,6 @@
             </tr>
         </table>
     </div>
-    <div class="entity property" id="material">
-        <h3>material<sup title="datatype property" class="sup-dp">dp</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td><code>https://w3id.org/ci#material</code></td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="https://w3id.org/ci#Work">ci:Work</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
     <div class="entity property" id="measurementRules">
         <h3>measurementRules<sup title="datatype property" class="sup-dp">dp</sup></h3>
         <table>
@@ -1353,28 +2293,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="https://w3id.org/ci#ProductionResult">ci:ProductionResult</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="object">
-        <h3>object<sup title="datatype property" class="sup-dp">dp</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td><code>https://w3id.org/ci#object</code></td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="https://w3id.org/ci#ProductionResult">ci:ProductionResult</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/ci#CostComponent">ci:CostComponent</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1395,7 +2314,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="https://w3id.org/ci#ProductionResult">ci:ProductionResult</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/ci#CostComponent">ci:CostComponent</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1521,7 +2440,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="https://w3id.org/ci#ProductionResult">ci:ProductionResult</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/ci#CostComponent">ci:CostComponent</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1626,28 +2545,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="https://w3id.org/ci#ProductionResult">ci:ProductionResult</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="type">
-        <h3>type<sup title="datatype property" class="sup-dp">dp</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td><code>https://w3id.org/ci#type</code></td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="https://w3id.org/ci#ProductionResult">ci:ProductionResult</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/ci#CostComponent">ci:CostComponent</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1668,7 +2566,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="https://w3id.org/ci#ProductionResult">ci:ProductionResult</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/ci#CostComponent">ci:CostComponent</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1689,7 +2587,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="https://w3id.org/ci#ProductionResult">ci:ProductionResult</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/ci#CostComponent">ci:CostComponent</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1700,23 +2598,23 @@
             </tr>
         </table>
     </div>
-    <div class="entity property" id="use">
-        <h3>use<sup title="datatype property" class="sup-dp">dp</sup></h3>
+    <div class="entity property" id="unitprice">
+        <h3>unit price<sup title="datatype property" class="sup-dp">dp</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>https://w3id.org/ci#use</code></td>
+                <td><code>https://w3id.org/ci#unitPrice</code></td>
             </tr>
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="https://w3id.org/ci#ProductionResult">ci:ProductionResult</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/ci#CostComponent">ci:CostComponent</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
                 <th>Range(s)</th>
                 <td>
-                    <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://www.w3.org/2001/XMLSchema#decimal">xsd:decimal</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
@@ -1735,6 +2633,10 @@
     <dl>
         <dt>ci</dt>
         <dd><code>https://w3id.org/ci#</code></dd>
+        <dt>cr</dt>
+        <dd><code>https://w3id.org/cr#</code></dd>
+        <dt>cterm</dt>
+        <dd><code>https://w3id.org/cterm#</code></dd>
         <dt>dc</dt>
         <dd><code>http://purl.org/dc/terms/</code></dd>
         <dt>owl</dt>
