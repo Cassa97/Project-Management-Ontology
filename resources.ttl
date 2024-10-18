@@ -183,12 +183,6 @@ cr:EquipmentResource
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
-      owl:onClass cr:Use ;
-      owl:onProperty cr:hasUse ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
       owl:onClass cterm:AspectOfEquipment ;
       owl:onProperty cterm:hasAspect ;
     ] ;
@@ -197,6 +191,12 @@ cr:EquipmentResource
       owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
       owl:onClass cterm:FunctionOfEquipment ;
       owl:onProperty cterm:hasFunction ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
+      owl:onClass cterm:Use ;
+      owl:onProperty cterm:hasUse ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -363,12 +363,6 @@ cr:MaterialResource
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
-      owl:onClass cr:Use ;
-      owl:onProperty cr:hasUse ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
       owl:onClass cterm:AspectOfMaterial ;
       owl:onProperty cterm:hasAspect ;
     ] ;
@@ -377,6 +371,12 @@ cr:MaterialResource
       owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
       owl:onClass cterm:FunctionOfMaterial ;
       owl:onProperty cterm:hasFunction ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
+      owl:onClass cterm:Use ;
+      owl:onProperty cterm:hasUse ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -654,21 +654,6 @@ cr:TaskToGeometryAssignment
   owl:disjointWith cr:ResourceToCostItemAssignment ;
   owl:disjointWith cr:ResourceToTaskAssignment ;
 .
-cr:Use
-  rdf:type owl:Class ;
-  rdfs:label "Use" ;
-  rdfs:subClassOf owl:Thing ;
-.
-cr:UseOfEquipment
-  rdf:type owl:Class ;
-  rdfs:label "Use of equipment" ;
-  rdfs:subClassOf cr:Use ;
-.
-cr:UseOfMaterial
-  rdf:type owl:Class ;
-  rdfs:label "Use of material" ;
-  rdfs:subClassOf cr:Use ;
-.
 cr:accessory
   rdf:type owl:DatatypeProperty ;
   rdfs:domain cr:EquipmentResource ;
@@ -805,13 +790,6 @@ cr:hasUnit
   rdfs:domain cr:Resource ;
   rdfs:label "hasUnit" ;
   rdfs:range qudt:Unit ;
-.
-cr:hasUse
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain cr:EquipmentResource ;
-  rdfs:domain cr:MaterialResource ;
-  rdfs:label "hasUse" ;
-  rdfs:range cr:Use ;
 .
 cr:included
   rdf:type owl:DatatypeProperty ;

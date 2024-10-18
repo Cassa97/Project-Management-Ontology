@@ -79,14 +79,14 @@ ci:Activity
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
-      owl:onClass ci:UseOfActivity ;
-      owl:onProperty ci:hasUse ;
+      owl:onClass cterm:FunctionOfActivity ;
+      owl:onProperty cterm:hasFunction ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
-      owl:onClass cterm:FunctionOfActivity ;
-      owl:onProperty cterm:hasFunction ;
+      owl:onClass cterm:UseOfActivity ;
+      owl:onProperty cterm:hasUse ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -516,43 +516,6 @@ ci:TemporaryWork
   owl:disjointWith ci:ConstructionWork ;
   owl:disjointWith ci:ProductWork ;
 .
-ci:Use
-  rdf:type owl:Class ;
-  rdfs:label "Use" ;
-  rdfs:subClassOf owl:Thing ;
-.
-ci:UseOfActivity
-  rdf:type owl:Class ;
-  rdfs:label "UseOfActivity" ;
-  rdfs:subClassOf ci:Use ;
-  owl:disjointWith ci:UseOfWorkOfConstructionWork ;
-  owl:disjointWith ci:UseOfWorkOfProductWork ;
-  owl:disjointWith ci:UseOfWorkOfTemporaryWork ;
-.
-ci:UseOfWorkOfConstructionWork
-  rdf:type owl:Class ;
-  rdfs:label "UseOfWorkOfConstructionWork" ;
-  rdfs:subClassOf ci:Use ;
-  owl:disjointWith ci:UseOfActivity ;
-  owl:disjointWith ci:UseOfWorkOfProductWork ;
-  owl:disjointWith ci:UseOfWorkOfTemporaryWork ;
-.
-ci:UseOfWorkOfProductWork
-  rdf:type owl:Class ;
-  rdfs:label "UseOfWorkOfProductWork" ;
-  rdfs:subClassOf ci:Use ;
-  owl:disjointWith ci:UseOfActivity ;
-  owl:disjointWith ci:UseOfWorkOfConstructionWork ;
-  owl:disjointWith ci:UseOfWorkOfTemporaryWork ;
-.
-ci:UseOfWorkOfTemporaryWork
-  rdf:type owl:Class ;
-  rdfs:label "UseOfWorkOfTemporaryWork" ;
-  rdfs:subClassOf ci:Use ;
-  owl:disjointWith ci:UseOfActivity ;
-  owl:disjointWith ci:UseOfWorkOfConstructionWork ;
-  owl:disjointWith ci:UseOfWorkOfProductWork ;
-.
 ci:Work
   rdf:type owl:Class ;
   rdfs:label "Work" ;
@@ -667,14 +630,14 @@ ci:WorkOfConstructionWork
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
-      owl:onClass ci:UseOfWorkOfConstructionWork ;
-      owl:onProperty ci:hasUse ;
+      owl:onClass cterm:AspectOfWorkOfConstructionWork ;
+      owl:onProperty cterm:hasAspect ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
-      owl:onClass cterm:AspectOfWorkOfConstructionWork ;
-      owl:onProperty cterm:hasAspect ;
+      owl:onClass cterm:UseOfWorkOfConstructionWork ;
+      owl:onProperty cterm:hasUse ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -726,14 +689,14 @@ ci:WorkOfProductWork
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
-      owl:onClass ci:UseOfWorkOfProductWork ;
-      owl:onProperty ci:hasUse ;
+      owl:onClass cterm:AspectOfWorkOfProductWork ;
+      owl:onProperty cterm:hasAspect ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
-      owl:onClass cterm:AspectOfWorkOfProductWork ;
-      owl:onProperty cterm:hasAspect ;
+      owl:onClass cterm:UseOfWorkOfProductWork ;
+      owl:onProperty cterm:hasUse ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -769,14 +732,14 @@ ci:WorkOfTemporaryWork
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
-      owl:onClass ci:UseOfWorkOfTemporaryWork ;
-      owl:onProperty ci:hasUse ;
+      owl:onClass cterm:AspectOfWorkOfTemporaryWork ;
+      owl:onProperty cterm:hasAspect ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
-      owl:onClass cterm:AspectOfWorkOfTemporaryWork ;
-      owl:onProperty cterm:hasAspect ;
+      owl:onClass cterm:UseOfWorkOfTemporaryWork ;
+      owl:onProperty cterm:hasUse ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -927,13 +890,6 @@ ci:hasUnit
   rdfs:label "hasUnit" ;
   rdfs:range qudt:Unit ;
 .
-ci:hasUse
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain ci:Activity ;
-  rdfs:domain ci:Work ;
-  rdfs:label "hasUse" ;
-  rdfs:range ci:Use ;
-.
 ci:hasWork
   rdf:type owl:ObjectProperty ;
   rdfs:domain ci:CostComponent ;
@@ -1062,4 +1018,3 @@ ci:unitPrice
   rdfs:label "unit price" ;
   rdfs:range xsd:decimal ;
 .
-

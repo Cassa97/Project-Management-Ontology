@@ -493,6 +493,53 @@ cterm:TypeOfWorkOfTemporaryWork
   owl:disjointWith cterm:TypeOfWorkOfConstructionWork ;
   owl:disjointWith cterm:TypeOfWorkOfProductWork ;
 .
+cterm:Use
+  rdf:type owl:Class ;
+  rdfs:label "Use" ;
+  rdfs:subClassOf cterm:Terminology ;
+.
+cterm:UseOfActivity
+  rdf:type owl:Class ;
+  rdfs:label "UseOfActivity" ;
+  rdfs:subClassOf cterm:Use ;
+  owl:disjointWith cterm:UseOfWorkOfConstructionWork ;
+  owl:disjointWith cterm:UseOfWorkOfProductWork ;
+  owl:disjointWith cterm:UseOfWorkOfTemporaryWork ;
+.
+cterm:UseOfEquipment
+  rdf:type owl:Class ;
+  rdfs:label "Use of equipment" ;
+  rdfs:subClassOf cterm:Use ;
+.
+cterm:UseOfMaterial
+  rdf:type owl:Class ;
+  rdfs:label "Use of material" ;
+  rdfs:subClassOf cterm:Use ;
+.
+cterm:UseOfWorkOfConstructionWork
+  rdf:type owl:Class ;
+  rdfs:label "UseOfWorkOfConstructionWork" ;
+  rdfs:subClassOf cterm:Use ;
+  owl:disjointWith cterm:UseOfActivity ;
+  owl:disjointWith cterm:UseOfWorkOfProductWork ;
+  owl:disjointWith cterm:UseOfWorkOfTemporaryWork ;
+.
+cterm:UseOfWorkOfProductWork
+  rdf:type owl:Class ;
+  rdfs:label "UseOfWorkOfProductWork" ;
+  rdfs:subClassOf cterm:Use ;
+  owl:disjointWith cterm:UseOfActivity ;
+  owl:disjointWith cterm:UseOfWorkOfConstructionWork ;
+  owl:disjointWith cterm:UseOfWorkOfTemporaryWork ;
+.
+cterm:UseOfWorkOfTemporaryWork
+  rdf:type owl:Class ;
+  rdfs:label "UseOfWorkOfTemporaryWork" ;
+  rdfs:subClassOf cterm:Use ;
+  owl:disjointWith cterm:UseOfActivity ;
+  owl:disjointWith cterm:UseOfWorkOfConstructionWork ;
+  owl:disjointWith cterm:UseOfWorkOfProductWork ;
+.
 cterm:hasAspect
   rdf:type owl:ObjectProperty ;
   rdfs:domain ci:Work ;
@@ -536,4 +583,13 @@ cterm:hasType
   rdfs:domain cr:Resource ;
   rdfs:label "hasType" ;
   rdfs:range cterm:Type ;
+.
+cterm:hasUse
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain ci:Activity ;
+  rdfs:domain ci:Work ;
+  rdfs:domain cr:EquipmentResource ;
+  rdfs:domain cr:MaterialResource ;
+  rdfs:label "hasUse" ;
+  rdfs:range cterm:Use ;
 .
