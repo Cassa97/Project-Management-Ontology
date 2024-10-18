@@ -1269,7 +1269,7 @@ ci:hasPhysicalParameter
 ci:hasSubComponent
   rdf:type owl:ObjectProperty ;
   rdfs:domain ci:Activity ;
-  rdfs:domain ci:Work ;
+  rdfs:domain ci:WorkOfConstructionWork ;
   rdfs:label "hasSubComponent" ;
   rdfs:range ci:CostComponent ;
 .
