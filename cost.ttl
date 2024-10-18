@@ -927,12 +927,6 @@ ci:Work
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:string ;
-      owl:onProperty ci:hasAspect ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
       owl:onClass ci:FamilyOfWork ;
       owl:onProperty ci:hasFamily ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
