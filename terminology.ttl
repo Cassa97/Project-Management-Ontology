@@ -191,9 +191,9 @@ cterm:CivilEngineering
 cterm:Construction
   rdf:type owl:NamedIndividual ;
   rdf:type cterm:FamilyOfCostComponent ;
+  rdfs:label "Bauwerk"@de ;
   rdfs:label "Construction"@en ;
   rdfs:label "Edilizia"@it ;
-  rdfs:label "Konstruktion"@de ;
 .
 cterm:ElectricalEngineering
   rdf:type owl:NamedIndividual ;
@@ -351,11 +351,11 @@ cterm:MechanicalEngineering
   rdfs:label "IngegneriaMeccanica"@it ;
   rdfs:label "MechanicalEngineering"@en ;
 .
-cterm:Modify
+cterm:Modification
   rdf:type owl:NamedIndividual ;
   rdf:type cterm:FamilyOfActivity ;
   rdfs:label "Modifica"@it ;
-  rdfs:label "Modify"@en ;
+  rdfs:label "Modification"@en ;
   rdfs:label "Änderung"@de ;
 .
 cterm:Object
