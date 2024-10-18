@@ -61,7 +61,6 @@
   owl:versionInfo "0.1" ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
-
 cterm:Architecture
   rdf:type owl:NamedIndividual ;
   rdf:type cterm:FamilyOfWork ;
@@ -182,11 +181,11 @@ cterm:CategoryOfWorkOfTemporaryWork
   owl:disjointWith cterm:CategoryOfWorkOfConstructionWork ;
   owl:disjointWith cterm:CategoryOfWorkOfProductWork ;
 .
-cterm:CivilEngineer
+cterm:CivilEngineering
   rdf:type owl:NamedIndividual ;
   rdf:type cterm:FamilyOfWork ;
   rdfs:label "Bauinginieurwesen"@de ;
-  rdfs:label "CivilEngineer"@en ;
+  rdfs:label "CivilEngineering"@en ;
   rdfs:label "Ingegneria Civile"@it ;
 .
 cterm:Construction
@@ -196,10 +195,10 @@ cterm:Construction
   rdfs:label "Edilizia"@it ;
   rdfs:label "Konstruktion"@de ;
 .
-cterm:ElectricalEngineer
+cterm:ElectricalEngineering
   rdf:type owl:NamedIndividual ;
   rdf:type cterm:FamilyOfWork ;
-  rdfs:label "ElectricalEngineer"@en ;
+  rdfs:label "ElectricalEngineering"@en ;
   rdfs:label "Elektroingenieurwesen"@de ;
   rdfs:label "IngegneriaElettrica"@it ;
 .
@@ -322,11 +321,12 @@ cterm:Furniture
   rdf:type cterm:FamilyOfWork ;
   rdfs:label "Arredo"@it ;
   rdfs:label "Furniture"@en ;
+  rdfs:label "Möbel"@de ;
 .
-cterm:IdraulicEngineer
+cterm:HyraulicEngineering
   rdf:type owl:NamedIndividual ;
   rdf:type cterm:FamilyOfWork ;
-  rdfs:label "IdraulicEngineer"@en ;
+  rdfs:label "HydraulicEngineering"@en ;
   rdfs:label "IngegneriaIdraulica"@it ;
   rdfs:label "Wasserbauingenieurwesen"@de ;
 .
@@ -337,19 +337,19 @@ cterm:Infrastructure
   rdfs:label "Infrastruktur"@de ;
   rdfs:label "Infrastrutture"@it ;
 .
-cterm:Landscape
+cterm:Landscaping
   rdf:type owl:NamedIndividual ;
   rdf:type cterm:FamilyOfWork ;
-  rdfs:label "Landscape"@en ;
-  rdfs:label "Landschaft"@de ;
+  rdfs:label "Landscaping"@en ;
+  rdfs:label "Landschaftsbau"@de ;
   rdfs:label "VerdeEPaesaggio"@it ;
 .
-cterm:MechanicalEngineer
+cterm:MechanicalEngineering
   rdf:type owl:NamedIndividual ;
   rdf:type cterm:FamilyOfWork ;
   rdfs:label "Gebäudeausrüstung"@de ;
   rdfs:label "IngegneriaMeccanica"@it ;
-  rdfs:label "MechanicalEngineer"@en ;
+  rdfs:label "MechanicalEngineering"@en ;
 .
 cterm:Modify
   rdf:type owl:NamedIndividual ;
@@ -450,11 +450,11 @@ cterm:Soil
   rdfs:label "Soil"@en ;
   rdfs:label "Suolo"@it ;
 .
-cterm:StructuralEngineer
+cterm:StructuralEngineering
   rdf:type owl:NamedIndividual ;
   rdf:type cterm:FamilyOfWork ;
   rdfs:label "IngegneriaStrutturale"@it ;
-  rdfs:label "StructuralEngineer"@en ;
+  rdfs:label "StructuralEngineering"@en ;
   rdfs:label "Tragwerksplanung"@de ;
 .
 cterm:Terminology
@@ -649,10 +649,10 @@ cterm:hasFunction
 .
 cterm:hasObject
   rdf:type owl:ObjectProperty ;
-  rdfs:domain cr:Resource ;
-    rdfs:domain ci:Activity ;
+  rdfs:domain ci:Activity ;
   rdfs:domain ci:CostComponent ;
   rdfs:domain ci:Work ;
+  rdfs:domain cr:Resource ;
   rdfs:label "hasObject" ;
   rdfs:range cterm:Object ;
 .

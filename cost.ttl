@@ -309,11 +309,6 @@ ci:Material
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
 .
-ci:Object
-  rdf:type owl:Class ;
-  rdfs:label "Object" ;
-  rdfs:subClassOf owl:Thing ;
-.
 ci:Parameter
   rdf:type owl:Class ;
   rdfs:label "Parameter" ;
@@ -774,7 +769,6 @@ ci:hasMaterial
   rdfs:label "hasMaterial" ;
   rdfs:range ci:Material ;
 .
-
 ci:hasObjectStandard
   rdf:type owl:ObjectProperty ;
   rdfs:domain ci:Activity ;
