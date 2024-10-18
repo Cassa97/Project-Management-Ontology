@@ -1062,11 +1062,4 @@ ci:unitPrice
   rdfs:label "unit price" ;
   rdfs:range xsd:decimal ;
 .
-cterm:hasType
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain ci:Activity ;
-  rdfs:domain ci:CostComponent ;
-  rdfs:domain ci:Work ;
-  rdfs:label "hasType" ;
-  rdfs:range ci:Type ;
-.
+
