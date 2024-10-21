@@ -254,10 +254,6 @@ ci:CostItem
     ] ;
   owl:equivalentClass ci:ProductionResult ;
 .
-ci:DimensionParameter
-  rdf:type owl:Class ;
-  rdfs:label "DimensionParameter" ;
-  rdfs:subClassOf ci:Parameter ;
 ci:Finishing
   rdf:type owl:Class ;
   rdfs:label "Finishing" ;
@@ -284,11 +280,6 @@ ci:FinishingOfWorkOfTemporaryWork
   rdfs:label "FinishingOfWorkOfTemporaryWork" ;
   rdfs:subClassOf ci:Finishing ;
 .
-
-  rdfs:subClassOf owl:Thing ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 ci:ProductWork
   rdf:type owl:Class ;
   rdfs:label "ProductWork" ;
