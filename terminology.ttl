@@ -450,6 +450,35 @@ cterm:Soil
   rdfs:label "Soil"@en ;
   rdfs:label "Suolo"@it ;
 .
+cterm:Standard
+  rdf:type owl:Class ;
+  rdfs:label "Standard" ;
+  rdfs:subClassOf cterm:Terminology ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:integer ;
+      owl:onProperty cterm:standardNumber ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:integer ;
+      owl:onProperty cterm:standardPart ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:integer ;
+      owl:onProperty cterm:standardYear ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty cterm:standardBody ;
+    ] ;
+.
 cterm:StructuralEngineering
   rdf:type owl:NamedIndividual ;
   rdf:type cterm:FamilyOfWork ;
@@ -673,4 +702,64 @@ cterm:hasUse
   rdfs:domain cr:MaterialResource ;
   rdfs:label "hasUse" ;
   rdfs:range cterm:Use ;
+.
+cterm:standardBody
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cterm:Standard ;
+  rdfs:label "standardBody" ;
+  rdfs:range xsd:string ;
+.
+cterm:standardNumber
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cterm:Standard ;
+  rdfs:label "standardNumber" ;
+  rdfs:range xsd:integer ;
+.
+cterm:standardPart
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cterm:Standard ;
+  rdfs:label "standardPart" ;
+  rdfs:range xsd:integer ;
+.
+cterm:standardYear
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cterm:Standard ;
+  rdfs:label "standardYear" ;
+  rdfs:range xsd:integer ;
+.
+
+cterm:hasObjectStandard
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain ci:Activity ;
+  rdfs:domain ci:CostComponent ;
+  rdfs:domain cr:EquipmentResource ;
+  rdfs:domain cr:MaterialResource ;
+  rdfs:domain ci:Work ;
+  rdfs:label "hasObjectStandard" ;
+  rdfs:range cterm:Standard ;
+.
+cterm:hasOtherStandard
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain ci:Activity ;
+  rdfs:domain cr:EquipmentResource ;
+  rdfs:domain cr:MaterialResource ;
+  rdfs:domain ci:CostComponent ;
+  rdfs:domain ci:Work ;
+  rdfs:label "hasOtherStandard" ;
+  rdfs:range cterm:Standard ;
+.
+cterm:hasParameterStandard
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain ci:Parameter ;
+  rdfs:domain cr:Parameter ;
+  rdfs:label "hasParameterStandard" ;
+  rdfs:range cterm:Standard ;
+.
+
+cterm:hasPerformanceParameter
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain cr:EquipmentResource ;
+  rdfs:domain cr:MaterialResource ;
+  rdfs:label "hasPerformanceParameter" ;
+  rdfs:range cr:PerformanceParameter ;
 .

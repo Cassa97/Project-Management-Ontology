@@ -149,8 +149,8 @@ ci:ConstructionWork
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass ci:Standard ;
-      owl:onProperty ci:hasObjectStandard ;
+      owl:onClass cterm:Standard ;
+      owl:onProperty cterm:hasObjectStandard ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -322,8 +322,8 @@ ci:Parameter
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass ci:Standard ;
-      owl:onProperty ci:hasParameterStandard ;
+      owl:onClass cterm:Standard ;
+      owl:onProperty cterm:hasParameterStandard ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -377,8 +377,8 @@ ci:ProductWork
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass ci:Standard ;
-      owl:onProperty ci:hasObjectStandard ;
+      owl:onClass cterm:Standard ;
+      owl:onProperty cterm:hasObjectStandard ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -406,35 +406,7 @@ ci:ProductionResult
     ] ;
   owl:equivalentClass ci:CostItem ;
 .
-ci:Standard
-  rdf:type owl:Class ;
-  rdfs:label "Standard" ;
-  rdfs:subClassOf owl:Thing ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:integer ;
-      owl:onProperty ci:standardNumber ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:integer ;
-      owl:onProperty ci:standardPart ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:integer ;
-      owl:onProperty ci:standardYear ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:string ;
-      owl:onProperty ci:standardBody ;
-    ] ;
-.
+
 ci:TemporaryWork
   rdf:type owl:Class ;
   rdfs:label "TemporaryWork" ;
@@ -442,8 +414,8 @@ ci:TemporaryWork
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass ci:Standard ;
-      owl:onProperty ci:hasObjectStandard ;
+      owl:onClass cterm:Standard ;
+      owl:onProperty cterm:hasObjectStandard ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -486,7 +458,7 @@ ci:Work
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
       owl:onClass ci:PerformanceParameter ;
-      owl:onProperty ci:hasPerformanceParameter ;
+      owl:onProperty cterm:hasPerformanceParameter ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -503,8 +475,8 @@ ci:Work
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
-      owl:onClass ci:Standard ;
-      owl:onProperty ci:hasOtherStandard ;
+      owl:onClass cterm:Standard ;
+      owl:onProperty cterm:hasOtherStandard ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -769,28 +741,7 @@ ci:hasMaterial
   rdfs:label "hasMaterial" ;
   rdfs:range ci:Material ;
 .
-ci:hasObjectStandard
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain ci:Activity ;
-  rdfs:domain ci:CostComponent ;
-  rdfs:domain ci:Work ;
-  rdfs:label "hasObjectStandard" ;
-  rdfs:range ci:Standard ;
-.
-ci:hasOtherStandard
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain ci:Activity ;
-  rdfs:domain ci:CostComponent ;
-  rdfs:domain ci:Work ;
-  rdfs:label "hasOtherStandard" ;
-  rdfs:range ci:Standard ;
-.
-ci:hasParameterStandard
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain ci:Parameter ;
-  rdfs:label "hasParameterStandard" ;
-  rdfs:range ci:Standard ;
-.
+
 ci:hasPart
   rdf:type owl:ObjectProperty ;
   rdfs:domain ci:CostItem ;
@@ -798,12 +749,7 @@ ci:hasPart
   rdfs:label "hasPart" ;
   rdfs:range ci:CostComponent ;
 .
-ci:hasPerformanceParameter
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain ci:Work ;
-  rdfs:label "hasPerformanceParameter" ;
-  rdfs:range ci:PerformanceParameter ;
-.
+
 ci:hasPhysicalParameter
   rdf:type owl:ObjectProperty ;
   rdfs:domain ci:Work ;
@@ -904,30 +850,6 @@ ci:quantityUnitOfMeasure
   rdf:type owl:DatatypeProperty ;
   rdfs:domain ci:CostComponent ;
   rdfs:label "quantityUnitOfMeasure" ;
-  rdfs:range xsd:integer ;
-.
-ci:standardBody
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain ci:Standard ;
-  rdfs:label "standardBody" ;
-  rdfs:range xsd:string ;
-.
-ci:standardNumber
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain ci:Standard ;
-  rdfs:label "standardNumber" ;
-  rdfs:range xsd:integer ;
-.
-ci:standardPart
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain ci:Standard ;
-  rdfs:label "standardPart" ;
-  rdfs:range xsd:integer ;
-.
-ci:standardYear
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain ci:Standard ;
-  rdfs:label "standardYear" ;
   rdfs:range xsd:integer ;
 .
 ci:techSpecs

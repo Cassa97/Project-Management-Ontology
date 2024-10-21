@@ -147,8 +147,8 @@ cr:EquipmentResource
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass cr:Standard ;
-      owl:onProperty cr:hasObjectStandard ;
+      owl:onClass cterm:Standard ;
+      owl:onProperty cterm:hasObjectStandard ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -166,19 +166,13 @@ cr:EquipmentResource
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
       owl:onClass cr:PerformanceParameter ;
-      owl:onProperty cr:hasPerformanceParameter ;
+      owl:onProperty cterm:hasPerformanceParameter ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
       owl:onClass cr:PhysicalParameter ;
       owl:onProperty cr:hasPhysicalParameter ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
-      owl:onClass cr:Standard ;
-      owl:onProperty cr:hasOtherStandard ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -191,6 +185,12 @@ cr:EquipmentResource
       owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
       owl:onClass cterm:FunctionOfEquipment ;
       owl:onProperty cterm:hasFunction ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
+      owl:onClass cterm:Standard ;
+      owl:onProperty cterm:hasOtherStandard ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -321,8 +321,8 @@ cr:MaterialResource
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass cr:Standard ;
-      owl:onProperty cr:hasObjectStandard ;
+      owl:onClass cterm:Standard ;
+      owl:onProperty cterm:hasObjectStandard ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -334,7 +334,7 @@ cr:MaterialResource
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
       owl:onClass cr:PerformanceParameter ;
-      owl:onProperty cr:hasPerformanceParameter ;
+      owl:onProperty cterm:hasPerformanceParameter ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -357,12 +357,6 @@ cr:MaterialResource
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
-      owl:onClass cr:Standard ;
-      owl:onProperty cr:hasOtherStandard ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
       owl:onClass cterm:AspectOfMaterial ;
       owl:onProperty cterm:hasAspect ;
     ] ;
@@ -371,6 +365,12 @@ cr:MaterialResource
       owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
       owl:onClass cterm:FunctionOfMaterial ;
       owl:onProperty cterm:hasFunction ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
+      owl:onClass cterm:Standard ;
+      owl:onProperty cterm:hasOtherStandard ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -425,8 +425,8 @@ cr:Parameter
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass cr:Standard ;
-      owl:onProperty cr:hasParameterStandard ;
+      owl:onClass cterm:Standard ;
+      owl:onProperty cterm:hasParameterStandard ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -581,35 +581,6 @@ cr:ResourceToTaskAssignment
   owl:disjointWith cr:ResourceToCostItemAssignment ;
   owl:disjointWith cr:TaskToGeometryAssignment ;
 .
-cr:Standard
-  rdf:type owl:Class ;
-  rdfs:label "Standard" ;
-  rdfs:subClassOf owl:Thing ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:integer ;
-      owl:onProperty cr:standardNumber ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:integer ;
-      owl:onProperty cr:standardPart ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:integer ;
-      owl:onProperty cr:standardYear ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:string ;
-      owl:onProperty cr:standardBody ;
-    ] ;
-.
 cr:TaskToGeometryAssignment
   rdf:type owl:Class ;
   rdfs:label "Task to geometry assignment" ;
@@ -704,33 +675,7 @@ cr:hasMaterial
   rdfs:label "hasMaterial" ;
   rdfs:range cr:Material ;
 .
-cr:hasObjectStandard
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain cr:EquipmentResource ;
-  rdfs:domain cr:MaterialResource ;
-  rdfs:label "hasObjectStandard" ;
-  rdfs:range cr:Standard ;
-.
-cr:hasOtherStandard
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain cr:EquipmentResource ;
-  rdfs:domain cr:MaterialResource ;
-  rdfs:label "hasOtherStandard" ;
-  rdfs:range cr:Standard ;
-.
-cr:hasParameterStandard
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain cr:Parameter ;
-  rdfs:label "hasParameterStandard" ;
-  rdfs:range cr:Standard ;
-.
-cr:hasPerformanceParameter
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain cr:EquipmentResource ;
-  rdfs:domain cr:MaterialResource ;
-  rdfs:label "hasPerformanceParameter" ;
-  rdfs:range cr:PerformanceParameter ;
-.
+
 cr:hasPhysicalParameter
   rdf:type owl:ObjectProperty ;
   rdfs:domain cr:EquipmentResource ;
@@ -873,30 +818,6 @@ cr:rent
   rdfs:domain cr:EquipmentResource ;
   rdfs:label "rent" ;
   rdfs:range xsd:boolean ;
-.
-cr:standardBody
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain cr:Standard ;
-  rdfs:label "standardBody" ;
-  rdfs:range xsd:string ;
-.
-cr:standardNumber
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain cr:Standard ;
-  rdfs:label "standardNumber" ;
-  rdfs:range xsd:integer ;
-.
-cr:standardPart
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain cr:Standard ;
-  rdfs:label "standardPart" ;
-  rdfs:range xsd:integer ;
-.
-cr:standardYear
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain cr:Standard ;
-  rdfs:label "standardYear" ;
-  rdfs:range xsd:integer ;
 .
 cr:subRecourceOf
   rdf:type owl:TransitiveProperty ;
