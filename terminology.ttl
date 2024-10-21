@@ -49,17 +49,15 @@
         ] ;
       schema:name "Jacopo Cassandro" ;
     ] ;
-  dc:description "The Construction Terminology (CTERM) Ontology is based on concepts and principles ... "@en ;
+  dc:description "The Construction Terminology (CTERM) Ontology is providing terminology to use with the Construction Resource (CR) and Cost Item (CI), as well as with the DTC ontology for the broader scope of construction project management."@en ;
   dc:license <https://creativecommons.org/licenses/by/4.0/> ;
   dc:rights "Copyright 2024 by DABC, PoliMi" ;
-  dc:source <https://linkedbuildingdata.net/ldac2024/files/papers/LDAC2024_Camera_8.pdf> ;
   dc:title "The Construction Terminology (CTERM) Ontology"@en ;
   vann:preferredNamespacePrefix "cterm" ;
   vann:preferredNamespaceUri <http://w3id.org/cterm#> ;
   owl:imports <http://w3id.org/ci> ;
   owl:imports <http://w3id.org/cr> ;
   owl:versionInfo "0.1" ;
-  owl:versionInfo "Created with TopBraid Composer" ;
 .
 cterm:Architecture
   rdf:type owl:NamedIndividual ;
@@ -751,7 +749,10 @@ cterm:hasCategory
 cterm:hasDimensionParameter
   rdf:type owl:ObjectProperty ;
   rdfs:domain ci:Work ;
+  rdfs:domain cr:EquipmentResource ;
+  rdfs:domain cr:MaterialResource ;
   rdfs:label "hasDimensionParameter" ;
+  rdfs:range cr:DimensionParameter ;
   rdfs:range cterm:DimensionParameter ;
 .
 cterm:hasFamily
@@ -910,12 +911,4 @@ cterm:standardYear
   rdfs:domain cterm:Standard ;
   rdfs:label "standardYear" ;
   rdfs:range xsd:integer ;
-.
-
-cterm:hasDimensionParameter
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain cr:EquipmentResource ;
-  rdfs:domain cr:MaterialResource ;
-  rdfs:label "hasDimensionParameter" ;
-  rdfs:range cr:DimensionParameter ;
 .

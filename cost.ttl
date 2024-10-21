@@ -48,17 +48,16 @@
         ] ;
       schema:name "Jacopo Cassandro" ;
     ] ;
-  dc:description "The Construction Resources (CR) Ontology is based on concepts and principles . "@en ;
+  dc:description "The Cost Item (CI) Ontology is based on concepts and principles of construction project cost estimation an can be used together with the Construction Resources (CR) ontology and can use terminology from the Construction Terminology (CTERM)."@en ;
   dc:license <https://creativecommons.org/licenses/by/4.0/> ;
   dc:rights "Copyright 2024 by DABC, PoliMi" ;
   dc:source <https://linkedbuildingdata.net/ldac2024/files/papers/LDAC2024_Camera_8.pdf> ;
-  dc:title "The Construction Resources (CR) Ontology"@en ;
-  vann:preferredNamespacePrefix "cr" ;
+  dc:title "The Cost Item (CI) Ontology"@en ;
+  vann:preferredNamespacePrefix "ci" ;
   vann:preferredNamespaceUri <http://w3id.org/ci#> ;
   owl:imports <http://w3id.org/cr> ;
   owl:imports <http://w3id.org/cterm> ;
   owl:versionInfo "1.0" ;
-  owl:versionInfo "Created with TopBraid Composer" ;
 .
 ci:Activity
   rdf:type owl:Class ;
@@ -90,12 +89,6 @@ ci:Activity
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:onClass cterm:Gender ;
-      owl:onProperty cterm:hasGender ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
       owl:onClass cterm:CategoryOfActivity ;
       owl:onProperty cterm:hasCategory ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
@@ -104,6 +97,12 @@ ci:Activity
       rdf:type owl:Restriction ;
       owl:onClass cterm:FamilyOfActivity ;
       owl:onProperty cterm:hasFamily ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass cterm:Gender ;
+      owl:onProperty cterm:hasGender ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
@@ -185,18 +184,6 @@ ci:CostComponent
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:onClass cterm:Gender ;
-      owl:onProperty cterm:hasGender ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:onClass cterm:Material ;
-      owl:onProperty cterm:hasMaterial ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
       owl:onClass cterm:CategoryOfCostComponent ;
       owl:onProperty cterm:hasCategory ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
@@ -205,6 +192,18 @@ ci:CostComponent
       rdf:type owl:Restriction ;
       owl:onClass cterm:FamilyOfCostComponent ;
       owl:onProperty cterm:hasFamily ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass cterm:Gender ;
+      owl:onProperty cterm:hasGender ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass cterm:Material ;
+      owl:onProperty cterm:hasMaterial ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
@@ -389,6 +388,12 @@ ci:Work
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
+      owl:onClass cterm:FamilyOfWork ;
+      owl:onProperty cterm:hasFamily ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
       owl:onClass cterm:Gender ;
       owl:onProperty cterm:hasGender ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
@@ -397,12 +402,6 @@ ci:Work
       rdf:type owl:Restriction ;
       owl:onClass cterm:Material ;
       owl:onProperty cterm:hasMaterial ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:onClass cterm:FamilyOfWork ;
-      owl:onProperty cterm:hasFamily ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
@@ -629,7 +628,6 @@ ci:hasFinishing
   rdfs:label "hasFinishing" ;
   rdfs:range ci:Finishing ;
 .
-
 ci:hasPart
   rdf:type owl:ObjectProperty ;
   rdfs:domain ci:CostItem ;

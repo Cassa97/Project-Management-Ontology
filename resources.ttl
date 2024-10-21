@@ -48,16 +48,14 @@
         ] ;
       schema:name "Jacopo Cassandro" ;
     ] ;
-  dc:description "The Construction Resources (CR) Ontology is based on concepts and principles . "@en ;
+  dc:description "The Construction Resources (CR) Ontology is based on concepts and principles of construction project management to provide a centralized definitiopn of resources that can be used as shared entities with task planning and cost estimation for providing a unified context."@en ;
   dc:license <https://creativecommons.org/licenses/by/4.0/> ;
   dc:rights "Copyright 2024 by DABC, PoliMi" ;
-  dc:source <https://linkedbuildingdata.net/ldac2024/files/papers/LDAC2024_Camera_8.pdf> ;
   dc:title "The Construction Resources (CR) Ontology"@en ;
   vann:preferredNamespacePrefix "cr" ;
   vann:preferredNamespaceUri <http://w3id.org/cr#> ;
   owl:imports <http://w3id.org/ci> ;
   owl:versionInfo "0.1" ;
-  owl:versionInfo "Created with TopBraid Composer" ;
 .
 <https://dtc-ontology.cms.ed.tum.de/ontology#ResourceApplication>
   rdf:type rdfs:Class ;
@@ -133,7 +131,6 @@ cr:CostItemToGeometryAssignment
   owl:disjointWith cr:ResourceToTaskAssignment ;
   owl:disjointWith cr:TaskToGeometryAssignment ;
 .
-
 cr:EquipmentResource
   rdf:type owl:Class ;
   rdfs:label "Equipment resource" ;
@@ -153,14 +150,14 @@ cr:EquipmentResource
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
-      owl:onClass cterm:DimensionParameter ;
-      owl:onProperty cterm:hasDimensionParameter ;
+      owl:onClass cr:PerformanceParameter ;
+      owl:onProperty cterm:hasPerformanceParameter ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
-      owl:onClass cr:PerformanceParameter ;
-      owl:onProperty cterm:hasPerformanceParameter ;
+      owl:onClass cterm:DimensionParameter ;
+      owl:onProperty cterm:hasDimensionParameter ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -194,12 +191,6 @@ cr:EquipmentResource
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:onClass cterm:Material;
-      owl:onProperty cterm:hasMaterial ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
       owl:onClass cterm:CategoryOfEquipment ;
       owl:onProperty cterm:hasCategory ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
@@ -208,6 +199,12 @@ cr:EquipmentResource
       rdf:type owl:Restriction ;
       owl:onClass cterm:FamilyOfEquipment ;
       owl:onProperty cterm:hasFamily ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass cterm:Material ;
+      owl:onProperty cterm:hasMaterial ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
@@ -254,7 +251,6 @@ cr:Furnishing
       owl:onProperty cr:hasFurnishing ;
     ] ;
 .
-
 cr:LabourResource
   rdf:type owl:Class ;
   rdfs:label "Labour resource" ;
@@ -287,7 +283,6 @@ cr:LabourResource
   owl:disjointWith cr:MaterialResource ;
   owl:equivalentClass <https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedWorker> ;
 .
-
 cr:MaterialResource
   rdf:type owl:Class ;
   rdfs:label "Material resource" ;
@@ -354,12 +349,6 @@ cr:MaterialResource
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:onClass cterm:Material ;
-      owl:onProperty cterm:hasMaterial ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
       owl:onClass cterm:CategoryOfMaterial ;
       owl:onProperty cterm:hasCategory ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
@@ -368,6 +357,12 @@ cr:MaterialResource
       rdf:type owl:Restriction ;
       owl:onClass cterm:FamilyOfMaterial ;
       owl:onProperty cterm:hasFamily ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass cterm:Material ;
+      owl:onProperty cterm:hasMaterial ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
@@ -556,7 +551,6 @@ cr:hasConsumption
   rdfs:label "hasConsumption" ;
   rdfs:range cr:Consumption ;
 .
-
 cr:hasFinishing
   rdf:type owl:ObjectProperty ;
   rdfs:domain cr:MaterialResource ;
@@ -585,8 +579,8 @@ cr:hasSubResource
 cr:hasUnit
   rdf:type owl:ObjectProperty ;
   rdfs:domain cr:Consumption ;
-  rdfs:domain cterm:Parameter ;
   rdfs:domain cr:Resource ;
+  rdfs:domain cterm:Parameter ;
   rdfs:label "hasUnit" ;
   rdfs:range qudt:Unit ;
 .
