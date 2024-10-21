@@ -1466,7 +1466,7 @@ cterm:hasAspect
   rdf:type owl:ObjectProperty ;
   rdfs:domain ci:Work ;
   rdfs:domain cr:EquipmentResource ;
-  rdfs:domain cr:MaterialResource ;
+  rdfs:domain cr:Material ;
   rdfs:label "hasAspect" ;
   rdfs:range cterm:Aspect ;
 .
@@ -1483,7 +1483,7 @@ cterm:hasDimensionParameter
   rdf:type owl:ObjectProperty ;
   rdfs:domain ci:Work ;
   rdfs:domain cr:EquipmentResource ;
-  rdfs:domain cr:MaterialResource ;
+  rdfs:domain cr:Material ;
   rdfs:label "hasDimensionParameter" ;
   rdfs:range cr:DimensionParameter ;
   rdfs:range cterm:DimensionParameter ;
@@ -1500,7 +1500,7 @@ cterm:hasFamily
 cterm:hasFinishing
   rdf:type owl:ObjectProperty ;
   rdfs:domain ci:Work ;
-  rdfs:domain cr:MaterialResource ;
+  rdfs:domain cr:Material ;
   rdfs:label "hasFinishing" ;
   rdfs:range cterm:Finishing ;
 .
@@ -1509,13 +1509,13 @@ cterm:hasFunction
   rdfs:domain ci:Activity ;
   rdfs:domain ci:Work ;
   rdfs:domain cr:EquipmentResource ;
-  rdfs:domain cr:MaterialResource ;
+  rdfs:domain cr:Material ;
   rdfs:label "hasFunction" ;
   rdfs:range cterm:Function ;
 .
 cterm:hasFurnishing
   rdf:type owl:ObjectProperty ;
-  rdfs:domain cr:MaterialResource ;
+  rdfs:domain cr:Material ;
   rdfs:label "hasFurnishing" ;
   rdfs:range cterm:Furnishing ;
 .
@@ -1533,7 +1533,7 @@ cterm:hasMaterial
   rdfs:domain ci:CostComponent ;
   rdfs:domain ci:Work ;
   rdfs:domain cr:EquipmentResource ;
-  rdfs:domain cr:MaterialResource ;
+  rdfs:domain cr:Material ;
   rdfs:label "hasMaterial" ;
   rdfs:range cterm:Material ;
 .
@@ -1552,7 +1552,7 @@ cterm:hasObjectStandard
   rdfs:domain ci:CostComponent ;
   rdfs:domain ci:Work ;
   rdfs:domain cr:EquipmentResource ;
-  rdfs:domain cr:MaterialResource ;
+  rdfs:domain cr:Material ;
   rdfs:label "hasObjectStandard" ;
   rdfs:range cterm:Standard ;
 .
@@ -1562,7 +1562,7 @@ cterm:hasOtherStandard
   rdfs:domain ci:CostComponent ;
   rdfs:domain ci:Work ;
   rdfs:domain cr:EquipmentResource ;
-  rdfs:domain cr:MaterialResource ;
+  rdfs:domain cr:Material ;
   rdfs:label "hasOtherStandard" ;
   rdfs:range cterm:Standard ;
 .
@@ -1576,7 +1576,7 @@ cterm:hasParameterStandard
 cterm:hasPerformanceParameter
   rdf:type owl:ObjectProperty ;
   rdfs:domain cr:EquipmentResource ;
-  rdfs:domain cr:MaterialResource ;
+  rdfs:domain cr:Material ;
   rdfs:label "hasPerformanceParameter" ;
   rdfs:range cr:PerformanceParameter ;
 .
@@ -1606,7 +1606,7 @@ cterm:hasUse
   rdfs:domain ci:Activity ;
   rdfs:domain ci:Work ;
   rdfs:domain cr:EquipmentResource ;
-  rdfs:domain cr:MaterialResource ;
+  rdfs:domain cr:Material ;
   rdfs:label "hasUse" ;
   rdfs:range cterm:Use ;
 .
@@ -1664,3 +1664,566 @@ cterm:standardYear
   rdfs:label "standardYear" ;
   rdfs:range xsd:integer ;
 .
+
+@base <http://example.com/base/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cterm: <http://www.w3.id.org/cterm#> .
+
+cterm:Demolition a cterm:CategoryOfActivity, cterm:ObjectOfActivity;
+  rdfs:label "Demolition"@en, "Demolizione"@it, "Abriss"@de .
+
+cterm:Complete a cterm:TypeOfActivity;
+  rdfs:label "Complete"@en, "Totale"@it, "Vollständig"@de .
+
+cterm:WithMechanicalAndManualMeans a cterm:TypeOfActivity;
+  rdfs:label "With Mechanical And Manual Means"@en, "Con Mezzo Meccanico E Manuale"@it,
+    "Mit Mechanischen Und Manuellen Mitteln"@de .
+
+cterm:WithMechanicalMeans a cterm:TypeOfActivity;
+  rdfs:label "With Mechanical Means"@en, "Con Mezzo Meccanico"@it, "Mit Mechanischen Mitteln"@de .
+
+cterm:Partial a cterm:TypeOfActivity;
+  rdfs:label "Partial"@en, "Parziale"@it, "Teilweise"@de .
+
+cterm:ForRemanipulationAndReuseForHydraulicAdjustment a cterm:FunctionOfActivity;
+  rdfs:label "For Remanipulation And Reuse For Hydraulic Adjustment"@en, "Per Rimaneggiamento E Riutilizzo Per Variazione Della Conformazione Del Paraggio Idraulico"@it,
+    "Zur Umgestaltung Und Wiederverwendung Zur Änderung Der Hydraulischen Anpassung"@de .
+
+cterm:StoneRemoval a cterm:TypeOfActivity;
+  rdfs:label "Stone Removal"@en, "Spietramento"@it, "Steinentfernung"@de .
+
+cterm:Manual a cterm:TypeOfActivity;
+  rdfs:label "Manual"@en, "A Mano"@it, "Manuell"@de .
+
+cterm:ManualStoneRemoval a cterm:TypeOfActivity;
+  rdfs:label "Manual Stone Removal"@en, "Spietramento A Mano"@it, "Manuelle Steinentfernung"@de .
+
+cterm:WithManualEquipment a cterm:TypeOfActivity;
+  rdfs:label "With Manual Equipment"@en, "Con Attrezzatura Manuale"@it, "Mit Handgerät"@de .
+
+cterm:Realization a cterm:CategoryOfActivity;
+  rdfs:label "Realization"@en, "Realizzazione"@it, "Umsetzung"@de .
+
+cterm:Maintenance a cterm:CategoryOfActivity;
+  rdfs:label "Maintenance"@en, "Manutenzione"@it, "Instandhaltung"@de .
+
+cterm:OnSite a cterm:TypeOfActivity;
+  rdfs:label "On Site"@en, "In Opera"@it, "Vor Ort"@de .
+
+cterm:Cold a cterm:TypeOfActivity;
+  rdfs:label "Cold"@en, "A Freddo"@it, "Kalt"@de .
+
+cterm:TwoCoats a cterm:TypeOfActivity;
+  rdfs:label "Two Coats"@en, "Due Mani"@it, "Zwei Anstriche"@de .
+
+cterm:Spray a cterm:TypeOfActivity;
+  rdfs:label "Spray"@en, "A Spruzzo"@it, "Gesprüht"@de .
+
+cterm:Brush a cterm:TypeOfActivity;
+  rdfs:label "Brush"@en, "A Pennello"@it, "Mit Pinsel"@de .
+
+cterm:OneCoat a cterm:TypeOfActivity;
+  rdfs:label "One Coat"@en, "Una Mano"@it, "Ein Anstrich"@de .
+
+cterm:FirstCoat a cterm:TypeOfActivity;
+  rdfs:label "First Coat"@en, "Prima Mano"@it, "Erster Anstrich"@de .
+
+cterm:SecondCoat a cterm:TypeOfActivity;
+  rdfs:label "Second Coat"@en, "Seconda Mano"@it, "Zweiter Anstrich"@de .
+
+cterm:TwoLayers a cterm:TypeOfActivity;
+  rdfs:label "Two Layers"@en, "Due Riprese"@it, "Zwei Durchgänge"@de .
+
+cterm:Removal a cterm:ObjectOfActivity;
+  rdfs:label "Removal"@en, "Rimozione"@it, "Entfernung"@de .
+
+cterm:Application a cterm:ObjectOfActivity;
+  rdfs:label "Application"@en, "Applicazione"@it, "Aufbringung"@de .
+
+cterm:Assistance a cterm:ObjectOfActivity;
+  rdfs:label "Assistance"@en, "Assistenza"@it, "Unterstützung"@de .
+
+cterm:Consolidation a cterm:ObjectOfActivity;
+  rdfs:label "Consolidation"@en, "Consolidamento"@it, "Konsolidierung"@de .
+
+cterm:Distribution a cterm:ObjectOfActivity;
+  rdfs:label "Distribution"@en, "Distribuzione"@it, "Verteilung"@de .
+
+cterm:Execution a cterm:ObjectOfActivity;
+  rdfs:label "Execution"@en, "Esecuzione"@it, "Ausführung"@de .
+
+cterm:Forming a cterm:ObjectOfActivity;
+  rdfs:label "Forming"@en, "Formazione"@it, "Ausbildung"@de .
+
+cterm:Casting a cterm:ObjectOfActivity;
+  rdfs:label "Casting"@en, "Getto"@it, "Guss"@de .
+
+cterm:Gluing a cterm:ObjectOfActivity;
+  rdfs:label "Gluing"@en, "Incollaggio"@it, "Verkleben"@de .
+
+cterm:Installation a cterm:ObjectOfActivity;
+  rdfs:label "Installation"@en, "Installazione"@it, "Installation"@de .
+
+cterm:Assembly a cterm:ObjectOfActivity;
+  rdfs:label "Assembly"@en, "Montaggio"@it, "Montage"@de, "Assemblaggio"@it, "Zusammenbau"@de .
+
+cterm:Handling a cterm:ObjectOfActivity;
+  rdfs:label "Handling"@en, "Movimentazione"@it, "Bewegung"@de .
+
+cterm:Laying a cterm:ObjectOfActivity;
+  rdfs:label "Laying"@en, "Posa"@it, "Verlegung"@de .
+
+cterm:Protection a cterm:ObjectOfActivity, cterm:FunctionOfMateriaResource;
+  rdfs:label "Protection"@en, "Protezione"@it, "Schutz"@de .
+
+cterm:Cleaning a cterm:ObjectOfActivity;
+  rdfs:label "Cleaning"@en, "Pulizia"@it, "Reinigung"@de .
+
+cterm:Scraping a cterm:ObjectOfActivity;
+  rdfs:label "Scraping"@en, "Raschiatura"@it, "Kratzen"@de .
+
+cterm:Reconstruction a cterm:ObjectOfActivity;
+  rdfs:label "Reconstruction"@en, "Ricostruzione"@it, "Rekonstruktion"@de .
+
+cterm:Regeneration a cterm:ObjectOfActivity;
+  rdfs:label "Regeneration"@en, "Rigenerazione"@it, "Regeneration"@de .
+
+cterm:Excavation a cterm:ObjectOfActivity;
+  rdfs:label "Excavation"@en, "Scavo"@it, "Aushub"@de .
+
+cterm:Dismantling a cterm:ObjectOfActivity;
+  rdfs:label "Dismantling"@en, "Smontaggio"@it, "Demontage"@de .
+
+cterm:Replacement a cterm:ObjectOfActivity;
+  rdfs:label "Replacement"@en, "Sostituzione"@it, "Ersatz"@de .
+
+cterm:Plastering a cterm:ObjectOfActivity;
+  rdfs:label "Plastering"@en, "Stuccatura"@it, "Verputzen"@de .
+
+cterm:Restoration a cterm:ObjectOfActivity;
+  rdfs:label "Restoration"@en, "Ripristino"@it, "Wiederherstellung"@de .
+
+cterm:Repair a cterm:ObjectOfActivity;
+  rdfs:label "Repair"@en, "Riparazione"@it, "Reparatur"@de .
+
+cterm:Hydraulic a cterm:CategoryOfConstructionWork;
+  rdfs:label "Hydraulic"@en, "Idraulica"@it, "Hydraulik"@de .
+
+cterm:SoilProtection a cterm:CategoryOfConstructionWork;
+  rdfs:label "Soil Protection"@en, "Difesa Suolo"@it, "Bodenschutz"@de .
+
+cterm:AgroForestry a cterm:CategoryOfConstructionWork;
+  rdfs:label "Agro Forestry"@en, "Agro Forestale"@it, "Agro-Forstwirtschaft"@de .
+
+cterm:UrbanGreen a cterm:CategoryOfConstructionWork;
+  rdfs:label "Urban Green"@en, "Verde Urbano"@it, "Stadtgrün"@de .
+
+cterm:Buildings a cterm:CategoryOfConstructionWork;
+  rdfs:label "Buildings"@en, "Edifici"@it, "Gebäude"@de .
+
+cterm:Decontamination a cterm:CategoryOfConstructionWork;
+  rdfs:label "Decontamination"@en, "Bonifica"@it, "Decontaminazione"@it,"Dekontaminierung"@de .
+
+cterm:Transport a cterm:CategoryOfConstructionWork;
+  rdfs:label "Transport"@en, "Trasporti"@it, "Transport"@de .
+
+cterm:Agriculture a cterm:ObjectOfConstructionWork;
+  rdfs:label "Agriculture"@en, "Colture/Agricoltura"@it, "Nutzpflanzen/Landwirtschaft"@de .
+
+cterm:SewerWaterPipes a cterm:ObjectOfConstructionWork;
+  rdfs:label "Sewer/Water Pipes"@en, "Condotte/Fogna/Acquedotto"@it, "Abwasserleitungen/Wasserleitungen"@de .
+
+cterm:Coastal_River a cterm:ObjectOfConstructionWork;
+  rdfs:label "Coastal/River"@en, "Marittime/Fluviali"@it, "See- und Flussbau"@de .
+
+cterm:Green_Forest a cterm:ObjectOfConstructionWork;
+  rdfs:label "Green/Forest"@en, "Verde Boschivo/Forestale"@it, "Gün/Wald"@de .
+
+cterm:Rivers a cterm:ObjectOfConstructionWork;
+  rdfs:label "Rivers"@en, "Canali"@it,"Fiumi"@it, "Flüsse"@de .
+
+cterm:GreenAreas a cterm:ObjectOfConstructionWork;
+  rdfs:label "Parks/Gardens/Green Areas"@en, "Parchi/Giardini/Aree Verdi"@it, "Parks/Gärten/Grünflächen"@de .
+
+cterm:Residences a cterm:ObjectOfConstructionWork;
+  rdfs:label "Residences"@en, "Residenze"@it, "Wohngebiete"@de .
+
+cterm:ContaminatedSites a cterm:ObjectOfConstructionWork;
+  rdfs:label "Contaminated Sites"@en, "Siti Contaminati"@it, "Kontaminierte Standorte"@de .
+
+cterm:Roads a cterm:ObjectOfConstructionWork;
+  rdfs:label "Roads"@en, "Strade"@it, "Straßen"@de .
+
+cterm:LandSlopes a cterm:ObjectOfConstructionWork;
+  rdfs:label "Land/Slopes"@en, "Terreno/Versanti"@it, "Gelände/Hänge"@de .
+
+cterm:RoadsideGreen a cterm:ObjectOfConstructionWork;
+  rdfs:label "Roadside Green"@en, "Verde Stradale"@it, "Straßenbegleitgrün"@de .
+
+cterm:Land a cterm:ObjectOfConstructionWork;
+  rdfs:label "Land"@en, "Terreno"@it, "Gelände"@de .
+
+cterm:Panel a cterm:ObjectOfMaterial;
+  rdfs:label "Panel"@en, "Pannello"@it, "Paneel"@de .
+
+cterm:Insulations a cterm:FamilyOfMaterial;
+  rdfs:label "Insulations"@en, "Isolamenti"@it, "Dämmstoffe"@de .
+
+cterm:Masonry a cterm:FamilyOfMaterial, cterm:UseOfMaterial;
+  rdfs:label "Masonry"@en, "Murature"@it, "Mauerwerk"@de .
+
+cterm:Roofing a cterm:FamilyOfMaterial, cterm:UseOfMaterial;
+  rdfs:label "Roofing"@en, "Coperture"@it, "Bedachungen"@de .
+
+cterm:Flooring a cterm:FamilyOfMaterial;
+  rdfs:label "Flooring"@en, "Pavimentazioni"@it, "Bodenbeläge"@de .
+
+cterm:Products a cterm:CategoryOfMaterial;
+  rdfs:label "Products"@en, "Prodotti"@it, "Produkte"@de .
+
+cterm:Accessories a cterm:CategoryOfMaterial;
+  rdfs:label "Accessories"@en, "Accessori"@it, "Zubehör"@de .
+
+cterm:PolyurethaneFoamPlastic a cterm:Material;
+  rdfs:label "Polyurethane Foam Plastic (PIR)"@en, "Plastica Poliuretano Espanso (PIR)"@it,
+    "Kunststoff Polyurethanschaum (PIR)"@de .
+
+cterm:ExtrudedPolystyrenePlastic a cterm:Material;
+  rdfs:label "Extruded Polystyrene Plastic (XPS)"@en, "Plastica Polistirene Estruso (XPS)"@it,
+    "Kunststoff extrudiertes Polystyrol (XPS)"@de .
+
+cterm:MineralFiberGlassWool a cterm:Material;
+  rdfs:label "Mineral Fiber Glass Wool"@en, "Fibra Minerale Lana Di Vetro"@it, "Mineralfaser Glaswolle"@de .
+
+cterm:MineralFiberWoodWool a cterm:Material;
+  rdfs:label "Mineral Fiber Wood Wool"@en, "Fibra Minerale Lana Di Legno"@it, "Mineralfaser Holzwolle"@de .
+
+cterm:ExpandedPolystyrenePlastic a cterm:Material;
+  rdfs:label "Expanded Polystyrene Plastic (EPS)"@en, "Plastica Polistirene Espanso (EPS)"@it,
+    "Kunststoff expandiertes Polystyrol (EPS)"@de .
+
+cterm:MineralFiberFirWool a cterm:Material;
+  rdfs:label "Mineral Fiber Fir Wool"@en, "Fibra Minerale Lana Di Abete"@it, "Mineralfaser Tannenwolle"@de .
+
+cterm:ExpandedNaturalRockPerlite a cterm:Material;
+  rdfs:label "Expanded Natural Rock Perlite"@en, "Roccia Naturale Perlite Espansa"@it,
+    "Expandierte Naturstein-Perlit"@de .
+
+cterm:MineralFiberRockWool a cterm:Material;
+  rdfs:label "Mineral Fiber Rock Wool"@en, "Fibra Minerale Lana Di Roccia"@it, "Mineralfaser Steinwolle"@de .
+
+cterm:VulcanizedRubber a cterm:Material;
+  rdfs:label "Vulcanized Rubber"@en, "Gomma Vulcanizzata"@it, "Vulkanisierter Gummi"@de .
+
+cterm:VulcanizedRockWool a cterm:Material;
+  rdfs:label "Vulcanized Rock Wool"@en, "Fibra Minerale Lana Di Roccia Vulcanizzata"@it,
+    "Vulkanisierte Steinwolle"@de .
+
+cterm:Printed a cterm:FinishingOfMaterial;
+  rdfs:label "Printed"@en, "Stampato"@it, "Gedruckt"@de .
+
+cterm:GenericBitumen a cterm:FinishingOfMaterial;
+  rdfs:label "Generic Bitumen"@en, "Bitume Generico"@it, "Generisches Bitumen"@de .
+
+cterm:WaterRepellent a cterm:FinishingOfMaterial;
+  rdfs:label "Water Repellent"@en, "Idrorepellente"@it, "Wasserabweisend"@de .
+
+cterm:Coated a cterm:FinishingOfMaterial;
+  rdfs:label "Coated"@en, "Rivestito"@it, "Beschichtet"@de .
+
+cterm:Height a cterm:DimensionParameterType;
+  rdfs:label "Height"@en, "Altezza"@it, "Höhe"@de .
+
+cterm:ThermalConductivity a cterm:PerformanceParameterType;
+  rdfs:label "Thermal Conductivity"@en, "Conducibilità Termica"@it, "Wärmeleitfähigkeit"@de .
+
+cterm:ResistanceClass a cterm:PerformanceParameterType;
+  rdfs:label "Resistance Class"@en, "Classe Di Resistenza"@it, "Widerstandsklasse"@de .
+
+cterm:FireReaction a cterm:PerformanceParameterType;
+  rdfs:label "Fire Reaction"@en, "Reazione Al Fuoco"@it, "Brandverhalten"@de .
+
+cterm:WaterVaporDiffusionResistance a cterm:PerformanceParameterType;
+  rdfs:label "Water Vapor Diffusion Resistance"@en, "Resistenza Alla Diffusione Del Vapore Acqueo"@it,
+    "Wasserdampfdiffusionswiderstand"@de, "Resistenza A Diffusione Del Vapore Acqueo"@it .
+
+cterm:FireResistance a cterm:PerformanceParameterType;
+  rdfs:label "Fire Resistance"@en, "Resistenza Al Fuoco"@it, "Feuerbeständigkeit"@de .
+
+cterm:CompressionResistance a cterm:PerformanceParameterType;
+  rdfs:label "Compression Resistance"@en, "Resistenza A Compressione"@it, "Druckfestigkeit"@de .
+
+cterm:Density a cterm:PhysicalParameterType;
+  rdfs:label "Density"@en, "Densità"@it, "Dichte"@de .
+
+cterm:Finish a cterm:FunctionOfMateriaResource;
+  rdfs:label "Finish"@en, "Finitura"@it, "Oberfläche"@de .
+
+cterm:Rigid a cterm:spectOfMaterial;
+  rdfs:label "Rigid"@en, "Rigido"@it, "Starr"@de .
+
+cterm:SuspendedCeilings a cterm:FamilyOfMaterial;
+  rdfs:label "Suspended Ceilings"@en, "Controsoffitti"@it, "Abgehängte Decken"@de .
+
+cterm:Complementary a cterm:FamilyOfMaterial;
+  rdfs:label "Complementary"@en, "Complementari"@it, "Ergänzend"@de .
+
+cterm:Cemetery a cterm:FamilyOfMaterial;
+  rdfs:label "Cemetery"@en, "Cimiteriali"@it, "Friedhof"@de .
+
+cterm:Coatings a cterm:FamilyOfMaterial;
+  rdfs:label "Coatings"@en, "Rivestimenti"@it, "Verkleidungen"@de .
+
+cterm:FireProtectionSystems a cterm:FamilyOfMaterial;
+  rdfs:label "Fire Protection Systems"@en, "Impianti Antincendio"@it, "Brandschutzanlagen"@de .
+
+cterm:Soil a cterm:FamilyOfMaterial;
+  rdfs:label "Soil"@en, "Suolo"@it, "Boden"@de .
+
+cterm:SoilConsolidation a cterm:FamilyOfMaterial;
+  rdfs:label "Soil Consolidation"@en, "Consolidamento Suolo"@it, "Bodenkonsolidierung"@de .
+
+cterm:WindowsAndDoors a cterm:FamilyOfMaterial;
+  rdfs:label "Windows And Doors"@en, "Serramenti"@it, "Fenster und Türen"@de .
+
+cterm:Prefabricated a cterm:TypeOfActivity;
+  rdfs:label "Prefabricated"@en, "Prefabbricata"@it, "Vorgefertigt"@de .
+
+cterm:FrontWithDoor a cterm:TypeOfActivity;
+  rdfs:label "Front With Door"@en, "Frontale Con Porta"@it, "Front mit Tür"@de .
+
+cterm:Length a cterm:DimensionParameterType;
+  rdfs:label "Length"@en, "Lunghezza"@it, "Länge"@de .
+
+cterm:Weight a cterm:PhysicalParameterType;
+  rdfs:label "Weight"@en, "Peso"@it, "Gewicht"@de .
+
+cterm:Partition a cterm:FunctionOfMateriaResource;
+  rdfs:label "Partition"@en, "Divisoria"@it, "Trennwand"@de .
+
+cterm:Closure a cterm:FunctionOfMateriaResource;
+  rdfs:label "Closure"@en, "Chiusura"@it, "Verschluss"@de .
+
+cterm:FrontClosure a cterm:FunctionOfMateriaResource;
+  rdfs:label "Front Closure"@en, "Chiusura Frontale"@it, "Frontverschluss"@de .
+
+cterm:SideClosure a cterm:FunctionOfMateriaResource;
+  rdfs:label "Side Closure"@en, "Chiusura Laterale"@it, "Seitenverschluss"@de .
+
+cterm:Coating a cterm:FunctionOfMateriaResource;
+  rdfs:label "Coating"@en, "Rivestimento"@it, "Verkleidung"@de .
+
+cterm:Bathrooms a cterm:UseOfMaterial;
+  rdfs:label "Bathrooms"@en, "Bagni"@it, "Badezimmer"@de .
+
+cterm:Kitchens a cterm:UseOfMaterial;
+  rdfs:label "Kitchens"@en, "Cucine"@it, "Küchen"@de .
+
+cterm:PartitionWalls a cterm:UseOfMaterial;
+  rdfs:label "Partition Walls"@en, "Contropareti"@it, "Trennwände"@de .
+
+cterm:WindowSills a cterm:UseOfMaterial;
+  rdfs:label "Window Sills"@en, "Davanzali"@it, "Fensterbänke"@de .
+
+cterm:CoatingLayer a cterm:UseOfMaterial;
+  rdfs:label "Coating Layer"@en, "Strato Di Rivestimento"@it, "Beschichtungsschicht"@de .
+
+cterm:WoodVegetableFiber a cterm:Material;
+  rdfs:label "Wood Vegetable Fiber"@en, "Fibra Vegetale Legno"@it, "Holzpflanzenfaser"@de .
+
+cterm:HempVegetableFiber a cterm:Material;
+  rdfs:label "Hemp Vegetable Fiber"@en, "Fibra Vegetale Canapa"@it, "Hanffaser"@de .
+
+cterm:CellularGlass a cterm:Material;
+  rdfs:label "Cellular Glass"@en, "Vetro Cellulare"@it, "Schaumglas"@de .
+
+cterm:GenericMineralFiber a cterm:Material;
+  rdfs:label "Generic Mineral Fiber"@en, "Fibra Minerale Generico"@it, "Generische Mineralfaser"@de .
+
+cterm:ExpandedCorkVegetableFiber a cterm:Material;
+  rdfs:label "Expanded Cork Vegetable Fiber"@en, "Fibra Vegetale Sughero Espanso"@it,
+    "Expandierter Korkpflanzenfaser"@de .
+
+cterm:NaturalBlondCorkVegetableFiber a cterm:Material;
+  rdfs:label "Natural Blond Cork Vegetable Fiber"@en, "Fibra Vegetale Sughero Biondo Naturale"@it,
+    "Natürliche blonde Korkpflanzenfaser"@de .
+
+cterm:GraphiteExpandedPolystyrenePlastic a cterm:Material;
+  rdfs:label "Graphite Expanded Polystyrene Plastic (EPS)"@en, "Plastica Polistirene Espanso (EPS) Con Grafite"@it,
+    "Expandiertes Polystyrol (EPS) mit Graphit"@de .
+
+cterm:PolyethylenePlastic a cterm:Material;
+  rdfs:label "Polyethylene Plastic (PE)"@en, "Plastica Polietilene (PE)"@it, "Polyethylen-Kunststoff (PE)"@de .
+
+cterm:Bitumen a cterm:FinishingOfMaterial;
+  rdfs:label "Bitumen"@en, "Bitume"@it, "Bitumen"@de .
+
+cterm:PolyethyleneCoatedKraftPaper a cterm:FinishingOfMaterial;
+  rdfs:label "Polyethylene Coated Kraft Paper"@en, "Carta Kraft Politenata"@it, "Polyethylenbeschichtetes Kraftpapier"@de .
+
+cterm:Rough a cterm:FinishingOfMaterial;
+  rdfs:label "Rough"@en, "Ruvida"@it, "Rau"@de .
+
+cterm:RoughWithoutSkin a cterm:FinishingOfMaterial;
+  rdfs:label "Rough Without Skin"@en, "Ruvida Senza Pelle"@it, "Rau ohne Beschichtung"@de .
+
+cterm:WhiteColor a cterm:FinishingOfMaterial;
+  rdfs:label "White Color"@en, "Colore Bianco"@it, "Weiße Farbe"@de .
+
+cterm:Granular a cterm:FinishingOfMaterial;
+  rdfs:label "Granular"@en, "Granulata"@it, "Körnig"@de .
+
+cterm:PlasticFilm a cterm:FinishingOfMaterial;
+  rdfs:label "Plastic Film"@en, "Film Plastico"@it, "Kunststofffolie"@de .
+
+cterm:RefractoryCeramics a cterm:FinishingOfMaterial;
+  rdfs:label "Refractory Ceramics"@en, "Ceramica Refrattaria"@it, "Feuerfeste Keramik"@de .
+
+cterm:PartiallySubliming a cterm:FinishingOfMaterial;
+  rdfs:label "Partially Subliming"@en, "Parzialmente Sublimante"@it, "Teilweise sublimierend"@de .
+
+cterm:MatteBronzeColor a cterm:FinishingOfMaterial;
+  rdfs:label "Matte Bronze Color"@en, "Colore Bronzo Opaco"@it, "Mattbronze Farbe"@de .
+
+cterm:GoldenYellowColor a cterm:FinishingOfMaterial;
+  rdfs:label "Golden Yellow Color"@en, "Colore Giallo Dorata"@it, "Goldgelbe Farbe"@de .
+
+cterm:GrayColor a cterm:FinishingOfMaterial;
+  rdfs:label "Gray Color"@en, "Colore Grigio"@it, "Graue Farbe"@de .
+
+cterm:OliveGrayColor a cterm:FinishingOfMaterial;
+  rdfs:label "Olive Gray Color"@en, "Colore Grigio Oliva"@it, "Olivgraue Farbe"@de .
+
+cterm:BlackColor a cterm:FinishingOfMaterial;
+  rdfs:label "Black Color"@en, "Colore Nero"@it, "Schwarze Farbe"@de .
+
+cterm:PinkColor a cterm:FinishingOfMaterial;
+  rdfs:label "Pink Color"@en, "Colore Rosa"@it, "Rosafarbene Farbe"@de .
+
+cterm:SoundAbsorption a cterm:PerformanceParameterType;
+  rdfs:label "Sound Absorption"@en, "Assorbimento Acustico"@it, "Schallabsorption"@de .
+
+cterm:TensileStrength a cterm:PerformanceParameterType;
+  rdfs:label "Tensile Strength"@en, "Resistenza A Trazione"@it, "Zugfestigkeit"@de .
+
+cterm:Ventilation a cterm:FunctionOfMateriaResource;
+  rdfs:label "Ventilation"@en, "Ventilazione"@it, "Belüftung"@de .
+
+cterm:ThermalInsulation a cterm:FunctionOfMateriaResource;
+  rdfs:label "Thermal Insulation"@en, "Termoisolante"@it, "Wärmedämmend"@de .
+
+cterm:SoundAbsorbing a cterm:FunctionOfMateriaResource;
+  rdfs:label "Sound Absorbing"@en, "Fonoassorbente"@it, "Schalldämpfend"@de .
+
+cterm:Breathable a cterm:FunctionOfMateriaResource;
+  rdfs:label "Breathable"@en, "Traspirante"@it, "Atmungsaktiv"@de .
+
+cterm:Insulation a cterm:FunctionOfMateriaResource;
+  rdfs:label "Insulation"@en, "Isolamento"@it, "Isolierung"@de .
+
+cterm:Soundproof a cterm:FunctionOfMateriaResource;
+  rdfs:label "Soundproof"@en, "Fonoisolante"@it, "Schallisolierend"@de .
+
+cterm:Non-Combustible a cterm:FunctionOfMateriaResource;
+  rdfs:label "Non-Combustible"@en, "Incombustibile"@it, "Nicht brennbar"@de .
+
+cterm:Fireproof a cterm:FunctionOfMateriaResource;
+  rdfs:label "Fireproof"@en, "Antincendio"@it, "Brandschutz"@de .
+
+cterm:PitchedRoofs a cterm:UseOfMaterial;
+  rdfs:label "Pitched Roofs"@en, "Coperture A Falde"@it, "Pultdächer"@de .
+
+cterm:PitchedRoofsWithTiles a cterm:UseOfMaterial;
+  rdfs:label "Pitched Roofs With Tiles"@en, "Coperture A Falde Con Coppi"@it, "Pultdächer mit Ziegeln"@de .
+
+cterm:PitchedRoofsWithShingles a cterm:UseOfMaterial;
+  rdfs:label "Pitched Roofs With Shingles"@en, "Coperture A Falde Con Tegole"@it, "Pultdächer mit Dachziegeln"@de .
+
+cterm:FloorSlab a cterm:UseOfMaterial;
+  rdfs:label "FloorSlab"@en, "Solaio"@it, "Bodenplatte"@de .
+
+cterm:WallsWithInsulatedPlasterSystem a cterm:UseOfMaterial;
+  rdfs:label "Walls With Insulated Plaster System"@en, "Pareti Con Sistema A Cappotto"@it,
+    "Wände mit Wärmedämmverbundsystem"@de .
+
+cterm:FlatRoofs a cterm:UseOfMaterial;
+  rdfs:label "Flat Roofs"@en, "Coperture Piane"@it, "Flachdächer"@de .
+
+cterm:Attic a cterm:UseOfMaterial;
+  rdfs:label "Attic"@en, "Sottotetto"@it, "Dachboden"@de .
+
+cterm:FloorsOverUnheatedAreas a cterm:UseOfMaterial;
+  rdfs:label "Floors Over Unheated Areas"@en, "Solai Su Zone Non Riscaldate"@it, "Böden über unbeheizten Bereichen"@de .
+
+cterm:ExternalWalls a cterm:UseOfMaterial;
+  rdfs:label "External Walls"@en, "Pareti Esterne"@it, "Außenwände"@de .
+
+cterm:PartitionWallsWithMetalStructure a cterm:UseOfMaterial;
+  rdfs:label "Partition Walls With Metal Structure"@en, "Contropareti Con Struttura Metallica"@it,
+    "Trennwände mit Metallstruktur"@de .
+
+cterm:Perimeter_PartitionCavities a cterm:UseOfMaterial;
+  rdfs:label "Perimeter/Partition Cavities"@en, "Intercapedini Perimetrali/Divisorie"@it,
+    "Perimeter-/Trennwände"@de .
+
+cterm:RetainingWalls a cterm:UseOfMaterial;
+  rdfs:label "Retaining Walls"@en, "Pareti Controterra"@it, "Stützwände"@de .
+
+cterm:ThermalBridges a cterm:UseOfMaterial;
+  rdfs:label "Thermal Bridges"@en, "Ponti Termici"@it, "Wärmebrücken"@de .
+
+cterm:FormworkForReinforcedConcreteStructures a cterm:UseOfMaterial;
+  rdfs:label "Formwork For Reinforced Concrete Structures"@en, "Casseri Per Strutture In Conglomerato Cementizio"@it,
+    "Schalungen für Betonstrukturen"@de .
+
+cterm:FormworkForThermalBridges a cterm:UseOfMaterial;
+  rdfs:label "Formwork For Thermal Bridges"@en, "Casseri Per Ponti Termici"@it, "Schalungen für Wärmebrücken"@de .
+
+cterm:IntermediateFloors a cterm:UseOfMaterial;
+  rdfs:label "Intermediate Floors"@en, "Solai Intermedi"@it, "Zwischendecken"@de .
+
+cterm:Floor a cterm:UseOfMaterial;
+  rdfs:label "Floor"@en, "Pavimento"@it, "Fußboden"@de .
+
+cterm:InternalPartitionWalls a cterm:UseOfMaterial;
+  rdfs:label "Internal Partition Walls"@en, "Pareti Divisorie Interne"@it, "Innenwände"@de .
+
+cterm:Plasterboard a cterm:UseOfMaterial;
+  rdfs:label "Plasterboard"@en, "Cartongesso"@it, "Gipskartonplatten"@de .
+
+cterm:Panels a cterm:AspectOfMaterial;
+  rdfs:label "Panels"@en, "Pannelli"@it, "Paneele"@de .
+
+cterm:TongueAndGrooveEdges a cterm:AspectOfMaterial;
+  rdfs:label "Tongue And Groove Edges"@en, "Bordi Battentati/Incastro"@it, "Nut-und-Feder-Kanten"@de .
+
+cterm:PreformedPanels a cterm:AspectOfMaterial;
+  rdfs:label "Preformed Panels"@en, "Pannelli Preformati"@it, "Vorgeformte Paneele"@de .
+
+cterm:Self-SupportingPanels a cterm:AspectOfMaterial;
+  rdfs:label "Self-Supporting Panels"@en, "Pannelli Autoportanti"@it, "Selbsttragende Paneele"@de .
+
+cterm:RigidPanels a cterm:AspectOfMaterial;
+  rdfs:label "Rigid Panels"@en, "Pannelli Rigidi"@it, "Starre Paneele"@de .
+
+cterm:QuiltedMat a cterm:AspectOfMaterial;
+  rdfs:label "Quilted Mat"@en, "Materassino Trapuntato"@it, "Gestepptes Polster"@de .
+
+cterm:Semi-RigidPanel a cterm:AspectOfMaterial;
+  rdfs:label "Semi-Rigid Panel"@en, "Pannello Semirigido"@it, "Halbsteife Platte"@de .
+
+cterm:TongueAndGroovePanels a cterm:AspectOfMaterial;
+  rdfs:label "Tongue And Groove Panels"@en, "Pannelli A Bordi Battentati/Incastro"@it,
+    "Nut-und-Feder-Paneele"@de .
+
+cterm:StraightEdgePanels a cterm:AspectOfMaterial;
+  rdfs:label "Straight Edge Panels"@en, "Pannelli A Bordi Dritti"@it, "Paneele mit geraden Kanten"@de .
+
+cterm:RightAngleCorners a cterm:AspectOfMaterial;
+  rdfs:label "Right Angle Corners"@en, "Spigoli Ad Angolo Retto"@it, "Rechte Winkelkanten"@de .
+
+cterm:RebatedEdgePanels a cterm:AspectOfMaterial;
+  rdfs:label "Rebated Edge Panels"@en, "Pannelli A Bordi Risegati"@it, "Paneele mit abgesetzten Kanten"@de .
+
+cterm:RigidPanel a cterm:AspectOfMaterial;
+  rdfs:label "Rigid Panel"@en, "Pannello Rigido"@it, "Starre Platte"@de .

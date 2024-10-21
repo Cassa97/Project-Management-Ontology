@@ -5,8 +5,8 @@
 cterm:Demolition a cterm:CategoryOfActivity, cterm:ObjectOfActivity;
   rdfs:label "Demolition"@en, "Demolizione"@it, "Abriss"@de .
 
-cterm:Total a cterm:TypeOfActivity;
-  rdfs:label "Total"@en, "Totale"@it, "Total"@de .
+cterm:Complete a cterm:TypeOfActivity;
+  rdfs:label "Complete"@en, "Totale"@it, "Vollständig"@de .
 
 cterm:WithMechanicalAndManualMeans a cterm:TypeOfActivity;
   rdfs:label "With Mechanical And Manual Means"@en, "Con Mezzo Meccanico E Manuale"@it,
@@ -25,26 +25,20 @@ cterm:ForRemanipulationAndReuseForHydraulicAdjustment a cterm:FunctionOfActivity
 cterm:StoneRemoval a cterm:TypeOfActivity;
   rdfs:label "Stone Removal"@en, "Spietramento"@it, "Steinentfernung"@de .
 
-cterm:ByHand a cterm:TypeOfActivity;
-  rdfs:label "By Hand"@en, "A Mano"@it, "Von Hand"@de .
+cterm:Manual a cterm:TypeOfActivity;
+  rdfs:label "Manual"@en, "A Mano"@it, "Manuell"@de .
 
-cterm:StoneRemovalByHand a cterm:TypeOfActivity;
-  rdfs:label "Stone Removal By Hand"@en, "Spietramento A Mano"@it, "Steinentfernung Von Hand"@de .
+cterm:ManualStoneRemoval a cterm:TypeOfActivity;
+  rdfs:label "Manual Stone Removal"@en, "Spietramento A Mano"@it, "Manuelle Steinentfernung"@de .
 
 cterm:WithManualEquipment a cterm:TypeOfActivity;
   rdfs:label "With Manual Equipment"@en, "Con Attrezzatura Manuale"@it, "Mit Handgerät"@de .
 
-cterm:Implementation a cterm:CategoryOfActivity;
-  rdfs:label "Implementation"@en, "Realizzazione"@it, "Umsetzung"@de .
+cterm:Realization a cterm:CategoryOfActivity;
+  rdfs:label "Realization"@en, "Realizzazione"@it, "Umsetzung"@de .
 
 cterm:Maintenance a cterm:CategoryOfActivity;
   rdfs:label "Maintenance"@en, "Manutenzione"@it, "Instandhaltung"@de .
-
-cterm:Emergency a cterm:FunctionOfActivity;
-  rdfs:label "Emergency"@en, "Di Soccorso"@it, "Notfall"@de .
-
-cterm:WithControlledOpenSection a cterm:GeometryOfActivity;
-  rdfs:label "With Controlled Open Section"@en, "A Sezione Aperta Controllata"@it, "Mit Kontrolliertem Offenen Abschnitt"@de .
 
 cterm:OnSite a cterm:TypeOfActivity;
   rdfs:label "On Site"@en, "In Opera"@it, "Vor Ort"@de .
@@ -53,16 +47,7 @@ cterm:Cold a cterm:TypeOfActivity;
   rdfs:label "Cold"@en, "A Freddo"@it, "Kalt"@de .
 
 cterm:TwoCoats a cterm:TypeOfActivity;
-  rdfs:label "Two Coats"@en, "Due Mani"@it, "Zwei Schichten"@de .
-
-cterm:DoubleVeil a cterm:TypeOfActivity;
-  rdfs:label "Double Veil"@en, "Doppia Velatura"@it, "Doppelte Glasur"@de .
-
-cterm:PartialTuning a cterm:TypeOfActivity;
-  rdfs:label "Partial Tuning"@en, "Accordatura Parziale"@it, "Teilweise Abstimmung"@de .
-
-cterm:FullTuning a cterm:TypeOfActivity;
-  rdfs:label "Full Tuning"@en, "Accordatura Totale"@it, "Volle Abstimmung"@de .
+  rdfs:label "Two Coats"@en, "Due Mani"@it, "Zwei Anstriche"@de .
 
 cterm:Spray a cterm:TypeOfActivity;
   rdfs:label "Spray"@en, "A Spruzzo"@it, "Gesprüht"@de .
@@ -82,14 +67,11 @@ cterm:SecondCoat a cterm:TypeOfActivity;
 cterm:TwoLayers a cterm:TypeOfActivity;
   rdfs:label "Two Layers"@en, "Due Riprese"@it, "Zwei Durchgänge"@de .
 
-cterm:SingleGlazing a cterm:TypeOfActivity;
-  rdfs:label "Single Veil"@en, "Singola Velatura"@it, "Einfache Glasur"@de .
-
 cterm:Removal a cterm:ObjectOfActivity;
   rdfs:label "Removal"@en, "Rimozione"@it, "Entfernung"@de .
 
 cterm:Application a cterm:ObjectOfActivity;
-  rdfs:label "Application"@en, "Applicazione"@it, "Anwendung"@de .
+  rdfs:label "Application"@en, "Applicazione"@it, "Aufbringung"@de .
 
 cterm:Assistance a cterm:ObjectOfActivity;
   rdfs:label "Assistance"@en, "Assistenza"@it, "Unterstützung"@de .
@@ -103,8 +85,8 @@ cterm:Distribution a cterm:ObjectOfActivity;
 cterm:Execution a cterm:ObjectOfActivity;
   rdfs:label "Execution"@en, "Esecuzione"@it, "Ausführung"@de .
 
-cterm:Formation a cterm:ObjectOfActivity;
-  rdfs:label "Formation"@en, "Formazione"@it, "Bildung"@de .
+cterm:Forming a cterm:ObjectOfActivity;
+  rdfs:label "Forming"@en, "Formazione"@it, "Ausbildung"@de .
 
 cterm:Casting a cterm:ObjectOfActivity;
   rdfs:label "Casting"@en, "Getto"@it, "Guss"@de .
@@ -134,13 +116,13 @@ cterm:Scraping a cterm:ObjectOfActivity;
   rdfs:label "Scraping"@en, "Raschiatura"@it, "Kratzen"@de .
 
 cterm:Reconstruction a cterm:ObjectOfActivity;
-  rdfs:label "Reconstruction"@en, "Ricostruzione"@it, "Wiederaufbau"@de .
+  rdfs:label "Reconstruction"@en, "Ricostruzione"@it, "Rekonstruktion"@de .
 
 cterm:Regeneration a cterm:ObjectOfActivity;
   rdfs:label "Regeneration"@en, "Rigenerazione"@it, "Regeneration"@de .
 
 cterm:Excavation a cterm:ObjectOfActivity;
-  rdfs:label "Excavation"@en, "Scavo"@it, "Ausgrabung"@de .
+  rdfs:label "Excavation"@en, "Scavo"@it, "Aushub"@de .
 
 cterm:Dismantling a cterm:ObjectOfActivity;
   rdfs:label "Dismantling"@en, "Smontaggio"@it, "Demontage"@de .
@@ -160,11 +142,11 @@ cterm:Repair a cterm:ObjectOfActivity;
 cterm:Hydraulic a cterm:CategoryOfConstructionWork;
   rdfs:label "Hydraulic"@en, "Idraulica"@it, "Hydraulik"@de .
 
-cterm:SoilDefense a cterm:CategoryOfConstructionWork;
-  rdfs:label "Soil Defense"@en, "Difesa Suolo"@it, "Bodenschutz"@de .
+cterm:SoilProtection a cterm:CategoryOfConstructionWork;
+  rdfs:label "Soil Protection"@en, "Difesa Suolo"@it, "Bodenschutz"@de .
 
-cterm:Agro_Forestry a cterm:CategoryOfConstructionWork;
-  rdfs:label "Agro_Forestry"@en, "Agro_Forestale"@it, "Agro-Forstwirtschaft"@de .
+cterm:AgroForestry a cterm:CategoryOfConstructionWork;
+  rdfs:label "Agro Forestry"@en, "Agro Forestale"@it, "Agro-Forstwirtschaft"@de .
 
 cterm:UrbanGreen a cterm:CategoryOfConstructionWork;
   rdfs:label "Urban Green"@en, "Verde Urbano"@it, "Stadtgrün"@de .
@@ -172,32 +154,32 @@ cterm:UrbanGreen a cterm:CategoryOfConstructionWork;
 cterm:Buildings a cterm:CategoryOfConstructionWork;
   rdfs:label "Buildings"@en, "Edifici"@it, "Gebäude"@de .
 
-cterm:LandReclamation a cterm:CategoryOfConstructionWork;
-  rdfs:label "Land Reclamation"@en, "Bonifica"@it, "Sanierung"@de .
+cterm:Decontamination a cterm:CategoryOfConstructionWork;
+  rdfs:label "Decontamination"@en, "Bonifica"@it, "Decontaminazione"@it,"Dekontaminierung"@de .
 
 cterm:Transport a cterm:CategoryOfConstructionWork;
-  rdfs:label "Transport"@en, "Trasporti"@it, "Verkehr"@de .
+  rdfs:label "Transport"@en, "Trasporti"@it, "Transport"@de .
 
-cterm:AgricultureCrops a cterm:ObjectOfConstructionWork;
-  rdfs:label "Agriculture Crops"@en, "Colture_Agricoltura"@it, "Landwirtschaftliche Kulturen"@de .
+cterm:Agriculture a cterm:ObjectOfConstructionWork;
+  rdfs:label "Agriculture"@en, "Colture/Agricoltura"@it, "Nutzpflanzen/Landwirtschaft"@de .
 
 cterm:SewerWaterPipes a cterm:ObjectOfConstructionWork;
-  rdfs:label "Sewer Water Pipes"@en, "Condotte_Fogna_Acquedotto"@it, "Abwasserleitungen/Wasserleitungen"@de .
+  rdfs:label "Sewer/Water Pipes"@en, "Condotte/Fogna/Acquedotto"@it, "Abwasserleitungen/Wasserleitungen"@de .
 
-cterm:MaritimeRivers a cterm:ObjectOfConstructionWork;
-  rdfs:label "Maritime Rivers"@en, "Marittime_Fluviali"@it, "See- und Flussbau"@de .
+cterm:Coastal_River a cterm:ObjectOfConstructionWork;
+  rdfs:label "Coastal/River"@en, "Marittime/Fluviali"@it, "See- und Flussbau"@de .
 
-cterm:ForestGreen a cterm:ObjectOfConstructionWork;
-  rdfs:label "Forest Green"@en, "Verde Boschivo_Forestale"@it, "Waldgrün"@de .
+cterm:Green_Forest a cterm:ObjectOfConstructionWork;
+  rdfs:label "Green/Forest"@en, "Verde Boschivo/Forestale"@it, "Gün/Wald"@de .
 
-cterm:Channels a cterm:ObjectOfConstructionWork;
-  rdfs:label "Channels"@en, "Canali"@it, "Kanäle"@de .
+cterm:Rivers a cterm:ObjectOfConstructionWork;
+  rdfs:label "Rivers"@en, "Canali"@it,"Fiumi"@it, "Flüsse"@de .
 
-cterm:ParksGardensGreenAreas a cterm:ObjectOfConstructionWork;
-  rdfs:label "Parks Gardens Green Areas"@en, "Parchi_Giardini_Aree Verdi"@it, "Parks, Gärten, Grünflächen"@de .
+cterm:GreenAreas a cterm:ObjectOfConstructionWork;
+  rdfs:label "Parks/Gardens/Green Areas"@en, "Parchi/Giardini/Aree Verdi"@it, "Parks/Gärten/Grünflächen"@de .
 
 cterm:Residences a cterm:ObjectOfConstructionWork;
-  rdfs:label "Residences"@en, "Residenze"@it, "Wohnsitze"@de .
+  rdfs:label "Residences"@en, "Residenze"@it, "Wohngebiete"@de .
 
 cterm:ContaminatedSites a cterm:ObjectOfConstructionWork;
   rdfs:label "Contaminated Sites"@en, "Siti Contaminati"@it, "Kontaminierte Standorte"@de .
@@ -206,7 +188,7 @@ cterm:Roads a cterm:ObjectOfConstructionWork;
   rdfs:label "Roads"@en, "Strade"@it, "Straßen"@de .
 
 cterm:LandSlopes a cterm:ObjectOfConstructionWork;
-  rdfs:label "Land Slopes"@en, "Terreno_Versanti"@it, "Gelände/Hänge"@de .
+  rdfs:label "Land/Slopes"@en, "Terreno/Versanti"@it, "Gelände/Hänge"@de .
 
 cterm:RoadsideGreen a cterm:ObjectOfConstructionWork;
   rdfs:label "Roadside Green"@en, "Verde Stradale"@it, "Straßenbegleitgrün"@de .
@@ -215,7 +197,7 @@ cterm:Land a cterm:ObjectOfConstructionWork;
   rdfs:label "Land"@en, "Terreno"@it, "Gelände"@de .
 
 cterm:Panel a cterm:ObjectOfMaterialResource;
-  rdfs:label "Panel"@en, "Pannello"@it, "Platte"@de .
+  rdfs:label "Panel"@en, "Pannello"@it, "Paneel"@de .
 
 cterm:Insulations a cterm:FamilyOfMaterialResource;
   rdfs:label "Insulations"@en, "Isolamenti"@it, "Dämmstoffe"@de .
@@ -281,12 +263,6 @@ cterm:WaterRepellent a cterm:FinishingOfMaterialResource;
 
 cterm:Coated a cterm:FinishingOfMaterialResource;
   rdfs:label "Coated"@en, "Rivestito"@it, "Beschichtet"@de .
-
-cterm:Thickness a cterm:DimensionParameterType;
-  rdfs:label "Thickness"@en, "Spessore"@it, "Dicke"@de .
-
-cterm:Width a cterm:DimensionParameterType;
-  rdfs:label "Width"@en, "Larghezza"@it, "Breite"@de .
 
 cterm:Height a cterm:DimensionParameterType;
   rdfs:label "Height"@en, "Altezza"@it, "Höhe"@de .
@@ -519,8 +495,8 @@ cterm:PartitionWallsWithMetalStructure a cterm:UseOfMaterialResource;
   rdfs:label "Partition Walls With Metal Structure"@en, "Contropareti Con Struttura Metallica"@it,
     "Trennwände mit Metallstruktur"@de .
 
-<http://www.w3.id.org/cterm#Perimeter/PartitionCavities> a cterm:UseOfMaterialResource;
-  rdfs:label "Perimeter-Partition Cavities"@en, "Intercapedini Perimetrali/Divisorie"@it,
+cterm:Perimeter_PartitionCavities a cterm:UseOfMaterialResource;
+  rdfs:label "Perimeter/Partition Cavities"@en, "Intercapedini Perimetrali/Divisorie"@it,
     "Perimeter-/Trennwände"@de .
 
 cterm:RetainingWalls a cterm:UseOfMaterialResource;
