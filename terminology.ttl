@@ -94,6 +94,7 @@ cterm:Acoustic
   rdf:type cterm:TypeOfWorkOfConstructionWork ;
   rdfs:label "Acoustic"@en ;
   rdfs:label "Acustico"@it ;
+  rdfs:label "Akustik"@de ;
 .
 cterm:AluminumFoil
   rdf:type owl:NamedIndividual ;
@@ -148,13 +149,22 @@ cterm:Attic
   rdf:type owl:NamedIndividual ;
   rdf:type cterm:UseOfWorkOfConstructionWork ;
   rdfs:label "Attic"@en ;
+  rdfs:label "Dachboden"@de ;
   rdfs:label "Sottotetto"@it ;
 .
 cterm:BasementFlooring
   rdf:type owl:NamedIndividual ;
   rdf:type cterm:UseOfWorkOfConstructionWork ;
   rdfs:label "Basement Flooring"@en ;
+  rdfs:label "Fußböden im Untergeschoss"@de ;
   rdfs:label "Pavimenti Piano Cantina"@it ;
+.
+cterm:BasementWalls
+  rdf:type owl:NamedIndividual ;
+  rdf:type cterm:UseOfWorkOfConstructionWork ;
+  rdfs:label "Buried Walls"@en ;
+  rdfs:label "Pareti Interrate"@it ;
+  rdfs:label "Wände im Untergeschoss"@de ;
 .
 cterm:Bitumen
   rdf:type owl:NamedIndividual ;
@@ -180,12 +190,6 @@ cterm:BituminizedGlassFiber
   rdf:type cterm:FinishingOfWorkOfConstructionWork ;
   rdfs:label "Bituminized Glass Fiber"@en ;
   rdfs:label "Velo Vetro Bitumato"@it ;
-.
-cterm:BuriedWalls
-  rdf:type owl:NamedIndividual ;
-  rdf:type cterm:UseOfWorkOfConstructionWork ;
-  rdfs:label "Buried Walls"@en ;
-  rdfs:label "Pareti Interrate"@it ;
 .
 cterm:Category
   rdf:type owl:Class ;
@@ -257,6 +261,7 @@ cterm:Cavities
   rdf:type cterm:UseOfWorkOfConstructionWork ;
   rdfs:label "Cavities"@en ;
   rdfs:label "Intercapedini"@it ;
+  rdfs:label "Zwischenräume"@de ;
 .
 cterm:Ceilings
   rdf:type owl:NamedIndividual ;
@@ -360,6 +365,7 @@ cterm:ExistingScreeds
   rdf:type cterm:UseOfWorkOfConstructionWork ;
   rdfs:label "Existing Screeds"@en ;
   rdfs:label "Massetti Esistenti"@it ;
+  rdfs:label "Vorhandene Estriche"@de ;
 .
 cterm:ExpandedClay
   rdf:type owl:NamedIndividual ;
@@ -502,18 +508,28 @@ cterm:FlatRoofWithWalkableSurface
 cterm:FloorSlab
   rdf:type owl:NamedIndividual ;
   rdf:type cterm:UseOfWorkOfConstructionWork ;
+  rdfs:label "Deckenplatte"@de ;
   rdfs:label "Floor Slab"@en ;
   rdfs:label "Solaio"@it ;
+.
+cterm:FloorUnderlay
+  rdf:type owl:NamedIndividual ;
+  rdf:type cterm:UseOfWorkOfConstructionWork ;
+  rdfs:label "Floor Underlay"@en ;
+  rdfs:label "Fußbodenunterlage"@de ;
+  rdfs:label "Sottopavimenti"@it ;
 .
 cterm:Floors
   rdf:type owl:NamedIndividual ;
   rdf:type cterm:UseOfWorkOfConstructionWork ;
+  rdfs:label "Bodenbeläge"@de ;
   rdfs:label "Floors"@en ;
   rdfs:label "Pavimenti"@it ;
 .
 cterm:FloorsOverUnheatedAreas
   rdf:type owl:NamedIndividual ;
   rdf:type cterm:UseOfWorkOfConstructionWork ;
+  rdfs:label "Decken über unbeheizten Bereichen"@de ;
   rdfs:label "Floors Over Unheated Areas"@en ;
   rdfs:label "Solai Su Zone Non Riscaldate"@it ;
 .
@@ -592,6 +608,7 @@ cterm:Generic
   rdf:type cterm:TypeOfWorkOfConstructionWork ;
   rdfs:label "Generic"@en ;
   rdfs:label "Generico"@it ;
+  rdfs:label "Generisch"@de ;
 .
 cterm:GenericMaterial
   rdf:type owl:NamedIndividual ;
@@ -617,12 +634,6 @@ cterm:Granulometry
   rdfs:label "Granulometria"@it ;
   rdfs:label "Granulometry"@en ;
   rdfs:label "Korngrößenverteilung"@de ;
-.
-cterm:Ground
-  rdf:type owl:NamedIndividual ;
-  rdf:type cterm:UseOfWorkOfConstructionWork ;
-  rdfs:label "Ground"@en ;
-  rdfs:label "Terreno"@it ;
 .
 cterm:HighDensityRockWool
   rdf:type owl:NamedIndividual ;
@@ -1072,6 +1083,13 @@ cterm:RoofGarden
   rdfs:label "Giardino pensile"@it ;
   rdfs:label "Roof garden"@en ;
 .
+cterm:RoofPanelling
+  rdf:type owl:NamedIndividual ;
+  rdf:type cterm:UseOfWorkOfConstructionWork ;
+  rdfs:label "Dachschalung"@de ;
+  rdfs:label "Roof panelling"@en ;
+  rdfs:label "Sotto Tavolati"@it ;
+.
 cterm:Rough
   rdf:type owl:NamedIndividual ;
   rdf:type cterm:FinishingOfWorkOfConstructionWork ;
@@ -1107,9 +1125,11 @@ cterm:SmoothWithSkin
 cterm:Soil
   rdf:type owl:NamedIndividual ;
   rdf:type cterm:FamilyOfWork ;
+  rdf:type cterm:UseOfWorkOfConstructionWork ;
   rdfs:label "Boden"@de ;
   rdfs:label "Soil"@en ;
   rdfs:label "Suolo"@it ;
+  rdfs:label "Terreno"@it ;
 .
 cterm:Standard
   rdf:type owl:Class ;
@@ -1183,6 +1203,7 @@ cterm:TensileStrengthPerpendicularToFaces
   rdf:type cterm:PerformanceParameterType ;
   rdfs:label "Resistenza A Trazione Perpendicolare Alle Facce"@it ;
   rdfs:label "Tensile Strength Perpendicular To Faces"@en ;
+  rdfs:label "Zugfestigkeit rechtwinklig zu den Seitenflächen"@de ;
 .
 cterm:Terminology
   rdf:type owl:Class ;
@@ -1194,12 +1215,14 @@ cterm:Thermal
   rdf:type cterm:TypeOfWorkOfConstructionWork ;
   rdfs:label "Termico"@it ;
   rdfs:label "Thermal"@en ;
+  rdfs:label "Thermisch"@de ;
 .
 cterm:ThermalConductivity
   rdf:type owl:NamedIndividual ;
   rdf:type cterm:PerformanceParameterType ;
   rdfs:label "Conducibilità Termica (λ)"@it ;
   rdfs:label "Thermal Conductivity (λ)"@en ;
+  rdfs:label "Wärmeleitfähigkeit (λ)"@de ;
 .
 cterm:ThermalInsulation
   rdf:type owl:NamedIndividual ;
@@ -1213,10 +1236,12 @@ cterm:Thermal_Acoustic
   rdf:type cterm:TypeOfWorkOfConstructionWork ;
   rdfs:label "Termico/Acustico"@it ;
   rdfs:label "Thermal/Acoustic"@en ;
+  rdfs:label "Thermisch-Akustisch"@de ;
 .
 cterm:Thickness
   rdf:type owl:NamedIndividual ;
   rdf:type cterm:DimensionParameterType ;
+  rdfs:label "Dicke"@de ;
   rdfs:label "Spessore"@it ;
   rdfs:label "Thickness"@en ;
 .
@@ -1322,18 +1347,6 @@ cterm:TypeOfWorkOfTemporaryWork
   owl:disjointWith cterm:TypeOfWorkOfConstructionWork ;
   owl:disjointWith cterm:TypeOfWorkOfProductWork ;
 .
-cterm:UnderBoards
-  rdf:type owl:NamedIndividual ;
-  rdf:type cterm:UseOfWorkOfConstructionWork ;
-  rdfs:label "Sotto Tavolati"@it ;
-  rdfs:label "Under Boards"@en ;
-.
-cterm:Underfloor
-  rdf:type owl:NamedIndividual ;
-  rdf:type cterm:UseOfWorkOfConstructionWork ;
-  rdfs:label "Sottopavimenti"@it ;
-  rdfs:label "Underfloor"@en ;
-.
 cterm:Use
   rdf:type owl:Class ;
   rdfs:label "Use" ;
@@ -1391,12 +1404,14 @@ cterm:VentilatedCrawlSpaceFormation
 cterm:VentilatedFacade
   rdf:type owl:NamedIndividual ;
   rdf:type cterm:UseOfWorkOfConstructionWork ;
+  rdfs:label "Belüftete Fassade"@de ;
   rdfs:label "Facciata Ventilata"@it ;
   rdfs:label "Ventilated Facade"@en ;
 .
 cterm:VentilatedPitchedRoof
   rdf:type owl:NamedIndividual ;
   rdf:type cterm:UseOfWorkOfConstructionWork ;
+  rdfs:label "Belüftetes Pultdach"@de ;
   rdfs:label "Copertura Ventilata A Falde"@it ;
   rdfs:label "Ventilated Pitched Roof"@en ;
 .
@@ -1412,6 +1427,7 @@ cterm:VerticalStructures
   rdf:type cterm:UseOfWorkOfConstructionWork ;
   rdfs:label "Strutture Verticali"@it ;
   rdfs:label "Vertical Structures"@en ;
+  rdfs:label "Vertikale Strukturen"@de ;
 .
 cterm:VulcanizedRubber
   rdf:type owl:NamedIndividual ;
@@ -1422,6 +1438,7 @@ cterm:VulcanizedRubber
 cterm:WalkableAttics
   rdf:type owl:NamedIndividual ;
   rdf:type cterm:UseOfWorkOfConstructionWork ;
+  rdfs:label "Begehbare Dachböden"@de ;
   rdfs:label "Sottotetti Praticabili"@it ;
   rdfs:label "Walkable Attics"@en ;
 .
