@@ -200,8 +200,8 @@ cr:EquipmentResource
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:onClass cr:Material ;
-      owl:onProperty cr:hasMaterial ;
+      owl:onClass cterm:Material;
+      owl:onProperty cterm:hasMaterial ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
@@ -260,17 +260,7 @@ cr:Furnishing
       owl:onProperty cr:hasFurnishing ;
     ] ;
 .
-cr:Gender
-  rdf:type owl:Class ;
-  rdfs:label "Gender" ;
-  rdfs:subClassOf owl:Thing ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:onClass cr:Gender ;
-      owl:onProperty cr:hasGender ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-.
+
 cr:LabourResource
   rdf:type owl:Class ;
   rdfs:label "Labour resource" ;
@@ -303,17 +293,7 @@ cr:LabourResource
   owl:disjointWith cr:MaterialResource ;
   owl:equivalentClass <https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedWorker> ;
 .
-cr:Material
-  rdf:type owl:Class ;
-  rdfs:label "Material" ;
-  rdfs:subClassOf owl:Thing ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:onClass cr:Material ;
-      owl:onProperty cr:hasMaterial ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-.
+
 cr:MaterialResource
   rdf:type owl:Class ;
   rdfs:label "Material resource" ;
@@ -380,8 +360,8 @@ cr:MaterialResource
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:onClass cr:Material ;
-      owl:onProperty cr:hasMaterial ;
+      owl:onClass cterm:Material ;
+      owl:onProperty cterm:hasMaterial ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
@@ -521,8 +501,8 @@ cr:Resource
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:onClass cr:Gender ;
-      owl:onProperty cr:hasGender ;
+      owl:onClass cterm:Gender ;
+      owl:onProperty cterm:hasGender ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
@@ -662,19 +642,7 @@ cr:hasFurnishing
   rdfs:label "hasFurnishing" ;
   rdfs:range cr:Furnishing ;
 .
-cr:hasGender
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain cr:Resource ;
-  rdfs:label "hasGender" ;
-  rdfs:range ci:Gender ;
-.
-cr:hasMaterial
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain cr:EquipmentResource ;
-  rdfs:domain cr:MaterialResource ;
-  rdfs:label "hasMaterial" ;
-  rdfs:range cr:Material ;
-.
+
 
 cr:hasPhysicalParameter
   rdf:type owl:ObjectProperty ;
@@ -851,3 +819,4 @@ cr:yield
   rdfs:label "yield" ;
   rdfs:range xsd:string ;
 .
+

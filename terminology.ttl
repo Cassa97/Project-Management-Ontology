@@ -763,3 +763,47 @@ cterm:hasPerformanceParameter
   rdfs:label "hasPerformanceParameter" ;
   rdfs:range cr:PerformanceParameter ;
 .
+
+cterm:Gender
+  rdf:type owl:Class ;
+  rdfs:label "Gender" ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass ci:Gender ;
+      owl:onProperty ci:hasGender ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+.
+
+cterm:hasGender
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain ci:Activity ;
+  rdfs:domain ci:CostComponent ;
+  rdfs:domain cr:Resource ;
+  rdfs:domain ci:Work ;
+  rdfs:label "hasGender" ;
+  rdfs:range cterm:Gender ;
+.
+
+cterm:Material
+  rdf:type owl:Class ;
+  rdfs:label "Material" ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass cterm:Material ;
+      owl:onProperty cterm:hasMaterial ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+.
+
+cterm:hasMaterial
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain ci:CostComponent ;
+    rdfs:domain cr:EquipmentResource ;
+  rdfs:domain cr:MaterialResource ;
+  rdfs:domain ci:Work ;
+  rdfs:label "hasMaterial" ;
+  rdfs:range cterm:Material ;
+.

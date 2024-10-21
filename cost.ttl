@@ -90,8 +90,8 @@ ci:Activity
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:onClass ci:Gender ;
-      owl:onProperty ci:hasGender ;
+      owl:onClass cterm:Gender ;
+      owl:onProperty cterm:hasGender ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
@@ -185,14 +185,14 @@ ci:CostComponent
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:onClass ci:Gender ;
-      owl:onProperty ci:hasGender ;
+      owl:onClass cterm:Gender ;
+      owl:onProperty cterm:hasGender ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:onClass ci:Material ;
-      owl:onProperty ci:hasMaterial ;
+      owl:onClass cterm:Material ;
+      owl:onProperty cterm:hasMaterial ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
@@ -287,28 +287,8 @@ ci:FinishingOfWorkOfTemporaryWork
   rdfs:label "FinishingOfWorkOfTemporaryWork" ;
   rdfs:subClassOf ci:Finishing ;
 .
-ci:Gender
-  rdf:type owl:Class ;
-  rdfs:label "Gender" ;
-  rdfs:subClassOf owl:Thing ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:onClass ci:Gender ;
-      owl:onProperty ci:hasGender ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-.
-ci:Material
-  rdf:type owl:Class ;
-  rdfs:label "Material" ;
-  rdfs:subClassOf owl:Thing ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:onClass ci:Material ;
-      owl:onProperty ci:hasMaterial ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-.
+
+
 ci:Parameter
   rdf:type owl:Class ;
   rdfs:label "Parameter" ;
@@ -480,14 +460,14 @@ ci:Work
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:onClass ci:Gender ;
-      owl:onProperty ci:hasGender ;
+      owl:onClass cterm:Gender ;
+      owl:onProperty cterm:hasGender ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:onClass ci:Material ;
-      owl:onProperty ci:hasMaterial ;
+      owl:onClass cterm:Material ;
+      owl:onProperty cterm:hasMaterial ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
@@ -725,21 +705,6 @@ ci:hasFinishing
   rdfs:domain ci:Work ;
   rdfs:label "hasFinishing" ;
   rdfs:range ci:Finishing ;
-.
-ci:hasGender
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain ci:Activity ;
-  rdfs:domain ci:CostComponent ;
-  rdfs:domain ci:Work ;
-  rdfs:label "hasGender" ;
-  rdfs:range ci:Gender ;
-.
-ci:hasMaterial
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain ci:CostComponent ;
-  rdfs:domain ci:Work ;
-  rdfs:label "hasMaterial" ;
-  rdfs:range ci:Material ;
 .
 
 ci:hasPart
