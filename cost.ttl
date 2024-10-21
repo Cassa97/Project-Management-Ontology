@@ -253,32 +253,7 @@ ci:CostItem
     ] ;
   owl:equivalentClass ci:ProductionResult ;
 .
-ci:Finishing
-  rdf:type owl:Class ;
-  rdfs:label "Finishing" ;
-  rdfs:subClassOf owl:Thing ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
-      owl:onClass ci:Finishing ;
-      owl:onProperty ci:hasFinishing ;
-    ] ;
-.
-ci:FinishingOfWorkOfConstructionWork
-  rdf:type owl:Class ;
-  rdfs:label "FinishingOfWorkOfConstructionWork" ;
-  rdfs:subClassOf ci:Finishing ;
-.
-ci:FinishingOfWorkOfProductWork
-  rdf:type owl:Class ;
-  rdfs:label "FinishingOfWorkOfProductWork" ;
-  rdfs:subClassOf ci:Finishing ;
-.
-ci:FinishingOfWorkOfTemporaryWork
-  rdf:type owl:Class ;
-  rdfs:label "FinishingOfWorkOfTemporaryWork" ;
-  rdfs:subClassOf ci:Finishing ;
-.
+
 ci:ProductWork
   rdf:type owl:Class ;
   rdfs:label "ProductWork" ;
@@ -448,8 +423,8 @@ ci:WorkOfConstructionWork
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
-      owl:onClass ci:FinishingOfWorkOfConstructionWork ;
-      owl:onProperty ci:hasFinishing ;
+      owl:onClass cterm:FinishingOfWorkOfConstructionWork ;
+      owl:onProperty cterm:hasFinishing ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -507,8 +482,8 @@ ci:WorkOfProductWork
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
-      owl:onClass ci:FinishingOfWorkOfProductWork ;
-      owl:onProperty ci:hasFinishing ;
+      owl:onClass cterm:FinishingOfWorkOfProductWork ;
+      owl:onProperty cterm:hasFinishing ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -550,8 +525,8 @@ ci:WorkOfTemporaryWork
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
-      owl:onClass ci:FinishingOfWorkOfTemporaryWork ;
-      owl:onProperty ci:hasFinishing ;
+      owl:onClass cterm:FinishingOfWorkOfTemporaryWork ;
+      owl:onProperty cterm:hasFinishing ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -622,12 +597,6 @@ ci:hasActivity
   rdfs:label "hasActivity" ;
   rdfs:range ci:Activity ;
 .
-ci:hasFinishing
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain ci:Work ;
-  rdfs:label "hasFinishing" ;
-  rdfs:range ci:Finishing ;
-.
 ci:hasPart
   rdf:type owl:ObjectProperty ;
   rdfs:domain ci:CostItem ;
@@ -647,7 +616,6 @@ ci:hasUnit
   rdfs:domain ci:Activity ;
   rdfs:domain ci:CostComponent ;
   rdfs:domain ci:Work ;
-  rdfs:domain cterm:Parameter ;
   rdfs:label "hasUnit" ;
   rdfs:range qudt:Unit ;
 .

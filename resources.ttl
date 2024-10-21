@@ -229,28 +229,6 @@ cr:EquipmentResource
   owl:disjointWith cr:MaterialResource ;
   owl:equivalentClass <https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedEquipment> ;
 .
-cr:Finishing
-  rdf:type owl:Class ;
-  rdfs:label "Finishing" ;
-  rdfs:subClassOf owl:Thing ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
-      owl:onClass cr:Finishing ;
-      owl:onProperty cr:hasFinishing ;
-    ] ;
-.
-cr:Furnishing
-  rdf:type owl:Class ;
-  rdfs:label "Furnishing" ;
-  rdfs:subClassOf owl:Thing ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
-      owl:onClass cr:Furnishing ;
-      owl:onProperty cr:hasFurnishing ;
-    ] ;
-.
 cr:LabourResource
   rdf:type owl:Class ;
   rdfs:label "Labour resource" ;
@@ -314,14 +292,14 @@ cr:MaterialResource
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
-      owl:onClass cr:Finishing ;
-      owl:onProperty cr:hasFinishing ;
+      owl:onClass cterm:Finishing ;
+      owl:onProperty cterm:hasFinishing ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
-      owl:onClass cr:Furnishing ;
-      owl:onProperty cr:hasFurnishing ;
+      owl:onClass cterm:Furnishing ;
+      owl:onProperty cterm:hasFurnishing ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -551,18 +529,8 @@ cr:hasConsumption
   rdfs:label "hasConsumption" ;
   rdfs:range cr:Consumption ;
 .
-cr:hasFinishing
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain cr:MaterialResource ;
-  rdfs:label "hasFinishing" ;
-  rdfs:range cr:Finishing ;
-.
-cr:hasFurnishing
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain cr:MaterialResource ;
-  rdfs:label "hasFurnishing" ;
-  rdfs:range cr:Furnishing ;
-.
+
+
 cr:hasQualificationLevel
   rdf:type owl:ObjectProperty ;
   rdfs:domain cr:LabourResource ;

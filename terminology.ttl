@@ -15,6 +15,7 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
 
 <http://w3id.org/cterm>
   rdf:type owl:Ontology ;
@@ -70,12 +71,6 @@ cterm:Aspect
   rdf:type owl:Class ;
   rdfs:label "Aspect" ;
   rdfs:subClassOf cterm:Terminology ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
-      owl:onClass cterm:Aspect ;
-      owl:onProperty cterm:hasAspect ;
-    ] ;
 .
 cterm:AspectOfEquipment
   rdf:type owl:Class ;
@@ -112,12 +107,6 @@ cterm:Category
   rdf:type owl:Class ;
   rdfs:label "Category" ;
   rdfs:subClassOf cterm:Terminology ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:onClass cterm:Category ;
-      owl:onProperty cterm:hasCategory ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
 .
 cterm:CategoryOfActivity
   rdf:type owl:Class ;
@@ -218,12 +207,6 @@ cterm:Family
   rdf:type owl:Class ;
   rdfs:label "Family" ;
   rdfs:subClassOf cterm:Terminology ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:onClass cterm:Family ;
-      owl:onProperty cterm:hasFamily ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
 .
 cterm:FamilyOfActivity
   rdf:type owl:Class ;
@@ -272,12 +255,6 @@ cterm:Function
   rdf:type owl:Class ;
   rdfs:label "Function" ;
   rdfs:subClassOf cterm:Terminology ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
-      owl:onClass cterm:Function ;
-      owl:onProperty cterm:hasFunction ;
-    ] ;
 .
 cterm:FunctionOfActivity
   rdf:type owl:Class ;
@@ -332,12 +309,6 @@ cterm:Gender
   rdf:type owl:Class ;
   rdfs:label "Gender" ;
   rdfs:subClassOf cterm:Terminology ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:onClass ci:Gender ;
-      owl:onProperty ci:hasGender ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
 .
 cterm:HyraulicEngineering
   rdf:type owl:NamedIndividual ;
@@ -364,12 +335,6 @@ cterm:Material
   rdf:type owl:Class ;
   rdfs:label "Material" ;
   rdfs:subClassOf cterm:Terminology ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:onClass cterm:Material ;
-      owl:onProperty cterm:hasMaterial ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
 .
 cterm:MechanicalEngineering
   rdf:type owl:NamedIndividual ;
@@ -389,12 +354,6 @@ cterm:Object
   rdf:type owl:Class ;
   rdfs:label "Object" ;
   rdfs:subClassOf cterm:Terminology ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:onClass cterm:Object ;
-      owl:onProperty cterm:hasObject ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
 .
 cterm:ObjectOfActivity
   rdf:type owl:Class ;
@@ -456,6 +415,12 @@ cterm:ObjectOfWorkOfTemporaryWork
   owl:disjointWith cterm:ObjectOfWorkOfConstructionWork ;
   owl:disjointWith cterm:ObjectOfWorkOfProductWork ;
 .
+cterm:hasUnit
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain cterm:Parameter ;
+  rdfs:label "hasUnit" ;
+  rdfs:range qudt:Unit ;
+.
 cterm:Parameter
   rdf:type owl:Class ;
   rdfs:label "Parameter" ;
@@ -464,7 +429,7 @@ cterm:Parameter
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onClass qudt:Unit ;
-      owl:onProperty ci:hasUnit ;
+      owl:onProperty cterm:hasUnit ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -583,12 +548,6 @@ cterm:Type
   rdf:type owl:Class ;
   rdfs:label "Type" ;
   rdfs:subClassOf cterm:Terminology ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass cterm:Type ;
-      owl:onProperty cterm:hasType ;
-    ] ;
 .
 cterm:TypeOfActivity
   rdf:type owl:Class ;
@@ -911,4 +870,43 @@ cterm:standardYear
   rdfs:domain cterm:Standard ;
   rdfs:label "standardYear" ;
   rdfs:range xsd:integer ;
+.
+
+cterm:hasFinishing
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain ci:Work ;
+    rdfs:domain cr:MaterialResource ;
+  rdfs:label "hasFinishing" ;
+  rdfs:range cterm:Finishing ;
+.
+cterm:hasFurnishing
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain cr:MaterialResource ;
+  rdfs:label "hasFurnishing" ;
+  rdfs:range cterm:Furnishing ;
+.
+cterm:Furnishing
+  rdf:type owl:Class ;
+  rdfs:label "Furnishing" ;
+  rdfs:subClassOf owl:Thing ;
+.
+cterm:Finishing
+  rdf:type owl:Class ;
+  rdfs:label "Finishing" ;
+  rdfs:subClassOf owl:Thing ;
+.
+cterm:FinishingOfWorkOfConstructionWork
+  rdf:type owl:Class ;
+  rdfs:label "FinishingOfWorkOfConstructionWork" ;
+  rdfs:subClassOf cterm:Finishing ;
+.
+cterm:FinishingOfWorkOfProductWork
+  rdf:type owl:Class ;
+  rdfs:label "FinishingOfWorkOfProductWork" ;
+  rdfs:subClassOf cterm:Finishing ;
+.
+cterm:FinishingOfWorkOfTemporaryWork
+  rdf:type owl:Class ;
+  rdfs:label "FinishingOfWorkOfTemporaryWork" ;
+  rdfs:subClassOf cterm:Finishing ;
 .
