@@ -1220,9 +1220,9 @@ cterm:Thermal
 cterm:ThermalConductivity
   rdf:type owl:NamedIndividual ;
   rdf:type cterm:PerformanceParameterType ;
-  rdfs:label "Conducibilità Termica (λ)"@it ;
-  rdfs:label "Thermal Conductivity (λ)"@en ;
-  rdfs:label "Wärmeleitfähigkeit (λ)"@de ;
+  rdfs:label "Conducibilità Termica"@it ;
+  rdfs:label "Thermal Conductivity"@en ;
+  rdfs:label "Wärmeleitfähigkeit"@de ;
 .
 cterm:ThermalInsulation
   rdf:type owl:NamedIndividual ;
