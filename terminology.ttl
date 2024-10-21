@@ -195,6 +195,13 @@ cterm:Construction
   rdfs:label "Construction"@en ;
   rdfs:label "Edilizia"@it ;
 .
+cterm:DimensionParameter
+  rdf:type owl:Class ;
+  rdfs:label "DimensionParameter" ;
+  rdfs:subClassOf cterm:Parameter ;
+  owl:disjointWith cterm:PerformanceParameter ;
+  owl:disjointWith cterm:PhysicalParameter ;
+.
 cterm:ElectricalEngineering
   rdf:type owl:NamedIndividual ;
   rdf:type cterm:FamilyOfWork ;
@@ -323,6 +330,17 @@ cterm:Furniture
   rdfs:label "Furniture"@en ;
   rdfs:label "Möbel"@de ;
 .
+cterm:Gender
+  rdf:type owl:Class ;
+  rdfs:label "Gender" ;
+  rdfs:subClassOf cterm:Terminology ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass ci:Gender ;
+      owl:onProperty ci:hasGender ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+.
 cterm:HyraulicEngineering
   rdf:type owl:NamedIndividual ;
   rdf:type cterm:FamilyOfWork ;
@@ -343,6 +361,17 @@ cterm:Landscaping
   rdfs:label "Landscaping"@en ;
   rdfs:label "Landschaftsbau"@de ;
   rdfs:label "VerdeEPaesaggio"@it ;
+.
+cterm:Material
+  rdf:type owl:Class ;
+  rdfs:label "Material" ;
+  rdfs:subClassOf cterm:Terminology ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass cterm:Material ;
+      owl:onProperty cterm:hasMaterial ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
 .
 cterm:MechanicalEngineering
   rdf:type owl:NamedIndividual ;
@@ -428,6 +457,67 @@ cterm:ObjectOfWorkOfTemporaryWork
   owl:disjointWith cterm:ObjectOfCostComponent ;
   owl:disjointWith cterm:ObjectOfWorkOfConstructionWork ;
   owl:disjointWith cterm:ObjectOfWorkOfProductWork ;
+.
+cterm:Parameter
+  rdf:type owl:Class ;
+  rdfs:label "Parameter" ;
+  rdfs:subClassOf cterm:Terminology ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass qudt:Unit ;
+      owl:onProperty ci:hasUnit ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass cterm:Standard ;
+      owl:onProperty cterm:hasParameterStandard ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:integer ;
+      owl:onProperty cterm:parameterValue1 ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:integer ;
+      owl:onProperty cterm:parameterValue2 ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty cterm:parameterSymbol1 ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty cterm:parameterSymbol2 ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty cterm:parameterType ;
+    ] ;
+.
+cterm:PerformanceParameter
+  rdf:type owl:Class ;
+  rdfs:label "PerformanceParameter" ;
+  rdfs:subClassOf cterm:Parameter ;
+  owl:disjointWith cterm:DimensionParameter ;
+  owl:disjointWith cterm:PhysicalParameter ;
+.
+cterm:PhysicalParameter
+  rdf:type owl:Class ;
+  rdfs:label "PhysicalParameter" ;
+  rdfs:subClassOf cterm:Parameter ;
+  owl:disjointWith cterm:DimensionParameter ;
+  owl:disjointWith cterm:PerformanceParameter ;
 .
 cterm:PrefabricatedStructuresForConcrete
   rdf:type owl:NamedIndividual ;
@@ -658,6 +748,12 @@ cterm:hasCategory
   rdfs:label "hasCategory" ;
   rdfs:range cterm:Category ;
 .
+cterm:hasDimensionParameter
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain ci:Work ;
+  rdfs:label "hasDimensionParameter" ;
+  rdfs:range cterm:DimensionParameter ;
+.
 cterm:hasFamily
   rdf:type owl:ObjectProperty ;
   rdfs:domain ci:Activity ;
@@ -676,6 +772,24 @@ cterm:hasFunction
   rdfs:label "hasFunction" ;
   rdfs:range cterm:Function ;
 .
+cterm:hasGender
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain ci:Activity ;
+  rdfs:domain ci:CostComponent ;
+  rdfs:domain ci:Work ;
+  rdfs:domain cr:Resource ;
+  rdfs:label "hasGender" ;
+  rdfs:range cterm:Gender ;
+.
+cterm:hasMaterial
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain ci:CostComponent ;
+  rdfs:domain ci:Work ;
+  rdfs:domain cr:EquipmentResource ;
+  rdfs:domain cr:MaterialResource ;
+  rdfs:label "hasMaterial" ;
+  rdfs:range cterm:Material ;
+.
 cterm:hasObject
   rdf:type owl:ObjectProperty ;
   rdfs:domain ci:Activity ;
@@ -684,6 +798,46 @@ cterm:hasObject
   rdfs:domain cr:Resource ;
   rdfs:label "hasObject" ;
   rdfs:range cterm:Object ;
+.
+cterm:hasObjectStandard
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain ci:Activity ;
+  rdfs:domain ci:CostComponent ;
+  rdfs:domain ci:Work ;
+  rdfs:domain cr:EquipmentResource ;
+  rdfs:domain cr:MaterialResource ;
+  rdfs:label "hasObjectStandard" ;
+  rdfs:range cterm:Standard ;
+.
+cterm:hasOtherStandard
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain ci:Activity ;
+  rdfs:domain ci:CostComponent ;
+  rdfs:domain ci:Work ;
+  rdfs:domain cr:EquipmentResource ;
+  rdfs:domain cr:MaterialResource ;
+  rdfs:label "hasOtherStandard" ;
+  rdfs:range cterm:Standard ;
+.
+cterm:hasParameterStandard
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain cr:Parameter ;
+  rdfs:domain cterm:Parameter ;
+  rdfs:label "hasParameterStandard" ;
+  rdfs:range cterm:Standard ;
+.
+cterm:hasPerformanceParameter
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain cr:EquipmentResource ;
+  rdfs:domain cr:MaterialResource ;
+  rdfs:label "hasPerformanceParameter" ;
+  rdfs:range cr:PerformanceParameter ;
+.
+cterm:hasPhysicalParameter
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain ci:Work ;
+  rdfs:label "hasPhysicalParameter" ;
+  rdfs:range cterm:PhysicalParameter ;
 .
 cterm:hasType
   rdf:type owl:ObjectProperty ;
@@ -702,6 +856,36 @@ cterm:hasUse
   rdfs:domain cr:MaterialResource ;
   rdfs:label "hasUse" ;
   rdfs:range cterm:Use ;
+.
+cterm:parameterSymbol1
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cterm:Parameter ;
+  rdfs:label "parameterSimbol1" ;
+  rdfs:range xsd:string ;
+.
+cterm:parameterSymbol2
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cterm:Parameter ;
+  rdfs:label "parameterSimbol2" ;
+  rdfs:range xsd:string ;
+.
+cterm:parameterType
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cterm:Parameter ;
+  rdfs:label "parameterType" ;
+  rdfs:range xsd:string ;
+.
+cterm:parameterValue1
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cterm:Parameter ;
+  rdfs:label "parameterValue1" ;
+  rdfs:range xsd:integer ;
+.
+cterm:parameterValue2
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cterm:Parameter ;
+  rdfs:label "parameterValue2" ;
+  rdfs:range xsd:integer ;
 .
 cterm:standardBody
   rdf:type owl:DatatypeProperty ;
@@ -728,82 +912,10 @@ cterm:standardYear
   rdfs:range xsd:integer ;
 .
 
-cterm:hasObjectStandard
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain ci:Activity ;
-  rdfs:domain ci:CostComponent ;
-  rdfs:domain cr:EquipmentResource ;
-  rdfs:domain cr:MaterialResource ;
-  rdfs:domain ci:Work ;
-  rdfs:label "hasObjectStandard" ;
-  rdfs:range cterm:Standard ;
-.
-cterm:hasOtherStandard
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain ci:Activity ;
-  rdfs:domain cr:EquipmentResource ;
-  rdfs:domain cr:MaterialResource ;
-  rdfs:domain ci:CostComponent ;
-  rdfs:domain ci:Work ;
-  rdfs:label "hasOtherStandard" ;
-  rdfs:range cterm:Standard ;
-.
-cterm:hasParameterStandard
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain ci:Parameter ;
-  rdfs:domain cr:Parameter ;
-  rdfs:label "hasParameterStandard" ;
-  rdfs:range cterm:Standard ;
-.
-
-cterm:hasPerformanceParameter
+cterm:hasDimensionParameter
   rdf:type owl:ObjectProperty ;
   rdfs:domain cr:EquipmentResource ;
   rdfs:domain cr:MaterialResource ;
-  rdfs:label "hasPerformanceParameter" ;
-  rdfs:range cr:PerformanceParameter ;
-.
-
-cterm:Gender
-  rdf:type owl:Class ;
-  rdfs:label "Gender" ;
-  rdfs:subClassOf owl:Thing ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:onClass ci:Gender ;
-      owl:onProperty ci:hasGender ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-.
-
-cterm:hasGender
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain ci:Activity ;
-  rdfs:domain ci:CostComponent ;
-  rdfs:domain cr:Resource ;
-  rdfs:domain ci:Work ;
-  rdfs:label "hasGender" ;
-  rdfs:range cterm:Gender ;
-.
-
-cterm:Material
-  rdf:type owl:Class ;
-  rdfs:label "Material" ;
-  rdfs:subClassOf owl:Thing ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:onClass cterm:Material ;
-      owl:onProperty cterm:hasMaterial ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-.
-
-cterm:hasMaterial
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain ci:CostComponent ;
-    rdfs:domain cr:EquipmentResource ;
-  rdfs:domain cr:MaterialResource ;
-  rdfs:domain ci:Work ;
-  rdfs:label "hasMaterial" ;
-  rdfs:range cterm:Material ;
+  rdfs:label "hasDimensionParameter" ;
+  rdfs:range cr:DimensionParameter ;
 .

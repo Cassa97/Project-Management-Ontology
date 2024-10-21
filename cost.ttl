@@ -258,9 +258,6 @@ ci:DimensionParameter
   rdf:type owl:Class ;
   rdfs:label "DimensionParameter" ;
   rdfs:subClassOf ci:Parameter ;
-  owl:disjointWith ci:PerformanceParameter ;
-  owl:disjointWith ci:PhysicalParameter ;
-.
 ci:Finishing
   rdf:type owl:Class ;
   rdfs:label "Finishing" ;
@@ -288,68 +285,10 @@ ci:FinishingOfWorkOfTemporaryWork
   rdfs:subClassOf ci:Finishing ;
 .
 
-
-ci:Parameter
-  rdf:type owl:Class ;
-  rdfs:label "Parameter" ;
   rdfs:subClassOf owl:Thing ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass qudt:Unit ;
-      owl:onProperty ci:hasUnit ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass cterm:Standard ;
-      owl:onProperty cterm:hasParameterStandard ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:integer ;
-      owl:onProperty ci:parameterValue1 ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:integer ;
-      owl:onProperty ci:parameterValue2 ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:string ;
-      owl:onProperty ci:parameterSimbol1 ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:string ;
-      owl:onProperty ci:parameterSimbol2 ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:string ;
-      owl:onProperty ci:parameterType ;
-    ] ;
-.
-ci:PerformanceParameter
-  rdf:type owl:Class ;
-  rdfs:label "PerformanceParameter" ;
-  rdfs:subClassOf ci:Parameter ;
-  owl:disjointWith ci:DimensionParameter ;
-  owl:disjointWith ci:PhysicalParameter ;
-.
-ci:PhysicalParameter
-  rdf:type owl:Class ;
-  rdfs:label "PhysicalParameter" ;
-  rdfs:subClassOf ci:Parameter ;
-  owl:disjointWith ci:DimensionParameter ;
-  owl:disjointWith ci:PerformanceParameter ;
-.
 ci:ProductWork
   rdf:type owl:Class ;
   rdfs:label "ProductWork" ;
@@ -386,7 +325,6 @@ ci:ProductionResult
     ] ;
   owl:equivalentClass ci:CostItem ;
 .
-
 ci:TemporaryWork
   rdf:type owl:Class ;
   rdfs:label "TemporaryWork" ;
@@ -431,20 +369,20 @@ ci:Work
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
-      owl:onClass ci:DimensionParameter ;
-      owl:onProperty ci:hasDimensionParameter ;
+      owl:onClass cterm:DimensionParameter ;
+      owl:onProperty cterm:hasDimensionParameter ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
-      owl:onClass ci:PerformanceParameter ;
+      owl:onClass cterm:PerformanceParameter ;
       owl:onProperty cterm:hasPerformanceParameter ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
-      owl:onClass ci:PhysicalParameter ;
-      owl:onProperty ci:hasPhysicalParameter ;
+      owl:onClass cterm:PhysicalParameter ;
+      owl:onProperty cterm:hasPhysicalParameter ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -682,10 +620,10 @@ ci:descriptionGeneral
   rdfs:label "descriptionGeneral" ;
   rdfs:range xsd:string ;
 .
-ci:escluded
+ci:excluded
   rdf:type owl:DatatypeProperty ;
   rdfs:domain ci:CostComponent ;
-  rdfs:label "escluded" ;
+  rdfs:label "excluded" ;
   rdfs:range xsd:string ;
 .
 ci:hasActivity
@@ -693,12 +631,6 @@ ci:hasActivity
   rdfs:domain ci:CostComponent ;
   rdfs:label "hasActivity" ;
   rdfs:range ci:Activity ;
-.
-ci:hasDimensionParameter
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain ci:Work ;
-  rdfs:label "hasDimensionParameter" ;
-  rdfs:range ci:DimensionParameter ;
 .
 ci:hasFinishing
   rdf:type owl:ObjectProperty ;
@@ -714,13 +646,6 @@ ci:hasPart
   rdfs:label "hasPart" ;
   rdfs:range ci:CostComponent ;
 .
-
-ci:hasPhysicalParameter
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain ci:Work ;
-  rdfs:label "hasPhysicalParameter" ;
-  rdfs:range ci:PhysicalParameter ;
-.
 ci:hasSubComponent
   rdf:type owl:ObjectProperty ;
   rdfs:domain ci:Activity ;
@@ -732,8 +657,8 @@ ci:hasUnit
   rdf:type owl:ObjectProperty ;
   rdfs:domain ci:Activity ;
   rdfs:domain ci:CostComponent ;
-  rdfs:domain ci:Parameter ;
   rdfs:domain ci:Work ;
+  rdfs:domain cterm:Parameter ;
   rdfs:label "hasUnit" ;
   rdfs:range qudt:Unit ;
 .
@@ -781,36 +706,6 @@ ci:omniclass
   rdfs:label "omniclass" ;
   rdfs:range xsd:string ;
 .
-ci:parameterSimbol1
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain ci:Parameter ;
-  rdfs:label "parameterSimbol1" ;
-  rdfs:range xsd:string ;
-.
-ci:parameterSimbol2
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain ci:Parameter ;
-  rdfs:label "parameterSimbol2" ;
-  rdfs:range xsd:string ;
-.
-ci:parameterType
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain ci:Parameter ;
-  rdfs:label "parameterType" ;
-  rdfs:range xsd:string ;
-.
-ci:parameterValue1
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain ci:Parameter ;
-  rdfs:label "parameterValue1" ;
-  rdfs:range xsd:integer ;
-.
-ci:parameterValue2
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain ci:Parameter ;
-  rdfs:label "parameterValue2" ;
-  rdfs:range xsd:integer ;
-.
 ci:quantityUnitOfMeasure
   rdf:type owl:DatatypeProperty ;
   rdfs:domain ci:CostComponent ;
@@ -840,44 +735,4 @@ ci:unitPrice
   rdfs:domain ci:CostComponent ;
   rdfs:label "unit price" ;
   rdfs:range xsd:decimal ;
-.
-cterm:ObjectOfActivity
-  rdf:type owl:Class ;
-  rdfs:label "ObjectOfActivity" ;
-  owl:disjointWith cterm:ObjectOfCostComponent ;
-  owl:disjointWith cterm:ObjectOfWorkOfConstructionWork ;
-  owl:disjointWith cterm:ObjectOfWorkOfProductWork ;
-  owl:disjointWith cterm:ObjectOfWorkOfTemporaryWork ;
-.
-cterm:ObjectOfCostComponent
-  rdf:type owl:Class ;
-  rdfs:label "ObjectOfCostComponent" ;
-  owl:disjointWith cterm:ObjectOfActivity ;
-  owl:disjointWith cterm:ObjectOfWorkOfConstructionWork ;
-  owl:disjointWith cterm:ObjectOfWorkOfProductWork ;
-  owl:disjointWith cterm:ObjectOfWorkOfTemporaryWork ;
-.
-cterm:ObjectOfWorkOfConstructionWork
-  rdf:type owl:Class ;
-  rdfs:label "ObjectOfWorkOfConstructionWork" ;
-  owl:disjointWith cterm:ObjectOfActivity ;
-  owl:disjointWith cterm:ObjectOfCostComponent ;
-  owl:disjointWith cterm:ObjectOfWorkOfProductWork ;
-  owl:disjointWith cterm:ObjectOfWorkOfTemporaryWork ;
-.
-cterm:ObjectOfWorkOfProductWork
-  rdf:type owl:Class ;
-  rdfs:label "ObjectOfWorkOfProductWork" ;
-  owl:disjointWith cterm:ObjectOfActivity ;
-  owl:disjointWith cterm:ObjectOfCostComponent ;
-  owl:disjointWith cterm:ObjectOfWorkOfConstructionWork ;
-  owl:disjointWith cterm:ObjectOfWorkOfTemporaryWork ;
-.
-cterm:ObjectOfWorkOfTemporaryWork
-  rdf:type owl:Class ;
-  rdfs:label "ObjectOfWorkOfTemporaryWork" ;
-  owl:disjointWith cterm:ObjectOfActivity ;
-  owl:disjointWith cterm:ObjectOfCostComponent ;
-  owl:disjointWith cterm:ObjectOfWorkOfConstructionWork ;
-  owl:disjointWith cterm:ObjectOfWorkOfProductWork ;
 .
