@@ -2,96 +2,296 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix cterm: <http://www.w3.id.org/cterm#> .
 
-cterm:CategoryOfWorkOfConstructionWork a cterm:InsulationSystems;
-  rdfs:%20label "InsulationSystems"@en, "SistemiDiIsolamento"@it .
+cterm:InsulationSystems a cterm:CategoryOfWorkOfConstructionWork;
+  rdfs:label "InsulationSystems"@en, "SistemiDiIsolamento"@it .
 
-cterm:TypeOfWorkOfConstructionWork a cterm:Thermal, <http://www.w3.id.org/cterm#Thermal/Acoustic>,
-    cterm:Acoustic, cterm:Generic;
-  rdfs:%20label "Thermal"@en, "Termico"@it, "Thermal/Acoustic"@en, "Termico/Acustico"@it,
-    "Acoustic"@en, "Acustico"@it, "Generic"@en, "Generico"@it .
+cterm:Thermal a cterm:TypeOfWorkOfConstructionWork;
+  rdfs:label "Thermal"@en, "Termico"@it .
 
-cterm:Material a cterm:GenericMaterial, cterm:PolyurethaneFoamPlastic, cterm:ExtrudedPolystyrenePlastic,
-    cterm:ExpandedPolystyrenePlastic, cterm:MineralFiberGlassWool, cterm:MineralFiberRockWool,
-    cterm:ExpandedNaturalRockPerlite, cterm:MineralFiberWoodWool, cterm:HighDensityRockWool,
-    cterm:CellularGlass, cterm:ExpandedClay, cterm:ExpandedNaturalRockVermiculite, cterm:CorkVegetableFiber,
-    cterm:MineralizedWoodVegetableFiber, cterm:VulcanizedRubber, cterm:PolyethylenePlastic,
-    cterm:GenericRubber, cterm:ExpandedPolyethylenePlastic;
-  rdfs:%20label "GenericMaterial"@en, "MaterialeGenerico"@it, "PolyurethaneFoamPlastic(PIR)"@en,
-    "PlasticaPoliuretanoEspanso(PIR)"@it, "ExtrudedPolystyrenePlastic(XPS)"@en, "PlasticaPolistireneEstruso(XPS)"@it,
-    "ExpandedPolystyrenePlastic(EPS)"@en, "PlasticaPolistireneEspanso(EPS)"@it, "MineralFiberGlassWool"@en,
-    "FibraMineraleLanaDiVetro"@it, "MineralFiberRockWool"@en, "FibraMineraleLanaDiRoccia"@it,
-    "ExpandedNaturalRockPerlite"@en, "RocciaNaturalePerliteEspansa"@it, "MineralFiberWoodWool"@en,
-    "FibraMineraleLanaDiLegno"@it, "HighDensityRockWool"@en, "FibraMineraleLanaDiRocciaAdAltaDensità"@it,
-    "CellularGlass"@en, "VetroCellulare"@it, "ExpandedClay"@en, "ArgillaEspansa"@it, "ExpandedNaturalRockVermiculite"@en,
-    "RocciaNaturaleVermiculiteEspansa"@it, "CorkVegetableFiber"@en, "FibraVegetaleSughero"@it,
-    "MineralizedWoodVegetableFiber"@en, "FibraVegetaleLegnoMineralizzata"@it, "VulcanizedRubber"@en,
-    "GommaVulcanizzata"@it, "PolyethylenePlastic(PE)"@en, "PlasticaPolietilene(PE)"@it,
-    "GenericRubber"@en, "GommaGenerico"@it, "ExpandedPolyethylenePlastic"@en, "PlasticaPolietileneEspanso"@it .
+<http://www.w3.id.org/cterm#Thermal/Acoustic> a cterm:TypeOfWorkOfConstructionWork;
+  rdfs:label "Thermal/Acoustic"@en, "Termico/Acustico"@it .
 
-cterm:Finishing a cterm:GlassFiber, cterm:AluminumFoil, cterm:BitumenLayer, cterm:MineralizedWoodWool,
-    cterm:MineralizedFirWool, cterm:SmoothWithSkin, cterm:FilteringGeotextile, cterm:FirWool,
-    cterm:PolypropyleneNonwovenFabricLayer, cterm:PolypropyleneFilm, cterm:WoodWool, cterm:ReinforcedMembraneWithGlassFiber,
-    cterm:ReinforcedMembraneWithPolyesterNonwoven, cterm:ReinforcedSlateGlassFiberMembrane,
-    cterm:KraftPaper, cterm:Skin, cterm:Rough, cterm:PlasticFilm, cterm:Polyolefins, cterm:BituminizedFeltboard,
-    cterm:TreatedForOutdoors, cterm:GasImpermeableMultilayer, cterm:MineralizedGlassFiber,
-    cterm:BituminizedGlassFiber, cterm:Bitumen, cterm:CoatedWithRefractoryCeramicLayer,
-    cterm:CoatedWithSpecialCardboard;
-  rdfs:%20label "GlassFiber"@en, "VeloVetro"@it, "AluminumFoil"@en, "LaminaInAlluminio"@it,
-    "BitumenLayer"@en, "StratoDiBitume"@it, "MineralizedWoodWool"@en, "LanaDiLegnoMineralizzata"@it,
-    "MineralizedFirWool"@en, "LanaDiAbeteMineralizzata"@it, "SmoothWithSkin"@en, "LisciaConPelle"@it,
-    "FilteringGeotextile"@en, "GeotessileFiltrante"@it, "FirWool"@en, "LanaDiAbete"@it,
-    "PolypropyleneNonwovenFabricLayer"@en, "StratoDiTessutoNonTessutoPolipropilenico"@it,
-    "PolypropyleneFilm"@en, "PellicolaPolipropilenica"@it, "WoodWool"@en, "LanaDiLegno"@it,
-    "ReinforcedMembraneWithGlassFiber"@en, "MembranaArmataConVeloVetro"@it, "ReinforcedMembraneWithPolyesterNonwoven"@en,
-    "MembranaArmataConTNTDiPoliestere"@it, "ReinforcedSlateGlassFiberMembrane"@en, "MembranaArmataConVeloVetroArdesiata"@it,
-    "KraftPaper"@en, "CartaKraft"@it, "Skin"@en, "Pelle"@it, "Rough"@en, "Ruvida"@it,
-    "PlasticFilm"@en, "FilmPlastico"@it, "Polyolefins"@en, "Poliolefine"@it, "BituminizedFeltboard"@en,
-    "CartonfeltroBitumato"@it, "TreatedForOutdoors"@en, "TrattatoPerEsterni"@it, "GasImpermeableMultilayer"@en,
-    "MultistratoGasImpermeabile"@it, "MineralizedGlassFiber"@en, "VeloVetroMineralizzato"@it,
-    "BituminizedGlassFiber"@en, "VeloVetroBitumato"@it, "Bitumen"@en, "Bitume"@it, "CoatedWithRefractoryCeramicLayer"@en,
-    "RivestitoConStratoCeramicoRefrattario"@it, "CoatedWithSpecialCardboard"@en, "RivestitoDiCartoneSpeciale"@it .
+cterm:Acoustic a cterm:TypeOfWorkOfConstructionWork;
+  rdfs:label "Acoustic"@en, "Acustico"@it .
 
-cterm:DimensionParameter a cterm:Thickness, cterm:Granulometry, cterm:Width;
-  rdfs:%20label "Thickness"@en, "Spessore"@it, "Granulometry"@en, "Granulometria"@it,
-    "Width"@en, "Larghezza"@it .
+cterm:Generic a cterm:TypeOfWorkOfConstructionWork;
+  rdfs:label "Generic"@en, "Generico"@it .
 
-cterm:PerformanceParameter a cterm:ThermalConductivity, cterm:CompressionStrength,
-    cterm:FireReaction, cterm:10%25CompressionStrength, cterm:TensileStrengthPerpendicularToFaces;
-  rdfs:%20label "ThermalConductivity"@en, "ConducibilitàTermica(λ)"@it, "CompressionStrength"@en,
-    "ResistenzaACompressione"@it, "FireReaction"@en, "ReazioneAlFuoco"@it, "10%CompressionStrength"@en,
-    "ResistenzaACompressioneAl10%"@it, "TensileStrengthPerpendicularToFaces"@en, "ResistenzaATrazionePerpendicolareAlleFacce"@it .
+cterm:GenericMaterial a cterm:Material;
+  rdfs:label "GenericMaterial"@en, "MaterialeGenerico"@it .
 
-cterm:FunctionOfWorkOfConstructionWork a cterm:ScreedFormation, cterm:VentilatedCrawlSpaceFormation,
-    cterm:ThermalInsulation, cterm:Insulation, cterm:Ventilation;
-  rdfs:%20label "ScreedFormation"@en, "FormazioneMassetti"@it, "VentilatedCrawlSpaceFormation"@en,
-    "FormazioneVespaiAerati"@it, "ThermalInsulation"@en, "IsolamentoTermico"@it, "Insulation"@en,
-    "Coibentazione"@it, "Ventilation"@en, "Ventilazione"@it .
+cterm:PolyurethaneFoamPlastic a cterm:Material;
+  rdfs:label "PolyurethaneFoamPlastic(PIR)"@en, "PlasticaPoliuretanoEspanso(PIR)"@it .
 
-cterm:UseOfWorkOfConstructionWork a cterm:Walls, cterm:PitchedRoof, cterm:FlatRoof,
-    cterm:Attic, cterm:FlatRoofWithWalkableSurface, cterm:DriveableFlatRoof, cterm:GardenFlatRoof,
-    cterm:NonWalkableAttics, cterm:WalkableAttics, cterm:NonHeatedAttics, cterm:FloorSlab,
-    cterm:Underfloor, cterm:ExistingScreeds, cterm:MasonryLayer, cterm:PerimeterCavities,
-    cterm:VentilatedFacade, cterm:Stringcourses, cterm:Lintels, cterm:Facia, cterm:Pillars,
-    cterm:VerticalStructures, cterm:HorizontalStructures, cterm:UnderBoards, cterm:FalseCeilings,
-    cterm:VentilatedPitchedRoof, cterm:BasementFlooring, cterm:FloorsOverUnheatedAreas,
-    cterm:IntermediateFloors, cterm:Floors, cterm:Cavities, cterm:Ground, cterm:Screeds,
-    cterm:InternalWalls, cterm:BuriedWalls;
-  rdfs:%20label "Walls"@en, "Pareti"@it, "PitchedRoof"@en, "CoperturaAFalde"@it, "FlatRoof"@en,
-    "CoperturaPiana"@it, "Attic"@en, "Sottotetto"@it, "FlatRoofWithWalkableSurface"@en,
-    "CoperturaPianaConPavimentazionePedonabile"@it, "DriveableFlatRoof"@en, "CoperturaPianaCarrabile"@it,
-    "GardenFlatRoof"@en, "CoperturaPianaAGiardino"@it, "NonWalkableAttics"@en, "SottotettiNonPraticabili"@it,
-    "WalkableAttics"@en, "SottotettiPraticabili"@it, "NonHeatedAttics"@en, "SottotettiNonRiscaldati"@it,
-    "FloorSlab"@en, "Solaio"@it, "Underfloor"@en, "Sottopavimenti"@it, "ExistingScreeds"@en,
-    "MassettiEsistenti"@it, "MasonryLayer"@en, "StratoDiMuratura"@it, "PerimeterCavities"@en,
-    "IntercapediniPerimetrali"@it, "VentilatedFacade"@en, "FacciataVentilata"@it, "Stringcourses"@en,
-    "Cordoli"@it, "Lintels"@en, "Architravi"@it, "Facia"@en, "Velette"@it, "Pillars"@en,
-    "Pilastri"@it, "VerticalStructures"@en, "StruttureVerticali"@it, "HorizontalStructures"@en,
-    "StruttureOrizzontali"@it, "UnderBoards"@en, "SottoTavolati"@it, "FalseCeilings"@en,
-    "Controsoffitti"@it, "VentilatedPitchedRoof"@en, "CoperturaVentilataAFalde"@it, "BasementFlooring"@en,
-    "PavimentiPianoCantina"@it, "FloorsOverUnheatedAreas"@en, "SolaiSuZoneNonRiscaldate"@it,
-    "IntermediateFloors"@en, "SolaiIntermedi"@it, "Floors"@en, "Pavimenti"@it, "Cavities"@en,
-    "Intercapedini"@it, "Ground"@en, "Terreno"@it, "Screeds"@en, "Massetti"@it, "InternalWalls"@en,
-    "ParetiDallInterno"@it, "BuriedWalls"@en, "ParetiInterrate"@it .
+cterm:ExtrudedPolystyrenePlastic a cterm:Material;
+  rdfs:label "ExtrudedPolystyrenePlastic(XPS)"@en, "PlasticaPolistireneEstruso(XPS)"@it .
 
-cterm:AspectOfWorkOfConstructionWork a cterm:Panels;
-  rdfs:%20label "Panels"@en, "Pannelli"@it .
+cterm:ExpandedPolystyrenePlastic a cterm:Material;
+  rdfs:label "ExpandedPolystyrenePlastic(EPS)"@en, "PlasticaPolistireneEspanso(EPS)"@it .
+
+cterm:MineralFiberGlassWool a cterm:Material;
+  rdfs:label "MineralFiberGlassWool"@en, "FibraMineraleLanaDiVetro"@it .
+
+cterm:MineralFiberRockWool a cterm:Material;
+  rdfs:label "MineralFiberRockWool"@en, "FibraMineraleLanaDiRoccia"@it .
+
+cterm:ExpandedNaturalRockPerlite a cterm:Material;
+  rdfs:label "ExpandedNaturalRockPerlite"@en, "RocciaNaturalePerliteEspansa"@it .
+
+cterm:MineralFiberWoodWool a cterm:Material;
+  rdfs:label "MineralFiberWoodWool"@en, "FibraMineraleLanaDiLegno"@it .
+
+cterm:HighDensityRockWool a cterm:Material;
+  rdfs:label "HighDensityRockWool"@en, "FibraMineraleLanaDiRocciaAdAltaDensità"@it .
+
+cterm:CellularGlass a cterm:Material;
+  rdfs:label "CellularGlass"@en, "VetroCellulare"@it .
+
+cterm:ExpandedClay a cterm:Material;
+  rdfs:label "ExpandedClay"@en, "ArgillaEspansa"@it .
+
+cterm:ExpandedNaturalRockVermiculite a cterm:Material;
+  rdfs:label "ExpandedNaturalRockVermiculite"@en, "RocciaNaturaleVermiculiteEspansa"@it .
+
+cterm:CorkVegetableFiber a cterm:Material;
+  rdfs:label "CorkVegetableFiber"@en, "FibraVegetaleSughero"@it .
+
+cterm:MineralizedWoodVegetableFiber a cterm:Material;
+  rdfs:label "MineralizedWoodVegetableFiber"@en, "FibraVegetaleLegnoMineralizzata"@it .
+
+cterm:VulcanizedRubber a cterm:Material;
+  rdfs:label "VulcanizedRubber"@en, "GommaVulcanizzata"@it .
+
+cterm:PolyethylenePlastic a cterm:Material;
+  rdfs:label "PolyethylenePlastic(PE)"@en, "PlasticaPolietilene(PE)"@it .
+
+cterm:GenericRubber a cterm:Material;
+  rdfs:label "GenericRubber"@en, "GommaGenerico"@it .
+
+cterm:ExpandedPolyethylenePlastic a cterm:Material;
+  rdfs:label "ExpandedPolyethylenePlastic"@en, "PlasticaPolietileneEspanso"@it .
+
+cterm:GlassFiber a cterm:Finishing;
+  rdfs:label "GlassFiber"@en, "VeloVetro"@it .
+
+cterm:AluminumFoil a cterm:Finishing;
+  rdfs:label "AluminumFoil"@en, "LaminaInAlluminio"@it .
+
+cterm:BitumenLayer a cterm:Finishing;
+  rdfs:label "BitumenLayer"@en, "StratoDiBitume"@it .
+
+cterm:MineralizedWoodWool a cterm:Finishing;
+  rdfs:label "MineralizedWoodWool"@en, "LanaDiLegnoMineralizzata"@it .
+
+cterm:MineralizedFirWool a cterm:Finishing;
+  rdfs:label "MineralizedFirWool"@en, "LanaDiAbeteMineralizzata"@it .
+
+cterm:SmoothWithSkin a cterm:Finishing;
+  rdfs:label "SmoothWithSkin"@en, "LisciaConPelle"@it .
+
+cterm:FilteringGeotextile a cterm:Finishing;
+  rdfs:label "FilteringGeotextile"@en, "GeotessileFiltrante"@it .
+
+cterm:FirWool a cterm:Finishing;
+  rdfs:label "FirWool"@en, "LanaDiAbete"@it .
+
+cterm:PolypropyleneNonwovenFabricLayer a cterm:Finishing;
+  rdfs:label "PolypropyleneNonwovenFabricLayer"@en, "StratoDiTessutoNonTessutoPolipropilenico"@it .
+
+cterm:PolypropyleneFilm a cterm:Finishing;
+  rdfs:label "PolypropyleneFilm"@en, "PellicolaPolipropilenica"@it .
+
+cterm:WoodWool a cterm:Finishing;
+  rdfs:label "WoodWool"@en, "LanaDiLegno"@it .
+
+cterm:ReinforcedMembraneWithGlassFiber a cterm:Finishing;
+  rdfs:label "ReinforcedMembraneWithGlassFiber"@en, "MembranaArmataConVeloVetro"@it .
+
+cterm:ReinforcedMembraneWithPolyesterNonwoven a cterm:Finishing;
+  rdfs:label "ReinforcedMembraneWithPolyesterNonwoven"@en, "MembranaArmataConTNTDiPoliestere"@it .
+
+cterm:ReinforcedSlateGlassFiberMembrane a cterm:Finishing;
+  rdfs:label "ReinforcedSlateGlassFiberMembrane"@en, "MembranaArmataConVeloVetroArdesiata"@it .
+
+cterm:KraftPaper a cterm:Finishing;
+  rdfs:label "KraftPaper"@en, "CartaKraft"@it .
+
+cterm:Skin a cterm:Finishing;
+  rdfs:label "Skin"@en, "Pelle"@it .
+
+cterm:Rough a cterm:Finishing;
+  rdfs:label "Rough"@en, "Ruvida"@it .
+
+cterm:PlasticFilm a cterm:Finishing;
+  rdfs:label "PlasticFilm"@en, "FilmPlastico"@it .
+
+cterm:Polyolefins a cterm:Finishing;
+  rdfs:label "Polyolefins"@en, "Poliolefine"@it .
+
+cterm:BituminizedFeltboard a cterm:Finishing;
+  rdfs:label "BituminizedFeltboard"@en, "CartonfeltroBitumato"@it .
+
+cterm:TreatedForOutdoors a cterm:Finishing;
+  rdfs:label "TreatedForOutdoors"@en, "TrattatoPerEsterni"@it .
+
+cterm:GasImpermeableMultilayer a cterm:Finishing;
+  rdfs:label "GasImpermeableMultilayer"@en, "MultistratoGasImpermeabile"@it .
+
+cterm:MineralizedGlassFiber a cterm:Finishing;
+  rdfs:label "MineralizedGlassFiber"@en, "VeloVetroMineralizzato"@it .
+
+cterm:BituminizedGlassFiber a cterm:Finishing;
+  rdfs:label "BituminizedGlassFiber"@en, "VeloVetroBitumato"@it .
+
+cterm:Bitumen a cterm:Finishing;
+  rdfs:label "Bitumen"@en, "Bitume"@it .
+
+cterm:CoatedWithRefractoryCeramicLayer a cterm:Finishing;
+  rdfs:label "CoatedWithRefractoryCeramicLayer"@en, "RivestitoConStratoCeramicoRefrattario"@it .
+
+cterm:CoatedWithSpecialCardboard a cterm:Finishing;
+  rdfs:label "CoatedWithSpecialCardboard"@en, "RivestitoDiCartoneSpeciale"@it .
+
+cterm:Thickness a cterm:DimensionParameter;
+  rdfs:label "Thickness"@en, "Spessore"@it .
+
+cterm:Granulometry a cterm:DimensionParameter;
+  rdfs:label "Granulometry"@en, "Granulometria"@it .
+
+cterm:Width a cterm:DimensionParameter;
+  rdfs:label "Width"@en, "Larghezza"@it .
+
+cterm:ThermalConductivity a cterm:PerformanceParameter;
+  rdfs:label "ThermalConductivity"@en, "ConducibilitàTermica(λ)"@it .
+
+cterm:CompressionStrength a cterm:PerformanceParameter;
+  rdfs:label "CompressionStrength"@en, "ResistenzaACompressione"@it .
+
+cterm:FireReaction a cterm:PerformanceParameter;
+  rdfs:label "FireReaction"@en, "ReazioneAlFuoco"@it .
+
+cterm:10%25CompressionStrength a cterm:PerformanceParameter;
+  rdfs:label "10%CompressionStrength"@en, "ResistenzaACompressioneAl10%"@it .
+
+cterm:TensileStrengthPerpendicularToFaces a cterm:PerformanceParameter;
+  rdfs:label "TensileStrengthPerpendicularToFaces"@en, "ResistenzaATrazionePerpendicolareAlleFacce"@it .
+
+cterm:ScreedFormation a cterm:FunctionOfWorkOfConstructionWork;
+  rdfs:label "ScreedFormation"@en, "FormazioneMassetti"@it .
+
+cterm:VentilatedCrawlSpaceFormation a cterm:FunctionOfWorkOfConstructionWork;
+  rdfs:label "VentilatedCrawlSpaceFormation"@en, "FormazioneVespaiAerati"@it .
+
+cterm:ThermalInsulation a cterm:FunctionOfWorkOfConstructionWork;
+  rdfs:label "ThermalInsulation"@en, "IsolamentoTermico"@it .
+
+cterm:Insulation a cterm:FunctionOfWorkOfConstructionWork;
+  rdfs:label "Insulation"@en, "Coibentazione"@it .
+
+cterm:Ventilation a cterm:FunctionOfWorkOfConstructionWork;
+  rdfs:label "Ventilation"@en, "Ventilazione"@it .
+
+cterm:Walls a cterm:UseOfWorkOfConstructionWork;
+  rdfs:label "Walls"@en, "Pareti"@it .
+
+cterm:PitchedRoof a cterm:UseOfWorkOfConstructionWork;
+  rdfs:label "PitchedRoof"@en, "CoperturaAFalde"@it .
+
+cterm:FlatRoof a cterm:UseOfWorkOfConstructionWork;
+  rdfs:label "FlatRoof"@en, "CoperturaPiana"@it .
+
+cterm:Attic a cterm:UseOfWorkOfConstructionWork;
+  rdfs:label "Attic"@en, "Sottotetto"@it .
+
+cterm:FlatRoofWithWalkableSurface a cterm:UseOfWorkOfConstructionWork;
+  rdfs:label "FlatRoofWithWalkableSurface"@en, "CoperturaPianaConPavimentazionePedonabile"@it .
+
+cterm:DriveableFlatRoof a cterm:UseOfWorkOfConstructionWork;
+  rdfs:label "DriveableFlatRoof"@en, "CoperturaPianaCarrabile"@it .
+
+cterm:GardenFlatRoof a cterm:UseOfWorkOfConstructionWork;
+  rdfs:label "GardenFlatRoof"@en, "CoperturaPianaAGiardino"@it .
+
+cterm:NonWalkableAttics a cterm:UseOfWorkOfConstructionWork;
+  rdfs:label "NonWalkableAttics"@en, "SottotettiNonPraticabili"@it .
+
+cterm:WalkableAttics a cterm:UseOfWorkOfConstructionWork;
+  rdfs:label "WalkableAttics"@en, "SottotettiPraticabili"@it .
+
+cterm:NonHeatedAttics a cterm:UseOfWorkOfConstructionWork;
+  rdfs:label "NonHeatedAttics"@en, "SottotettiNonRiscaldati"@it .
+
+cterm:FloorSlab a cterm:UseOfWorkOfConstructionWork;
+  rdfs:label "FloorSlab"@en, "Solaio"@it .
+
+cterm:Underfloor a cterm:UseOfWorkOfConstructionWork;
+  rdfs:label "Underfloor"@en, "Sottopavimenti"@it .
+
+cterm:ExistingScreeds a cterm:UseOfWorkOfConstructionWork;
+  rdfs:label "ExistingScreeds"@en, "MassettiEsistenti"@it .
+
+cterm:MasonryLayer a cterm:UseOfWorkOfConstructionWork;
+  rdfs:label "MasonryLayer"@en, "StratoDiMuratura"@it .
+
+cterm:PerimeterCavities a cterm:UseOfWorkOfConstructionWork;
+  rdfs:label "PerimeterCavities"@en, "IntercapediniPerimetrali"@it .
+
+cterm:VentilatedFacade a cterm:UseOfWorkOfConstructionWork;
+  rdfs:label "VentilatedFacade"@en, "FacciataVentilata"@it .
+
+cterm:Stringcourses a cterm:UseOfWorkOfConstructionWork;
+  rdfs:label "Stringcourses"@en, "Cordoli"@it .
+
+cterm:Lintels a cterm:UseOfWorkOfConstructionWork;
+  rdfs:label "Lintels"@en, "Architravi"@it .
+
+cterm:Facia a cterm:UseOfWorkOfConstructionWork;
+  rdfs:label "Facia"@en, "Velette"@it .
+
+cterm:Pillars a cterm:UseOfWorkOfConstructionWork;
+  rdfs:label "Pillars"@en, "Pilastri"@it .
+
+cterm:VerticalStructures a cterm:UseOfWorkOfConstructionWork;
+  rdfs:label "VerticalStructures"@en, "StruttureVerticali"@it .
+
+cterm:HorizontalStructures a cterm:UseOfWorkOfConstructionWork;
+  rdfs:label "HorizontalStructures"@en, "StruttureOrizzontali"@it .
+
+cterm:UnderBoards a cterm:UseOfWorkOfConstructionWork;
+  rdfs:label "UnderBoards"@en, "SottoTavolati"@it .
+
+cterm:FalseCeilings a cterm:UseOfWorkOfConstructionWork;
+  rdfs:label "FalseCeilings"@en, "Controsoffitti"@it .
+
+cterm:VentilatedPitchedRoof a cterm:UseOfWorkOfConstructionWork;
+  rdfs:label "VentilatedPitchedRoof"@en, "CoperturaVentilataAFalde"@it .
+
+cterm:BasementFlooring a cterm:UseOfWorkOfConstructionWork;
+  rdfs:label "BasementFlooring"@en, "PavimentiPianoCantina"@it .
+
+cterm:FloorsOverUnheatedAreas a cterm:UseOfWorkOfConstructionWork;
+  rdfs:label "FloorsOverUnheatedAreas"@en, "SolaiSuZoneNonRiscaldate"@it .
+
+cterm:IntermediateFloors a cterm:UseOfWorkOfConstructionWork;
+  rdfs:label "IntermediateFloors"@en, "SolaiIntermedi"@it .
+
+cterm:Floors a cterm:UseOfWorkOfConstructionWork;
+  rdfs:label "Floors"@en, "Pavimenti"@it .
+
+cterm:Cavities a cterm:UseOfWorkOfConstructionWork;
+  rdfs:label "Cavities"@en, "Intercapedini"@it .
+
+cterm:Ground a cterm:UseOfWorkOfConstructionWork;
+  rdfs:label "Ground"@en, "Terreno"@it .
+
+cterm:Screeds a cterm:UseOfWorkOfConstructionWork;
+  rdfs:label "Screeds"@en, "Massetti"@it .
+
+cterm:InternalWalls a cterm:UseOfWorkOfConstructionWork;
+  rdfs:label "InternalWalls"@en, "ParetiDallInterno"@it .
+
+cterm:BuriedWalls a cterm:UseOfWorkOfConstructionWork;
+  rdfs:label "BuriedWalls"@en, "ParetiInterrate"@it .
+
+cterm:Panels a cterm:AspectOfWorkOfConstructionWork;
+  rdfs:label "Panels"@en, "Pannelli"@it .
