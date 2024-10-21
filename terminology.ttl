@@ -15,7 +15,6 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix qudt: <http://qudt.org/schema/qudt/> .
 
 <http://w3id.org/cterm>
   rdf:type owl:Ontology ;
@@ -244,6 +243,26 @@ cterm:FamilyOfWork
   owl:disjointWith cterm:FamilyOfActivity ;
   owl:disjointWith cterm:FamilyOfCostComponent ;
 .
+cterm:Finishing
+  rdf:type owl:Class ;
+  rdfs:label "Finishing" ;
+  rdfs:subClassOf cterm:Terminology ;
+.
+cterm:FinishingOfWorkOfConstructionWork
+  rdf:type owl:Class ;
+  rdfs:label "FinishingOfWorkOfConstructionWork" ;
+  rdfs:subClassOf cterm:Finishing ;
+.
+cterm:FinishingOfWorkOfProductWork
+  rdf:type owl:Class ;
+  rdfs:label "FinishingOfWorkOfProductWork" ;
+  rdfs:subClassOf cterm:Finishing ;
+.
+cterm:FinishingOfWorkOfTemporaryWork
+  rdf:type owl:Class ;
+  rdfs:label "FinishingOfWorkOfTemporaryWork" ;
+  rdfs:subClassOf cterm:Finishing ;
+.
 cterm:FireSafety
   rdf:type owl:NamedIndividual ;
   rdf:type cterm:FamilyOfWork ;
@@ -297,6 +316,11 @@ cterm:FunctionOfWorkOfTemporaryWork
   owl:disjointWith cterm:FunctionOfActivity ;
   owl:disjointWith cterm:FunctionOfWorkOfConstructionWork ;
   owl:disjointWith cterm:FunctionOfWorkOfProductWork ;
+.
+cterm:Furnishing
+  rdf:type owl:Class ;
+  rdfs:label "Furnishing" ;
+  rdfs:subClassOf cterm:Terminology ;
 .
 cterm:Furniture
   rdf:type owl:NamedIndividual ;
@@ -414,12 +438,6 @@ cterm:ObjectOfWorkOfTemporaryWork
   owl:disjointWith cterm:ObjectOfCostComponent ;
   owl:disjointWith cterm:ObjectOfWorkOfConstructionWork ;
   owl:disjointWith cterm:ObjectOfWorkOfProductWork ;
-.
-cterm:hasUnit
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain cterm:Parameter ;
-  rdfs:label "hasUnit" ;
-  rdfs:range qudt:Unit ;
 .
 cterm:Parameter
   rdf:type owl:Class ;
@@ -723,6 +741,13 @@ cterm:hasFamily
   rdfs:label "hasFamily" ;
   rdfs:range cterm:Family ;
 .
+cterm:hasFinishing
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain ci:Work ;
+  rdfs:domain cr:MaterialResource ;
+  rdfs:label "hasFinishing" ;
+  rdfs:range cterm:Finishing ;
+.
 cterm:hasFunction
   rdf:type owl:ObjectProperty ;
   rdfs:domain ci:Activity ;
@@ -731,6 +756,12 @@ cterm:hasFunction
   rdfs:domain cr:MaterialResource ;
   rdfs:label "hasFunction" ;
   rdfs:range cterm:Function ;
+.
+cterm:hasFurnishing
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain cr:MaterialResource ;
+  rdfs:label "hasFurnishing" ;
+  rdfs:range cterm:Furnishing ;
 .
 cterm:hasGender
   rdf:type owl:ObjectProperty ;
@@ -808,6 +839,12 @@ cterm:hasType
   rdfs:label "hasType" ;
   rdfs:range cterm:Type ;
 .
+cterm:hasUnit
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain cterm:Parameter ;
+  rdfs:label "hasUnit" ;
+  rdfs:range qudt:Unit ;
+.
 cterm:hasUse
   rdf:type owl:ObjectProperty ;
   rdfs:domain ci:Activity ;
@@ -870,43 +907,4 @@ cterm:standardYear
   rdfs:domain cterm:Standard ;
   rdfs:label "standardYear" ;
   rdfs:range xsd:integer ;
-.
-
-cterm:hasFinishing
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain ci:Work ;
-    rdfs:domain cr:MaterialResource ;
-  rdfs:label "hasFinishing" ;
-  rdfs:range cterm:Finishing ;
-.
-cterm:hasFurnishing
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain cr:MaterialResource ;
-  rdfs:label "hasFurnishing" ;
-  rdfs:range cterm:Furnishing ;
-.
-cterm:Furnishing
-  rdf:type owl:Class ;
-  rdfs:label "Furnishing" ;
-  rdfs:subClassOf owl:Thing ;
-.
-cterm:Finishing
-  rdf:type owl:Class ;
-  rdfs:label "Finishing" ;
-  rdfs:subClassOf owl:Thing ;
-.
-cterm:FinishingOfWorkOfConstructionWork
-  rdf:type owl:Class ;
-  rdfs:label "FinishingOfWorkOfConstructionWork" ;
-  rdfs:subClassOf cterm:Finishing ;
-.
-cterm:FinishingOfWorkOfProductWork
-  rdf:type owl:Class ;
-  rdfs:label "FinishingOfWorkOfProductWork" ;
-  rdfs:subClassOf cterm:Finishing ;
-.
-cterm:FinishingOfWorkOfTemporaryWork
-  rdf:type owl:Class ;
-  rdfs:label "FinishingOfWorkOfTemporaryWork" ;
-  rdfs:subClassOf cterm:Finishing ;
 .
