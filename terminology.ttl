@@ -30,16 +30,6 @@
     ] ;
   dc:contributor [
       rdf:type schema:Person ;
-      schema:email <mailto:claudio.mirarchi@polimi.it> ;
-      schema:identifier <https://orcid.org/0000-0002-9288-8662> ;
-      schema:memberOf [
-          schema:identifier <https://www.dabc.polimi.it/persona/claudio-mirarchi/> ;
-          schema:name "Politecnico di Milano, Dipartimento ABC" ;
-        ] ;
-      schema:name "Claudio Mirarchi" ;
-    ] ;
-  dc:contributor [
-      rdf:type schema:Person ;
       schema:email <mailto:philipp.hagedorn-n6v@rub.de> ;
       schema:identifier <https://orcid.org/0000-0002-6249-243X> ;
       schema:memberOf [
@@ -48,27 +38,8 @@
         ] ;
       schema:name "Philipp Hagedorn" ;
     ] ;
-  dc:contributor [
-      rdf:type schema:Person ;
-      schema:email <mailto:philipp.hagedorn-n6v@rub.de> ;
-      schema:identifier <https://orcid.org/0000-0002-6249-243X> ;
-      schema:memberOf [
-          schema:identifier <https://www.inf.bi.ruhr-uni-bochum.de/iib/lehrstuhl/mitarbeiter/philipp_hagedorn.html.en> ;
-          schema:name "Ruhr University Bochum, Computing in Engineering" ;
-        ] ;
-      schema:name "Philipp Hagedorn" ;
-    ] ;
-  dc:created "2024-12-12"^^xsd:date ;
-  dc:creator [
-      rdf:type schema:Person ;
-      schema:email <mailto:jacopo.cassandro@polimi.it> ;
-      schema:identifier <https://orcid.org/0000-0002-1487-8178> ;
-      schema:memberOf [
-          schema:identifier <https://www.dabc.polimi.it/persona/jacopo-cassandro/> ;
-          schema:name "Politecnico di Milano" ;
-        ] ;
-      schema:name "Jacopo Cassandro" ;
-    ] ;
+  dc:created "2024-10-12"^^xsd:date ;
+  dc:modified "2024-10-22"^^xsd:date ;
   dc:creator [
       rdf:type schema:Person ;
       schema:email <mailto:jacopo.cassandro@polimi.it> ;

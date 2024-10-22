@@ -37,7 +37,8 @@
         ] ;
       schema:name "Philipp Hagedorn" ;
     ] ;
-  dc:created "2024-12-12"^^xsd:date ;
+  dc:created "2024-10-12"^^xsd:date ;
+  dc:modified "2024-10-22"^^xsd:date ;
   dc:creator [
       rdf:type schema:Person ;
       schema:email <mailto:jacopo.cassandro@polimi.it> ;

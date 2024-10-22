@@ -19,11 +19,11 @@
   rdf:type owl:Ontology ;
   dc:contributor [
       rdf:type schema:Person ;
-      schema:email <mailto:philipp.hagedorn-n6v@rub.de> ;
-      schema:identifier <https://orcid.org/0000-0002-6249-243X> ;
+      schema:email <mailto:claudio.mirarchi@polimi.it> ;
+      schema:identifier <https://orcid.org/0000-0002-9288-8662> ;
       schema:memberOf [
-          schema:identifier <https://www.inf.bi.ruhr-uni-bochum.de/iib/lehrstuhl/mitarbeiter/philipp_hagedorn.html.en> ;
-          schema:name "Politecnico di Milano" ;
+          schema:identifier <https://www.dabc.polimi.it/persona/claudio-mirarchi/> ;
+          schema:name "Politecnico di Milano, Dipartimento ABC" ;
         ] ;
       schema:name "Claudio Mirarchi" ;
     ] ;
@@ -37,13 +37,14 @@
         ] ;
       schema:name "Philipp Hagedorn" ;
     ] ;
-  dc:created "2024-12-12"^^xsd:date ;
+  dc:created "2024-10-12"^^xsd:date ;
+  dc:modified "2024-10-22"^^xsd:date ;
   dc:creator [
       rdf:type schema:Person ;
       schema:email <mailto:jacopo.cassandro@polimi.it> ;
-      schema:identifier <https://orcid.org/0000-0001-6058-7614> ;
+      schema:identifier <https://orcid.org/0000-0002-1487-8178> ;
       schema:memberOf [
-          schema:identifier <https://www.inf.bi.ruhr-uni-bochum.de/iib/lehrstuhl/mitarbeiter/sven_zentgraf.html.en> ;
+          schema:identifier <https://www.dabc.polimi.it/persona/jacopo-cassandro/> ;
           schema:name "Politecnico di Milano" ;
         ] ;
       schema:name "Jacopo Cassandro" ;
@@ -51,8 +52,7 @@
   dc:description "The Cost Item (CI) Ontology is based on concepts and principles of construction project cost estimation an can be used together with the Construction Resources (CR) ontology and can use terminology from the Construction Terminology (CTERM)."@en ;
   dc:license <https://creativecommons.org/licenses/by/4.0/> ;
   dc:rights "Copyright 2024 by DABC, PoliMi" ;
-  dc:source <https://linkedbuildingdata.net/ldac2024/files/papers/LDAC2024_Camera_8.pdf> ;
-  dc:title "The Cost Item (CI) Ontology"@en ;
+    dc:title "The Cost Item (CI) Ontology"@en ;
   vann:preferredNamespacePrefix "ci" ;
   vann:preferredNamespaceUri <http://w3id.org/ci#> ;
   owl:imports <http://w3id.org/cr> ;
