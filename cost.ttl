@@ -19,11 +19,11 @@
   rdf:type owl:Ontology ;
   dc:contributor [
       rdf:type schema:Person ;
-      schema:email <mailto:claudio.mirarchi@polimi.it> ;
-      schema:identifier <https://orcid.org/0000-0002-9288-8662> ;
+      schema:email <mailto:philipp.hagedorn-n6v@rub.de> ;
+      schema:identifier <https://orcid.org/0000-0002-6249-243X> ;
       schema:memberOf [
-          schema:identifier <https://www.dabc.polimi.it/persona/claudio-mirarchi/> ;
-          schema:name "Politecnico di Milano, Dipartimento ABC" ;
+          schema:identifier <https://www.inf.bi.ruhr-uni-bochum.de/iib/lehrstuhl/mitarbeiter/philipp_hagedorn.html.en> ;
+          schema:name "Politecnico di Milano" ;
         ] ;
       schema:name "Claudio Mirarchi" ;
     ] ;
@@ -37,14 +37,13 @@
         ] ;
       schema:name "Philipp Hagedorn" ;
     ] ;
-  dc:created "2024-10-12"^^xsd:date ;
-  dc:modified "2024-10-22"^^xsd:date ;
+  dc:created "2024-12-12"^^xsd:date ;
   dc:creator [
       rdf:type schema:Person ;
       schema:email <mailto:jacopo.cassandro@polimi.it> ;
-      schema:identifier <https://orcid.org/0000-0002-1487-8178> ;
+      schema:identifier <https://orcid.org/0000-0001-6058-7614> ;
       schema:memberOf [
-          schema:identifier <https://www.dabc.polimi.it/persona/jacopo-cassandro/> ;
+          schema:identifier <https://www.inf.bi.ruhr-uni-bochum.de/iib/lehrstuhl/mitarbeiter/sven_zentgraf.html.en> ;
           schema:name "Politecnico di Milano" ;
         ] ;
       schema:name "Jacopo Cassandro" ;
@@ -52,7 +51,8 @@
   dc:description "The Cost Item (CI) Ontology is based on concepts and principles of construction project cost estimation an can be used together with the Construction Resources (CR) ontology and can use terminology from the Construction Terminology (CTERM)."@en ;
   dc:license <https://creativecommons.org/licenses/by/4.0/> ;
   dc:rights "Copyright 2024 by DABC, PoliMi" ;
-    dc:title "The Cost Item (CI) Ontology"@en ;
+  dc:source <https://linkedbuildingdata.net/ldac2024/files/papers/LDAC2024_Camera_8.pdf> ;
+  dc:title "The Cost Item (CI) Ontology"@en ;
   vann:preferredNamespacePrefix "ci" ;
   vann:preferredNamespaceUri <http://w3id.org/ci#> ;
   owl:imports <http://w3id.org/cr> ;
@@ -248,12 +248,35 @@ ci:CostItem
   rdfs:subClassOf owl:Thing ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
+      owl:onDataRange xsd:decimal ;
+      owl:onProperty ci:unitPrice ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty cr:code ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty cr:descriptionDetail ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty cr:descriptionGeneral ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
       owl:onProperty ci:hasPart ;
       owl:someValuesFrom ci:CostComponent ;
     ] ;
   owl:equivalentClass ci:ProductionResult ;
 .
-
 ci:ProductWork
   rdf:type owl:Class ;
   rdfs:label "ProductWork" ;
@@ -423,14 +446,14 @@ ci:WorkOfConstructionWork
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
-      owl:onClass cterm:FinishingOfWorkOfConstructionWork ;
-      owl:onProperty cterm:hasFinishing ;
+      owl:onClass cterm:AspectOfWorkOfConstructionWork ;
+      owl:onProperty cterm:hasAspect ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
-      owl:onClass cterm:AspectOfWorkOfConstructionWork ;
-      owl:onProperty cterm:hasAspect ;
+      owl:onClass cterm:FinishingOfWorkOfConstructionWork ;
+      owl:onProperty cterm:hasFinishing ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -482,14 +505,14 @@ ci:WorkOfProductWork
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
-      owl:onClass cterm:FinishingOfWorkOfProductWork ;
-      owl:onProperty cterm:hasFinishing ;
+      owl:onClass cterm:AspectOfWorkOfProductWork ;
+      owl:onProperty cterm:hasAspect ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
-      owl:onClass cterm:AspectOfWorkOfProductWork ;
-      owl:onProperty cterm:hasAspect ;
+      owl:onClass cterm:FinishingOfWorkOfProductWork ;
+      owl:onProperty cterm:hasFinishing ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -525,14 +548,14 @@ ci:WorkOfTemporaryWork
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
-      owl:onClass cterm:FinishingOfWorkOfTemporaryWork ;
-      owl:onProperty cterm:hasFinishing ;
+      owl:onClass cterm:AspectOfWorkOfTemporaryWork ;
+      owl:onProperty cterm:hasAspect ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
-      owl:onClass cterm:AspectOfWorkOfTemporaryWork ;
-      owl:onProperty cterm:hasAspect ;
+      owl:onClass cterm:FinishingOfWorkOfTemporaryWork ;
+      owl:onProperty cterm:hasFinishing ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;

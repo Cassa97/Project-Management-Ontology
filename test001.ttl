@@ -1,0 +1,20 @@
+# baseURI: http://example.org/test001
+# imports: http://w3id.org/cr
+
+@prefix : <http://example.org/test001#> .
+@prefix ci: <https://w3id.org/ci#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix unnamed: <http://example.org/test001#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/test001>
+  rdf:type owl:Ontology ;
+  owl:imports <http://w3id.org/cr> ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+unnamed:Foundation
+  rdf:type ci:CostItem ;
+  rdf:type ci:ProductionResult ;
+.
