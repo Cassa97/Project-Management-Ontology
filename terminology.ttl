@@ -60,27 +60,6 @@
   owl:imports <http://w3id.org/cr> ;
   owl:versionInfo "0.1" ;
 .
-<https://w3id.org/cterm#3DBraidedRope>
-  rdf:type owl:NamedIndividual ;
-  rdf:type cterm:AspectOfMaterial ;
-  rdfs:label "3D Braided Rope"@en ;
-  rdfs:label "Dreidimensionales Geflechtseil"@de ;
-  rdfs:label "tridimensionale a funi intrecciate"@it ;
-.
-<https://w3id.org/cterm#5Holes>
-  rdf:type owl:NamedIndividual ;
-  rdf:type cterm:AspectOfMaterial ;
-  rdfs:label "5 Holes"@en ;
-  rdfs:label "5 Löcher"@de ;
-  rdfs:label "5 fori"@it ;
-.
-<https://w3id.org/cterm#6Strands>
-  rdf:type owl:NamedIndividual ;
-  rdf:type cterm:AspectOfMaterial ;
-  rdfs:label "6 Litzen"@de ;
-  rdfs:label "6 Strands"@en ;
-  rdfs:label "6 trefoli"@it ;
-.
 cterm:AboveGround
   rdf:type owl:NamedIndividual ;
   rdf:type cterm:AspectOfWorkOfConstructionWork ;
@@ -94,7 +73,6 @@ cterm:Accessories
   rdfs:label "Accessori"@it ;
   rdfs:label "Accessories"@en ;
   rdfs:label "Zubehör"@de ;
-  rdfs:label "accessori"@it ;
 .
 cterm:Acoustic
   rdf:type owl:NamedIndividual ;
@@ -119,13 +97,12 @@ cterm:Aggregate
 .
 cterm:Agriculture
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:FamilyOfLabor ;
+  rdf:type cterm:FamilyOfLabour ;
   rdf:type cterm:ObjectOfCostComponent ;
   rdfs:label "Agriculture"@en ;
   rdfs:label "Colture/Agricoltura"@it ;
   rdfs:label "Landwirtschaft"@de ;
   rdfs:label "Nutzpflanzen/Landwirtschaft"@de ;
-  rdfs:label "agricoltura"@it ;
 .
 cterm:AgroForestry
   rdf:type owl:NamedIndividual ;
@@ -178,11 +155,9 @@ cterm:Application
 cterm:Architecture
   rdf:type owl:NamedIndividual ;
   rdf:type cterm:FamilyOfWork ;
-  rdf:type cterm:FamilyOfWorkOfConstructionWork ;
   rdfs:label "Architecture"@en ;
   rdfs:label "Architektur"@de ;
   rdfs:label "Architettura"@it ;
-  rdfs:label "architettura"@it ;
 .
 cterm:Arm
   rdf:type owl:NamedIndividual ;
@@ -413,7 +388,7 @@ cterm:Brush
 .
 cterm:Building
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:CategoryOfLabor ;
+  rdf:type cterm:CategoryOfLabour ;
   rdfs:label "Bau"@de ;
   rdfs:label "Building"@en ;
   rdfs:label "edile"@it ;
@@ -586,7 +561,7 @@ cterm:Chemical
 .
 cterm:ChemicalWorkers
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:CategoryOfLabor ;
+  rdf:type cterm:CategoryOfLabour ;
   rdfs:label "Chemical Workers"@en ;
   rdfs:label "Chemiearbeiter"@de ;
   rdfs:label "chimici"@it ;
@@ -850,12 +825,11 @@ cterm:Consolidation
 cterm:Construction
   rdf:type owl:NamedIndividual ;
   rdf:type cterm:FamilyOfCostComponent ;
-  rdf:type cterm:FamilyOfLabor ;
+  rdf:type cterm:FamilyOfLabour ;
   rdfs:label "Bauwerk"@de ;
-  rdfs:label "Bauwesen"@de ;
   rdfs:label "Construction"@en ;
+  rdfs:label "Costruzioni"@it ;
   rdfs:label "Edilizia"@it ;
-  rdfs:label "costruzioni"@it ;
 .
 cterm:ConstructionSiteFences
   rdf:type owl:NamedIndividual ;
@@ -866,7 +840,7 @@ cterm:ConstructionSiteFences
 .
 cterm:ConstructionWorkers
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:CategoryOfLabor ;
+  rdf:type cterm:CategoryOfLabour ;
   rdfs:label "Bauarbeiter"@de ;
   rdfs:label "Construction Workers"@en ;
   rdfs:label "edili"@it ;
@@ -1005,7 +979,7 @@ cterm:Distribution
   rdfs:label "Distribuzione"@it ;
   rdfs:label "Verteilung"@de ;
 .
-<https://w3id.org/cterm#Diwdag%28ConstructionTechnique%29>
+cterm:Diwdag
   rdf:type owl:NamedIndividual ;
   rdf:type cterm:TypeOfMaterial ;
   rdfs:label "Diwdag (Bauweise)"@de ;
@@ -1126,7 +1100,6 @@ cterm:Environment
 .
 cterm:Ergonomics
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:FamilyOfWorkOfTemporaryWork ;
   rdfs:label "Ergonomics"@en ;
   rdfs:label "Ergotechnik"@de ;
   rdfs:label "ergotecnica"@it ;
@@ -1284,7 +1257,7 @@ cterm:FamilyOfMaterial
 cterm:FamilyOfWork
   rdf:type owl:Class ;
   rdfs:label "Family of Work" ;
-  rdfs:subClassOf cterm:Family ;
+  rdfs:subClassOf cterm:Function ;
   owl:disjointWith cterm:FamilyOfActivity ;
   owl:disjointWith cterm:FamilyOfCostComponent ;
 .
@@ -1429,6 +1402,13 @@ cterm:FirstCoat
   rdfs:label "Erster Anstrich"@de ;
   rdfs:label "First Coat"@en ;
   rdfs:label "Prima Mano"@it ;
+.
+cterm:FiveHoles
+  rdf:type owl:NamedIndividual ;
+  rdf:type cterm:AspectOfMaterial ;
+  rdfs:label "5 Holes"@en ;
+  rdfs:label "5 Löcher"@de ;
+  rdfs:label "5 fori"@it ;
 .
 cterm:Fixed
   rdf:type owl:NamedIndividual ;
@@ -1576,7 +1556,7 @@ cterm:ForRemanipulationAndReuseForHydraulicAdjustment
 .
 cterm:Forestry
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:CategoryOfLabor ;
+  rdf:type cterm:CategoryOfLabour ;
   rdfs:label "Forestry"@en ;
   rdfs:label "Forstwirtschaft"@de ;
   rdfs:label "forestale"@it ;
@@ -1889,7 +1869,6 @@ cterm:Green_Forest
 cterm:GreeneryandLandscaping
   rdf:type owl:NamedIndividual ;
   rdf:type cterm:FamilyOfMaterial ;
-  rdf:type cterm:FamilyOfWorkOfConstructionWork ;
   rdfs:label "Greenery and Landscaping"@en ;
   rdfs:label "Grünanlagen und Landschaftsbau"@de ;
   rdfs:label "verde e paesaggio"@it ;
@@ -1905,11 +1884,9 @@ cterm:Handling
   rdf:type owl:NamedIndividual ;
   rdf:type cterm:FamilyOfEquipment ;
   rdf:type cterm:ObjectOfActivity ;
-  rdfs:label "Bewegung"@de ;
   rdfs:label "Bewegungen"@de ;
   rdfs:label "Handling"@en ;
   rdfs:label "Movimentazione"@it ;
-  rdfs:label "movimentazioni"@it ;
 .
 cterm:HardNaturalStoneStructure
   rdf:type owl:NamedIndividual ;
@@ -2278,63 +2255,63 @@ cterm:Length
 .
 cterm:Level1
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:TypeOfLabor ;
+  rdf:type cterm:TypeOfLabour ;
   rdfs:label "Level 1"@en ;
   rdfs:label "Stufe 1"@de ;
   rdfs:label "livello 1°"@it ;
 .
 cterm:Level2
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:TypeOfLabor ;
+  rdf:type cterm:TypeOfLabour ;
   rdfs:label "Level 2"@en ;
   rdfs:label "Stufe 2"@de ;
   rdfs:label "livello 2°"@it ;
 .
 cterm:Level3
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:TypeOfLabor ;
+  rdf:type cterm:TypeOfLabour ;
   rdfs:label "Level 3"@en ;
   rdfs:label "Stufe 3"@de ;
   rdfs:label "livello 3°"@it ;
 .
 cterm:LevelB1
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:TypeOfLabor ;
+  rdf:type cterm:TypeOfLabour ;
   rdfs:label "Level B1"@en ;
   rdfs:label "Stufe B1"@de ;
   rdfs:label "livello B1"@it ;
 .
 cterm:LevelC1
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:TypeOfLabor ;
+  rdf:type cterm:TypeOfLabour ;
   rdfs:label "Level C1"@en ;
   rdfs:label "Stufe C1"@de ;
   rdfs:label "livello C1"@it ;
 .
 cterm:LevelC2
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:TypeOfLabor ;
+  rdf:type cterm:TypeOfLabour ;
   rdfs:label "Level C2"@en ;
   rdfs:label "Stufe C2"@de ;
   rdfs:label "livello C2"@it ;
 .
 cterm:LevelC3
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:TypeOfLabor ;
+  rdf:type cterm:TypeOfLabour ;
   rdfs:label "Level C3"@en ;
   rdfs:label "Stufe C3"@de ;
   rdfs:label "livello C3"@it ;
 .
 cterm:LevelD1
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:TypeOfLabor ;
+  rdf:type cterm:TypeOfLabour ;
   rdfs:label "Level D1"@en ;
   rdfs:label "Stufe D1"@de ;
   rdfs:label "livello D1"@it ;
 .
 cterm:LevelD2
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:TypeOfLabor ;
+  rdf:type cterm:TypeOfLabour ;
   rdfs:label "Level D2"@en ;
   rdfs:label "Stufe D2"@de ;
   rdfs:label "livello D2"@it ;
@@ -2460,7 +2437,7 @@ cterm:MetalProp
 .
 cterm:Metalworkers
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:CategoryOfLabor ;
+  rdf:type cterm:CategoryOfLabour ;
   rdfs:label "Metallarbeiter"@de ;
   rdfs:label "Metalworkers"@en ;
   rdfs:label "metalmeccanici"@it ;
@@ -2646,7 +2623,6 @@ cterm:NormalColor
   rdfs:label "Normale Farbe"@de ;
   rdfs:label "colore normale"@it ;
 .
-
 cterm:Object
   rdf:type owl:Class ;
   rdfs:label "Object" ;
@@ -3137,16 +3113,10 @@ cterm:Prefabricated
   rdfs:label "Prefabricated"@en ;
   rdfs:label "Vorgefertigt"@de ;
 .
-cterm:PrefabricatedStructuresForConcrete
-  rdf:type owl:NamedIndividual ;
-  rdf:type cterm:FamilyOfWork ;
-  rdfs:label "Betonfertigteilkonstruktion"@de ;
-  rdfs:label "PrefabbricatiPerStruttureInCls"@it ;
-  rdfs:label "PrefabricatedStructuresForConcrete"@en ;
-.
-cterm:PrefabricatedStructuresinConcrete
+cterm:PrefabricatedStructuresInConcrete
   rdf:type owl:NamedIndividual ;
   rdf:type cterm:FamilyOfMaterial ;
+  rdf:type cterm:FamilyOfWork ;
   rdfs:label "Fertigteile für Betonstrukturen"@de ;
   rdfs:label "Prefabricated Structures in Concrete"@en ;
   rdfs:label "prefabbricati per strutture in cls"@it ;
@@ -3730,6 +3700,13 @@ cterm:SiteSetupSystems
   rdfs:label "Site Setup Systems"@en ;
   rdfs:label "sistemi di apprestamento di cantiere"@it ;
 .
+cterm:SixStrands
+  rdf:type owl:NamedIndividual ;
+  rdf:type cterm:AspectOfMaterial ;
+  rdfs:label "6 Litzen"@de ;
+  rdfs:label "6 Strands"@en ;
+  rdfs:label "6 trefoli"@it ;
+.
 cterm:Skin
   rdf:type owl:NamedIndividual ;
   rdf:type cterm:FinishingOfWorkOfConstructionWork ;
@@ -3774,13 +3751,11 @@ cterm:Soil
   rdf:type owl:NamedIndividual ;
   rdf:type cterm:FamilyOfMaterial ;
   rdf:type cterm:FamilyOfWork ;
-  rdf:type cterm:FamilyOfWorkOfTemporaryWork ;
   rdf:type cterm:UseOfWorkOfConstructionWork ;
   rdfs:label "Boden"@de ;
   rdfs:label "Soil"@en ;
   rdfs:label "Suolo"@it ;
   rdfs:label "Terreno"@it ;
-  rdfs:label "suolo"@it ;
 .
 cterm:SoilConsolidation
   rdf:type owl:NamedIndividual ;
@@ -3788,7 +3763,6 @@ cterm:SoilConsolidation
   rdfs:label "Bodenkonsolidierung"@de ;
   rdfs:label "Consolidamento Suolo"@it ;
   rdfs:label "Soil Consolidation"@en ;
-  rdfs:label "consolidamento suolo"@it ;
 .
 cterm:SoilProtection
   rdf:type owl:NamedIndividual ;
@@ -3833,7 +3807,7 @@ cterm:Soundproof
   rdfs:label "Schallisolierend"@de ;
   rdfs:label "Soundproof"@en ;
 .
-<https://w3id.org/cterm#SpecialMortars%28RubberGranules%2CPolyurethaneResins%2Cetc.%29>
+cterm:SpecialMortars
   rdf:type owl:NamedIndividual ;
   rdf:type cterm:UseOfEquipment ;
   rdfs:label "Special Mortars (Rubber Granules, Polyurethane Resins, etc.)"@en ;
@@ -4099,13 +4073,9 @@ cterm:Structural
 cterm:StructuralEngineering
   rdf:type owl:NamedIndividual ;
   rdf:type cterm:FamilyOfWork ;
-  rdf:type cterm:FamilyOfWorkOfConstructionWork ;
-  rdf:type cterm:FamilyOfWorkOfTemporaryWork ;
   rdfs:label "Ingegneria Strutturale"@it ;
   rdfs:label "Structural Engineering"@en ;
-  rdfs:label "Strukturtechnik"@de ;
   rdfs:label "Tragwerksplanung"@de ;
-  rdfs:label "ingegneria strutturale"@it ;
 .
 cterm:StructuralReinforcement
   rdf:type owl:NamedIndividual ;
@@ -4141,7 +4111,6 @@ cterm:SuspendedCeilings
   rdfs:label "Abgehängte Decken"@de ;
   rdfs:label "Controsoffitti"@it ;
   rdfs:label "Suspended Ceilings"@en ;
-  rdfs:label "controsoffitti"@it ;
 .
 cterm:SyntheticAcrylicResin
   rdf:type owl:NamedIndividual ;
@@ -4314,6 +4283,13 @@ cterm:Threaded
   rdfs:label "Gewindet"@de ;
   rdfs:label "Threaded"@en ;
   rdfs:label "filettata"@it ;
+.
+cterm:ThreeDimensionalBraidedRope
+  rdf:type owl:NamedIndividual ;
+  rdf:type cterm:AspectOfMaterial ;
+  rdfs:label "3D Braided Rope"@en ;
+  rdfs:label "Dreidimensionales Geflechtseil"@de ;
+  rdfs:label "tridimensionale a funi intrecciate"@it ;
 .
 cterm:TongueAndGrooveEdges
   rdf:type owl:NamedIndividual ;
@@ -4778,13 +4754,6 @@ cterm:WindowsAndDoors
   rdfs:label "Serramenti"@it ;
   rdfs:label "Windows And Doors"@en ;
 .
-cterm:WindowsandDoors
-  rdf:type owl:NamedIndividual ;
-  rdf:type cterm:FamilyOfMaterial ;
-  rdfs:label "Fenster und Türen"@de ;
-  rdfs:label "Windows and Doors"@en ;
-  rdfs:label "serramenti"@it ;
-.
 cterm:Wire
   rdf:type owl:NamedIndividual ;
   rdf:type cterm:TypeOfMaterial ;
@@ -4849,7 +4818,7 @@ cterm:WoodenStructures
 .
 cterm:Worker
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:ObjectOfLabor ;
+  rdf:type cterm:ObjectOfLabour ;
   rdfs:label "Arbeiter"@de ;
   rdfs:label "Worker"@en ;
   rdfs:label "operaio"@it ;
