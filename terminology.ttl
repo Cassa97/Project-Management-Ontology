@@ -129,7 +129,7 @@ cterm:Agriculture
 .
 cterm:AgroForestry
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:CategoryOfCostComponent;
+  rdf:type cterm:CategoryOfCostComponent ;
   rdfs:label "Agro Forestale"@it ;
   rdfs:label "Agro Forestry"@en ;
   rdfs:label "Agro-Forstwirtschaft"@de ;
@@ -420,7 +420,7 @@ cterm:Building
 .
 cterm:Buildings
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:CategoryOfCostComponent;
+  rdf:type cterm:CategoryOfCostComponent ;
   rdfs:label "Buildings"@en ;
   rdfs:label "Edifici"@it ;
   rdfs:label "Gebäude"@de ;
@@ -924,7 +924,7 @@ cterm:CurvedWallsinElevation
 .
 cterm:Decontamination
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:CategoryOfCostComponent;
+  rdf:type cterm:CategoryOfCostComponent ;
   rdfs:label "Bonifica"@it ;
   rdfs:label "Decontamination"@en ;
   rdfs:label "Decontaminazione"@it ;
@@ -1722,11 +1722,6 @@ cterm:GasImpermeableMultilayer
   rdfs:label "Gas Impermeable Multilayer"@en ;
   rdfs:label "Multistrato Gas Impermeabile"@it ;
 .
-cterm:Gender
-  rdf:type owl:Class ;
-  rdfs:label "Gender" ;
-  rdfs:subClassOf cterm:Terminology ;
-.
 cterm:Generic
   rdf:type owl:NamedIndividual ;
   rdf:type cterm:TypeOfWorkOfConstructionWork ;
@@ -2041,7 +2036,7 @@ cterm:HousingStructuralElements
 .
 cterm:Hydraulic
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:CategoryOfCostComponent;
+  rdf:type cterm:CategoryOfCostComponent ;
   rdfs:label "Hydraulic"@en ;
   rdfs:label "Hydraulik"@de ;
   rdfs:label "Idraulica"@it ;
@@ -3864,7 +3859,7 @@ cterm:SoilConsolidation
 .
 cterm:SoilProtection
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:CategoryOfCostComponent;
+  rdf:type cterm:CategoryOfCostComponent ;
   rdfs:label "Bodenschutz"@de ;
   rdfs:label "Difesa Suolo"@it ;
   rdfs:label "Soil Protection"@en ;
@@ -4434,7 +4429,7 @@ cterm:TraditionalWoodenFormwork
 .
 cterm:Transport
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:CategoryOfCostComponent;
+  rdf:type cterm:CategoryOfCostComponent ;
   rdfs:label "Transport"@de ;
   rdfs:label "Transport"@en ;
   rdfs:label "Trasporti"@it ;
@@ -4585,7 +4580,7 @@ cterm:Underpinnings
 .
 cterm:UrbanGreen
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:CategoryOfCostComponent;
+  rdf:type cterm:CategoryOfCostComponent ;
   rdfs:label "Stadtgrün"@de ;
   rdfs:label "Urban Green"@en ;
   rdfs:label "Verde Urbano"@it ;
@@ -4995,7 +4990,6 @@ cterm:hasGender
   rdfs:domain ci:Work ;
   rdfs:domain cr:Resource ;
   rdfs:label "hasGender" ;
-  rdfs:range cterm:Gender ;
 .
 cterm:hasMaterial
   rdf:type owl:ObjectProperty ;
