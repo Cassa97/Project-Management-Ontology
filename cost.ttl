@@ -693,7 +693,8 @@ ci:quantityUnitOfMeasure
 .
 ci:techSpecs
   rdf:type owl:DatatypeProperty ;
-  rdfs:domain ci:CostComponent ;
+  rdfs:domain ci:Activity ;
+  rdfs:domain ci:Work ;
   rdfs:label "tech specs" ;
   rdfs:range xsd:string ;
 .
