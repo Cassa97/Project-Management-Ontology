@@ -1,1163 +1,1174 @@
 @base <http://example.com/base/> .
 @prefix cterm: <http://www.w3.id.org/cterm#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 
-cterm:Construction a cterm:FamilyOfLabor;
+cterm:Construction a cterm:FamilyOfLabor, owl:NamedIndividual;
   rdfs:label "Construction"@en, "costruzioni"@it, "Bauwesen"@de .
 
-cterm:Building a cterm:CategoryOfLabor;
+cterm:Building a cterm:CategoryOfLabor, owl:NamedIndividual;
   rdfs:label "Building"@en, "edile"@it, "Bau"@de .
 
-cterm:Worker a cterm:ObjectOfLabor;
+cterm:Worker a cterm:ObjectOfLabor, owl:NamedIndividual;
   rdfs:label "Worker"@en, "operaio"@it, "Arbeiter"@de .
 
-cterm:Level3 a cterm:TypeOfLabor;
+cterm:Level3 a cterm:TypeOfLabor, owl:NamedIndividual;
   rdfs:label "Level 3"@en, "livello 3°"@it, "Stufe 3"@de .
 
-cterm:Level2 a cterm:TypeOfLabor;
+cterm:Level2 a cterm:TypeOfLabor, owl:NamedIndividual;
   rdfs:label "Level 2"@en, "livello 2°"@it, "Stufe 2"@de .
 
-cterm:Level1 a cterm:TypeOfLabor;
+cterm:Level1 a cterm:TypeOfLabor, owl:NamedIndividual;
   rdfs:label "Level 1"@en, "livello 1°"@it, "Stufe 1"@de .
 
-cterm:Specialized a cterm:QualificationLevel;
+cterm:Specialized a cterm:QualificationLevel, owl:NamedIndividual;
   rdfs:label "Specialized"@en, "specializzato"@it, "Facharbeiter"@de .
 
-cterm:Qualified a cterm:QualificationLevel;
+cterm:Qualified a cterm:QualificationLevel, owl:NamedIndividual;
   rdfs:label "Qualified"@en, "qualificato"@it, "Qualifiziert"@de .
 
-cterm:Common a cterm:QualificationLevel;
+cterm:Common a cterm:QualificationLevel, owl:NamedIndividual;
   rdfs:label "Common"@en, "comune"@it, "Allgemein"@de .
 
-cterm:Agriculture a cterm:FamilyOfLabor;
+cterm:Agriculture a cterm:FamilyOfLabor, owl:NamedIndividual;
   rdfs:label "Agriculture"@en, "agricoltura"@it, "Landwirtschaft"@de .
 
-cterm:ConstructionWorkers a cterm:CategoryOfLabor;
+cterm:ConstructionWorkers a cterm:CategoryOfLabor, owl:NamedIndividual;
   rdfs:label "Construction Workers"@en, "edili"@it, "Bauarbeiter"@de .
 
-cterm:Metalworkers a cterm:CategoryOfLabor;
+cterm:Metalworkers a cterm:CategoryOfLabor, owl:NamedIndividual;
   rdfs:label "Metalworkers"@en, "metalmeccanici"@it, "Metallarbeiter"@de .
 
-cterm:ChemicalWorkers a cterm:CategoryOfLabor;
+cterm:ChemicalWorkers a cterm:CategoryOfLabor, owl:NamedIndividual;
   rdfs:label "Chemical Workers"@en, "chimici"@it, "Chemiearbeiter"@de .
 
-cterm:Forestry a cterm:CategoryOfLabor;
+cterm:Forestry a cterm:CategoryOfLabor, owl:NamedIndividual;
   rdfs:label "Forestry"@en, "forestale"@it, "Forstwirtschaft"@de .
 
-cterm:SpecializedSuper-TeamLeader a cterm:QualificationLevel;
+cterm:SpecializedSuper-TeamLeader a cterm:QualificationLevel, owl:NamedIndividual;
   rdfs:label "Specialized Super-Team Leader"@en, "specializzato super-caposquadra"@it,
     "Oberfacharbeiter / Vorarbeiter"@de .
 
-cterm:SpecializedSuper a cterm:QualificationLevel;
+cterm:SpecializedSuper a cterm:QualificationLevel, owl:NamedIndividual;
   rdfs:label "Specialized Super"@en, "specializzato super"@it, "Oberfacharbeiter"@de .
 
-cterm:QualifiedSuper a cterm:QualificationLevel;
+cterm:QualifiedSuper a cterm:QualificationLevel, owl:NamedIndividual;
   rdfs:label "Qualified Super"@en, "qualificato super"@it, "Oberqualifiziert"@de .
 
-cterm:HelicopterPilot a cterm:QualificationLevel;
+cterm:HelicopterPilot a cterm:QualificationLevel, owl:NamedIndividual;
   rdfs:label "Helicopter Pilot"@en, "elicotterista"@it, "Hubschrauberpilot"@de .
 
-cterm:HelicopterGroundAssistant a cterm:QualificationLevel;
+cterm:HelicopterGroundAssistant a cterm:QualificationLevel, owl:NamedIndividual;
   rdfs:label "Helicopter Ground Assistant"@en, "assistente a terra di elicotterista"@it,
     "Bodenhelfer für Hubschrauber"@de .
 
-cterm:SpecializedTechnicianforICTWork a cterm:QualificationLevel;
+cterm:SpecializedTechnicianforICTWork a cterm:QualificationLevel, owl:NamedIndividual;
   rdfs:label "Specialized Technician for ICT Work"@en, "tecnico specialistico per lavorazioni ICT"@it,
     "ICT-Spezialist"@de .
 
-cterm:LevelD1 a cterm:TypeOfLabor;
+cterm:LevelD1 a cterm:TypeOfLabor, owl:NamedIndividual;
   rdfs:label "Level D1"@en, "livello D1"@it, "Stufe D1"@de .
 
-cterm:LevelD2 a cterm:TypeOfLabor;
+cterm:LevelD2 a cterm:TypeOfLabor, owl:NamedIndividual;
   rdfs:label "Level D2"@en, "livello D2"@it, "Stufe D2"@de .
 
-cterm:LevelC1 a cterm:TypeOfLabor;
+cterm:LevelC1 a cterm:TypeOfLabor, owl:NamedIndividual;
   rdfs:label "Level C1"@en, "livello C1"@it, "Stufe C1"@de .
 
-cterm:LevelC2 a cterm:TypeOfLabor;
+cterm:LevelC2 a cterm:TypeOfLabor, owl:NamedIndividual;
   rdfs:label "Level C2"@en, "livello C2"@it, "Stufe C2"@de .
 
-cterm:LevelC3 a cterm:TypeOfLabor;
+cterm:LevelC3 a cterm:TypeOfLabor, owl:NamedIndividual;
   rdfs:label "Level C3"@en, "livello C3"@it, "Stufe C3"@de .
 
-cterm:LevelB1 a cterm:TypeOfLabor;
+cterm:LevelB1 a cterm:TypeOfLabor, owl:NamedIndividual;
   rdfs:label "Level B1"@en, "livello B1"@it, "Stufe B1"@de .
 
-cterm:Setups a cterm:FamilyOfEquipment;
+cterm:Setups a cterm:FamilyOfEquipment, owl:NamedIndividual;
   rdfs:label "Setups"@en, "apprestamenti"@it, "Einrichtung"@de .
 
-cterm:ProvisionalElements a cterm:CategoryOfEquipment;
+cterm:ProvisionalElements a cterm:CategoryOfEquipment, owl:NamedIndividual;
   rdfs:label "Provisional Elements"@en, "elementi provvisionali"@it, "Provisorische Elemente"@de .
 
-cterm:Formwork a cterm:ObjectOfEquipment, cterm:ObjectOfWorkOfTemporaryWork;
-  rdfs:label "Formwork"@en, "casseforme"@it, "Schalungen"@de, "cassaforma"@it, "Schalung"@de .
+cterm:Formwork a cterm:ObjectOfEquipment, owl:NamedIndividual;
+  rdfs:label "Formwork"@en, "casseforme"@it, "Schalungen"@de .
 
-cterm:TraditionalWoodenFormwork a cterm:TypeOfEquipment;
+cterm:TraditionalWoodenFormwork a cterm:TypeOfEquipment, owl:NamedIndividual;
   rdfs:label "Traditional Wooden Formwork"@en, "cassaforma tradizionale in legno"@it,
     "Traditionelle Holzschalung"@de .
 
-cterm:ModularFormwork a cterm:TypeOfEquipment;
+cterm:ModularFormwork a cterm:TypeOfEquipment, owl:NamedIndividual;
   rdfs:label "Modular Formwork"@en, "cassaforma componibile"@it, "Modulare Schalung"@de .
 
-cterm:MetalProp a cterm:TypeOfEquipment;
+cterm:MetalProp a cterm:TypeOfEquipment, owl:NamedIndividual;
   rdfs:label "Metal Prop"@en, "puntello metallico"@it, "Metallstütze"@de .
 
-cterm:Height a cterm:DimensionParameter;
+cterm:Height a cterm:DimensionParameter, owl:NamedIndividual;
   rdfs:label "Height"@en, "altezza"@it, "Höhe"@de .
 
-cterm:RoughFloorHeight a cterm:DimensionParameter;
+cterm:RoughFloorHeight a cterm:DimensionParameter, owl:NamedIndividual;
   rdfs:label "Rough Floor Height"@en, "interpiano rustico"@it, "Rohe Deckenhöhe"@de .
 
-cterm:Length a cterm:DimensionParameter;
+cterm:Length a cterm:DimensionParameter, owl:NamedIndividual;
   rdfs:label "Length"@en, "lunghezza"@it, "Länge"@de .
 
-cterm:Diameter a cterm:DimensionParameter;
+cterm:Diameter a cterm:DimensionParameter, owl:NamedIndividual;
   rdfs:label "Diameter"@en, "diametro"@it, "Durchmesser"@de .
 
-cterm:PassageWidth a cterm:DimensionParameter;
+cterm:PassageWidth a cterm:DimensionParameter, owl:NamedIndividual;
   rdfs:label "Passage Width"@en, "larghezza di passaggio"@it, "Durchgangsbreite"@de .
 
-cterm:Pressure a cterm:PerformanceParameter;
+cterm:Pressure a cterm:PerformanceParameter, owl:NamedIndividual;
   rdfs:label "Pressure"@en, "pressione"@it, "Druck"@de .
 
-cterm:Load a cterm:PerformanceParameter;
+cterm:Load a cterm:PerformanceParameter, owl:NamedIndividual;
   rdfs:label "Load"@en, "carico"@it, "Last"@de .
 
-cterm:LoadClass a cterm:PerformanceParameter;
+cterm:LoadClass a cterm:PerformanceParameter, owl:NamedIndividual;
   rdfs:label "Load Class"@en, "classe di carico"@it, "Lastklasse"@de .
 
-cterm:FlatHead a cterm:AspectOfEquipment;
+cterm:FlatHead a cterm:AspectOfEquipment, owl:NamedIndividual;
   rdfs:label "Flat Head"@en, "testa piatta"@it, "Flacher Kopf"@de .
 
-cterm:T-Head a cterm:AspectOfEquipment;
+cterm:T-Head a cterm:AspectOfEquipment, owl:NamedIndividual;
   rdfs:label "T-Head"@en, "testa a T"@it, "T-Kopf"@de .
 
-cterm:PointFoundations a cterm:UseOfEquipment;
+cterm:PointFoundations a cterm:UseOfEquipment, owl:NamedIndividual;
   rdfs:label "Point Foundations"@en, "fondazioni puntuali"@it, "Punktfundamente"@de .
 
-cterm:ContinuousFoundations a cterm:UseOfEquipment;
+cterm:ContinuousFoundations a cterm:UseOfEquipment, owl:NamedIndividual;
   rdfs:label "Continuous Foundations"@en, "fondazioni continue"@it, "Streifenfundamente"@de .
 
-cterm:WallsinElevation a cterm:UseOfEquipment;
+cterm:WallsinElevation a cterm:UseOfEquipment, owl:NamedIndividual;
   rdfs:label "Walls in Elevation"@en, "pareti in elevazione"@it, "Wände in Höhe"@de .
 
-cterm:WallsforStaircasesandElevators a cterm:UseOfEquipment;
+cterm:WallsforStaircasesandElevators a cterm:UseOfEquipment, owl:NamedIndividual;
   rdfs:label "Walls for Staircases and Elevators"@en, "pareti per vani scala e ascensori"@it,
     "Wände für Treppen- und Aufzugsschächte"@de .
 
-cterm:Rectangular-SquareColumns a cterm:UseOfEquipment;
+cterm:Rectangular-SquareColumns a cterm:UseOfEquipment, owl:NamedIndividual;
   rdfs:label "Rectangular-Square Columns"@en, "pilastri a sezione rettangolare-quadrata"@it,
     "Rechteckige/Quadratische Pfeiler"@de .
 
-cterm:ParapetsforStraightBalconiesinReinforcedConcrete a cterm:UseOfEquipment;
+cterm:ParapetsforStraightBalconiesinReinforcedConcrete a cterm:UseOfEquipment, owl:NamedIndividual;
   rdfs:label "Parapets for Straight Balconies in Reinforced Concrete"@en, "parapetti per balconi rettilinei in conglomerato cementizio armato"@it,
     "Geländer für geradlinige Balkone aus Stahlbeton"@de .
 
-cterm:MixedSlabwithDeepBeamsforFlatStructures a cterm:UseOfEquipment;
+cterm:MixedSlabwithDeepBeamsforFlatStructures a cterm:UseOfEquipment, owl:NamedIndividual;
   rdfs:label "Mixed Slab with Deep Beams for Flat Structures"@en, "solaio misto con travi in spessore per strutture piane"@it,
     "Mischdecke mit Balken in der Dicke für flache Strukturen"@de .
 
-cterm:BeamEdgesandCurbs a cterm:UseOfEquipment;
+cterm:BeamEdgesandCurbs a cterm:UseOfEquipment, owl:NamedIndividual;
   rdfs:label "Beam Edges and Curbs"@en, "sponde di travi e cordoli"@it, "Balken und Randplatten"@de .
 
-cterm:StraightStairLandingsandRampsinReinforcedConcrete a cterm:UseOfEquipment;
+cterm:StraightStairLandingsandRampsinReinforcedConcrete a cterm:UseOfEquipment, owl:NamedIndividual;
   rdfs:label "Straight Stair Landings and Ramps in Reinforced Concrete"@en, "pianerottoli e rampe scale rettilinei in c.a."@it,
     "Gerade Treppenabsätze und Rampen in Stahlbeton"@de .
 
-cterm:CurvedWallsinElevation a cterm:UseOfEquipment;
+cterm:CurvedWallsinElevation a cterm:UseOfEquipment, owl:NamedIndividual;
   rdfs:label "Curved Walls in Elevation"@en, "pareti curvilinee in elevazione"@it, "Geschwungene Wände in Höhe"@de .
 
-cterm:CircularColumns a cterm:UseOfEquipment;
+cterm:CircularColumns a cterm:UseOfEquipment, owl:NamedIndividual;
   rdfs:label "Circular Columns"@en, "pilastri circolari"@it, "Runde Pfeiler"@de .
 
-cterm:MixedSlabwithDeepBeams a cterm:UseOfEquipment;
+cterm:MixedSlabwithDeepBeams a cterm:UseOfEquipment, owl:NamedIndividual;
   rdfs:label "Mixed Slab with Deep Beams"@en, "solaio misto con travi a spessore"@it,
     "Mischdecke mit Balken in der Dicke"@de .
 
-cterm:SolidSlabsandFloorsinReinforcedConcretewithDeepBeams a cterm:UseOfEquipment;
+cterm:SolidSlabsandFloorsinReinforcedConcretewithDeepBeams a cterm:UseOfEquipment,
+    owl:NamedIndividual;
   rdfs:label "Solid Slabs and Floors in Reinforced Concrete with Deep Beams"@en, "solai e solette piene in c.a. con travi a spessore"@it,
     "Vollbetonböden und -platten mit Balken in der Dicke"@de .
 
-cterm:ConcretePoursinVerticalFormwork a cterm:UseOfEquipment;
+cterm:ConcretePoursinVerticalFormwork a cterm:UseOfEquipment, owl:NamedIndividual;
   rdfs:label "Concrete Pours in Vertical Formwork"@en, "getti di conglomerato cementizio in casseforme verticali"@it,
     "Betonierarbeiten in vertikalen Schalungen"@de .
 
-cterm:Thickness a cterm:DimensionParameter;
+cterm:Thickness a cterm:DimensionParameter, owl:NamedIndividual;
   rdfs:label "Thickness"@en, "spessore"@it, "Dicke"@de .
 
-cterm:Non-RelevantGenericMaterial a cterm:Material;
+cterm:Non-RelevantGenericMaterial a cterm:Material, owl:NamedIndividual;
   rdfs:label "Non-Relevant Generic Material"@en, "materiale generico non rilevante"@it,
     "Allgemeines, nicht relevantes Material"@de .
 
-cterm:FixedCranes a cterm:ObjectOfEquipment;
+cterm:FixedCranes a cterm:ObjectOfEquipment, owl:NamedIndividual;
   rdfs:label "Fixed Cranes"@en, "gru fisse"@it, "Feste Kräne"@de .
 
-cterm:Handling a cterm:FamilyOfEquipment;
+cterm:Handling a cterm:FamilyOfEquipment, owl:NamedIndividual;
   rdfs:label "Handling"@en, "movimentazioni"@it, "Bewegungen"@de .
 
-cterm:AerialHandling a cterm:CategoryOfEquipment;
+cterm:AerialHandling a cterm:CategoryOfEquipment, owl:NamedIndividual;
   rdfs:label "Aerial Handling"@en, "movimentazione aerea"@it, "Luftbewegung"@de .
 
-cterm:Top-SlewingTowerCrane a cterm:TypeOfEquipment;
+cterm:Top-SlewingTowerCrane a cterm:TypeOfEquipment, owl:NamedIndividual;
   rdfs:label "Top-Slewing Tower Crane"@en, "gru a torre a rotazione in alto"@it, "Oben drehender Turmkran"@de .
 
-cterm:HookHeight a cterm:DimensionParameter;
+cterm:HookHeight a cterm:DimensionParameter, owl:NamedIndividual;
   rdfs:label "Hook Height"@en, "altezza sotto gancio"@it, "Höhe unter Haken"@de .
 
-cterm:Capacity a cterm:PerformanceParameter;
-  rdfs:label "Capacity"@en, "portata"@it, "Tragfähigkeit"@de, "capacità"@it, "Kapazität"@de .
+cterm:Capacity a cterm:PerformanceParameter, owl:NamedIndividual;
+  rdfs:label "Capacity"@en, "portata"@it, "Tragfähigkeit"@de .
 
-cterm:Self-ErectingCranewithBottomSlewing a cterm:TypeOfEquipment;
+cterm:Self-ErectingCranewithBottomSlewing a cterm:TypeOfEquipment, owl:NamedIndividual;
   rdfs:label "Self-Erecting Crane with Bottom Slewing"@en, "gru automontante a rotazione in basso"@it,
     "Selbstmontierender Kran mit unterer Drehung"@de .
 
-cterm:Arm a cterm:DimensionParameter;
+cterm:Arm a cterm:DimensionParameter, owl:NamedIndividual;
   rdfs:label "Arm"@en, "sbraccio"@it, "Auslegerlänge"@de .
 
-cterm:MobileCrane a cterm:TypeOfEquipment;
+cterm:MobileCrane a cterm:TypeOfEquipment, owl:NamedIndividual;
   rdfs:label "Mobile Crane"@en, "autogrù"@it, "Autokran"@de .
 
-cterm:TruckwithCrane a cterm:TypeOfEquipment;
+cterm:TruckwithCrane a cterm:TypeOfEquipment, owl:NamedIndividual;
   rdfs:label "Truck with Crane"@en, "autocarro con gru"@it, "Lastwagen mit Kran"@de .
 
-cterm:Net a cterm:ObjectOfMaterial;
+cterm:Net a cterm:ObjectOfMaterial, owl:NamedIndividual;
   rdfs:label "Net"@en, "rete"@it, "Netz"@de .
 
-cterm:SoilConsolidation a cterm:FamilyOfMaterial;
+cterm:SoilConsolidation a cterm:FamilyOfMaterial, owl:NamedIndividual;
   rdfs:label "Soil Consolidation"@en, "consolidamento suolo"@it, "Bodenkonsolidierung"@de .
 
-cterm:Soil a cterm:FamilyOfMaterial;
+cterm:Soil a cterm:FamilyOfMaterial, owl:NamedIndividual;
   rdfs:label "Soil"@en, "suolo"@it, "Boden"@de .
 
-cterm:SportsEquipment a cterm:FamilyOfMaterial;
+cterm:SportsEquipment a cterm:FamilyOfMaterial, owl:NamedIndividual;
   rdfs:label "Sports Equipment"@en, "attrezzature sport"@it, "Sportgeräte"@de .
 
-cterm:PrefabricatedStructuresinConcrete a cterm:FamilyOfMaterial;
+cterm:PrefabricatedStructuresinConcrete a cterm:FamilyOfMaterial, owl:NamedIndividual;
   rdfs:label "Prefabricated Structures in Concrete"@en, "prefabbricati per strutture in cls"@it,
     "Fertigteile für Betonstrukturen"@de .
 
-cterm:WindowsandDoors a cterm:FamilyOfMaterial;
+cterm:WindowsandDoors a cterm:FamilyOfMaterial, owl:NamedIndividual;
   rdfs:label "Windows and Doors"@en, "serramenti"@it, "Fenster und Türen"@de .
 
-cterm:TerminalHydraulicSystems a cterm:FamilyOfMaterial;
+cterm:TerminalHydraulicSystems a cterm:FamilyOfMaterial, owl:NamedIndividual;
   rdfs:label "Terminal Hydraulic Systems"@en, "impianti idraulici terminali"@it, "Endinstallationen für Hydraulikanlagen"@de .
 
-cterm:Waterproofing a cterm:FamilyOfMaterial;
+cterm:Waterproofing a cterm:FamilyOfMaterial, owl:NamedIndividual;
   rdfs:label "Waterproofing"@en, "impermeabilizzazioni"@it, "Abdichtungen"@de .
 
-cterm:Delimitations-Protections a cterm:FamilyOfMaterial;
+cterm:Delimitations-Protections a cterm:FamilyOfMaterial, owl:NamedIndividual;
   rdfs:label "Delimitations-Protections"@en, "delimitazioni-protezioni"@it, "Abgrenzungen-Schutzvorrichtungen"@de .
 
-cterm:Roofs a cterm:FamilyOfMaterial;
+cterm:Roofs a cterm:FamilyOfMaterial, owl:NamedIndividual;
   rdfs:label "Roofs"@en, "coperture"@it, "Bedachungen"@de .
 
-cterm:Products a cterm:CategoryOfMaterial;
+cterm:Products a cterm:CategoryOfMaterial, owl:NamedIndividual;
   rdfs:label "Products"@en, "prodotti"@it, "Produkte"@de .
 
-cterm:Components a cterm:CategoryOfMaterial;
+cterm:Components a cterm:CategoryOfMaterial, owl:NamedIndividual;
   rdfs:label "Components"@en, "componenti"@it, "Komponenten"@de .
 
-cterm:DoubleTwist a cterm:TypeOfMaterial;
+cterm:DoubleTwist a cterm:TypeOfMaterial, owl:NamedIndividual;
   rdfs:label "Double Twist"@en, "a doppia torsione"@it, "Doppeldrehung"@de .
 
-cterm:LooseMesh a cterm:TypeOfMaterial;
+cterm:LooseMesh a cterm:TypeOfMaterial, owl:NamedIndividual;
   rdfs:label "Loose Mesh"@en, "a maglia sciolta"@it, "Lockeres Netz"@de .
 
-cterm:ForFootball a cterm:TypeOfMaterial;
+cterm:ForFootball a cterm:TypeOfMaterial, owl:NamedIndividual;
   rdfs:label "For Football"@en, "da calcio"@it, "Für Fußball"@de .
 
-cterm:Fixed a cterm:TypeOfMaterial;
+cterm:Fixed a cterm:TypeOfMaterial, owl:NamedIndividual;
   rdfs:label "Fixed"@en, "fissa"@it, "Fest"@de .
 
-cterm:Rolling a cterm:TypeOfMaterial;
+cterm:Rolling a cterm:TypeOfMaterial, owl:NamedIndividual;
   rdfs:label "Rolling"@en, "avvolgibile"@it, "Rollbar"@de .
 
-cterm:Sliding a cterm:TypeOfMaterial;
+cterm:Sliding a cterm:TypeOfMaterial, owl:NamedIndividual;
   rdfs:label "Sliding"@en, "scorrevole"@it, "Schiebbar"@de .
 
-cterm:Electro-Welded a cterm:TypeOfMaterial;
+cterm:Electro-Welded a cterm:TypeOfMaterial, owl:NamedIndividual;
   rdfs:label "Electro-Welded"@en, "elettrosaldata"@it, "Elektroschweißgitter"@de .
 
-cterm:Plastic-Coated a cterm:FinishingOfMaterial;
+cterm:Plastic-Coated a cterm:FinishingOfMaterial, owl:NamedIndividual;
   rdfs:label "Plastic-Coated"@en, "plastificata"@it, "Kunststoffbeschichtet"@de .
 
-cterm:PolyamideMaterial a cterm:FinishingOfMaterial;
+cterm:PolyamideMaterial a cterm:FinishingOfMaterial, owl:NamedIndividual;
   rdfs:label "Polyamide Material"@en, "materiale poliammidico"@it, "Polyamidgewebe"@de .
 
-cterm:PolymericCoating a cterm:FinishingOfMaterial;
+cterm:PolymericCoating a cterm:FinishingOfMaterial, owl:NamedIndividual;
   rdfs:label "Polymeric Coating"@en, "rivestimento polimerico"@it, "Polymerbeschichtung"@de .
 
-cterm:White a cterm:FinishingOfMaterial;
+cterm:White a cterm:FinishingOfMaterial, owl:NamedIndividual;
   rdfs:label "White"@en, "colore bianco"@it, "Weiß"@de .
 
-cterm:Width a cterm:DimensionParameter;
+cterm:Width a cterm:DimensionParameter, owl:NamedIndividual;
   rdfs:label "Width"@en, "larghezza"@it, "Breite"@de .
 
-cterm:TensileStrength a cterm:PerformanceParameter;
+cterm:TensileStrength a cterm:PerformanceParameter, owl:NamedIndividual;
   rdfs:label "Tensile Strength"@en, "resistenza a trazione"@it, "Zugfestigkeit"@de .
 
-cterm:PunchingResistance a cterm:PerformanceParameter;
+cterm:PunchingResistance a cterm:PerformanceParameter, owl:NamedIndividual;
   rdfs:label "Punching Resistance"@en, "resistenza a punzonamento"@it, "Durchstoßfestigkeit"@de .
 
-cterm:Structural a cterm:FunctionOfMaterial;
+cterm:Structural a cterm:FunctionOfMaterial, owl:NamedIndividual;
   rdfs:label "Structural"@en, "strutturale"@it, "Strukturell"@de .
 
-cterm:PyramidPlayStructure a cterm:UseOfMaterial;
+cterm:PyramidPlayStructure a cterm:UseOfMaterial, owl:NamedIndividual;
   rdfs:label "Pyramid Play Structure"@en, "gioco piramide"@it, "Pyramidenspiel"@de .
 
-cterm:TableTennis a cterm:UseOfMaterial;
+cterm:TableTennis a cterm:UseOfMaterial, owl:NamedIndividual;
   rdfs:label "Table Tennis"@en, "ping pong"@it, "Tischtennis"@de .
 
-cterm:RegulationGoal a cterm:UseOfMaterial;
+cterm:RegulationGoal a cterm:UseOfMaterial, owl:NamedIndividual;
   rdfs:label "Regulation Goal"@en, "porta regolamentare"@it, "Standardtor"@de .
 
-cterm:FixedGoal a cterm:UseOfMaterial;
+cterm:FixedGoal a cterm:UseOfMaterial, owl:NamedIndividual;
   rdfs:label "Fixed Goal"@en, "porta fissa"@it, "Festes Tor"@de .
 
-cterm:HexagonalMesh a cterm:AspectOfMaterial;
+cterm:HexagonalMesh a cterm:AspectOfMaterial, owl:NamedIndividual;
   rdfs:label "Hexagonal Mesh"@en, "maglia esagonale"@it, "Sechseckiges Netz"@de, "maglie esagonali"@it .
 
-cterm:Hexagonal a cterm:AspectOfMaterial;
+cterm:Hexagonal a cterm:AspectOfMaterial, owl:NamedIndividual;
   rdfs:label "Hexagonal"@en, "esagonale"@it, "Sechseckig"@de .
 
-cterm:3DBraidedRope a cterm:AspectOfMaterial;
+cterm:3DBraidedRope a cterm:AspectOfMaterial, owl:NamedIndividual;
   rdfs:label "3D Braided Rope"@en, "tridimensionale a funi intrecciate"@it, "Dreidimensionales Geflechtseil"@de .
 
-cterm:6Strands a cterm:AspectOfMaterial;
+cterm:6Strands a cterm:AspectOfMaterial, owl:NamedIndividual;
   rdfs:label "6 Strands"@en, "6 trefoli"@it, "6 Litzen"@de .
 
-cterm:5Holes a cterm:AspectOfMaterial;
+cterm:5Holes a cterm:AspectOfMaterial, owl:NamedIndividual;
   rdfs:label "5 Holes"@en, "5 fori"@it, "5 Löcher"@de .
 
-cterm:SquareMesh a cterm:AspectOfMaterial;
+cterm:SquareMesh a cterm:AspectOfMaterial, owl:NamedIndividual;
   rdfs:label "Square Mesh"@en, "maglia quadrata"@it, "Quadratisches Netz"@de .
 
-cterm:DifferentiatedMesh a cterm:AspectOfMaterial;
+cterm:DifferentiatedMesh a cterm:AspectOfMaterial, owl:NamedIndividual;
   rdfs:label "Differentiated Mesh"@en, "maglia differenziata"@it, "Unterschiedliches Netz"@de .
 
-cterm:ReinforcementsandStrengthening a cterm:FamilyOfMaterial;
+cterm:ReinforcementsandStrengthening a cterm:FamilyOfMaterial, owl:NamedIndividual;
   rdfs:label "Reinforcements and Strengthening"@en, "armature e rinforzi"@it, "Bewehrungen und Verstärkungen"@de .
 
-cterm:SuspendedCeilings a cterm:FamilyOfMaterial;
+cterm:SuspendedCeilings a cterm:FamilyOfMaterial, owl:NamedIndividual;
   rdfs:label "Suspended Ceilings"@en, "controsoffitti"@it, "Abgehängte Decken"@de .
 
-cterm:GreeneryandLandscaping a cterm:FamilyOfMaterial;
+cterm:GreeneryandLandscaping a cterm:FamilyOfMaterial, owl:NamedIndividual;
   rdfs:label "Greenery and Landscaping"@en, "verde e paesaggio"@it, "Grünanlagen und Landschaftsbau"@de .
 
-cterm:PlayEquipment a cterm:FamilyOfMaterial;
+cterm:PlayEquipment a cterm:FamilyOfMaterial, owl:NamedIndividual;
   rdfs:label "Play Equipment"@en, "attrezzature giochi"@it, "Spielgeräte"@de .
 
-cterm:Accessories a cterm:CategoryOfMaterial;
+cterm:Accessories a cterm:CategoryOfMaterial, owl:NamedIndividual;
   rdfs:label "Accessories"@en, "accessori"@it, "Zubehör"@de .
 
-cterm:BirdRepellent a cterm:TypeOfMaterial;
+cterm:BirdRepellent a cterm:TypeOfMaterial, owl:NamedIndividual;
   rdfs:label "Bird Repellent"@en, "antipiccione"@it, "Vogelabwehr"@de .
 
-cterm:Electroforged a cterm:TypeOfMaterial;
+cterm:Electroforged a cterm:TypeOfMaterial, owl:NamedIndividual;
   rdfs:label "Electroforged"@en, "elettroforgiata"@it, "Elektroschmiedegitter"@de .
 
-cterm:Shaped a cterm:TypeOfMaterial;
+cterm:Shaped a cterm:TypeOfMaterial, owl:NamedIndividual;
   rdfs:label "Shaped"@en, "sagomata"@it, "Geformt"@de .
 
-cterm:GenericFerrousAlloy a cterm:Material;
+cterm:GenericFerrousAlloy a cterm:Material, owl:NamedIndividual;
   rdfs:label "Generic Ferrous Alloy"@en, "lega ferrosa generico"@it, "Allgemeine Eisenlegierung"@de .
 
-cterm:FerrousAlloySteelB450A a cterm:Material;
+cterm:FerrousAlloySteelB450A a cterm:Material, owl:NamedIndividual;
   rdfs:label "Ferrous Alloy Steel B450A"@en, "lega ferrosa acciaio B450A"@it, "Eisenlegierung Stahl B450A"@de .
 
-cterm:FerrousAlloySteelB450C a cterm:Material;
+cterm:FerrousAlloySteelB450C a cterm:Material, owl:NamedIndividual;
   rdfs:label "Ferrous Alloy Steel B450C"@en, "lega ferrosa acciaio B450C"@it, "Eisenlegierung Stahl B450C"@de .
 
-cterm:StainlessSteelAlloyAISI304l a cterm:Material;
+cterm:StainlessSteelAlloyAISI304l a cterm:Material, owl:NamedIndividual;
   rdfs:label "Stainless Steel Alloy AISI 304l"@en, "lega ferrosa acciaio inox AISI 304l"@it,
     "Edelstahllegierung AISI 304l"@de .
 
-cterm:StainlessSteelAlloyAISI316L a cterm:Material;
+cterm:StainlessSteelAlloyAISI316L a cterm:Material, owl:NamedIndividual;
   rdfs:label "Stainless Steel Alloy AISI 316L"@en, "lega ferrosa acciaio inox AISI 316L"@it,
     "Edelstahllegierung AISI 316L"@de .
 
-cterm:OrangeColor a cterm:FinishingOfMaterial;
+cterm:OrangeColor a cterm:FinishingOfMaterial, owl:NamedIndividual;
   rdfs:label "Orange Color"@en, "colore arancione"@it, "Orange Farbe"@de .
 
-cterm:PlasticCoating a cterm:FinishingOfMaterial;
+cterm:PlasticCoating a cterm:FinishingOfMaterial, owl:NamedIndividual;
   rdfs:label "Plastic Coating"@en, "rivestimento plastico"@it, "Kunststoffbeschichtung"@de .
 
-cterm:ElasticModulus a cterm:PerformanceParameter;
+cterm:ElasticModulus a cterm:PerformanceParameter, owl:NamedIndividual;
   rdfs:label "Elastic Modulus"@en, "modulo elastico"@it, "Elastizitätsmodul"@de .
 
-cterm:Weight a cterm:PhysicalParameter;
+cterm:Weight a cterm:PhysicalParameter, owl:NamedIndividual;
   rdfs:label "Weight"@en, "peso"@it, "Gewicht"@de .
 
-cterm:Fences a cterm:FunctionOfMaterial;
+cterm:Fences a cterm:FunctionOfMaterial, owl:NamedIndividual;
   rdfs:label "Fences"@en, "recinzioni"@it, "Zäune"@de .
 
-cterm:TemporaryFences a cterm:FunctionOfMaterial;
+cterm:TemporaryFences a cterm:FunctionOfMaterial, owl:NamedIndividual;
   rdfs:label "Temporary Fences"@en, "recinzioni provvisorie"@it, "Temporäre Zäune"@de .
 
-cterm:ConstructionSiteFences a cterm:FunctionOfMaterial;
+cterm:ConstructionSiteFences a cterm:FunctionOfMaterial, owl:NamedIndividual;
   rdfs:label "Construction Site Fences"@en, "recinzioni cantieri"@it, "Baustellenzäune"@de .
 
-cterm:CrackRepair a cterm:UseOfMaterial;
+cterm:CrackRepair a cterm:UseOfMaterial, owl:NamedIndividual;
   rdfs:label "Crack Repair"@en, "riparazione fessure"@it, "Rissreparatur"@de .
 
-cterm:RockfallBarriers a cterm:UseOfMaterial;
+cterm:RockfallBarriers a cterm:UseOfMaterial, owl:NamedIndividual;
   rdfs:label "Rockfall Barriers"@en, "paramassi"@it, "Steinschlagschutz"@de .
 
-cterm:RhomboidMesh a cterm:AspectOfMaterial;
+cterm:RhomboidMesh a cterm:AspectOfMaterial, owl:NamedIndividual;
   rdfs:label "Rhomboid Mesh"@en, "maglie romboidali"@it, "Rautenförmiges Netz"@de .
 
-cterm:Wavy a cterm:AspectOfMaterial;
+cterm:Wavy a cterm:AspectOfMaterial, owl:NamedIndividual;
   rdfs:label "Wavy"@en, "ondulata"@it, "Gewellt"@de .
 
-cterm:InPanels a cterm:AspectOfMaterial;
+cterm:InPanels a cterm:AspectOfMaterial, owl:NamedIndividual;
   rdfs:label "In Panels"@en, "in pannelli"@it, "In Paneelen"@de .
 
-cterm:InModularPanels a cterm:AspectOfMaterial;
+cterm:InModularPanels a cterm:AspectOfMaterial, owl:NamedIndividual;
   rdfs:label "In Modular Panels"@en, "in pannello modulare"@it, "In Modulenpanelen"@de .
 
-cterm:Square a cterm:AspectOfMaterial;
+cterm:Square a cterm:AspectOfMaterial, owl:NamedIndividual;
   rdfs:label "Square"@en, "quadrata"@it, "Quadratisch"@de .
 
-cterm:RoadSafety a cterm:FamilyOfMaterial;
+cterm:RoadSafety a cterm:FamilyOfMaterial, owl:NamedIndividual;
   rdfs:label "Road Safety"@en, "sicurezza stradale"@it, "Straßensicherheit"@de .
 
-cterm:Diwdag%28ConstructionTechnique%29 a cterm:TypeOfMaterial;
+cterm:Diwdag%28ConstructionTechnique%29 a cterm:TypeOfMaterial, owl:NamedIndividual;
   rdfs:label "Diwdag (Construction Technique)"@en, "diwdag"@it, "Diwdag (Bauweise)"@de .
 
-cterm:Electrifiable a cterm:TypeOfMaterial;
+cterm:Electrifiable a cterm:TypeOfMaterial, owl:NamedIndividual;
   rdfs:label "Electrifiable"@en, "elettrificabile"@it, "Elektrifizierbar"@de .
 
-cterm:GenericMetal a cterm:Material;
+cterm:GenericMetal a cterm:Material, owl:NamedIndividual;
   rdfs:label "Generic Metal"@en, "metallo generico"@it, "Allgemeines Metall"@de .
 
-cterm:GenericMaterial a cterm:Material;
+cterm:GenericMaterial a cterm:Material, owl:NamedIndividual;
   rdfs:label "Generic Material"@en, "materiale generico"@it, "Allgemeines Material"@de .
 
-cterm:StainlessSteelAlloy a cterm:Material;
+cterm:StainlessSteelAlloy a cterm:Material, owl:NamedIndividual;
   rdfs:label "Stainless Steel Alloy"@en, "lega ferrosa acciaio inox"@it, "Edelstahllegierung"@de .
 
-cterm:RoadBarriers a cterm:UseOfMaterial;
+cterm:RoadBarriers a cterm:UseOfMaterial, owl:NamedIndividual;
   rdfs:label "Road Barriers"@en, "barriere stradali"@it, "Straßenbarrieren"@de .
 
-cterm:Fastenings a cterm:FamilyOfMaterial;
+cterm:Fastenings a cterm:FamilyOfMaterial, owl:NamedIndividual;
   rdfs:label "Fastenings"@en, "fissaggi"@it, "Befestigungen"@de .
 
-cterm:Ribbed a cterm:TypeOfMaterial;
+cterm:Ribbed a cterm:TypeOfMaterial, owl:NamedIndividual;
   rdfs:label "Ribbed"@en, "nervata"@it, "Gerippt"@de .
 
-cterm:Strand a cterm:TypeOfMaterial;
+cterm:Strand a cterm:TypeOfMaterial, owl:NamedIndividual;
   rdfs:label "Strand"@en, "trefolo"@it, "Litze"@de .
 
-cterm:ImprovedAdhesion a cterm:TypeOfMaterial;
+cterm:ImprovedAdhesion a cterm:TypeOfMaterial, owl:NamedIndividual;
   rdfs:label "Improved Adhesion"@en, "ad aderenza migliorata"@it, "Mit verbesserter Haftung"@de .
 
-cterm:Threaded a cterm:TypeOfMaterial;
+cterm:Threaded a cterm:TypeOfMaterial, owl:NamedIndividual;
   rdfs:label "Threaded"@en, "filettata"@it, "Gewindet"@de .
 
-cterm:GenericFerrousAlloySteel a cterm:Material;
+cterm:GenericFerrousAlloySteel a cterm:Material, owl:NamedIndividual;
   rdfs:label "Generic Ferrous Alloy Steel"@en, "lega ferrosa acciaio generico"@it, "Allgemeine Eisenlegierung"@de .
 
-cterm:Stainless a cterm:FinishingOfMaterial;
+cterm:Stainless a cterm:FinishingOfMaterial, owl:NamedIndividual;
   rdfs:label "Stainless"@en, "inox"@it, "Edelstahl"@de .
 
-cterm:Coated a cterm:FinishingOfMaterial;
+cterm:Coated a cterm:FinishingOfMaterial, owl:NamedIndividual;
   rdfs:label "Coated"@en, "rivestito"@it, "Beschichtet"@de .
 
-cterm:Galvanized a cterm:FinishingOfMaterial;
+cterm:Galvanized a cterm:FinishingOfMaterial, owl:NamedIndividual;
   rdfs:label "Galvanized"@en, "zincata"@it, "Verzinkt"@de .
 
-cterm:NominalDiameter a cterm:DimensionParameter;
+cterm:NominalDiameter a cterm:DimensionParameter, owl:NamedIndividual;
   rdfs:label "Nominal Diameter"@en, "diametro nominale"@it, "Nennmaß-Durchmesser"@de .
 
-cterm:ResistanceClass a cterm:PerformanceParameter;
+cterm:ResistanceClass a cterm:PerformanceParameter, owl:NamedIndividual;
   rdfs:label "Resistance Class"@en, "classe di resistenza"@it, "Widerstandsklasse"@de .
 
-cterm:Pre-Tensioning a cterm:FunctionOfMaterial;
+cterm:Pre-Tensioning a cterm:FunctionOfMaterial, owl:NamedIndividual;
   rdfs:label "Pre-Tensioning"@en, "precompressione"@it, "Vorspannung"@de .
 
-cterm:StructuralReinforcement a cterm:FunctionOfMaterial;
+cterm:StructuralReinforcement a cterm:FunctionOfMaterial, owl:NamedIndividual;
   rdfs:label "Structural Reinforcement"@en, "rinforzo strutturale"@it, "Strukturelle Verstärkung"@de .
 
-cterm:Fastening a cterm:FunctionOfMaterial;
+cterm:Fastening a cterm:FunctionOfMaterial, owl:NamedIndividual;
   rdfs:label "Fastening"@en, "fissaggio"@it, "Befestigung"@de .
 
-cterm:ReinforcedConcreteStructures a cterm:UseOfMaterial;
+cterm:ReinforcedConcreteStructures a cterm:UseOfMaterial, owl:NamedIndividual;
   rdfs:label "Reinforced Concrete Structures"@en, "strutture in conglomerato cementizio armato"@it,
     "Strukturen aus Stahlbeton"@de .
 
-cterm:ReinforcedConcrete a cterm:UseOfMaterial;
+cterm:ReinforcedConcrete a cterm:UseOfMaterial, owl:NamedIndividual;
   rdfs:label "Reinforced Concrete"@en, "conglomerato cementizio armato"@it, "Stahlbeton"@de .
 
-cterm:BirdRepellentDevice a cterm:UseOfMaterial;
+cterm:BirdRepellentDevice a cterm:UseOfMaterial, owl:NamedIndividual;
   rdfs:label "Bird Repellent Device"@en, "dissuasore antipiccione"@it, "Vogelabwehr-Dissuasor"@de .
 
-cterm:Pultruded a cterm:AspectOfMaterial;
+cterm:Pultruded a cterm:AspectOfMaterial, owl:NamedIndividual;
   rdfs:label "Pultruded"@en, "pultruso"@it, "Pultrudiertes Material"@de .
 
-cterm:IronMetal a cterm:Material;
+cterm:IronMetal a cterm:Material, owl:NamedIndividual;
   rdfs:label "Iron Metal"@en, "metallo ferro"@it, "Eisenmetall"@de .
 
-cterm:Wire a cterm:TypeOfMaterial;
+cterm:Wire a cterm:TypeOfMaterial, owl:NamedIndividual;
   rdfs:label "Wire"@en, "filo"@it, "Draht"@de .
 
-cterm:Hardware a cterm:ObjectOfMaterial;
+cterm:Hardware a cterm:ObjectOfMaterial, owl:NamedIndividual;
   rdfs:label "Hardware"@en, "ferramenta"@it, "Eisenwaren"@de .
 
-cterm:Aggregate a cterm:TypeOfMaterial;
+cterm:Aggregate a cterm:TypeOfMaterial, owl:NamedIndividual;
   rdfs:label "Aggregate"@en, "conglomerato"@it, "Gemisch"@de .
 
-cterm:GenericBitumen a cterm:Material;
+cterm:GenericBitumen a cterm:Material, owl:NamedIndividual;
   rdfs:label "Generic Bitumen"@en, "bitume generico"@it, "Allgemeines Bitumen"@de .
 
-cterm:Mixtures a cterm:FamilyOfMaterial;
+cterm:Mixtures a cterm:FamilyOfMaterial, owl:NamedIndividual;
   rdfs:label "Mixtures"@en, "impasti"@it, "Mischungen"@de .
 
-cterm:Systems a cterm:CategoryOfMaterial;
+cterm:Systems a cterm:CategoryOfMaterial, owl:NamedIndividual;
   rdfs:label "Systems"@en, "sistemi"@it, "Systeme"@de .
 
-cterm:Chemical a cterm:TypeOfMaterial;
+cterm:Chemical a cterm:TypeOfMaterial, owl:NamedIndividual;
   rdfs:label "Chemical"@en, "chimico"@it, "Chemisch"@de .
 
-cterm:SlakedLime a cterm:Material;
+cterm:SlakedLime a cterm:Material, owl:NamedIndividual;
   rdfs:label "Slaked Lime"@en, "calce grassello"@it, "Löschkalk"@de .
 
-cterm:GenericCement a cterm:Material;
+cterm:GenericCement a cterm:Material, owl:NamedIndividual;
   rdfs:label "Generic Cement"@en, "cemento generico"@it, "Allgemeiner Zement"@de .
 
-cterm:SyntheticAcrylicResin a cterm:Material;
+cterm:SyntheticAcrylicResin a cterm:Material, owl:NamedIndividual;
   rdfs:label "Synthetic Acrylic Resin"@en, "resina sintetica acrilica"@it, "Synthetisches Acrylharz"@de .
 
-cterm:SyntheticRubber a cterm:Material;
+cterm:SyntheticRubber a cterm:Material, owl:NamedIndividual;
   rdfs:label "Synthetic Rubber"@en, "gomma sintetica"@it, "Synthetischer Gummi"@de .
 
-cterm:RubberCompound a cterm:Material;
+cterm:RubberCompound a cterm:Material, owl:NamedIndividual;
   rdfs:label "Rubber Compound"@en, "conglomerato gomma"@it, "Gummigemisch"@de .
 
-cterm:EPDMRubber a cterm:Material;
+cterm:EPDMRubber a cterm:Material, owl:NamedIndividual;
   rdfs:label "EPDM Rubber"@en, "gomma epdm"@it, "EPDM-Gummi"@de .
 
-cterm:GenericRubber a cterm:Material;
+cterm:GenericRubber a cterm:Material, owl:NamedIndividual;
   rdfs:label "Generic Rubber"@en, "gomma generico"@it, "Allgemeiner Gummi"@de .
 
-cterm:Paint a cterm:FinishingOfMaterial;
+cterm:Paint a cterm:FinishingOfMaterial, owl:NamedIndividual;
   rdfs:label "Paint"@en, "vernice"@it, "Lack"@de .
 
-cterm:Red a cterm:FinishingOfMaterial;
+cterm:Red a cterm:FinishingOfMaterial, owl:NamedIndividual;
   rdfs:label "Red"@en, "colore rosso"@it, "Rot"@de .
 
-cterm:Green a cterm:FinishingOfMaterial;
+cterm:Green a cterm:FinishingOfMaterial, owl:NamedIndividual;
   rdfs:label "Green"@en, "colore verde"@it, "Grün"@de .
 
-cterm:PolyurethanePaint a cterm:FinishingOfMaterial;
+cterm:PolyurethanePaint a cterm:FinishingOfMaterial, owl:NamedIndividual;
   rdfs:label "Polyurethane Paint"@en, "vernice poliuretanica"@it, "Polyurethanlack"@de .
 
-cterm:Blend a cterm:FinishingOfMaterial;
+cterm:Blend a cterm:FinishingOfMaterial, owl:NamedIndividual;
   rdfs:label "Blend"@en, "melange"@it, "Melange"@de .
 
-cterm:TotalThickness a cterm:DimensionParameter;
+cterm:TotalThickness a cterm:DimensionParameter, owl:NamedIndividual;
   rdfs:label "Total Thickness"@en, "spessore totale"@it, "Gesamtdicke"@de .
 
-cterm:ConsistencyClass a cterm:PerformanceParameter;
+cterm:ConsistencyClass a cterm:PerformanceParameter, owl:NamedIndividual;
   rdfs:label "Consistency Class"@en, "classe di consistenza"@it, "Konsistenzklasse"@de .
 
-cterm:ExposureClass a cterm:PerformanceParameter;
+cterm:ExposureClass a cterm:PerformanceParameter, owl:NamedIndividual;
   rdfs:label "Exposure Class"@en, "classe di esposizione"@it, "Expositionsklasse"@de .
 
-cterm:SpreadClass a cterm:PerformanceParameter;
+cterm:SpreadClass a cterm:PerformanceParameter, owl:NamedIndividual;
   rdfs:label "Spread Class"@en, "classe di spandimento"@it, "Verteilungsklasse"@de .
 
-cterm:CompressionStrength a cterm:PerformanceParameter;
+cterm:CompressionStrength a cterm:PerformanceParameter, owl:NamedIndividual;
   rdfs:label "Compression Strength"@en, "resistenza a compressione"@it, "Druckfestigkeit"@de .
 
-cterm:FallHeights a cterm:PerformanceParameter;
+cterm:FallHeights a cterm:PerformanceParameter, owl:NamedIndividual;
   rdfs:label "Fall Heights"@en, "altezze di caduta"@it, "Fallhöhen"@de .
 
-cterm:Density a cterm:PhysicalParameter;
+cterm:Density a cterm:PhysicalParameter, owl:NamedIndividual;
   rdfs:label "Density"@en, "densità"@it, "Dichte"@de .
 
-cterm:SpecificWeight a cterm:PhysicalParameter;
+cterm:SpecificWeight a cterm:PhysicalParameter, owl:NamedIndividual;
   rdfs:label "Specific Weight"@en, "peso specifico"@it, "Spezifisches Gewicht"@de .
 
-cterm:Non-Structural a cterm:FunctionOfMaterial;
+cterm:Non-Structural a cterm:FunctionOfMaterial, owl:NamedIndividual;
   rdfs:label "Non-Structural"@en, "non strutturale"@it, "Nicht strukturell"@de .
 
-cterm:Draining a cterm:FunctionOfMaterial;
+cterm:Draining a cterm:FunctionOfMaterial, owl:NamedIndividual;
   rdfs:label "Draining"@en, "drenante"@it, "Drainierend"@de .
 
-cterm:ElasticCoating a cterm:FunctionOfMaterial;
+cterm:ElasticCoating a cterm:FunctionOfMaterial, owl:NamedIndividual;
   rdfs:label "Elastic Coating"@en, "rivestimento elastico"@it, "Elastische Beschichtung"@de .
 
-cterm:Anti-Reflective a cterm:FunctionOfMaterial;
+cterm:Anti-Reflective a cterm:FunctionOfMaterial, owl:NamedIndividual;
   rdfs:label "Anti-Reflective"@en, "antiriflesso"@it, "Antireflex"@de .
 
-cterm:Anti-Slip a cterm:FunctionOfMaterial;
+cterm:Anti-Slip a cterm:FunctionOfMaterial, owl:NamedIndividual;
   rdfs:label "Anti-Slip"@en, "antisdrucciolo"@it, "Rutschfest"@de .
 
-cterm:Waterproof a cterm:FunctionOfMaterial;
+cterm:Waterproof a cterm:FunctionOfMaterial, owl:NamedIndividual;
   rdfs:label "Waterproof"@en, "impermeabile"@it, "Wasserdicht"@de .
 
-cterm:Wear-Resistant a cterm:FunctionOfMaterial;
+cterm:Wear-Resistant a cterm:FunctionOfMaterial, owl:NamedIndividual;
   rdfs:label "Wear-Resistant"@en, "resistente all'usura"@it, "Verschleißfest"@de .
 
-cterm:Anti-Trauma a cterm:FunctionOfMaterial;
+cterm:Anti-Trauma a cterm:FunctionOfMaterial, owl:NamedIndividual;
   rdfs:label "Anti-Trauma"@en, "antitrauma"@it, "Stoßsicher"@de .
 
-cterm:Anti-Corrosive a cterm:FunctionOfMaterial;
+cterm:Anti-Corrosive a cterm:FunctionOfMaterial, owl:NamedIndividual;
   rdfs:label "Anti-Corrosive"@en, "anticorrosiva"@it, "Korrosionsschutz"@de .
 
-cterm:Injection a cterm:FunctionOfMaterial;
+cterm:Injection a cterm:FunctionOfMaterial, owl:NamedIndividual;
   rdfs:label "Injection"@en, "iniezione"@it, "Injektion"@de .
 
-cterm:CementitiousCompound a cterm:UseOfMaterial;
+cterm:CementitiousCompound a cterm:UseOfMaterial, owl:NamedIndividual;
   rdfs:label "Cementitious Compound"@en, "conglomerato cementizio"@it, "Betonmischung"@de .
 
-cterm:SyntheticCompound a cterm:UseOfMaterial;
+cterm:SyntheticCompound a cterm:UseOfMaterial, owl:NamedIndividual;
   rdfs:label "Synthetic Compound"@en, "conglomerato sintetico"@it, "Synthetisches Gemisch"@de .
 
-cterm:Interior a cterm:UseOfMaterial;
+cterm:Interior a cterm:UseOfMaterial, owl:NamedIndividual;
   rdfs:label "Interior"@en, "interno"@it, "Innenbereich"@de .
 
-cterm:Exterior a cterm:UseOfMaterial;
+cterm:Exterior a cterm:UseOfMaterial, owl:NamedIndividual;
   rdfs:label "Exterior"@en, "esterno"@it, "Außenbereich"@de .
 
-cterm:SportsFlooring a cterm:UseOfMaterial;
+cterm:SportsFlooring a cterm:UseOfMaterial, owl:NamedIndividual;
   rdfs:label "Sports Flooring"@en, "pavimentazione sportiva"@it, "Sportbodenbelag"@de .
 
-cterm:DrainingSyntheticLayer a cterm:UseOfMaterial;
+cterm:DrainingSyntheticLayer a cterm:UseOfMaterial, owl:NamedIndividual;
   rdfs:label "Draining Synthetic Layer"@en, "manto sintetico drenante"@it, "Drainierender Kunststoffbelag"@de .
 
-cterm:RoadWorks a cterm:UseOfMaterial;
+cterm:RoadWorks a cterm:UseOfMaterial, owl:NamedIndividual;
   rdfs:label "Road Works"@en, "opere stradali"@it, "Straßenbau"@de .
 
-cterm:BituminousMix a cterm:UseOfMaterial;
+cterm:BituminousMix a cterm:UseOfMaterial, owl:NamedIndividual;
   rdfs:label "Bituminous Mix"@en, "conglomerato bituminoso"@it, "Asphaltgemisch"@de .
 
-cterm:Sidewalks a cterm:UseOfMaterial;
+cterm:Sidewalks a cterm:UseOfMaterial, owl:NamedIndividual;
   rdfs:label "Sidewalks"@en, "marciapiedi"@it, "Gehwege"@de .
 
-cterm:BikePaths a cterm:UseOfMaterial;
+cterm:BikePaths a cterm:UseOfMaterial, owl:NamedIndividual;
   rdfs:label "Bike Paths"@en, "piste ciclabili"@it, "Radwege"@de .
 
-cterm:StabilizedEarthCarpets a cterm:UseOfMaterial;
+cterm:StabilizedEarthCarpets a cterm:UseOfMaterial, owl:NamedIndividual;
   rdfs:label "Stabilized Earth Carpets"@en, "tappeti in terra stabilizzata"@it, "Stabilisierte Bodenbeläge"@de .
 
-cterm:RubberFlooring a cterm:UseOfMaterial;
+cterm:RubberFlooring a cterm:UseOfMaterial, owl:NamedIndividual;
   rdfs:label "Rubber Flooring"@en, "pavimentazione in gomma"@it, "Gummibodenbelag"@de .
 
-cterm:ReinforcingBars a cterm:UseOfMaterial;
+cterm:ReinforcingBars a cterm:UseOfMaterial, owl:NamedIndividual;
   rdfs:label "Reinforcing Bars"@en, "ferri d'armatura"@it, "Bewehrungsstahl"@de .
 
-cterm:Grout a cterm:UseOfMaterial;
+cterm:Grout a cterm:UseOfMaterial, owl:NamedIndividual;
   rdfs:label "Grout"@en, "boiacche"@it, "Mörtel"@de .
 
-cterm:Bulk a cterm:AspectOfMaterial;
+cterm:Bulk a cterm:AspectOfMaterial, owl:NamedIndividual;
   rdfs:label "Bulk"@en, "sfuso"@it, "Lose"@de .
 
-cterm:Bags a cterm:FurnishingOfMaterial;
+cterm:Bags a cterm:FurnishingOfMaterial, owl:NamedIndividual;
   rdfs:label "Bags"@en, "sacchi"@it, "Säcke"@de .
 
-cterm:ConcreteMixerTruck a cterm:FurnishingOfMaterial;
+cterm:ConcreteMixerTruck a cterm:FurnishingOfMaterial, owl:NamedIndividual;
   rdfs:label "Concrete Mixer Truck"@en, "autobetoniera"@it, "Fahrmischer"@de .
 
-cterm:LightweightConcrete a cterm:UseOfMaterial;
+cterm:LightweightConcrete a cterm:UseOfMaterial, owl:NamedIndividual;
   rdfs:label "Lightweight Concrete"@en, "conglomerato cementizio alleggerito"@it, "Leichtbeton"@de .
 
-cterm:Flooring a cterm:UseOfMaterial;
+cterm:Flooring a cterm:UseOfMaterial, owl:NamedIndividual;
   rdfs:label "Flooring"@en, "pavimentazione"@it, "Bodenbelag"@de .
 
-cterm:BaseLayer a cterm:UseOfMaterial;
+cterm:BaseLayer a cterm:UseOfMaterial, owl:NamedIndividual;
   rdfs:label "Base Layer"@en, "strato di base"@it, "Tragschicht"@de .
 
-cterm:BinderLayer a cterm:UseOfMaterial;
+cterm:BinderLayer a cterm:UseOfMaterial, owl:NamedIndividual;
   rdfs:label "Binder Layer"@en, "strato di binder"@it, "Binderschicht"@de .
 
-cterm:WearingLayer a cterm:UseOfMaterial;
+cterm:WearingLayer a cterm:UseOfMaterial, owl:NamedIndividual;
   rdfs:label "Wearing Layer"@en, "strato di usura"@it, "Deckschicht"@de .
 
-cterm:Draining-NoiseAbsorbingWearingLayer a cterm:UseOfMaterial;
+cterm:Draining-NoiseAbsorbingWearingLayer a cterm:UseOfMaterial, owl:NamedIndividual;
   rdfs:label "Draining-Noise Absorbing Wearing Layer"@en, "strato di usura drenante-fonoassorbente"@it,
     "Drainierende/Schallabsorbierende Deckschicht"@de .
 
-cterm:FloorSlab a cterm:UseOfMaterial;
+cterm:FloorSlab a cterm:UseOfMaterial, owl:NamedIndividual, cterm:UseOfWorkOfConstructionWork,
+    cterm:TypeOfWorkOfConstructionWork;
   rdfs:label "Floor Slab"@en, "solaio"@it, "Decke"@de .
 
-cterm:CoveringLayers a cterm:UseOfMaterial;
+cterm:CoveringLayers a cterm:UseOfMaterial, owl:NamedIndividual;
   rdfs:label "Covering Layers"@en, "strati di copertura"@it, "Deckschichten"@de .
 
-cterm:ExternalSurfaces a cterm:UseOfMaterial;
+cterm:ExternalSurfaces a cterm:UseOfMaterial, owl:NamedIndividual;
   rdfs:label "External Surfaces"@en, "superfici esterne"@it, "Außenflächen"@de .
 
-cterm:InternalSurfaces a cterm:UseOfMaterial;
+cterm:InternalSurfaces a cterm:UseOfMaterial, owl:NamedIndividual;
   rdfs:label "Internal Surfaces"@en, "superfici interne"@it, "Innenflächen"@de .
 
-cterm:HorizontalSurfaces a cterm:UseOfMaterial;
+cterm:HorizontalSurfaces a cterm:UseOfMaterial, owl:NamedIndividual;
   rdfs:label "Horizontal Surfaces"@en, "superfici orizzontali"@it, "Horizontale Flächen"@de .
 
-cterm:VerticalSurfaces a cterm:UseOfMaterial;
+cterm:VerticalSurfaces a cterm:UseOfMaterial, owl:NamedIndividual;
   rdfs:label "Vertical Surfaces"@en, "superfici verticali"@it, "Vertikale Flächen"@de .
 
-cterm:Terraces a cterm:UseOfMaterial;
+cterm:Terraces a cterm:UseOfMaterial, owl:NamedIndividual;
   rdfs:label "Terraces"@en, "terrazze"@it, "Terrassen"@de .
 
-cterm:Insulation a cterm:TypeOfMaterial;
+cterm:Insulation a cterm:TypeOfMaterial, owl:NamedIndividual;
   rdfs:label "Insulation"@en, "isolante"@it, "Dämmstoff"@de .
 
-cterm:Lime-SilicaMixMaterial a cterm:Material;
+cterm:Lime-SilicaMixMaterial a cterm:Material, owl:NamedIndividual;
   rdfs:label "Lime-Silica Mix Material"@en, "materiale mix calce-silicio"@it, "Kalk-Silikat-Mix"@de .
 
-cterm:ThermalConductivity a cterm:PerformanceParameter;
+cterm:ThermalConductivity a cterm:PerformanceParameter, owl:NamedIndividual;
   rdfs:label "Thermal Conductivity"@en, "conducibilità termica"@it, "Wärmeleitfähigkeit"@de .
 
-cterm:FireReaction a cterm:PerformanceParameter;
+cterm:FireReaction a cterm:PerformanceParameter, owl:NamedIndividual;
   rdfs:label "Fire Reaction"@en, "reazione al fuoco"@it, "Brandverhalten"@de .
 
-cterm:ThermalInsulating a cterm:FunctionOfMaterial;
+cterm:ThermalInsulating a cterm:FunctionOfMaterial, owl:NamedIndividual;
   rdfs:label "Thermal Insulating"@en, "termoisolante"@it, "Wärmedämmend"@de .
 
-cterm:HeatReflective a cterm:FunctionOfMaterial;
+cterm:HeatReflective a cterm:FunctionOfMaterial, owl:NamedIndividual;
   rdfs:label "Heat Reflective"@en, "termoriflettente"@it, "Wärmereflektierend"@de .
 
-cterm:Non-Combustible a cterm:AspectOfMaterial;
+cterm:Non-Combustible a cterm:AspectOfMaterial, owl:NamedIndividual;
   rdfs:label "Non-Combustible"@en, "incombustibile"@it, "Nicht brennbar"@de .
 
-cterm:T1Plaster a cterm:AspectOfMaterial;
+cterm:T1Plaster a cterm:AspectOfMaterial, owl:NamedIndividual;
   rdfs:label "T1 Plaster"@en, "intonaco T1"@it, "Putz T1"@de .
 
-cterm:VolumetricMass a cterm:PerformanceParameter;
+cterm:VolumetricMass a cterm:PerformanceParameter, owl:NamedIndividual;
   rdfs:label "Volumetric Mass"@en, "massa volumica"@it, "Volumenmasse"@de .
 
-cterm:GenericStructures a cterm:UseOfMaterial;
+cterm:GenericStructures a cterm:UseOfMaterial, owl:NamedIndividual;
   rdfs:label "Generic Structures"@en, "strutture generiche"@it, "Allgemeine Strukturen"@de .
 
-cterm:Fluid a cterm:AspectOfMaterial;
+cterm:Fluid a cterm:AspectOfMaterial, owl:NamedIndividual;
   rdfs:label "Fluid"@en, "fluido"@it, "Flüssig"@de .
 
-cterm:Semi-FinishedProducts a cterm:FamilyOfEquipment;
+cterm:Semi-FinishedProducts a cterm:FamilyOfEquipment, owl:NamedIndividual;
   rdfs:label "Semi-Finished Products"@en, "semi-lavorati"@it, "Halbfertigprodukte"@de .
 
-cterm:Mixing a cterm:CategoryOfEquipment;
+cterm:Mixing a cterm:CategoryOfEquipment, owl:NamedIndividual;
   rdfs:label "Mixing"@en, "miscelazione"@it, "Mischung"@de .
 
-cterm:ConcreteVibrator a cterm:ObjectOfEquipment;
+cterm:ConcreteVibrator a cterm:ObjectOfEquipment, owl:NamedIndividual;
   rdfs:label "Concrete Vibrator"@en, "vibratore per calcestruzzo"@it, "Betonvibrator"@de .
 
-cterm:HeadDiameter a cterm:DimensionParameter;
+cterm:HeadDiameter a cterm:DimensionParameter, owl:NamedIndividual;
   rdfs:label "Head Diameter"@en, "diametro testa"@it, "Kopfdurchmesser"@de .
 
-cterm:Power a cterm:PerformanceParameter;
+cterm:Power a cterm:PerformanceParameter, owl:NamedIndividual;
   rdfs:label "Power"@en, "potenza"@it, "Leistung"@de .
 
-cterm:SpecialMortars%28RubberGranules%2CPolyurethaneResins%2Cetc.%29 a cterm:UseOfEquipment;
+cterm:Capacity a cterm:PerformanceParameter, owl:NamedIndividual;
+  rdfs:label "Capacity"@en, "capacità"@it, "Kapazität"@de .
+
+cterm:SpecialMortars%28RubberGranules%2CPolyurethaneResins%2Cetc.%29 a cterm:UseOfEquipment,
+    owl:NamedIndividual;
   rdfs:label "Special Mortars (Rubber Granules, Polyurethane Resins, etc.)"@en, "malte speciali (granuli di gomma, resine poliuretaiche e simili)"@it,
     "Spezialmörtel (Gummigranulat, Polyurethanharze etc.)"@de .
 
-cterm:ConcretePumps a cterm:ObjectOfEquipment;
+cterm:ConcretePumps a cterm:ObjectOfEquipment, owl:NamedIndividual;
   rdfs:label "Concrete Pumps"@en, "pompe per cls"@it, "Betonpumpen"@de .
 
-cterm:MechanizedHandling a cterm:CategoryOfEquipment;
+cterm:MechanizedHandling a cterm:CategoryOfEquipment, owl:NamedIndividual;
   rdfs:label "Mechanized Handling"@en, "movimentazione meccanizzata"@it, "Mechanisierte Bewegung"@de .
 
-cterm:Truck-MountedPump a cterm:TypeOfEquipment;
+cterm:Truck-MountedPump a cterm:TypeOfEquipment, owl:NamedIndividual;
   rdfs:label "Truck-Mounted Pump"@en, "pompa autocarrata"@it, "Fahrbare Pumpe"@de .
 
-cterm:Boom a cterm:DimensionParameter;
+cterm:Boom a cterm:DimensionParameter, owl:NamedIndividual;
   rdfs:label "Boom"@en, "braccio"@it, "Ausleger"@de .
 
-cterm:Ergonomics a cterm:FamilyOfWorkOfTemporaryWork;
+cterm:Formwork a cterm:ObjectOfWorkOfTemporaryWork, owl:NamedIndividual;
+  rdfs:label "Formwork"@en, "cassaforma"@it, "Schalung"@de .
+
+cterm:Ergonomics a cterm:FamilyOfWorkOfTemporaryWork, owl:NamedIndividual;
   rdfs:label "Ergonomics"@en, "ergotecnica"@it, "Ergotechnik"@de .
 
-cterm:SiteSetupSystems a cterm:CategoryOfWorkOfTemporaryWork;
+cterm:SiteSetupSystems a cterm:CategoryOfWorkOfTemporaryWork, owl:NamedIndividual;
   rdfs:label "Site Setup Systems"@en, "sistemi di apprestamento di cantiere"@it, "Baustelleneinrichtungen"@de .
 
-cterm:Traditional a cterm:TypeOfWorkOfTemporaryWork;
+cterm:Traditional a cterm:TypeOfWorkOfTemporaryWork, owl:NamedIndividual;
   rdfs:label "Traditional"@en, "tradizionale"@it, "Traditionell"@de .
 
-cterm:Modular a cterm:TypeOfWorkOfTemporaryWork;
+cterm:Modular a cterm:TypeOfWorkOfTemporaryWork, owl:NamedIndividual;
   rdfs:label "Modular"@en, "componibile"@it, "Modular"@de .
 
-cterm:PouringWalkway a cterm:TypeOfWorkOfTemporaryWork;
+cterm:PouringWalkway a cterm:TypeOfWorkOfTemporaryWork, owl:NamedIndividual;
   rdfs:label "Pouring Walkway"@en, "passerella di getto"@it, "Gusslaufsteg"@de .
 
-cterm:GenericNaturalWood a cterm:MaterialOfWorkOfTemporaryWork;
+cterm:GenericNaturalWood a cterm:MaterialOfWorkOfTemporaryWork, owl:NamedIndividual;
   rdfs:label "Generic Natural Wood"@en, "legno naturale generico"@it, "Allgemeines Naturholz"@de .
 
-cterm:PointFoundations a cterm:UseOfWorkOfTemporaryWork;
+cterm:PointFoundations a cterm:UseOfWorkOfTemporaryWork, owl:NamedIndividual;
   rdfs:label "Point Foundations"@en, "fondazioni puntuali"@it, "Punktfundamente"@de .
 
-cterm:ContinuousFoundations a cterm:UseOfWorkOfTemporaryWork;
+cterm:ContinuousFoundations a cterm:UseOfWorkOfTemporaryWork, owl:NamedIndividual;
   rdfs:label "Continuous Foundations"@en, "fondazioni continue"@it, "Streifenfundamente"@de .
 
-cterm:WallsinElevation a cterm:UseOfWorkOfTemporaryWork;
+cterm:WallsinElevation a cterm:UseOfWorkOfTemporaryWork, owl:NamedIndividual;
   rdfs:label "Walls in Elevation"@en, "pareti in elevazione"@it, "Wände in Höhe"@de .
 
-cterm:WallsforStaircasesandElevators a cterm:UseOfWorkOfTemporaryWork;
+cterm:WallsforStaircasesandElevators a cterm:UseOfWorkOfTemporaryWork, owl:NamedIndividual;
   rdfs:label "Walls for Staircases and Elevators"@en, "pareti per vani scala e ascensori"@it,
     "Wände für Treppen- und Aufzugsschächte"@de .
 
-cterm:RectangularColumns a cterm:UseOfWorkOfTemporaryWork;
+cterm:RectangularColumns a cterm:UseOfWorkOfTemporaryWork, owl:NamedIndividual;
   rdfs:label "Rectangular Columns"@en, "pilastri a sezione rettangolare"@it, "Rechteckige Pfeiler"@de .
 
-cterm:StraightBalconyParapets a cterm:UseOfWorkOfTemporaryWork;
+cterm:StraightBalconyParapets a cterm:UseOfWorkOfTemporaryWork, owl:NamedIndividual;
   rdfs:label "Straight Balcony Parapets"@en, "parapetti per balconi rettilinei"@it,
     "Geländer für gerade Balkone"@de .
 
-cterm:MixedSlabwithDeepBeamsforFlatStructures a cterm:UseOfWorkOfTemporaryWork;
+cterm:MixedSlabwithDeepBeamsforFlatStructures a cterm:UseOfWorkOfTemporaryWork, owl:NamedIndividual;
   rdfs:label "Mixed Slab with Deep Beams for Flat Structures"@en, "solaio misto con travi in spessore per strutture piane"@it,
     "Mischdecke mit Balken in der Dicke für flache Strukturen"@de .
 
-cterm:BeamEdgesandCurbs a cterm:UseOfWorkOfTemporaryWork;
+cterm:BeamEdgesandCurbs a cterm:UseOfWorkOfTemporaryWork, owl:NamedIndividual;
   rdfs:label "Beam Edges and Curbs"@en, "sponde di travi e cordoli"@it, "Balken und Randplatten"@de .
 
-cterm:StraightStairLandingsandRamps a cterm:UseOfWorkOfTemporaryWork;
+cterm:StraightStairLandingsandRamps a cterm:UseOfWorkOfTemporaryWork, owl:NamedIndividual;
   rdfs:label "Straight Stair Landings and Ramps"@en, "pianerottoli e rampe scale rettilinei"@it,
     "Gerade Treppenabsätze und Rampen"@de .
 
-cterm:CurvedWallsinElevation a cterm:UseOfWorkOfTemporaryWork;
+cterm:CurvedWallsinElevation a cterm:UseOfWorkOfTemporaryWork, owl:NamedIndividual;
   rdfs:label "Curved Walls in Elevation"@en, "pareti curvilinee in elevazione"@it, "Geschwungene Wände in Höhe"@de .
 
-cterm:CircularColumns a cterm:UseOfWorkOfTemporaryWork;
+cterm:CircularColumns a cterm:UseOfWorkOfTemporaryWork, owl:NamedIndividual;
   rdfs:label "Circular Columns"@en, "pilastri circolari"@it, "Runde Pfeiler"@de .
 
-cterm:MixedSlabwithDeepBeams a cterm:UseOfWorkOfTemporaryWork;
+cterm:MixedSlabwithDeepBeams a cterm:UseOfWorkOfTemporaryWork, owl:NamedIndividual;
   rdfs:label "Mixed Slab with Deep Beams"@en, "solaio misto con travi a spessore"@it,
     "Mischdecke mit Balken in der Dicke"@de .
 
-cterm:SolidSlabsandFloorsinReinforcedConcretewithDeepBeams a cterm:UseOfWorkOfTemporaryWork;
+cterm:SolidSlabsandFloorsinReinforcedConcretewithDeepBeams a cterm:UseOfWorkOfTemporaryWork,
+    owl:NamedIndividual;
   rdfs:label "Solid Slabs and Floors in Reinforced Concrete with Deep Beams"@en, "solai e solette piene in c.a. con travi a spessore"@it,
     "Vollbetonböden und -platten mit Balken in der Dicke"@de .
 
-cterm:Reinforcement a cterm:ObjectOfWorkOfConstructionWork, cterm:FunctionOfWorkOfConstructionWork;
+cterm:Reinforcement a cterm:ObjectOfWorkOfConstructionWork, owl:NamedIndividual, cterm:FunctionOfWorkOfConstructionWork;
   rdfs:label "Reinforcement"@en, "armatura"@it, "Bewehrung"@de, "rinforzo"@it, "Verstärkung"@de .
 
-cterm:StructuralEngineering a cterm:FamilyOfWorkOfConstructionWork, cterm:FamilyOfWorkOfTemporaryWork;
+cterm:StructuralEngineering a cterm:FamilyOfWorkOfConstructionWork, owl:NamedIndividual,
+    cterm:FamilyOfWorkOfTemporaryWork;
   rdfs:label "Structural Engineering"@en, "ingegneria strutturale"@it, "Strukturtechnik"@de .
 
-cterm:ComplementarySystems a cterm:CategoryOfWorkOfConstructionWork;
+cterm:ComplementarySystems a cterm:CategoryOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Complementary Systems"@en, "sistemi complementari"@it, "Ergänzende Systeme"@de .
 
-cterm:RibbedBars a cterm:TypeOfWorkOfConstructionWork;
+cterm:RibbedBars a cterm:TypeOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Ribbed Bars"@en, "barre nervate"@it, "Gerippte Stäbe"@de .
 
-cterm:Electro-WeldedMesh a cterm:TypeOfWorkOfConstructionWork;
+cterm:Electro-WeldedMesh a cterm:TypeOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Electro-Welded Mesh"@en, "rete elettrosaldata"@it, "Geschweißtes Netz"@de .
 
-cterm:Strands a cterm:TypeOfWorkOfConstructionWork;
+cterm:Strands a cterm:TypeOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Strands"@en, "trefoli"@it, "Litzen"@de .
 
-cterm:Truss a cterm:TypeOfWorkOfConstructionWork;
+cterm:Truss a cterm:TypeOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Truss"@en, "traliccio"@it, "Fachwerk"@de .
 
-cterm:StainlessSteelAlloyAISI304 a cterm:Material;
+cterm:StainlessSteelAlloyAISI304 a cterm:Material, owl:NamedIndividual;
   rdfs:label "Stainless Steel Alloy AISI 304"@en, "lega ferrosa acciaio inox AISI 304"@it,
     "Edelstahllegierung AISI 304"@de .
 
-cterm:Seams a cterm:FunctionOfWorkOfConstructionWork;
+cterm:Seams a cterm:FunctionOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Seams"@en, "cuciture"@it, "Nähte"@de .
 
-cterm:Pre-Tensioning a cterm:FunctionOfWorkOfConstructionWork;
+cterm:Pre-Tensioning a cterm:FunctionOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Pre-Tensioning"@en, "precompressione"@it, "Vorspannung"@de .
 
-cterm:ReinforcedConcreteStructures a cterm:UseOfWorkOfConstructionWork;
+cterm:ReinforcedConcreteStructures a cterm:UseOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Reinforced Concrete Structures"@en, "strutture in conglomerato cementizio armato"@it,
     "Strukturen aus Stahlbeton"@de .
 
-cterm:Underpinnings a cterm:UseOfWorkOfConstructionWork;
+cterm:Underpinnings a cterm:UseOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Underpinnings"@en, "sottomurazioni"@it, "Unterfangungen"@de .
 
-cterm:Connections a cterm:UseOfWorkOfConstructionWork;
+cterm:Connections a cterm:UseOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Connections"@en, "collegamenti"@it, "Verbindungen"@de .
 
-cterm:WoodenStructures a cterm:UseOfWorkOfConstructionWork;
+cterm:WoodenStructures a cterm:UseOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Wooden Structures"@en, "strutture in legno"@it, "Holzstrukturen"@de .
 
-cterm:FloorSlab a cterm:UseOfWorkOfConstructionWork, cterm:TypeOfWorkOfConstructionWork;
-  rdfs:label "Floor Slab"@en, "solaio"@it, "Decke"@de .
-
-cterm:Piles a cterm:UseOfWorkOfConstructionWork;
+cterm:Piles a cterm:UseOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Piles"@en, "pali"@it, "Pfähle"@de .
 
-cterm:Diaphragms a cterm:UseOfWorkOfConstructionWork;
+cterm:Diaphragms a cterm:UseOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Diaphragms"@en, "diaframmi"@it, "Diaphragmen"@de .
 
-cterm:Consolidation a cterm:FunctionOfWorkOfConstructionWork;
+cterm:Consolidation a cterm:FunctionOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Consolidation"@en, "consolidamento"@it, "Konsolidierung"@de .
 
-cterm:ConcreteStructures a cterm:UseOfWorkOfConstructionWork;
+cterm:ConcreteStructures a cterm:UseOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Concrete Structures"@en, "strutture in conglomerato cementizio"@it, "Betonstrukturen"@de .
 
-cterm:Subfoundation a cterm:ObjectOfWorkOfConstructionWork;
+cterm:Subfoundation a cterm:ObjectOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Subfoundation"@en, "sottofondazione"@it, "Unterfundamentierung"@de .
 
-cterm:Soil a cterm:FamilyOfWorkOfTemporaryWork;
+cterm:Soil a cterm:FamilyOfWorkOfTemporaryWork, owl:NamedIndividual;
   rdfs:label "Soil"@en, "suolo"@it, "Boden"@de .
 
-cterm:ExcavationSystems a cterm:CategoryOfWorkOfTemporaryWork;
+cterm:ExcavationSystems a cterm:CategoryOfWorkOfTemporaryWork, owl:NamedIndividual;
   rdfs:label "Excavation Systems"@en, "sistemi di scavo"@it, "Aushubsysteme"@de .
 
-cterm:CementitiousCompound a cterm:Material;
+cterm:CementitiousCompound a cterm:Material, owl:NamedIndividual;
   rdfs:label "Cementitious Compound"@en, "conglomerato cementizio"@it, "Betonmischung"@de .
 
-cterm:Exposure a cterm:PerformanceParameter;
+cterm:Exposure a cterm:PerformanceParameter, owl:NamedIndividual;
   rdfs:label "Exposure"@en, "esposizione"@it, "Exposition"@de .
 
-cterm:Consistency a cterm:PerformanceParameter;
+cterm:Consistency a cterm:PerformanceParameter, owl:NamedIndividual;
   rdfs:label "Consistency"@en, "consistenza"@it, "Konsistenz"@de .
 
-cterm:Foundation a cterm:ObjectOfWorkOfConstructionWork;
+cterm:Foundation a cterm:ObjectOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Foundation"@en, "fondazione"@it, "Fundament"@de .
 
-cterm:FoundationSystems a cterm:CategoryOfWorkOfConstructionWork;
+cterm:FoundationSystems a cterm:CategoryOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Foundation Systems"@en, "sistemi di fondazione"@it, "Fundamentensysteme"@de .
 
-cterm:CharacteristicStrength a cterm:PerformanceParameter;
+cterm:CharacteristicStrength a cterm:PerformanceParameter, owl:NamedIndividual;
   rdfs:label "Characteristic Strength"@en, "resistenza caratteristica"@it, "Charakteristische Festigkeit"@de .
 
-cterm:Footings-InvertedBeams-Slabs a cterm:UseOfWorkOfConstructionWork;
+cterm:Footings-InvertedBeams-Slabs a cterm:UseOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Footings-Inverted Beams-Slabs"@en, "plinti-travi rovesce-platee"@it, "Fundamente-Umgekehrte Balken-Platten"@de .
 
-cterm:Structure a cterm:ObjectOfWorkOfConstructionWork;
+cterm:Structure a cterm:ObjectOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Structure"@en, "struttura"@it, "Struktur"@de .
 
-cterm:StructuralSystem a cterm:CategoryOfWorkOfTemporaryWork;
+cterm:StructuralSystem a cterm:CategoryOfWorkOfTemporaryWork, owl:NamedIndividual;
   rdfs:label "Structural System"@en, "sistema stutturale"@it, "Struktursystem"@de .
 
-cterm:GenericNaturalRock a cterm:Material;
+cterm:GenericNaturalRock a cterm:Material, owl:NamedIndividual;
   rdfs:label "Generic Natural Rock"@en, "roccia naturale generico"@it, "Allgemeiner Naturstein"@de .
 
-cterm:CeramicTerracotta-Brick a cterm:Material;
+cterm:CeramicTerracotta-Brick a cterm:Material, owl:NamedIndividual;
   rdfs:label "Ceramic Terracotta-Brick"@en, "ceramica terracotta-laterizio"@it, "Keramik, Terrakotta-Ziegel"@de .
 
-cterm:HousingStructuralElements a cterm:FunctionOfWorkOfConstructionWork;
+cterm:HousingStructuralElements a cterm:FunctionOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Housing Structural Elements"@en, "alloggiamento elementi strutturali"@it,
     "Unterbringung struktureller Elemente"@de .
 
-cterm:Stitching a cterm:FunctionOfWorkOfConstructionWork;
+cterm:Stitching a cterm:FunctionOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Stitching"@en, "cucitura"@it, "Naht"@de .
 
-cterm:Tensioning a cterm:FunctionOfWorkOfConstructionWork;
+cterm:Tensioning a cterm:FunctionOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Tensioning"@en, "tirantatura"@it, "Abspannung"@de .
 
-cterm:SolidBrick-Stone-MixedMasonry a cterm:UseOfWorkOfConstructionWork;
+cterm:SolidBrick-Stone-MixedMasonry a cterm:UseOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Solid Brick-Stone-Mixed Masonry"@en, "muratura in mattoni pieni-pietrame-miste"@it,
     "Mauerwerk aus Vollziegeln-Naturstein-Gemisch"@de .
 
-cterm:ConcreteStructure a cterm:UseOfWorkOfConstructionWork;
+cterm:ConcreteStructure a cterm:UseOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Concrete Structure"@en, "struttura in conglomerato cementizio"@it, "Betonstruktur"@de .
 
-cterm:HardNaturalStoneStructure a cterm:UseOfWorkOfConstructionWork;
+cterm:HardNaturalStoneStructure a cterm:UseOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Hard Natural Stone Structure"@en, "struttura in pietra naturale dura"@it,
     "Struktur aus Naturhartstein"@de .
 
-cterm:MixedSlabStructure a cterm:UseOfWorkOfConstructionWork;
+cterm:MixedSlabStructure a cterm:UseOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Mixed Slab Structure"@en, "struttura in solaio misto"@it, "Mischdeckenkonstruktion"@de .
 
-cterm:SimpleConcreteStructure a cterm:UseOfWorkOfConstructionWork;
+cterm:SimpleConcreteStructure a cterm:UseOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Simple Concrete Structure"@en, "struttura in conglomerato cementizio semplice"@it,
     "Einfache Betonstruktur"@de .
 
-cterm:Columns a cterm:UseOfWorkOfConstructionWork;
+cterm:Columns a cterm:UseOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Columns"@en, "pilastri"@it, "Pfeiler"@de .
 
-cterm:Beams a cterm:UseOfWorkOfConstructionWork;
+cterm:Beams a cterm:UseOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Beams"@en, "travi"@it, "Balken"@de .
 
-cterm:ConnectingBeams a cterm:UseOfWorkOfConstructionWork;
+cterm:ConnectingBeams a cterm:UseOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Connecting Beams"@en, "corree"@it, "Streifenfundamentbalken"@de .
 
-cterm:FloorSlabs a cterm:UseOfWorkOfConstructionWork;
+cterm:FloorSlabs a cterm:UseOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Floor Slabs"@en, "solette"@it, "Bodenplatten"@de .
 
-cterm:Staircase-ElevatorShaftWalls a cterm:UseOfWorkOfConstructionWork;
+cterm:Staircase-ElevatorShaftWalls a cterm:UseOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Staircase-Elevator Shaft Walls"@en, "murature vani scala-ascensori"@it,
     "Wände für Treppen- und Aufzugsschächte"@de .
 
-cterm:VariousStructures a cterm:UseOfWorkOfConstructionWork;
+cterm:VariousStructures a cterm:UseOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Various Structures"@en, "strutture varie"@it, "Verschiedene Strukturen"@de .
 
-cterm:Inland a cterm:AspectOfWorkOfConstructionWork;
+cterm:Inland a cterm:AspectOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Inland"@en, "entroterra"@it, "Hinterland"@de .
 
-cterm:AboveGround a cterm:AspectOfWorkOfConstructionWork;
+cterm:AboveGround a cterm:AspectOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Above Ground"@en, "fuori terra"@it, "Überirdisch"@de .
 
-cterm:Fastening a cterm:FunctionOfWorkOfConstructionWork;
+cterm:Fastening a cterm:FunctionOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Fastening"@en, "fissaggio"@it, "Befestigung"@de .
 
-cterm:Load-Bearing a cterm:FunctionOfWorkOfConstructionWork;
+cterm:Load-Bearing a cterm:FunctionOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Load-Bearing"@en, "portante"@it, "Tragend"@de .
 
-cterm:MasonryLayer a cterm:ObjectOfWorkOfConstructionWork;
+cterm:MasonryLayer a cterm:ObjectOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Masonry Layer"@en, "strato di muratura"@it, "Mauerwerksschicht"@de .
 
-cterm:Architecture a cterm:FamilyOfWorkOfConstructionWork;
+cterm:Architecture a cterm:FamilyOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Architecture"@en, "architettura"@it, "Architektur"@de .
 
-cterm:GreeneryandLandscaping a cterm:FamilyOfWorkOfConstructionWork;
+cterm:GreeneryandLandscaping a cterm:FamilyOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Greenery and Landscaping"@en, "verde e paesaggio"@it, "Grünanlagen und Landschaftsbau"@de .
 
-cterm:WallSystems a cterm:CategoryOfWorkOfTemporaryWork;
+cterm:WallSystems a cterm:CategoryOfWorkOfTemporaryWork, owl:NamedIndividual;
   rdfs:label "Wall Systems"@en, "sistemi murari"@it, "Mauersysteme"@de .
 
-cterm:NotDefined a cterm:TypeOfWorkOfConstructionWork;
+cterm:NotDefined a cterm:TypeOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Not Defined"@en, "nd"@it, "Nicht definiert"@de .
 
-cterm:Reinforced a cterm:TypeOfWorkOfConstructionWork;
+cterm:Reinforced a cterm:TypeOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Reinforced"@en, "armato"@it, "Bewehrt"@de .
 
-cterm:InSolidBlocks a cterm:TypeOfWorkOfConstructionWork;
+cterm:InSolidBlocks a cterm:TypeOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "In Solid Blocks"@en, "in blocchi pieni"@it, "Aus Vollblöcken"@de .
 
-cterm:InHollowBlocks a cterm:TypeOfWorkOfConstructionWork;
+cterm:InHollowBlocks a cterm:TypeOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "In Hollow Blocks"@en, "in blocchi forati"@it, "Aus Hohlblöcken"@de, "in blocchi cavi"@it .
 
-cterm:InMulti-HoleBlocks a cterm:TypeOfWorkOfConstructionWork;
+cterm:InMulti-HoleBlocks a cterm:TypeOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "In Multi-Hole Blocks"@en, "in blocchi multiforo"@it, "Aus Mehrlochblöcken"@de .
 
-cterm:InSwiss-TypeBlocks a cterm:TypeOfWorkOfConstructionWork;
+cterm:InSwiss-TypeBlocks a cterm:TypeOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "In Swiss-Type Blocks"@en, "in blocchi tipo svizzero"@it, "Aus Schweizer Typ-Blöcken"@de .
 
-cterm:InHoneycombBlocks a cterm:TypeOfWorkOfConstructionWork;
+cterm:InHoneycombBlocks a cterm:TypeOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "In Honeycomb Blocks"@en, "in blocchi alveolati"@it, "Aus Wabenblöcken"@de .
 
-cterm:InSemi-SolidBlocks a cterm:TypeOfWorkOfConstructionWork;
+cterm:InSemi-SolidBlocks a cterm:TypeOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "In Semi-Solid Blocks"@en, "in blocchi semipieni"@it, "Aus Halbvollen Blöcken"@de .
 
-cterm:InSlabs a cterm:TypeOfWorkOfConstructionWork;
+cterm:InSlabs a cterm:TypeOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "In Slabs"@en, "in lastre"@it, "In Platten"@de .
 
-cterm:InPanels a cterm:TypeOfWorkOfConstructionWork;
+cterm:InPanels a cterm:TypeOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "In Panels"@en, "in pannelli"@it, "In Paneelen"@de .
 
-cterm:InBlocks a cterm:TypeOfWorkOfConstructionWork;
+cterm:InBlocks a cterm:TypeOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "In Blocks"@en, "in blocchi"@it, "Aus Blöcken"@de .
 
-cterm:InBricks a cterm:TypeOfWorkOfConstructionWork;
+cterm:InBricks a cterm:TypeOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "In Bricks"@en, "in tavelle"@it, "Aus Fliesen"@de .
 
-cterm:InPerforatedBricks a cterm:TypeOfWorkOfConstructionWork;
+cterm:InPerforatedBricks a cterm:TypeOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "In Perforated Bricks"@en, "in tavelle forate"@it, "Aus gelochten Fliesen"@de .
 
-cterm:Drywall a cterm:TypeOfWorkOfConstructionWork;
+cterm:Drywall a cterm:TypeOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Drywall"@en, "a secco"@it, "Trockenbau"@de .
 
-cterm:AutoclavedAeratedConcrete a cterm:Material;
+cterm:AutoclavedAeratedConcrete a cterm:Material, owl:NamedIndividual;
   rdfs:label "Autoclaved Aerated Concrete"@en, "conglomerato cementizio aerato autoclavato"@it,
     "Autoklavierter Porenbeton"@de .
 
-cterm:GenericPlaster a cterm:Material;
+cterm:GenericPlaster a cterm:Material, owl:NamedIndividual;
   rdfs:label "Generic Plaster"@en, "gesso generico"@it, "Allgemeiner Gips"@de .
 
-cterm:GenericEngineeredWood a cterm:Material;
+cterm:GenericEngineeredWood a cterm:Material, owl:NamedIndividual;
   rdfs:label "Generic Engineered Wood"@en, "legno artificiale generico"@it, "Allgemeines Kunstholz"@de .
 
-cterm:Classic-Rustic a cterm:FinishingOfWorkOfConstructionWork;
+cterm:Classic-Rustic a cterm:FinishingOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Classic-Rustic"@en, "classica-rustica"@it, "Klassisch-Rustikal"@de .
 
-cterm:Rough-Sandblasted a cterm:FinishingOfWorkOfConstructionWork;
+cterm:Rough-Sandblasted a cterm:FinishingOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Rough-Sandblasted"@en, "rugoso-sabbiato"@it, "Rau-Gesandstrahlt"@de .
 
-cterm:GrayColor a cterm:FinishingOfWorkOfConstructionWork;
+cterm:GrayColor a cterm:FinishingOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Gray Color"@en, "colore grigio"@it, "Graue Farbe"@de .
 
-cterm:Smooth a cterm:FinishingOfWorkOfConstructionWork;
+cterm:Smooth a cterm:FinishingOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Smooth"@en, "liscio"@it, "Glatt"@de .
 
-cterm:NormalColor a cterm:FinishingOfWorkOfConstructionWork;
+cterm:NormalColor a cterm:FinishingOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Normal Color"@en, "colore normale"@it, "Normale Farbe"@de .
 
-cterm:PastelColor a cterm:FinishingOfWorkOfConstructionWork;
+cterm:PastelColor a cterm:FinishingOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Pastel Color"@en, "colore pastello"@it, "Pastellfarbe"@de .
 
-cterm:Sandblasted a cterm:FinishingOfWorkOfConstructionWork;
+cterm:Sandblasted a cterm:FinishingOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Sandblasted"@en, "sabbiato"@it, "Gesandstrahlt"@de .
 
-cterm:Polished a cterm:FinishingOfWorkOfConstructionWork;
+cterm:Polished a cterm:FinishingOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Polished"@en, "levigato"@it, "Geschliffen"@de .
 
-cterm:Bush-Hammered a cterm:FinishingOfWorkOfConstructionWork;
+cterm:Bush-Hammered a cterm:FinishingOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Bush-Hammered"@en, "bocciardato"@it, "Bossiert"@de .
 
-cterm:Plastered a cterm:FinishingOfWorkOfConstructionWork;
+cterm:Plastered a cterm:FinishingOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Plastered"@en, "intonacato"@it, "Verputzt"@de .
 
-cterm:Colored a cterm:FinishingOfWorkOfConstructionWork;
+cterm:Colored a cterm:FinishingOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Colored"@en, "colorato"@it, "Gefärbt"@de .
 
-cterm:CoatedwithFireproofMortar a cterm:FinishingOfWorkOfConstructionWork;
+cterm:CoatedwithFireproofMortar a cterm:FinishingOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Coated with Fireproof Mortar"@en, "rivestito con malta antincendio"@it,
     "Mit Brandschutzmörtel beschichtet"@de .
 
-cterm:CoatedwithRefractoryCeramicLayer a cterm:FinishingOfWorkOfConstructionWork;
+cterm:CoatedwithRefractoryCeramicLayer a cterm:FinishingOfWorkOfConstructionWork,
+    owl:NamedIndividual;
   rdfs:label "Coated with Refractory Ceramic Layer"@en, "rivestito con strato di ceramica refrattaria"@it,
     "Mit feuerfester Keramik beschichtet"@de .
 
-cterm:Coated a cterm:FinishingOfWorkOfConstructionWork;
+cterm:Coated a cterm:FinishingOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Coated"@en, "rivestito"@it, "Beschichtet"@de .
 
-cterm:CoatedwithSpecialCardboard a cterm:FinishingOfWorkOfConstructionWork;
+cterm:CoatedwithSpecialCardboard a cterm:FinishingOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Coated with Special Cardboard"@en, "rivestito in cartone speciale"@it,
     "Mit Spezialpappe beschichtet"@de .
 
-cterm:SmoothedonGlass a cterm:FinishingOfWorkOfConstructionWork;
+cterm:SmoothedonGlass a cterm:FinishingOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Smoothed on Glass"@en, "rasato su vetro"@it, "Auf Glas geglättet"@de .
 
-cterm:FireResistance a cterm:PerformanceParameter;
+cterm:FireResistance a cterm:PerformanceParameter, owl:NamedIndividual;
   rdfs:label "Fire Resistance"@en, "resistenza al fuoco"@it, "Feuerbeständigkeit"@de .
 
-cterm:ThermalResistance a cterm:PerformanceParameter;
+cterm:ThermalResistance a cterm:PerformanceParameter, owl:NamedIndividual;
   rdfs:label "Thermal Resistance"@en, "resistenza termica"@it, "Wärmewiderstand"@de .
 
-cterm:Semi-Load-Bearing a cterm:FunctionOfWorkOfConstructionWork;
+cterm:Semi-Load-Bearing a cterm:FunctionOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Semi-Load-Bearing"@en, "semiportante"@it, "Halbtragend"@de .
 
-cterm:Filling a cterm:FunctionOfWorkOfConstructionWork;
+cterm:Filling a cterm:FunctionOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Filling"@en, "tamponamento"@it, "Verfüllung"@de .
 
-cterm:FireproofPartition a cterm:FunctionOfWorkOfConstructionWork;
+cterm:FireproofPartition a cterm:FunctionOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Fireproof Partition"@en, "divisorio antincendio"@it, "Brandschutztrennwand"@de .
 
-cterm:PartitionWall a cterm:FunctionOfWorkOfConstructionWork;
+cterm:PartitionWall a cterm:FunctionOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Partition Wall"@en, "controparete"@it, "Vorsatzschale"@de .
 
-cterm:ThermalInsulatingandSoundAbsorbingPartitionWall a cterm:FunctionOfWorkOfConstructionWork;
+cterm:ThermalInsulatingandSoundAbsorbingPartitionWall a cterm:FunctionOfWorkOfConstructionWork,
+    owl:NamedIndividual;
   rdfs:label "Thermal Insulating and Sound Absorbing Partition Wall"@en, "controparete termoisolante-fonoassorbente"@it,
     "Wärmedämmende und schallabsorbierende Vorsatzschale"@de .
 
-cterm:FireproofPartitionWall a cterm:FunctionOfWorkOfConstructionWork;
+cterm:FireproofPartitionWall a cterm:FunctionOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Fireproof Partition Wall"@en, "controparete antincendio"@it, "Brandschutzvorsatzschale"@de .
 
-cterm:Casing a cterm:FunctionOfWorkOfConstructionWork;
+cterm:Casing a cterm:FunctionOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Casing"@en, "incassettature"@it, "Kassettierungen"@de .
 
-cterm:PipeClosures a cterm:FunctionOfWorkOfConstructionWork;
+cterm:PipeClosures a cterm:FunctionOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Pipe Closures"@en, "chiusure canne"@it, "Verschlüsse für Rohre"@de .
 
-cterm:Elevation-Foundation a cterm:UseOfWorkOfConstructionWork;
+cterm:Elevation-Foundation a cterm:UseOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Elevation-Foundation"@en, "elevazione-fondazione"@it, "Erhöhung-Fundament"@de .
 
-cterm:Openings a cterm:UseOfWorkOfConstructionWork;
+cterm:Openings a cterm:UseOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Openings"@en, "aperture"@it, "Öffnungen"@de .
 
-cterm:Wall-Ceiling a cterm:UseOfWorkOfConstructionWork;
+cterm:Wall-Ceiling a cterm:UseOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Wall-Ceiling"@en, "parete-soffitto"@it, "Wand-Decke"@de .
 
-cterm:Bathrooms-Kitchens a cterm:UseOfWorkOfConstructionWork;
+cterm:Bathrooms-Kitchens a cterm:UseOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Bathrooms-Kitchens"@en, "bagni-cucine"@it, "Bäder-Küchen"@de .
 
-cterm:ForDamConstruction a cterm:UseOfWorkOfConstructionWork;
+cterm:ForDamConstruction a cterm:UseOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "For Dam Construction"@en, "per realizzazione di briglia"@it, "Zur Realisierung von Stauwerken"@de .
 
-cterm:HollowBox a cterm:AspectOfWorkOfConstructionWork;
+cterm:HollowBox a cterm:AspectOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Hollow Box"@en, "a cassa vuota"@it, "Mit Hohlkasten"@de .
 
-cterm:Curved-Oblique a cterm:AspectOfWorkOfConstructionWork;
+cterm:Curved-Oblique a cterm:AspectOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Curved-Oblique"@en, "curva-obliqua"@it, "Gebogen-Schief"@de .
 
-cterm:Straight-CurvedAxis a cterm:AspectOfWorkOfConstructionWork;
+cterm:Straight-CurvedAxis a cterm:AspectOfWorkOfConstructionWork, owl:NamedIndividual;
   rdfs:label "Straight-Curved Axis"@en, "asse rettilineo-curvilineo"@it, "Gerade-Gebogene Achse"@de .
 
-cterm:WithCrane a cterm:TypeOfActivity;
+cterm:WithCrane a cterm:TypeOfActivity, owl:NamedIndividual;
   rdfs:label "With Crane"@en, "con gru"@it, "Mit Kran"@de .
 
-cterm:WithPump a cterm:TypeOfActivity;
+cterm:WithPump a cterm:TypeOfActivity, owl:NamedIndividual;
   rdfs:label "With Pump"@en, "con pompa"@it, "Mit Pumpe"@de .
