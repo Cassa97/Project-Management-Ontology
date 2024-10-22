@@ -120,7 +120,7 @@ cterm:Aggregate
 cterm:Agriculture
   rdf:type owl:NamedIndividual ;
   rdf:type cterm:FamilyOfLabor ;
-  rdf:type cterm:ObjectOfConstructionWork ;
+  rdf:type cterm:ObjectOfCostComponent ;
   rdfs:label "Agriculture"@en ;
   rdfs:label "Colture/Agricoltura"@it ;
   rdfs:label "Landwirtschaft"@de ;
@@ -129,7 +129,7 @@ cterm:Agriculture
 .
 cterm:AgroForestry
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:CategoryOfConstructionWork ;
+  rdf:type cterm:CategoryOfCostComponent;
   rdfs:label "Agro Forestale"@it ;
   rdfs:label "Agro Forestry"@en ;
   rdfs:label "Agro-Forstwirtschaft"@de ;
@@ -420,7 +420,7 @@ cterm:Building
 .
 cterm:Buildings
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:CategoryOfConstructionWork ;
+  rdf:type cterm:CategoryOfCostComponent;
   rdfs:label "Buildings"@en ;
   rdfs:label "Edifici"@it ;
   rdfs:label "Gebäude"@de ;
@@ -629,7 +629,7 @@ cterm:Closure
 .
 cterm:Coastal_River
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:ObjectOfConstructionWork ;
+  rdf:type cterm:ObjectOfCostComponent ;
   rdfs:label "Coastal/River"@en ;
   rdfs:label "Marittime/Fluviali"@it ;
   rdfs:label "See- und Flussbau"@de ;
@@ -874,7 +874,7 @@ cterm:ConstructionWorkers
 .
 cterm:ContaminatedSites
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:ObjectOfConstructionWork ;
+  rdf:type cterm:ObjectOfCostComponent ;
   rdfs:label "Contaminated Sites"@en ;
   rdfs:label "Kontaminierte Standorte"@de ;
   rdfs:label "Siti Contaminati"@it ;
@@ -924,7 +924,7 @@ cterm:CurvedWallsinElevation
 .
 cterm:Decontamination
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:CategoryOfConstructionWork ;
+  rdf:type cterm:CategoryOfCostComponent;
   rdfs:label "Bonifica"@it ;
   rdfs:label "Decontamination"@en ;
   rdfs:label "Decontaminazione"@it ;
@@ -1889,14 +1889,14 @@ cterm:Green
 .
 cterm:GreenAreas
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:ObjectOfConstructionWork ;
+  rdf:type cterm:ObjectOfCostComponent ;
   rdfs:label "Parchi/Giardini/Aree Verdi"@it ;
   rdfs:label "Parks/Gardens/Green Areas"@en ;
   rdfs:label "Parks/Gärten/Grünflächen"@de ;
 .
 cterm:Green_Forest
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:ObjectOfConstructionWork ;
+  rdf:type cterm:ObjectOfCostComponent ;
   rdfs:label "Green/Forest"@en ;
   rdfs:label "Gün/Wald"@de ;
   rdfs:label "Verde Boschivo/Forestale"@it ;
@@ -2041,7 +2041,7 @@ cterm:HousingStructuralElements
 .
 cterm:Hydraulic
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:CategoryOfConstructionWork ;
+  rdf:type cterm:CategoryOfCostComponent;
   rdfs:label "Hydraulic"@en ;
   rdfs:label "Hydraulik"@de ;
   rdfs:label "Idraulica"@it ;
@@ -2258,14 +2258,14 @@ cterm:KraftPaper
 .
 cterm:Land
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:ObjectOfConstructionWork ;
+  rdf:type cterm:ObjectOfCostComponent ;
   rdfs:label "Gelände"@de ;
   rdfs:label "Land"@en ;
   rdfs:label "Terreno"@it ;
 .
 cterm:LandSlopes
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:ObjectOfConstructionWork ;
+  rdf:type cterm:ObjectOfCostComponent ;
   rdfs:label "Gelände/Hänge"@de ;
   rdfs:label "Land/Slopes"@en ;
   rdfs:label "Terreno/Versanti"@it ;
@@ -3470,7 +3470,7 @@ cterm:Replacement
 .
 cterm:Residences
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:ObjectOfConstructionWork ;
+  rdf:type cterm:ObjectOfCostComponent ;
   rdfs:label "Residences"@en ;
   rdfs:label "Residenze"@it ;
   rdfs:label "Wohngebiete"@de ;
@@ -3549,7 +3549,7 @@ cterm:RigidPanels
 .
 cterm:Rivers
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:ObjectOfConstructionWork ;
+  rdf:type cterm:ObjectOfCostComponent ;
   rdfs:label "Canali"@it ;
   rdfs:label "Fiumi"@it ;
   rdfs:label "Flüsse"@de ;
@@ -3578,14 +3578,14 @@ cterm:RoadWorks
 .
 cterm:Roads
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:ObjectOfConstructionWork ;
+  rdf:type cterm:ObjectOfCostComponent ;
   rdfs:label "Roads"@en ;
   rdfs:label "Strade"@it ;
   rdfs:label "Straßen"@de ;
 .
 cterm:RoadsideGreen
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:ObjectOfConstructionWork ;
+  rdf:type cterm:ObjectOfCostComponent ;
   rdfs:label "Roadside Green"@en ;
   rdfs:label "Straßenbegleitgrün"@de ;
   rdfs:label "Verde Stradale"@it ;
@@ -3762,7 +3762,7 @@ cterm:Setups
 .
 cterm:SewerWaterPipes
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:ObjectOfConstructionWork ;
+  rdf:type cterm:ObjectOfCostComponent ;
   rdfs:label "Abwasserleitungen/Wasserleitungen"@de ;
   rdfs:label "Condotte/Fogna/Acquedotto"@it ;
   rdfs:label "Sewer/Water Pipes"@en ;
@@ -3864,7 +3864,7 @@ cterm:SoilConsolidation
 .
 cterm:SoilProtection
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:CategoryOfConstructionWork ;
+  rdf:type cterm:CategoryOfCostComponent;
   rdfs:label "Bodenschutz"@de ;
   rdfs:label "Difesa Suolo"@it ;
   rdfs:label "Soil Protection"@en ;
@@ -4434,7 +4434,7 @@ cterm:TraditionalWoodenFormwork
 .
 cterm:Transport
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:CategoryOfConstructionWork ;
+  rdf:type cterm:CategoryOfCostComponent;
   rdfs:label "Transport"@de ;
   rdfs:label "Transport"@en ;
   rdfs:label "Trasporti"@it ;
@@ -4585,7 +4585,7 @@ cterm:Underpinnings
 .
 cterm:UrbanGreen
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:CategoryOfConstructionWork ;
+  rdf:type cterm:CategoryOfCostComponent;
   rdfs:label "Stadtgrün"@de ;
   rdfs:label "Urban Green"@en ;
   rdfs:label "Verde Urbano"@it ;
