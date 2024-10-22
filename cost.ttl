@@ -134,6 +134,16 @@ ci:Activity
       owl:onProperty ci:hasSubComponent ;
       owl:someValuesFrom ci:TemporaryComponent ;
     ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty ci:hasSubComponent ;
+      owl:someValuesFrom cr:EquipmentResource ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty ci:hasSubComponent ;
+      owl:someValuesFrom cr:LabourResource ;
+    ] ;
 .
 ci:ConstructionComponent
   rdf:type owl:Class ;
@@ -423,6 +433,11 @@ ci:WorkOfConstructionComponent
       owl:onProperty ci:hasSubComponent ;
       owl:someValuesFrom ci:ProductComponent ;
     ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty ci:hasSubComponent ;
+      owl:someValuesFrom cr:MaterialResource ;
+    ] ;
   owl:disjointWith ci:WorkOfProductComponent ;
   owl:disjointWith ci:WorkOfTemporaryComponent ;
 .
@@ -472,6 +487,11 @@ ci:WorkOfProductComponent
       owl:onProperty cterm:hasObject ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty ci:hasSubComponent ;
+      owl:someValuesFrom cr:MaterialResource ;
+    ] ;
   owl:disjointWith ci:WorkOfConstructionComponent ;
   owl:disjointWith ci:WorkOfTemporaryComponent ;
 .
@@ -520,6 +540,21 @@ ci:WorkOfTemporaryComponent
       owl:onClass cterm:TypeOfWorkOfTemporaryWork ;
       owl:onProperty cterm:hasType ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty ci:hasSubComponent ;
+      owl:someValuesFrom ci:ProductComponent ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty ci:hasSubComponent ;
+      owl:someValuesFrom cr:EquipmentResource ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty ci:hasSubComponent ;
+      owl:someValuesFrom cr:MaterialResource ;
     ] ;
   owl:disjointWith ci:WorkOfConstructionComponent ;
   owl:disjointWith ci:WorkOfProductComponent ;
@@ -574,9 +609,11 @@ ci:hasPart
 ci:hasSubComponent
   rdf:type owl:ObjectProperty ;
   rdfs:domain ci:Activity ;
-  rdfs:domain ci:WorkOfConstructionComponent ;
+  rdfs:domain ci:CostComponent ;
+  rdfs:domain ci:Work ;
   rdfs:label "hasSubComponent" ;
   rdfs:range ci:CostComponent ;
+  rdfs:range cr:Resource ;
 .
 ci:hasUnit
   rdf:type owl:ObjectProperty ;
