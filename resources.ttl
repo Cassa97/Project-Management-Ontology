@@ -79,12 +79,6 @@ cr:Consumption
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass cr:Consumption ;
-      owl:onProperty cr:hasConsumption ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onDataRange xsd:integer ;
       owl:onProperty cterm:parameterValue1 ;
     ] ;
