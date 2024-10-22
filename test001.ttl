@@ -1,9 +1,11 @@
 # baseURI: http://example.org/test001
 # imports: http://w3id.org/cr
+# prefix: unnamed
 
 @prefix : <http://example.org/test001#> .
 @prefix ci: <https://w3id.org/ci#> .
 @prefix cr: <https://w3id.org/cr#> .
+@prefix cterm: <https://w3id.org/cterm#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -15,9 +17,64 @@
   owl:imports <http://w3id.org/cr> ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
-unnamed:Foundation
+<http://example.org/test001#Activity_LV.Pa10.E5100.3750.->
+  rdf:type ci:Activity ;
+  ci:code "LV.Pa10.E5100.3750.-" ;
+.
+<http://example.org/test001#ConstructionComponent_OC.EEA.Pa10.E5100.J0001.0000.b>
+  rdf:type ci:ConstructionComponent ;
+  ci:descriptionDetail """OP1 OPERA: Fondazione di conglomerato cementizio; resistenza a compressione [classe] = C25/30 | classe di esposizione [classe] = XC2. 
+	RM2 Impasto preconfezionato di cemento generico; geometria: sfuso; funzione: strutturale; impiego: conglomerato cementizio; fornitura: autobetoniera; classe di 	consistenza [classe] = S3 | classe di resistenza [classe] = C25/30. Componenti: legante idraulico, aggregato, legante idraulico riciclato 
+	SPECIFICHE TECNICHE: semifluido, test slump [mm] = 100 ÷ 150 
+LV1 LAVORO: Getto con pompa. Incluso: vibratura. Escluso: ferro; casseri. 
+SPECIFICHE TECNICHE: getto per quantità di calcestruzzo [mc] ≤ 30. 
+	RP2 Vibratore per calcestruzzo; diametro testa [mm] = 45 ; potenza [kW] = 1; peso [kg] = 14; criterio di misurazione: ore di presenza in cantiere 
+	RP2 Pompa autocarrata 
+	SPECIFICHE TECNICHE: per quantità di calcestruzzo [m³] ≤ 30 ; criterio di misurazione: per metro cubo pompato di calcestruzzo""" ;
+  ci:descriptionGeneral """OPERA: Fondazione di conglomerato cementizio; resistenza a compressione [classe] = C25/30 | classe di esposizione [classe] = XC2. 
+LAVORO: Getto con pompa. Incluso: vibratura. Escluso: ferro; casseri. 
+SPECIFICHE TECNICHE: getto per quantità di calcestruzzo [mc] ≤ 30.""" ;
+  ci:hasActivity <http://example.org/test001#Activity_LV.Pa10.E5100.3750.-> ;
+  ci:hasWork <http://example.org/test001#WorkOfConstructionComponent_OP.E5100.J0001.0000.b> ;
+  ci:isPartOf <http://example.org/test001#Foundation_LOM241.OC.EEA.Pa10.E5100.J0001.0000.b> ;
+  ci:quantityUnitOfMeasure 1 ;
+  cterm:hasCategory cterm:Buildings ;
+  cterm:hasFamily cterm:Construction ;
+  cterm:hasMaterial cterm:CementitiousCompound ;
+  cterm:hasObject cterm:Residences ;
+.
+<http://example.org/test001#Foundation_LOM241.OC.EEA.Pa10.E5100.J0001.0000.b>
   rdf:type ci:CostItem ;
   rdf:type ci:ProductionResult ;
+  ci:hasPart <http://example.org/test001#ConstructionComponent_OC.EEA.Pa10.E5100.J0001.0000.b> ;
   ci:unitPrice 263.68 ;
   cr:code "LOM241.OC.EEA.Pa10.E5100.J0001.0000.b" ;
+  cr:descriptionDetail """OP1 OPERA: Fondazione di conglomerato cementizio; resistenza a compressione [classe] = C25/30 | classe di esposizione [classe] = XC2. 
+	RM2 Impasto preconfezionato di cemento generico; geometria: sfuso; funzione: strutturale; impiego: conglomerato cementizio; fornitura: autobetoniera; classe di 	consistenza [classe] = S3 | classe di resistenza [classe] = C25/30. Componenti: legante idraulico, aggregato, legante idraulico riciclato 
+	SPECIFICHE TECNICHE: semifluido, test slump [mm] = 100 ÷ 150 
+LV1 LAVORO: Getto con pompa. Incluso: vibratura. Escluso: ferro; casseri. 
+SPECIFICHE TECNICHE: getto per quantità di calcestruzzo [mc] ≤ 30. 
+	RP2 Vibratore per calcestruzzo; diametro testa [mm] = 45 ; potenza [kW] = 1; peso [kg] = 14; criterio di misurazione: ore di presenza in cantiere 
+	RP2 Pompa autocarrata 
+	SPECIFICHE TECNICHE: per quantità di calcestruzzo [m³] ≤ 30 ; criterio di misurazione: per metro cubo pompato di calcestruzzo""" ;
+  cr:descriptionGeneral """OPERA: Fondazione di conglomerato cementizio; resistenza a compressione [classe] = C25/30 | classe di esposizione [classe] = XC2. 
+LAVORO: Getto con pompa. Incluso: vibratura. Escluso: ferro; casseri. 
+SPECIFICHE TECNICHE: getto per quantità di calcestruzzo [mc] ≤ 30.""" ;
+.
+unnamed:PerformanceParameter_1
+  rdf:type cr:PerformanceParameter ;
+.
+<http://example.org/test001#WorkOfConstructionComponent_OP.E5100.J0001.0000.b>
+  rdf:type ci:WorkOfConstructionComponent ;
+  ci:cam "false"^^xsd:boolean ;
+  ci:code "OP.E5100.J0001.0000.b" ;
+  ci:descriptionDetail """RM1 Impasto preconfezionato di cemento generico; geometria: sfuso; funzione: strutturale; impiego: conglomerato cementizio; fornitura: autobetoniera; classe di consistenza [classe] = S3 | classe di resistenza [classe] = C25/30. Componenti: legante idraulico, aggregato, legante idraulico riciclato 
+SPECIFICHE TECNICHE: semifluido, test slump [mm] = 100 ÷ 150""" ;
+  ci:descriptionGeneral "Fondazione di conglomerato cementizio; resistenza a compressione [classe] = C25/30 | classe di esposizione [classe] = XC2." ;
+  ci:hasUnit <http://qudt.org/vocab/unit/M3> ;
+  ci:quantityUnitOfMeasure 1 ;
+  cterm:hasCategory cterm:FoundationSystems ;
+  cterm:hasFamily cterm:StructuralEngineering ;
+  cterm:hasMaterial cterm:CementitiousCompound ;
+  cterm:hasObject cterm:Foundation ;
 .
