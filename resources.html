@@ -393,10 +393,10 @@
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="https://w3id.org/cr#refGeometry">cr:refGeometry</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/cr#refTask">cr:refTask</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/cr#refResource">cr:refResource</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/cr#refCostItem">cr:refCostItem</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/cr#refGeometry">cr:refGeometry</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/cr#refResource">cr:refResource</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -417,12 +417,12 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="https://w3id.org/cterm#parameterType">cterm:parameterType</a> <span class="cardinality">max</span> 1<br/>
                     <a href="https://w3id.org/cterm#parameterValue1">cterm:parameterValue1</a> <span class="cardinality">max</span> 1<br/>
                     <a href="https://w3id.org/cterm#parameterSymbol1">cterm:parameterSymbol1</a> <span class="cardinality">max</span> 1<br/>
-                    <a href="https://w3id.org/cterm#parameterValue2">cterm:parameterValue2</a> <span class="cardinality">max</span> 1<br/>
-                    <a href="https://w3id.org/cr#hasUnit">cr:hasUnit</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://qudt.org/schema/qudt/Unit">qudt:Unit</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/cterm#parameterSymbol2">cterm:parameterSymbol2</a> <span class="cardinality">max</span> 1<br/>
+                    <a href="https://w3id.org/cterm#parameterValue2">cterm:parameterValue2</a> <span class="cardinality">max</span> 1<br/>
+                    <a href="https://w3id.org/cterm#parameterType">cterm:parameterType</a> <span class="cardinality">max</span> 1<br/>
+                    <a href="https://w3id.org/cr#hasUnit">cr:hasUnit</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://qudt.org/schema/qudt/Unit">qudt:Unit</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -455,8 +455,8 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="https://w3id.org/cr#refCostItem">cr:refCostItem</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="http://ifcowl.openbimstandards.org/IFC4_ADD2#IfcProduct">http://ifcowl.openbimstandards.org/IFC4_ADD2#IfcProduct</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/cr#refCostItem">cr:refCostItem</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="https://w3id.org/ci#ProductionResult">ci:ProductionResult</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cr#refCostItem">cr:refCostItem</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="http://ifcowl.openbimstandards.org/IFC4_ADD2#IfcProduct">http://ifcowl.openbimstandards.org/IFC4_ADD2#IfcProduct</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -477,32 +477,32 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="https://w3id.org/cr#minimunLevelLabourResource">cr:minimunLevelLabourResource</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="https://w3id.org/cterm#hasFunction">cterm:hasFunction</a> <span class="cardinality">max</span> 5 <a href="https://w3id.org/cterm#FunctionOfEquipment">cterm:FunctionOfEquipment</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/cterm#hasMaterial">cterm:hasMaterial</a> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/cterm#Material">cterm:Material</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/cterm#hasFamily">cterm:hasFamily</a> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/cterm#FamilyOfEquipment">cterm:FamilyOfEquipment</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/cterm#hasDimensionParameter">cterm:hasDimensionParameter</a> <span class="cardinality">max</span> 10 <a href="https://w3id.org/cterm#DimensionParameter">cterm:DimensionParameter</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/cterm#hasAspect">cterm:hasAspect</a> <span class="cardinality">max</span> 5 <a href="https://w3id.org/cterm#AspectOfEquipment">cterm:AspectOfEquipment</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/cterm#hasPerformanceParameter">cterm:hasPerformanceParameter</a> <span class="cardinality">max</span> 10 <a href="https://w3id.org/cr#PerformanceParameter">cr:PerformanceParameter</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/cr#accessory">cr:accessory</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
                     <a href="https://w3id.org/cterm#hasPhysicalParameter">cterm:hasPhysicalParameter</a> <span class="cardinality">max</span> 10 <a href="https://w3id.org/cterm#PhysicalParameter">cterm:PhysicalParameter</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/cterm#hasOtherStandard">cterm:hasOtherStandard</a> <span class="cardinality">max</span> 5 <a href="https://w3id.org/cterm#Standard">cterm:Standard</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/cterm#hasObject">cterm:hasObject</a> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/cterm#ObjectOfEquipment">cterm:ObjectOfEquipment</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/cr#rent">cr:rent</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="https://w3id.org/cterm#hasFamily">cterm:hasFamily</a> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/cterm#FamilyOfEquipment">cterm:FamilyOfEquipment</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cterm#hasOtherStandard">cterm:hasOtherStandard</a> <span class="cardinality">max</span> 5 <a href="https://w3id.org/cterm#Standard">cterm:Standard</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cterm#hasMaterial">cterm:hasMaterial</a> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/cterm#Material">cterm:Material</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cr#minimunLevelLabourResource">cr:minimunLevelLabourResource</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="https://w3id.org/cr#accessory">cr:accessory</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="https://w3id.org/cterm#hasDimensionParameter">cterm:hasDimensionParameter</a> <span class="cardinality">max</span> 10 <a href="https://w3id.org/cterm#DimensionParameter">cterm:DimensionParameter</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cterm#hasPerformanceParameter">cterm:hasPerformanceParameter</a> <span class="cardinality">max</span> 10 <a href="https://w3id.org/cr#PerformanceParameter">cr:PerformanceParameter</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cterm#hasObject">cterm:hasObject</a> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/cterm#ObjectOfEquipment">cterm:ObjectOfEquipment</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cterm#hasAspect">cterm:hasAspect</a> <span class="cardinality">max</span> 5 <a href="https://w3id.org/cterm#AspectOfEquipment">cterm:AspectOfEquipment</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/cterm#hasObjectStandard">cterm:hasObjectStandard</a> <span class="cardinality">max</span> 1 <a href="https://w3id.org/cterm#Standard">cterm:Standard</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/cterm#hasCategory">cterm:hasCategory</a> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/cterm#CategoryOfEquipment">cterm:CategoryOfEquipment</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cterm#hasFunction">cterm:hasFunction</a> <span class="cardinality">max</span> 5 <a href="https://w3id.org/cterm#FunctionOfEquipment">cterm:FunctionOfEquipment</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/cterm#hasUse">cterm:hasUse</a> <span class="cardinality">max</span> 5 <a href="https://w3id.org/cterm#Use">cterm:Use</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cterm#hasCategory">cterm:hasCategory</a> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/cterm#CategoryOfEquipment">cterm:CategoryOfEquipment</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="https://w3id.org/cr#rent">cr:rent</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/cr#accessory">cr:accessory</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/cr#minimunLevelLabourResource">cr:minimunLevelLabourResource</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/cr#hasConsumption">cr:hasConsumption</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/cr#cam">cr:cam</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="https://w3id.org/cr#yield">cr:yield</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#rent">cr:rent</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#minimunLevelLabourResource">cr:minimunLevelLabourResource</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#cam">cr:cam</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#accessory">cr:accessory</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#hasConsumption">cr:hasConsumption</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -524,9 +524,9 @@
                 <th>Restrictions</th>
                 <td>
                     <a href="https://w3id.org/cterm#hasObject">cterm:hasObject</a> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/cterm#ObjectOfLabour">cterm:ObjectOfLabour</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cterm#hasFamily">cterm:hasFamily</a> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/cterm#FamilyOfLabour">cterm:FamilyOfLabour</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/cterm#hasQualificationLevel">cterm:hasQualificationLevel</a> <span class="cardinality">max</span> 1 <a href="https://w3id.org/cterm#QualificationLevel">cterm:QualificationLevel</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/cterm#hasCategory">cterm:hasCategory</a> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/cterm#CategoryOfLabour">cterm:CategoryOfLabour</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/cterm#hasFamily">cterm:hasFamily</a> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/cterm#FamilyOfLabour">cterm:FamilyOfLabour</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -547,29 +547,29 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="https://w3id.org/cterm#hasPerformanceParameter">cterm:hasPerformanceParameter</a> <span class="cardinality">max</span> 10 <a href="https://w3id.org/cterm#PerformanceParameter">cterm:PerformanceParameter</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/cterm#hasObjectStandard">cterm:hasObjectStandard</a> <span class="cardinality">max</span> 1 <a href="https://w3id.org/cterm#Standard">cterm:Standard</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cterm#hasObject">cterm:hasObject</a> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/cterm#ObjectOfMaterial">cterm:ObjectOfMaterial</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cterm#hasPhysicalParameter">cterm:hasPhysicalParameter</a> <span class="cardinality">max</span> 10 <a href="https://w3id.org/cterm#PhysicalParameter">cterm:PhysicalParameter</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cr#cam">cr:cam</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="https://w3id.org/cterm#hasCategory">cterm:hasCategory</a> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/cterm#CategoryOfMaterial">cterm:CategoryOfMaterial</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cterm#hasUse">cterm:hasUse</a> <span class="cardinality">max</span> 5 <a href="https://w3id.org/cterm#Use">cterm:Use</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cterm#hasMaterial">cterm:hasMaterial</a> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/cterm#Material">cterm:Material</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/cterm#hasFunction">cterm:hasFunction</a> <span class="cardinality">max</span> 5 <a href="https://w3id.org/cterm#FunctionOfMaterial">cterm:FunctionOfMaterial</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/cterm#hasOtherStandard">cterm:hasOtherStandard</a> <span class="cardinality">max</span> 5 <a href="https://w3id.org/cterm#Standard">cterm:Standard</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/cterm#hasCategory">cterm:hasCategory</a> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/cterm#CategoryOfMaterial">cterm:CategoryOfMaterial</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/cterm#hasDimensionParameter">cterm:hasDimensionParameter</a> <span class="cardinality">max</span> 10 <a href="https://w3id.org/cterm#DimensionParameter">cterm:DimensionParameter</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/cterm#hasPhysicalParameter">cterm:hasPhysicalParameter</a> <span class="cardinality">max</span> 10 <a href="https://w3id.org/cterm#PhysicalParameter">cterm:PhysicalParameter</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/cterm#hasFinishing">cterm:hasFinishing</a> <span class="cardinality">max</span> 5 <a href="https://w3id.org/cterm#Finishing">cterm:Finishing</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/cterm#hasFamily">cterm:hasFamily</a> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/cterm#FamilyOfMaterial">cterm:FamilyOfMaterial</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/cterm#hasMaterial">cterm:hasMaterial</a> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/cterm#Material">cterm:Material</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cterm#hasPerformanceParameter">cterm:hasPerformanceParameter</a> <span class="cardinality">max</span> 10 <a href="https://w3id.org/cterm#PerformanceParameter">cterm:PerformanceParameter</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/cterm#hasFurnishing">cterm:hasFurnishing</a> <span class="cardinality">max</span> 5 <a href="https://w3id.org/cterm#Furnishing">cterm:Furnishing</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/cterm#hasObject">cterm:hasObject</a> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/cterm#ObjectOfMaterial">cterm:ObjectOfMaterial</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/cterm#hasUse">cterm:hasUse</a> <span class="cardinality">max</span> 5 <a href="https://w3id.org/cterm#Use">cterm:Use</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/cr#cam">cr:cam</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="https://w3id.org/cterm#hasFamily">cterm:hasFamily</a> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/cterm#FamilyOfMaterial">cterm:FamilyOfMaterial</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cterm#hasDimensionParameter">cterm:hasDimensionParameter</a> <span class="cardinality">max</span> 10 <a href="https://w3id.org/cterm#DimensionParameter">cterm:DimensionParameter</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cterm#hasFinishing">cterm:hasFinishing</a> <span class="cardinality">max</span> 5 <a href="https://w3id.org/cterm#Finishing">cterm:Finishing</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/cterm#hasAspect">cterm:hasAspect</a> <span class="cardinality">max</span> 5 <a href="https://w3id.org/cterm#AspectOfMaterial">cterm:AspectOfMaterial</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="https://w3id.org/cr#hasConsumption">cr:hasConsumption</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/cr#yield">cr:yield</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="https://w3id.org/cr#cam">cr:cam</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#yield">cr:yield</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#hasConsumption">cr:hasConsumption</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -591,50 +591,49 @@
                 <th>Restrictions</th>
                 <td>
                     <a href="https://w3id.org/cr#descriptionDetail">cr:descriptionDetail</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="https://w3id.org/cterm#hasGender">cterm:hasGender</a> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/cterm#Gender">cterm:Gender</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/cr#quantityUnitOfMeasure">cr:quantityUnitOfMeasure</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="https://w3id.org/cterm#hasType">cterm:hasType</a> <span class="cardinality">max</span> 1 <a href="https://w3id.org/cterm#Type">cterm:Type</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/cr#descriptionGeneral">cr:descriptionGeneral</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="https://w3id.org/cr#law">cr:law</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 10<br/>
-                    <a href="https://w3id.org/cr#hasUnit">cr:hasUnit</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="http://qudt.org/schema/qudt/Unit">qudt:Unit</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/cr#keywords">cr:keywords</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 10<br/>
                     <a href="https://w3id.org/cr#code">cr:code</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="https://w3id.org/cr#hasUnit">cr:hasUnit</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="http://qudt.org/schema/qudt/Unit">qudt:Unit</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cr#descriptionGeneral">cr:descriptionGeneral</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="https://w3id.org/cr#keywords">cr:keywords</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 10<br/>
+                    <a href="https://w3id.org/cterm#hasType">cterm:hasType</a> <span class="cardinality">max</span> 1 <a href="https://w3id.org/cterm#Type">cterm:Type</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cr#law">cr:law</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 10<br/>
                 </td>
             </tr>
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="https://w3id.org/cr#LabourResource">cr:LabourResource</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/cr#MaterialResource">cr:MaterialResource</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/cr#EquipmentResource">cr:EquipmentResource</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cr#MaterialResource">cr:MaterialResource</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cr#LabourResource">cr:LabourResource</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="https://w3id.org/cr#code">cr:code</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/cr#subRecourceOf">cr:subRecourceOf</a><br/>
+                    <a href="https://w3id.org/cr#descriptionDetail">cr:descriptionDetail</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#omniclass">cr:omniclass</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="https://w3id.org/cr#escluded">cr:escluded</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="https://w3id.org/cr#uniformat">cr:uniformat</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="https://w3id.org/cr#included">cr:included</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/cr#hasUnit">cr:hasUnit</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/cr#uniclass">cr:uniclass</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/cr#law">cr:law</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/cr#omniclass">cr:omniclass</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/cr#descriptionGeneral">cr:descriptionGeneral</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/cr#techSpecs">cr:techSpecs</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/cr#quantityUnitOfMeasure">cr:quantityUnitOfMeasure</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/cr#measurementRules">cr:measurementRules</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#code">cr:code</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="https://w3id.org/cr#hasSubResource">cr:hasSubResource</a><br/>
+                    <a href="https://w3id.org/cr#quantityUnitOfMeasure">cr:quantityUnitOfMeasure</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#subRecourceOf">cr:subRecourceOf</a><br/>
+                    <a href="https://w3id.org/cr#uniclass">cr:uniclass</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#hasUnit">cr:hasUnit</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/cr#measurementRules">cr:measurementRules</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#techSpecs">cr:techSpecs</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#descriptionGeneral">cr:descriptionGeneral</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="https://w3id.org/cr#keywords">cr:keywords</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/cr#descriptionDetail">cr:descriptionDetail</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/cr#law">cr:law</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="https://w3id.org/cr#refResource">cr:refResource</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/cr#hasSubResource">cr:hasSubResource</a><br/>
+                    <a href="https://w3id.org/cr#refResource">cr:refResource</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/cr#subRecourceOf">cr:subRecourceOf</a><br/>
                 </td>
             </tr>
@@ -678,8 +677,8 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="https://w3id.org/cr#refResource">cr:refResource</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="https://w3id.org/cr#Resource">cr:Resource</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/cr#refTask">cr:refTask</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="https://dtc-ontology.cms.ed.tum.de/ontology/Task">dtc:Task</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cr#refResource">cr:refResource</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="https://w3id.org/cr#Resource">cr:Resource</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -706,8 +705,8 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="https://w3id.org/cr#refTask">cr:refTask</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="https://dtc-ontology.cms.ed.tum.de/ontology/Task">dtc:Task</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/cr#refCostItem">cr:refCostItem</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="http://ifcowl.openbimstandards.org/IFC4_ADD2#IfcProduct">http://ifcowl.openbimstandards.org/IFC4_ADD2#IfcProduct</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/cr#refTask">cr:refTask</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="https://dtc-ontology.cms.ed.tum.de/ontology/Task">dtc:Task</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -941,8 +940,8 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="https://w3id.org/cr#EquipmentResource">cr:EquipmentResource</a><sup class="sup-c" title="class">c</sup>
                     <a href="https://w3id.org/cr#MaterialResource">cr:MaterialResource</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://w3id.org/cr#EquipmentResource">cr:EquipmentResource</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>

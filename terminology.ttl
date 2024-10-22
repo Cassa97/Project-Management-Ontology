@@ -2794,18 +2794,6 @@ cterm:Parameter
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:integer ;
-      owl:onProperty cterm:parameterValue1 ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:integer ;
-      owl:onProperty cterm:parameterValue2 ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onDataRange xsd:string ;
       owl:onProperty cterm:parameterSymbol1 ;
     ] ;
@@ -2814,6 +2802,18 @@ cterm:Parameter
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onDataRange xsd:string ;
       owl:onProperty cterm:parameterSymbol2 ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty cterm:parameterValue1 ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty cterm:parameterValue2 ;
     ] ;
 .
 cterm:ParameterType
@@ -5109,13 +5109,13 @@ cterm:parameterValue1
   rdf:type owl:DatatypeProperty ;
   rdfs:domain cterm:Parameter ;
   rdfs:label "parameterValue1" ;
-  rdfs:range xsd:integer ;
+  rdfs:range xsd:string ;
 .
 cterm:parameterValue2
   rdf:type owl:DatatypeProperty ;
   rdfs:domain cterm:Parameter ;
   rdfs:label "parameterValue2" ;
-  rdfs:range xsd:integer ;
+  rdfs:range xsd:string ;
 .
 cterm:standardBody
   rdf:type owl:DatatypeProperty ;
