@@ -392,12 +392,6 @@ cr:Resource
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:onClass cterm:Gender ;
-      owl:onProperty cterm:hasGender ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
       owl:onDataRange xsd:integer ;
       owl:onProperty cr:quantityUnitOfMeasure ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
