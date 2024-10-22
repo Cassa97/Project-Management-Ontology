@@ -1255,6 +1255,18 @@ cterm:Type
   rdfs:label "Type" ;
   rdfs:subClassOf cterm:Terminology ;
 .
+cterm:QualificationLevel
+  rdf:type owl:Class ;
+  rdfs:label "QualificationLevel" ;
+  rdfs:subClassOf owl:Thing ;  
+.
+
+cterm:hasQualificationLevel
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain cr:LabourResource ;
+  rdfs:label "hasQualificationLevel" ;
+  rdfs:range cterm:QualificationLevel ;
+.
 cterm:TypeOfActivity
   rdf:type owl:Class ;
   rdfs:label "TypeOfActivity" ;

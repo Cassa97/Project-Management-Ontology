@@ -230,8 +230,8 @@ cr:LabourResource
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass cr:QualificationLevel ;
-      owl:onProperty cr:hasQualificationLevel ;
+      owl:onClass cterm:QualificationLevel ;
+      owl:onProperty cterm:hasQualificationLevel ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -353,17 +353,7 @@ cr:MaterialResource
   owl:disjointWith cr:LabourResource ;
   owl:equivalentClass <https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedMaterial> ;
 .
-cr:QualificationLevel
-  rdf:type owl:Class ;
-  rdfs:label "QualificationLevel" ;
-  rdfs:subClassOf owl:Thing ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass cr:QualificationLevel ;
-      owl:onProperty cr:hasQualificationLevel ;
-    ] ;
-.
+
 cr:Resource
   rdf:type owl:Class ;
   rdfs:comment "This class is used for providing information about a construction resource." ;
@@ -525,12 +515,6 @@ cr:hasConsumption
 .
 
 
-cr:hasQualificationLevel
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain cr:LabourResource ;
-  rdfs:label "hasQualificationLevel" ;
-  rdfs:range cr:QualificationLevel ;
-.
 cr:hasSubResource
   rdf:type owl:TransitiveProperty ;
   rdfs:domain cr:Resource ;
