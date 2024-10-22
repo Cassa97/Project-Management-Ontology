@@ -214,12 +214,6 @@ ci:CostComponent
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:onDataRange xsd:decimal ;
-      owl:onProperty ci:unitPrice ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
       owl:onDataRange xsd:integer ;
       owl:onProperty ci:quantityUnitOfMeasure ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
@@ -592,7 +586,10 @@ ci:cam
 .
 ci:code
   rdf:type owl:DatatypeProperty ;
+  rdfs:domain ci:Activity ;
   rdfs:domain ci:CostComponent ;
+  rdfs:domain ci:CostItem ;
+  rdfs:domain ci:Work ;
   rdfs:label "code" ;
   rdfs:range xsd:string ;
 .
@@ -610,7 +607,8 @@ ci:descriptionGeneral
 .
 ci:excluded
   rdf:type owl:DatatypeProperty ;
-  rdfs:domain ci:CostComponent ;
+  rdfs:domain ci:Activity ;
+  rdfs:domain ci:Work ;
   rdfs:label "excluded" ;
   rdfs:range xsd:string ;
 .
@@ -650,7 +648,8 @@ ci:hasWork
 .
 ci:included
   rdf:type owl:DatatypeProperty ;
-  rdfs:domain ci:CostComponent ;
+  rdfs:domain ci:Activity ;
+  rdfs:domain ci:Work ;
   rdfs:label "included" ;
   rdfs:range xsd:string ;
 .
@@ -712,7 +711,7 @@ ci:uniformat
 .
 ci:unitPrice
   rdf:type owl:DatatypeProperty ;
-  rdfs:domain ci:CostComponent ;
+  rdfs:domain ci:CostItem ;
   rdfs:label "unit price" ;
   rdfs:range xsd:decimal ;
 .
