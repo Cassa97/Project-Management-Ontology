@@ -89,6 +89,12 @@ ci:Activity
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
+      owl:onClass qudt:Unit ;
+      owl:onProperty ci:hasUnit ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
       owl:onClass cterm:CategoryOfActivity ;
       owl:onProperty cterm:hasCategory ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
@@ -167,6 +173,12 @@ ci:CostComponent
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onDataRange xsd:string ;
       owl:onProperty ci:descriptionDetail ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass qudt:Unit ;
+      owl:onProperty ci:hasUnit ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -339,6 +351,12 @@ ci:Work
       owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
       owl:onClass cterm:Standard ;
       owl:onProperty cterm:hasOtherStandard ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass qudt:Unit ;
+      owl:onProperty ci:hasUnit ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
