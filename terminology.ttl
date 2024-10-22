@@ -2778,7 +2778,7 @@ cterm:Panels
 cterm:Parameter
   rdf:type owl:Class ;
   rdfs:label "Parameter" ;
-  rdfs:subClassOf cterm:Terminology ;
+  rdfs:subClassOf owl:Thing ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
