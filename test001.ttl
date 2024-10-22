@@ -61,9 +61,7 @@ SPECIFICHE TECNICHE: getto per quantità di calcestruzzo [mc] ≤ 30.
 LAVORO: Getto con pompa. Incluso: vibratura. Escluso: ferro; casseri. 
 SPECIFICHE TECNICHE: getto per quantità di calcestruzzo [mc] ≤ 30.""" ;
 .
-unnamed:PerformanceParameter_1
-  rdf:type cr:PerformanceParameter ;
-.
+
 <http://example.org/test001#WorkOfConstructionComponent_OP.E5100.J0001.0000.b>
   rdf:type ci:WorkOfConstructionComponent ;
   ci:cam "false"^^xsd:boolean ;

@@ -4881,9 +4881,8 @@ cterm:hasDimensionParameter
   rdf:type owl:ObjectProperty ;
   rdfs:domain ci:Work ;
   rdfs:domain cr:EquipmentResource ;
-  rdfs:domain cr:Material ;
+  rdfs:domain cr:MaterialResource ;
   rdfs:label "hasDimensionParameter" ;
-  rdfs:range cr:DimensionParameter ;
   rdfs:range cterm:DimensionParameter ;
 .
 cterm:hasFamily
@@ -4965,21 +4964,23 @@ cterm:hasOtherStandard
 .
 cterm:hasParameterStandard
   rdf:type owl:ObjectProperty ;
-  rdfs:domain cr:Parameter ;
   rdfs:domain cterm:Parameter ;
   rdfs:label "hasParameterStandard" ;
   rdfs:range cterm:Standard ;
 .
 cterm:hasPerformanceParameter
   rdf:type owl:ObjectProperty ;
+  rdfs:domain ci:Work ;
   rdfs:domain cr:EquipmentResource ;
-  rdfs:domain cr:Material ;
+  rdfs:domain cr:MaterialResource ;
   rdfs:label "hasPerformanceParameter" ;
-  rdfs:range cr:PerformanceParameter ;
+  rdfs:range cterm:PerformanceParameter ;
 .
 cterm:hasPhysicalParameter
   rdf:type owl:ObjectProperty ;
   rdfs:domain ci:Work ;
+  rdfs:domain cr:EquipmentResource ;
+  rdfs:domain cr:MaterialResource ;
   rdfs:label "hasPhysicalParameter" ;
   rdfs:range cterm:PhysicalParameter ;
 .
@@ -5101,7 +5102,7 @@ cterm:parameterSymbol2
 cterm:parameterType
   rdf:type owl:ObjectProperty ;
   rdfs:domain cterm:Parameter ;
-  rdfs:label "parameterType" ;
+  rdfs:label "parameter type" ;
   rdfs:range cterm:ParameterType ;
 .
 cterm:parameterValue1
