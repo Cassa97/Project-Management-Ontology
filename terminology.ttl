@@ -186,7 +186,7 @@ cterm:Architecture
 .
 cterm:Arm
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:DimensionParameter ;
+  rdf:type cterm:DimensionParameterType ;
   rdfs:label "Arm"@en ;
   rdfs:label "Auslegerlänge"@de ;
   rdfs:label "sbraccio"@it ;
@@ -392,7 +392,7 @@ cterm:Blend
 .
 cterm:Boom
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:DimensionParameter ;
+  rdf:type cterm:DimensionParameterType ;
   rdfs:label "Ausleger"@de ;
   rdfs:label "Boom"@en ;
   rdfs:label "braccio"@it ;
@@ -441,7 +441,7 @@ cterm:Bush-Hammered
 .
 cterm:Capacity
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:PerformanceParameter ;
+  rdf:type cterm:PerformanceParameterType ;
   rdfs:label "Capacity"@en ;
   rdfs:label "Kapazität"@de ;
   rdfs:label "Tragfähigkeit"@de ;
@@ -572,7 +572,7 @@ cterm:CeramicTerracotta-Brick
 .
 cterm:CharacteristicStrength
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:PerformanceParameter ;
+  rdf:type cterm:PerformanceParameterType ;
   rdfs:label "Characteristic Strength"@en ;
   rdfs:label "Charakteristische Festigkeit"@de ;
   rdfs:label "resistenza caratteristica"@it ;
@@ -762,7 +762,6 @@ cterm:CompressionResistance
 .
 cterm:CompressionStrength
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:PerformanceParameter ;
   rdf:type cterm:PerformanceParameterType ;
   rdfs:label "Compression Strength"@en ;
   rdfs:label "Druckfestigkeit"@de ;
@@ -827,14 +826,14 @@ cterm:Connections
 .
 cterm:Consistency
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:PerformanceParameter ;
+  rdf:type cterm:PerformanceParameterType ;
   rdfs:label "Consistency"@en ;
   rdfs:label "Konsistenz"@de ;
   rdfs:label "consistenza"@it ;
 .
 cterm:ConsistencyClass
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:PerformanceParameter ;
+  rdf:type cterm:PerformanceParameterType ;
   rdfs:label "Consistency Class"@en ;
   rdfs:label "Konsistenzklasse"@de ;
   rdfs:label "classe di consistenza"@it ;
@@ -947,7 +946,6 @@ cterm:Demolition
 .
 cterm:Density
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:PhysicalParameter ;
   rdf:type cterm:PhysicalParameterType ;
   rdfs:label "Density"@en ;
   rdfs:label "Densità"@it ;
@@ -956,7 +954,7 @@ cterm:Density
 .
 cterm:Diameter
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:DimensionParameter ;
+  rdf:type cterm:DimensionParameterType ;
   rdfs:label "Diameter"@en ;
   rdfs:label "Durchmesser"@de ;
   rdfs:label "diametro"@it ;
@@ -979,12 +977,6 @@ cterm:DimensionParameter
   rdf:type owl:Class ;
   rdfs:label "Dimension Parameter" ;
   rdfs:subClassOf cterm:Parameter ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:onClass cterm:DimensionParameterType ;
-      owl:onProperty cterm:parameterType ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:onClass cterm:DimensionParameterType ;
@@ -1078,7 +1070,7 @@ cterm:ElasticCoating
 .
 cterm:ElasticModulus
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:PerformanceParameter ;
+  rdf:type cterm:PerformanceParameterType ;
   rdfs:label "Elastic Modulus"@en ;
   rdfs:label "Elastizitätsmodul"@de ;
   rdfs:label "modulo elastico"@it ;
@@ -1208,14 +1200,14 @@ cterm:ExpandedPolystyrenePlastic
 .
 cterm:Exposure
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:PerformanceParameter ;
+  rdf:type cterm:PerformanceParameterType ;
   rdfs:label "Exposition"@de ;
   rdfs:label "Exposure"@en ;
   rdfs:label "esposizione"@it ;
 .
 cterm:ExposureClass
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:PerformanceParameter ;
+  rdf:type cterm:PerformanceParameterType ;
   rdfs:label "Expositionsklasse"@de ;
   rdfs:label "Exposure Class"@en ;
   rdfs:label "classe di esposizione"@it ;
@@ -1250,7 +1242,7 @@ cterm:ExtrudedPolystyrenePlastic
 .
 cterm:FallHeights
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:PerformanceParameter ;
+  rdf:type cterm:PerformanceParameterType ;
   rdfs:label "Fall Heights"@en ;
   rdfs:label "Fallhöhen"@de ;
   rdfs:label "altezze di caduta"@it ;
@@ -1388,7 +1380,6 @@ cterm:FireProtectionSystems
 .
 cterm:FireReaction
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:PerformanceParameter ;
   rdf:type cterm:PerformanceParameterType ;
   rdfs:label "Brandverhalten"@de ;
   rdfs:label "Feuerwiderstand"@de ;
@@ -1398,7 +1389,6 @@ cterm:FireReaction
 .
 cterm:FireResistance
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:PerformanceParameter ;
   rdf:type cterm:PerformanceParameterType ;
   rdfs:label "Feuerbeständigkeit"@de ;
   rdfs:label "Fire Resistance"@en ;
@@ -1937,7 +1927,7 @@ cterm:Hardware
 .
 cterm:HeadDiameter
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:DimensionParameter ;
+  rdf:type cterm:DimensionParameterType ;
   rdfs:label "Head Diameter"@en ;
   rdfs:label "Kopfdurchmesser"@de ;
   rdfs:label "diametro testa"@it ;
@@ -1951,7 +1941,6 @@ cterm:HeatReflective
 .
 cterm:Height
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:DimensionParameter ;
   rdf:type cterm:DimensionParameterType ;
   rdfs:label "Altezza"@it ;
   rdfs:label "Height"@en ;
@@ -2009,7 +1998,7 @@ cterm:HollowBox
 .
 cterm:HookHeight
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:DimensionParameter ;
+  rdf:type cterm:DimensionParameterType ;
   rdfs:label "Hook Height"@en ;
   rdfs:label "Höhe unter Haken"@de ;
   rdfs:label "altezza sotto gancio"@it ;
@@ -2281,7 +2270,6 @@ cterm:Laying
 .
 cterm:Length
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:DimensionParameter ;
   rdf:type cterm:DimensionParameterType ;
   rdfs:label "Length"@en ;
   rdfs:label "Lunghezza"@it ;
@@ -2373,7 +2361,7 @@ cterm:Lintels
 .
 cterm:Load
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:PerformanceParameter ;
+  rdf:type cterm:PerformanceParameterType ;
   rdfs:label "Last"@de ;
   rdfs:label "Load"@en ;
   rdfs:label "carico"@it ;
@@ -2387,7 +2375,7 @@ cterm:Load-Bearing
 .
 cterm:LoadClass
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:PerformanceParameter ;
+  rdf:type cterm:PerformanceParameterType ;
   rdfs:label "Lastklasse"@de ;
   rdfs:label "Load Class"@en ;
   rdfs:label "classe di carico"@it ;
@@ -2610,7 +2598,7 @@ cterm:Net
 .
 cterm:NominalDiameter
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:DimensionParameter ;
+  rdf:type cterm:DimensionParameterType ;
   rdfs:label "Nennmaß-Durchmesser"@de ;
   rdfs:label "Nominal Diameter"@en ;
   rdfs:label "diametro nominale"@it ;
@@ -2800,26 +2788,8 @@ cterm:Parameter
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass qudt:Unit ;
-      owl:onProperty cterm:hasUnit ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onClass cterm:Standard ;
       owl:onProperty cterm:hasParameterStandard ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass cterm:Standard ;
-      owl:onProperty cterm:hasParameterStandard ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:integer ;
-      owl:onProperty cterm:parameterValue1 ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -2836,26 +2806,8 @@ cterm:Parameter
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:integer ;
-      owl:onProperty cterm:parameterValue2 ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onDataRange xsd:string ;
       owl:onProperty cterm:parameterSymbol1 ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:string ;
-      owl:onProperty cterm:parameterSymbol1 ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange xsd:string ;
-      owl:onProperty cterm:parameterSymbol2 ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -2920,7 +2872,7 @@ cterm:PartitionWallsWithMetalStructure
 .
 cterm:PassageWidth
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:DimensionParameter ;
+  rdf:type cterm:DimensionParameterType ;
   rdfs:label "Durchgangsbreite"@de ;
   rdfs:label "Passage Width"@en ;
   rdfs:label "larghezza di passaggio"@it ;
@@ -2936,12 +2888,6 @@ cterm:PerformanceParameter
   rdf:type owl:Class ;
   rdfs:label "Performance Parameter" ;
   rdfs:subClassOf cterm:Parameter ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:onClass cterm:PerformanceParameterType ;
-      owl:onProperty cterm:parameterType ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:onClass cterm:PerformanceParameterType ;
@@ -2973,12 +2919,6 @@ cterm:PhysicalParameter
   rdf:type owl:Class ;
   rdfs:label "PhysicalParameter" ;
   rdfs:subClassOf cterm:Parameter ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:onClass cterm:PhysicalParameterType ;
-      owl:onProperty cterm:parameterType ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:onClass cterm:PhysicalParameterType ;
@@ -3183,7 +3123,7 @@ cterm:PouringWalkway
 .
 cterm:Power
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:PerformanceParameter ;
+  rdf:type cterm:PerformanceParameterType ;
   rdfs:label "Leistung"@de ;
   rdfs:label "Power"@en ;
   rdfs:label "potenza"@it ;
@@ -3226,7 +3166,7 @@ cterm:PreformedPanels
 .
 cterm:Pressure
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:PerformanceParameter ;
+  rdf:type cterm:PerformanceParameterType ;
   rdfs:label "Druck"@de ;
   rdfs:label "Pressure"@en ;
   rdfs:label "pressione"@it ;
@@ -3277,7 +3217,7 @@ cterm:Pultruded
 .
 cterm:PunchingResistance
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:PerformanceParameter ;
+  rdf:type cterm:PerformanceParameterType ;
   rdfs:label "Durchstoßfestigkeit"@de ;
   rdfs:label "Punching Resistance"@en ;
   rdfs:label "resistenza a punzonamento"@it ;
@@ -3472,7 +3412,6 @@ cterm:Residences
 .
 cterm:ResistanceClass
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:PerformanceParameter ;
   rdf:type cterm:PerformanceParameterType ;
   rdfs:label "Classe Di Resistenza"@it ;
   rdfs:label "Resistance Class"@en ;
@@ -3645,7 +3584,7 @@ cterm:Rough-Sandblasted
 .
 cterm:RoughFloorHeight
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:DimensionParameter ;
+  rdf:type cterm:DimensionParameterType ;
   rdfs:label "Rohe Deckenhöhe"@de ;
   rdfs:label "Rough Floor Height"@en ;
   rdfs:label "interpiano rustico"@it ;
@@ -3937,7 +3876,7 @@ cterm:SpecializedTechnicianforICTWork
 .
 cterm:SpecificWeight
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:PhysicalParameter ;
+  rdf:type cterm:PhysicalParameterType ;
   rdfs:label "Specific Weight"@en ;
   rdfs:label "Spezifisches Gewicht"@de ;
   rdfs:label "peso specifico"@it ;
@@ -3965,7 +3904,7 @@ cterm:Spray
 .
 cterm:SpreadClass
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:PerformanceParameter ;
+  rdf:type cterm:PerformanceParameterType ;
   rdfs:label "Spread Class"@en ;
   rdfs:label "Verteilungsklasse"@de ;
   rdfs:label "classe di spandimento"@it ;
@@ -4268,7 +4207,6 @@ cterm:TemporaryFences
 .
 cterm:TensileStrength
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:PerformanceParameter ;
   rdf:type cterm:PerformanceParameterType ;
   rdfs:label "Resistenza A Trazione"@it ;
   rdfs:label "Tensile Strength"@en ;
@@ -4324,7 +4262,6 @@ cterm:ThermalBridges
 .
 cterm:ThermalConductivity
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:PerformanceParameter ;
   rdf:type cterm:PerformanceParameterType ;
   rdfs:label "Conducibilità Termica"@it ;
   rdfs:label "Thermal Conductivity"@en ;
@@ -4357,7 +4294,7 @@ cterm:ThermalInsulation
 .
 cterm:ThermalResistance
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:PerformanceParameter ;
+  rdf:type cterm:PerformanceParameterType ;
   rdfs:label "Thermal Resistance"@en ;
   rdfs:label "Wärmewiderstand"@de ;
   rdfs:label "resistenza termica"@it ;
@@ -4371,7 +4308,6 @@ cterm:Thermal_Acoustic
 .
 cterm:Thickness
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:DimensionParameter ;
   rdf:type cterm:DimensionParameterType ;
   rdfs:label "Dicke"@de ;
   rdfs:label "Spessore"@it ;
@@ -4408,7 +4344,7 @@ cterm:Top-SlewingTowerCrane
 .
 cterm:TotalThickness
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:DimensionParameter ;
+  rdf:type cterm:DimensionParameterType ;
   rdfs:label "Gesamtdicke"@de ;
   rdfs:label "Total Thickness"@en ;
   rdfs:label "spessore totale"@it ;
@@ -4684,7 +4620,7 @@ cterm:VerticalSurfaces
 .
 cterm:VolumetricMass
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:PerformanceParameter ;
+  rdf:type cterm:PerformanceParameterType ;
   rdfs:label "Volumenmasse"@de ;
   rdfs:label "Volumetric Mass"@en ;
   rdfs:label "massa volumica"@it ;
@@ -4806,7 +4742,6 @@ cterm:WearingLayer
 .
 cterm:Weight
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:PhysicalParameter ;
   rdf:type cterm:PhysicalParameterType ;
   rdfs:label "Gewicht"@de ;
   rdfs:label "Peso"@it ;
@@ -4829,7 +4764,6 @@ cterm:WhiteColor
 .
 cterm:Width
   rdf:type owl:NamedIndividual ;
-  rdf:type cterm:DimensionParameter ;
   rdf:type cterm:DimensionParameterType ;
   rdfs:label "Breite"@de ;
   rdfs:label "Larghezza"@it ;
@@ -5079,6 +5013,79 @@ cterm:hasUse
   rdfs:label "hasUse" ;
   rdfs:range cterm:Use ;
 .
+cterm:nd
+  rdf:type cterm:Aspect ;
+  rdf:type cterm:AspectOfEquipment ;
+  rdf:type cterm:AspectOfMaterial ;
+  rdf:type cterm:AspectOfWorkOfConstructionWork ;
+  rdf:type cterm:AspectOfWorkOfProductWork ;
+  rdf:type cterm:AspectOfWorkOfTemporaryWork ;
+  rdf:type cterm:Category ;
+  rdf:type cterm:CategoryOfActivity ;
+  rdf:type cterm:CategoryOfCostComponent ;
+  rdf:type cterm:CategoryOfEquipment ;
+  rdf:type cterm:CategoryOfLabour ;
+  rdf:type cterm:CategoryOfMaterial ;
+  rdf:type cterm:CategoryOfWorkOfConstructionWork ;
+  rdf:type cterm:CategoryOfWorkOfProductWork ;
+  rdf:type cterm:CategoryOfWorkOfTemporaryWork ;
+  rdf:type cterm:DimensionParameterType ;
+  rdf:type cterm:Family ;
+  rdf:type cterm:FamilyOfActivity ;
+  rdf:type cterm:FamilyOfCostComponent ;
+  rdf:type cterm:FamilyOfEquipment ;
+  rdf:type cterm:FamilyOfLabour ;
+  rdf:type cterm:FamilyOfWork ;
+  rdf:type cterm:Finishing ;
+  rdf:type cterm:FinishingOfWorkOfConstructionWork ;
+  rdf:type cterm:FinishingOfWorkOfProductWork ;
+  rdf:type cterm:FinishingOfWorkOfTemporaryWork ;
+  rdf:type cterm:Function ;
+  rdf:type cterm:FunctionOfActivity ;
+  rdf:type cterm:FunctionOfEquipment ;
+  rdf:type cterm:FunctionOfMaterial ;
+  rdf:type cterm:FunctionOfWorkOfConstructionWork ;
+  rdf:type cterm:FunctionOfWorkOfProductWork ;
+  rdf:type cterm:FunctionOfWorkOfTemporaryWork ;
+  rdf:type cterm:Furnishing ;
+  rdf:type cterm:Material ;
+  rdf:type cterm:Object ;
+  rdf:type cterm:ObjectOfActivity ;
+  rdf:type cterm:ObjectOfCostComponent ;
+  rdf:type cterm:ObjectOfEquipment ;
+  rdf:type cterm:ObjectOfLabour ;
+  rdf:type cterm:ObjectOfMaterial ;
+  rdf:type cterm:ObjectOfWorkOfConstructionWork ;
+  rdf:type cterm:ObjectOfWorkOfProductWork ;
+  rdf:type cterm:ObjectOfWorkOfTemporaryWork ;
+  rdf:type cterm:ParameterType ;
+  rdf:type cterm:PerformanceParameterType ;
+  rdf:type cterm:PhysicalParameterType ;
+  rdf:type cterm:QualificationLevel ;
+  rdf:type cterm:Standard ;
+  rdf:type cterm:Terminology ;
+  rdf:type cterm:Type ;
+  rdf:type cterm:TypeOfActivity ;
+  rdf:type cterm:TypeOfConstructionWork ;
+  rdf:type cterm:TypeOfEquipment ;
+  rdf:type cterm:TypeOfLabour ;
+  rdf:type cterm:TypeOfMaterial ;
+  rdf:type cterm:TypeOfProductWork ;
+  rdf:type cterm:TypeOfTemporaryWork ;
+  rdf:type cterm:TypeOfWorkOfConstructionWork ;
+  rdf:type cterm:TypeOfWorkOfProductWork ;
+  rdf:type cterm:TypeOfWorkOfTemporaryWork ;
+  rdf:type cterm:Use ;
+  rdf:type cterm:UseOfActivity ;
+  rdf:type cterm:UseOfEquipment ;
+  rdf:type cterm:UseOfMaterial ;
+  rdf:type cterm:UseOfWorkOfConstructionWork ;
+  rdf:type cterm:UseOfWorkOfProductWork ;
+  rdf:type cterm:UseOfWorkOfTemporaryWork ;
+  rdfs:label "Terminologia non definita"@it ;
+  rdfs:label "Undefined Terminology"@en ;
+  rdfs:label "Undefinierte Terminologie"@de ;
+.
 cterm:parameterSymbol1
   rdf:type owl:DatatypeProperty ;
   rdfs:domain cterm:Parameter ;
@@ -5132,83 +5139,4 @@ cterm:standardYear
   rdfs:domain cterm:Standard ;
   rdfs:label "standardYear" ;
   rdfs:range xsd:integer ;
-.
-
-
-cterm:nd
-  rdf:type cterm:Aspect ;
-  rdf:type cterm:AspectOfEquipment ;
-  rdf:type cterm:AspectOfMaterial ;
-  rdf:type cterm:AspectOfWorkOfConstructionWork ;
-  rdf:type cterm:AspectOfWorkOfProductWork ;
-  rdf:type cterm:AspectOfWorkOfTemporaryWork ;
-  rdf:type cterm:Category ;
-  rdf:type cterm:CategoryOfActivity ;
-  rdf:type cterm:CategoryOfCostComponent ;
-  rdf:type cterm:CategoryOfEquipment ;
-  rdf:type cterm:CategoryOfLabour ;
-  rdf:type cterm:CategoryOfMaterial ;
-  rdf:type cterm:CategoryOfWorkOfConstructionWork ;
-  rdf:type cterm:CategoryOfWorkOfProductWork ;
-  rdf:type cterm:CategoryOfWorkOfTemporaryWork ;
-  rdf:type cterm:DimensionParameter ;
-  rdf:type cterm:DimensionParameterType ;
-  rdf:type cterm:Family ;
-  rdf:type cterm:FamilyOfActivity ;
-  rdf:type cterm:FamilyOfCostComponent ;
-  rdf:type cterm:FamilyOfEquipment ;
-  rdf:type cterm:FamilyOfLabour ;
-  rdf:type cterm:FamilyOfWork ;
-  rdf:type cterm:Finishing ;
-  rdf:type cterm:FinishingOfWorkOfConstructionWork ;
-  rdf:type cterm:FinishingOfWorkOfProductWork ;
-  rdf:type cterm:FinishingOfWorkOfTemporaryWork ;
-  rdf:type cterm:Function ;
-  rdf:type cterm:FunctionOfActivity ;
-  rdf:type cterm:FunctionOfEquipment ;
-  rdf:type cterm:FunctionOfMaterial ;
-  rdf:type cterm:FunctionOfWorkOfConstructionWork ;
-  rdf:type cterm:FunctionOfWorkOfProductWork ;
-  rdf:type cterm:FunctionOfWorkOfTemporaryWork ;
-  rdf:type cterm:Furnishing ;
-  rdf:type cterm:Material ;
-  rdf:type cterm:Object ;
-  rdf:type cterm:ObjectOfActivity ;
-  rdf:type cterm:ObjectOfCostComponent ;
-  rdf:type cterm:ObjectOfEquipment ;
-  rdf:type cterm:ObjectOfLabour ;
-  rdf:type cterm:ObjectOfMaterial ;
-  rdf:type cterm:ObjectOfWorkOfConstructionWork ;
-  rdf:type cterm:ObjectOfWorkOfProductWork ;
-  rdf:type cterm:ObjectOfWorkOfTemporaryWork ;
-  rdf:type cterm:Parameter ;
-  rdf:type cterm:ParameterType ;
-  rdf:type cterm:PerformanceParameter ;
-  rdf:type cterm:PerformanceParameterType ;
-  rdf:type cterm:PhysicalParameter ;
-  rdf:type cterm:PhysicalParameterType ;
-  rdf:type cterm:QualificationLevel ;
-  rdf:type cterm:Standard ;
-  rdf:type cterm:Terminology ;
-  rdf:type cterm:Type ;
-  rdf:type cterm:TypeOfActivity ;
-  rdf:type cterm:TypeOfConstructionWork ;
-  rdf:type cterm:TypeOfEquipment ;
-  rdf:type cterm:TypeOfLabour ;
-  rdf:type cterm:TypeOfMaterial ;
-  rdf:type cterm:TypeOfProductWork ;
-  rdf:type cterm:TypeOfTemporaryWork ;
-  rdf:type cterm:TypeOfWorkOfConstructionWork ;
-  rdf:type cterm:TypeOfWorkOfProductWork ;
-  rdf:type cterm:TypeOfWorkOfTemporaryWork ;
-  rdf:type cterm:Use ;
-  rdf:type cterm:UseOfActivity ;
-  rdf:type cterm:UseOfEquipment ;
-  rdf:type cterm:UseOfMaterial ;
-  rdf:type cterm:UseOfWorkOfConstructionWork ;
-  rdf:type cterm:UseOfWorkOfProductWork ;
-  rdf:type cterm:UseOfWorkOfTemporaryWork ;
-  rdfs:label "Terminologia non definita"@it ;
-  rdfs:label "Undefined Terminology"@en ;
-  rdfs:label "Undefinierte Terminologie"@de ;
 .
