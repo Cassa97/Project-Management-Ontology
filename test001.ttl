@@ -20,11 +20,19 @@
 <http://example.org/test001#Activity_LV.Pa10.E5100.3750.->
   rdf:type ci:Activity ;
   ci:code "LV.Pa10.E5100.3750.-" ;
+  ci:descriptionGeneral "Getto con pompa. Incluso: vibratura. Escluso: ferro; casseri. SPECIFICHE TECNICHE: getto per quantità di calcestruzzo [mc] ≤ 30." ;
+  ci:hasSubComponent unnamed:EquipmentResource_ ;
+  ci:hasSubComponent <http://example.org/test001#EquipmentResource_RP.01.00.00.0040.a> ;
+  ci:quantityUnitOfMeasure 1 ;
+  cterm:hasCategory cterm:Realization ;
+  cterm:hasFamily cterm:Production ;
+  cterm:hasObject cterm:Casting ;
+  cterm:hasType cterm:WithPump ;
 .
 <http://example.org/test001#ConstructionComponent_OC.EEA.Pa10.E5100.J0001.0000.b>
   rdf:type ci:ConstructionComponent ;
   ci:descriptionDetail """OP1 OPERA: Fondazione di conglomerato cementizio; resistenza a compressione [classe] = C25/30 | classe di esposizione [classe] = XC2. 
-	RM2 Impasto preconfezionato di cemento generico; geometria: sfuso; funzione: strutturale; impiego: conglomerato cementizio; fornitura: autobetoniera; classe di 	consistenza [classe] = S3 | classe di resistenza [classe] = C25/30. Componenti: legante idraulico, aggregato, legante idraulico riciclato 
+	RM2 Impasto preconfezionato di cemento generico; geometria: sfuso; funzione: strutturale; impiego: conglomerato cementizio; fornitura: autobetoniera; classe di 	consistenza [classe] = S3 | classe di resistenza [classe] = C25/30. Componenti: legante idraulico, aggregato, aggregato sabbia 
 	SPECIFICHE TECNICHE: semifluido, test slump [mm] = 100 ÷ 150 
 LV1 LAVORO: Getto con pompa. Incluso: vibratura. Escluso: ferro; casseri. 
 SPECIFICHE TECNICHE: getto per quantità di calcestruzzo [mc] ≤ 30. 
@@ -42,6 +50,34 @@ SPECIFICHE TECNICHE: getto per quantità di calcestruzzo [mc] ≤ 30.""" ;
   cterm:hasFamily cterm:Construction ;
   cterm:hasMaterial cterm:CementitiousCompound ;
   cterm:hasObject cterm:Residences ;
+.
+unnamed:DimensionParameter_1
+  rdf:type cterm:DimensionParameter ;
+  cterm:parameterSymbol1 "=" ;
+  cterm:parameterType cterm:Diameter ;
+  cterm:parameterValue1 "30" ;
+.
+unnamed:DimensionParameter_2
+  rdf:type cterm:DimensionParameter ;
+  cterm:parameterSymbol1 "=" ;
+  cterm:parameterType cterm:HeadDiameter ;
+  cterm:parameterValue1 "45" ;
+.
+unnamed:EquipmentResource_
+  rdf:type cr:EquipmentResource ;
+.
+<http://example.org/test001#EquipmentResource_RP.01.00.00.0040.a>
+  rdf:type cr:EquipmentResource ;
+  cr:accessory "false"^^xsd:boolean ;
+  cr:code "RP.01.00.00.0040.a" ;
+  cr:descriptionGeneral "Vibratore per calcestruzzo; diametro testa [mm] = 45; potenza [kW] = 1; peso [kg] = 14" ;
+  cr:quantityUnitOfMeasure 1 ;
+  cterm:hasCategory cterm:Mixing ;
+  cterm:hasDimensionParameter unnamed:DimensionParameter_2 ;
+  cterm:hasFamily cterm:Semi-FinishedProducts ;
+  cterm:hasObject cterm:ConcreteVibrator ;
+  cterm:hasPerformanceParameter unnamed:PerformanceParameter_6 ;
+  cterm:hasPhysicalParameter unnamed:PhysicalParameter_1 ;
 .
 <http://example.org/test001#Foundation_LOM241.OC.EEA.Pa10.E5100.J0001.0000.b>
   rdf:type ci:CostItem ;
@@ -61,18 +97,118 @@ SPECIFICHE TECNICHE: getto per quantità di calcestruzzo [mc] ≤ 30.
 LAVORO: Getto con pompa. Incluso: vibratura. Escluso: ferro; casseri. 
 SPECIFICHE TECNICHE: getto per quantità di calcestruzzo [mc] ≤ 30.""" ;
 .
-
+<http://example.org/test001#MaterialResource_RM.00.00.00.G0000.0290.b_CAM>
+  rdf:type cr:MaterialResource ;
+  cr:cam "true"^^xsd:boolean ;
+  cr:code "RM.00.00.00.G0000.0290.b_CAM" ;
+  cr:descriptionDetail """COMPONENTI: 
+RM1 Legante idraulico di cemento generico; resistenza a compressione [classe] = 42.5 
+RM1 Aggregato di materiale generico; diametro massimo (Dmax) [mm] = 30 
+RM1 Aggregato sabbia di materiale generico""" ;
+  cr:descriptionGeneral """Impasto preconfezionato di conglomerato cementizio; geometria: sfuso; funzione: strutturale; impiego: conglomerato cementizio; fornitura: autobetoniera; classe di consistenza [classe] = S3 | classe di resistenza [classe] = C25/30. Componenti: legante idraulico, aggregato, aggregato sabbia 
+SPECIFICHE TECNICHE: semifluido, test slump [mm] = 100 ÷ 150""" ;
+  cr:hasSubResource <http://example.org/test001#MaterialResource_RM.00.10.05.Za000.1755.c> ;
+  cr:hasSubResource <http://example.org/test001#MaterialResource_RM.00.10.05.Za000.2500.a> ;
+  cr:hasSubResource <http://example.org/test001#MaterialResource_RM.00.10.10.G0000.0250.e> ;
+  cr:hasUnit <http://qudt.org/vocab/unit/M3> ;
+  cr:keywords "impasto di calcestruzzo" ;
+  cr:quantityUnitOfMeasure 1 ;
+  cr:techSpecs "semifluido, test slump [mm] = 100 ÷ 150" ;
+  cterm:hasAspect cterm:Bulk ;
+  cterm:hasCategory cterm:Systems ;
+  cterm:hasFamily cterm:Mixtures ;
+  cterm:hasFunction cterm:Structural ;
+  cterm:hasMaterial cterm:CementitiousCompound ;
+  cterm:hasPerformanceParameter unnamed:PerformanceParameter_3 ;
+  cterm:hasPerformanceParameter unnamed:PerformanceParameter_4 ;
+  cterm:hasUse cterm:CementitiousCompound ;
+.
+<http://example.org/test001#MaterialResource_RM.00.10.05.Za000.1755.c>
+  rdf:type cr:MaterialResource ;
+  cr:cam "false"^^xsd:boolean ;
+  cr:code "RM.00.10.05.Za000.1755.c" ;
+  cr:descriptionGeneral "Aggregato di materiale generico; diametro massimo (Dmax) [mm] = 30" ;
+  cr:subRecourceOf <http://example.org/test001#MaterialResource_RM.00.00.00.G0000.0290.b_CAM> ;
+  cterm:hasDimensionParameter unnamed:DimensionParameter_1 ;
+  cterm:hasFamily cterm:Mixtures ;
+  cterm:hasMaterial cterm:GenericMaterial ;
+.
+<http://example.org/test001#MaterialResource_RM.00.10.05.Za000.2500.a>
+  rdf:type cr:MaterialResource ;
+  cr:cam "false"^^xsd:boolean ;
+  cr:code "RM.00.10.05.Za000.2500.a" ;
+  cr:descriptionGeneral "Aggregato sabbia di materiale generico" ;
+  cr:subRecourceOf <http://example.org/test001#MaterialResource_RM.00.00.00.G0000.0290.b_CAM> ;
+  cterm:hasCategory cterm:Products ;
+  cterm:hasFamily cterm:Mixtures ;
+  cterm:hasMaterial cterm:GenericCement ;
+.
+<http://example.org/test001#MaterialResource_RM.00.10.10.G0000.0250.e>
+  rdf:type cr:MaterialResource ;
+  cr:code "RM.00.10.10.G0000.0250.e" ;
+  cr:descriptionGeneral "Legante idraulico di cemento generico; resistenza a compressione [classe] = 42.5" ;
+  cr:subRecourceOf <http://example.org/test001#MaterialResource_RM.00.00.00.G0000.0290.b_CAM> ;
+  cterm:hasCategory cterm:Products ;
+  cterm:hasFamily cterm:Mixtures ;
+  cterm:hasMaterial cterm:GenericCement ;
+  cterm:hasPerformanceParameter unnamed:PerformanceParameter_5 ;
+.
+unnamed:PerformanceParameter_1
+  rdf:type cterm:PerformanceParameter ;
+  cterm:parameterSymbol1 "=" ;
+  cterm:parameterType cterm:CompressionStrength ;
+  cterm:parameterValue1 "C25/30" ;
+.
+unnamed:PerformanceParameter_2
+  rdf:type cterm:PerformanceParameter ;
+  cterm:parameterSymbol1 "=" ;
+  cterm:parameterType cterm:ExposureClass ;
+  cterm:parameterValue1 "XC2" ;
+.
+unnamed:PerformanceParameter_3
+  rdf:type cterm:PerformanceParameter ;
+  cterm:parameterSymbol1 "=" ;
+  cterm:parameterType cterm:ConsistencyClass ;
+  cterm:parameterValue1 "S3" ;
+.
+unnamed:PerformanceParameter_4
+  rdf:type cterm:PerformanceParameter ;
+  cterm:parameterSymbol1 "=" ;
+  cterm:parameterType cterm:CompressionStrength ;
+  cterm:parameterValue1 "C25/30" ;
+.
+unnamed:PerformanceParameter_5
+  rdf:type cterm:PerformanceParameter ;
+  cterm:parameterSymbol1 "=" ;
+  cterm:parameterType cterm:CompressionResistance ;
+  cterm:parameterValue1 "42,5" ;
+.
+unnamed:PerformanceParameter_6
+  rdf:type cterm:PerformanceParameter ;
+  cterm:parameterSymbol1 "=" ;
+  cterm:parameterType cterm:Power ;
+  cterm:parameterValue1 "1" ;
+.
+unnamed:PhysicalParameter_1
+  rdf:type cterm:PhysicalParameter ;
+  cterm:parameterSymbol1 "=" ;
+  cterm:parameterType cterm:Weight ;
+  cterm:parameterValue1 "14" ;
+.
 <http://example.org/test001#WorkOfConstructionComponent_OP.E5100.J0001.0000.b>
   rdf:type ci:WorkOfConstructionComponent ;
   ci:cam "false"^^xsd:boolean ;
   ci:code "OP.E5100.J0001.0000.b" ;
-  ci:descriptionDetail """RM1 Impasto preconfezionato di cemento generico; geometria: sfuso; funzione: strutturale; impiego: conglomerato cementizio; fornitura: autobetoniera; classe di consistenza [classe] = S3 | classe di resistenza [classe] = C25/30. Componenti: legante idraulico, aggregato, legante idraulico riciclato 
+  ci:descriptionDetail """RM1 Impasto preconfezionato di cemento generico; geometria: sfuso; funzione: strutturale; impiego: conglomerato cementizio; fornitura: autobetoniera; classe di consistenza [classe] = S3 | classe di resistenza [classe] = C25/30. Componenti: legante idraulico, aggregato, aggregato sabbia 
 SPECIFICHE TECNICHE: semifluido, test slump [mm] = 100 ÷ 150""" ;
   ci:descriptionGeneral "Fondazione di conglomerato cementizio; resistenza a compressione [classe] = C25/30 | classe di esposizione [classe] = XC2." ;
+  ci:hasSubComponent <http://example.org/test001#MaterialResource_RM.00.00.00.G0000.0290.b_CAM> ;
   ci:hasUnit <http://qudt.org/vocab/unit/M3> ;
   ci:quantityUnitOfMeasure 1 ;
   cterm:hasCategory cterm:FoundationSystems ;
   cterm:hasFamily cterm:StructuralEngineering ;
   cterm:hasMaterial cterm:CementitiousCompound ;
   cterm:hasObject cterm:Foundation ;
+  cterm:hasPerformanceParameter unnamed:PerformanceParameter_1 ;
+  cterm:hasPerformanceParameter unnamed:PerformanceParameter_2 ;
 .
