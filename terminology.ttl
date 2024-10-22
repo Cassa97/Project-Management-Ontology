@@ -2646,13 +2646,7 @@ cterm:NormalColor
   rdfs:label "Normale Farbe"@de ;
   rdfs:label "colore normale"@it ;
 .
-cterm:NotDefined
-  rdf:type owl:NamedIndividual ;
-  rdf:type cterm:TypeOfWorkOfConstructionWork ;
-  rdfs:label "Nicht definiert"@de ;
-  rdfs:label "Not Defined"@en ;
-  rdfs:label "nd"@it ;
-.
+
 cterm:Object
   rdf:type owl:Class ;
   rdfs:label "Object" ;
