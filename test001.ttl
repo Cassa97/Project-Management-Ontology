@@ -82,6 +82,13 @@ unnamed:CostItemToGeometryAssignment_1
   cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcSlab_905> ;
   cr:refParamQuantity "25"^^xsd:decimal ;
 .
+unnamed:CostItemToGeometryAssignment_2
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 2" ;
+  cr:refCostItem <http://example.org/test001#Formwork_LOM241.LP.EEA.Pa04.A1020.Qa000.0000.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcSlab_905> ;
+  cr:refParamQuantity "25"^^xsd:decimal ;
+.
 unnamed:DimensionParameter_1
   rdf:type cterm:DimensionParameter ;
   cterm:parameterSymbol1 "=" ;
