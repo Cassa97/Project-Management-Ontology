@@ -164,7 +164,9 @@ SPECIFICHE TECNICHE: semifluido, test slump [mm] = 100 ÷ 150""" ;
   cterm:hasCategory cterm:Systems ;
   cterm:hasFamily cterm:Mixtures ;
   cterm:hasFunction cterm:Structural ;
+  cterm:hasFurnishing cterm:TruckMixer ;
   cterm:hasMaterial cterm:CementitiousCompound ;
+  cterm:hasObject cterm:ReadyMixture ;
   cterm:hasPerformanceParameter unnamed:PerformanceParameter_3 ;
   cterm:hasPerformanceParameter unnamed:PerformanceParameter_4 ;
   cterm:hasUse cterm:CementitiousCompound ;
@@ -178,6 +180,7 @@ SPECIFICHE TECNICHE: semifluido, test slump [mm] = 100 ÷ 150""" ;
   cterm:hasDimensionParameter unnamed:DimensionParameter_1 ;
   cterm:hasFamily cterm:Mixtures ;
   cterm:hasMaterial cterm:GenericMaterial ;
+  cterm:hasObject cterm:Aggregate ;
 .
 <http://example.org/test001#MaterialResource_RM.00.10.05.Za000.2500.a>
   rdf:type cr:MaterialResource ;
@@ -188,6 +191,7 @@ SPECIFICHE TECNICHE: semifluido, test slump [mm] = 100 ÷ 150""" ;
   cterm:hasCategory cterm:Products ;
   cterm:hasFamily cterm:Mixtures ;
   cterm:hasMaterial cterm:GenericCement ;
+  cterm:hasObject cterm:Aggregate ;
 .
 <http://example.org/test001#MaterialResource_RM.00.10.10.G0000.0250.e>
   rdf:type cr:MaterialResource ;
@@ -197,6 +201,7 @@ SPECIFICHE TECNICHE: semifluido, test slump [mm] = 100 ÷ 150""" ;
   cterm:hasCategory cterm:Products ;
   cterm:hasFamily cterm:Mixtures ;
   cterm:hasMaterial cterm:GenericCement ;
+  cterm:hasObject cterm:Binder ;
   cterm:hasPerformanceParameter unnamed:PerformanceParameter_5 ;
 .
 unnamed:PerformanceParameter_1
