@@ -89,11 +89,10 @@ cterm:AerialHandling
   rdfs:label "movimentazione aerea"@it ;
 .
 cterm:Aggregate
-  rdf:type owl:NamedIndividual ;
-  rdf:type cterm:TypeOfMaterial ;
+  rdf:type cterm:ObjectOfMaterial ;
   rdfs:label "Aggregate"@en ;
-  rdfs:label "Gemisch"@de ;
-  rdfs:label "conglomerato"@it ;
+  rdfs:label "Aggregato"@it ;
+  rdfs:label "Aggregiert"@de ;
 .
 cterm:Agriculture
   rdf:type owl:NamedIndividual ;
@@ -296,6 +295,12 @@ cterm:BikePaths
   rdfs:label "Bike Paths"@en ;
   rdfs:label "Radwege"@de ;
   rdfs:label "piste ciclabili"@it ;
+.
+cterm:Binder
+  rdf:type cterm:ObjectOfMaterial ;
+  rdfs:label "Binder"@de ;
+  rdfs:label "Binder"@en ;
+  rdfs:label "Legante"@it ;
 .
 cterm:BinderLayer
   rdf:type owl:NamedIndividual ;
@@ -784,6 +789,13 @@ cterm:ConcreteVibrator
   rdfs:label "Betonvibrator"@de ;
   rdfs:label "Concrete Vibrator"@en ;
   rdfs:label "vibratore per calcestruzzo"@it ;
+.
+cterm:Conglomerate
+  rdf:type owl:NamedIndividual ;
+  rdf:type cterm:TypeOfMaterial ;
+  rdfs:label "Conglomerate"@en ;
+  rdfs:label "Gemisch"@de ;
+  rdfs:label "conglomerato"@it ;
 .
 cterm:ConnectingBeams
   rdf:type owl:NamedIndividual ;
@@ -2003,6 +2015,7 @@ cterm:HousingStructuralElements
 cterm:Hydraulic
   rdf:type owl:NamedIndividual ;
   rdf:type cterm:CategoryOfCostComponent ;
+  rdf:type cterm:TypeOfMaterial ;
   rdfs:label "Hydraulic"@en ;
   rdfs:label "Hydraulik"@de ;
   rdfs:label "Idraulica"@it ;
@@ -3219,6 +3232,12 @@ cterm:QuiltedMat
   rdfs:label "Materassino Trapuntato"@it ;
   rdfs:label "Quilted Mat"@en ;
 .
+cterm:ReadyMixture
+  rdf:type cterm:ObjectOfMaterial ;
+  rdfs:label "Fertigmischung"@de ;
+  rdfs:label "Impsto Preconfezionato"@it ;
+  rdfs:label "Ready Mixture"@en ;
+.
 cterm:Realization
   rdf:type owl:NamedIndividual ;
   rdf:type cterm:CategoryOfActivity ;
@@ -3573,6 +3592,12 @@ cterm:RubberFlooring
   rdfs:label "Gummibodenbelag"@de ;
   rdfs:label "Rubber Flooring"@en ;
   rdfs:label "pavimentazione in gomma"@it ;
+.
+cterm:Sand
+  rdf:type cterm:TypeOfMaterial ;
+  rdfs:label "Sabbia"@it ;
+  rdfs:label "Sand"@de ;
+  rdfs:label "Sand"@en ;
 .
 cterm:Sandblasted
   rdf:type owl:NamedIndividual ;
@@ -4351,6 +4376,12 @@ cterm:Truck-MountedPump
   rdfs:label "Fahrbare Pumpe"@de ;
   rdfs:label "Truck-Mounted Pump"@en ;
   rdfs:label "pompa autocarrata"@it ;
+.
+cterm:TruckMixer
+  rdf:type cterm:Furnishing ;
+  rdfs:label "Autobetoniera"@it ;
+  rdfs:label "Fahrmischer"@de ;
+  rdfs:label "Truck Mixer"@en ;
 .
 cterm:TruckwithCrane
   rdf:type owl:NamedIndividual ;
