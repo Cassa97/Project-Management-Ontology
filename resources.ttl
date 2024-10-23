@@ -64,12 +64,14 @@
 .
 cr:Assignment
   rdf:type owl:Class ;
-  rdfs:label "Assignment" ;
+  rdfs:label "Assignment"@en ;
+  rdfs:label "Relazione"@it ;
   rdfs:label "Zuweisung"@de ;
   rdfs:subClassOf owl:Thing ;
 .
 cr:Consumption
   rdf:type owl:Class ;
+  rdfs:label "Consumo"@it ;
   rdfs:label "Consumption"@en ;
   rdfs:label "Verbrauch"@de ;
   rdfs:subClassOf owl:Thing ;
@@ -113,6 +115,7 @@ cr:Consumption
 cr:CostItemToGeometryAssignment
   rdf:type owl:Class ;
   rdfs:label "Cost item to geometry assignment"@en ;
+  rdfs:label "Relazione tra costo e geometria"@it ;
   rdfs:label "Zuordnung von Kostenbestandteilen zu Geometrieobjekten"@de ;
   rdfs:subClassOf cr:Assignment ;
   rdfs:subClassOf [
@@ -139,6 +142,7 @@ cr:EquipmentResource
   rdfs:isDefinedBy <https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcconstructionmgmtdomain/lexical/ifcconstructionequipmentresource.htm> ;
   rdfs:label "Equipment resource"@en ;
   rdfs:label "Geräteressource"@de ;
+  rdfs:label "Risorsa strumentale"@it ;
   rdfs:subClassOf cr:Resource ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -239,6 +243,7 @@ cr:LabourResource
   rdfs:isDefinedBy <https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcconstructionmgmtdomain/lexical/ifclaborresource.htm> ;
   rdfs:label "Arbeitsressourcen"@de ;
   rdfs:label "Labour resource"@en ;
+  rdfs:label "Risorsa umana"@it ;
   rdfs:subClassOf cr:Resource ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -273,6 +278,7 @@ cr:MaterialResource
   rdfs:isDefinedBy <https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcconstructionmgmtdomain/lexical/ifcconstructionmaterialresource.htm> ;
   rdfs:label "Material resource"@en ;
   rdfs:label "Materielle Ressource"@de ;
+  rdfs:label "Risorsa materiale"@it ;
   rdfs:subClassOf cr:Resource ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -374,6 +380,7 @@ cr:Resource
   rdfs:isDefinedBy <https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifckernel/lexical/ifcresource.htm> ;
   rdfs:label "Resource"@en ;
   rdfs:label "Ressource"@de ;
+  rdfs:label "Risorsa"@it ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
@@ -406,6 +413,12 @@ cr:Resource
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
+      owl:onDataRange xsd:decimal ;
+      owl:onProperty cr:unitPrice ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
       owl:onDataRange xsd:integer ;
       owl:onProperty cr:quantityUnitOfMeasure ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
@@ -426,6 +439,7 @@ cr:Resource
 .
 cr:ResourceToCostItemAssignment
   rdf:type owl:Class ;
+  rdfs:label "Relazione tra risorsa e costo"@it ;
   rdfs:label "Resource to cost item assignment"@en ;
   rdfs:label "Zuordnung von Ressourcen zu Kostenbestandteilen"@de ;
   rdfs:subClassOf cr:Assignment ;
@@ -446,6 +460,7 @@ cr:ResourceToCostItemAssignment
 cr:ResourceToTaskAssignment
   rdf:type owl:Class ;
   rdfs:isDefinedBy <https://dtc-ontology.cms.ed.tum.de/ontology#ResourceApplication> ;
+  rdfs:label "Relazione tra risorsa e attività"@it ;
   rdfs:label "Resource to task assignment"@en ;
   rdfs:label "Zuordnung von Ressourcen zu Vorgängen"@de ;
   rdfs:subClassOf cr:Assignment ;
@@ -471,6 +486,7 @@ cr:ResourceToTaskAssignment
 .
 cr:TaskToGeometryAssignment
   rdf:type owl:Class ;
+  rdfs:label "Relazione tra attività e geometria"@it ;
   rdfs:label "Task to geometry assignment"@en ;
   rdfs:label "Zuordnung von Vorgängen zu Geometrieobjekten"@de ;
   rdfs:subClassOf cr:Assignment ;
@@ -676,6 +692,12 @@ cr:uniformat
   rdfs:domain cr:Resource ;
   rdfs:label "uniformat" ;
   rdfs:range xsd:string ;
+.
+cr:unitPrice
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:Resource ;
+  rdfs:label "unit price" ;
+  rdfs:range xsd:decimal ;
 .
 cr:yield
   rdf:type owl:DatatypeProperty ;

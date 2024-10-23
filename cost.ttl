@@ -77,6 +77,12 @@ ci:Activity
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:techSpecs ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
       owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
       owl:onClass cterm:FunctionOfActivity ;
       owl:onProperty cterm:hasFunction ;
@@ -240,26 +246,38 @@ ci:CostItem
   rdfs:subClassOf owl:Thing ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
+      owl:onClass qudt:unit ;
+      owl:onProperty ci:hasUnit ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
       owl:onDataRange xsd:decimal ;
       owl:onProperty ci:unitPrice ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:onDataRange xsd:string ;
-      owl:onProperty cr:code ;
+      owl:onDataRange xsd:integer ;
+      owl:onProperty ci:quantityUnitOfMeasure ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:onDataRange xsd:string ;
-      owl:onProperty cr:descriptionDetail ;
+      owl:onProperty ci:code ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:onDataRange xsd:string ;
-      owl:onProperty cr:descriptionGeneral ;
+      owl:onProperty ci:descriptionDetail ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:descriptionGeneral ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
@@ -321,6 +339,12 @@ ci:Work
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onDataRange xsd:string ;
       owl:onProperty ci:descriptionDetail ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty ci:techSpecs ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;

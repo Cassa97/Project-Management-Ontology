@@ -34,6 +34,25 @@
   cterm:hasObject cterm:Casting ;
   cterm:hasType cterm:WithPump ;
 .
+<http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c>
+  rdf:type ci:CostItem ;
+  rdf:type ci:ProductionResult ;
+  ci:code "LOM241.OC.EEA.Pa10.E0000.J0001.0045.c" ;
+  ci:descriptionDetail """OP1 OPERA: Struttura di conglomerato cementizio; impiego: pilastri | travi | corree | solette | murature vani scala-ascensori; spessore [cm] ≥ 17; resistenza a compressione [classe] = C25/30 | esposizione [classe] =  XC1/XC2.
+	RM2 Impasto preconfezionato di cemento generico; geometria: sfuso; funzione: strutturale; impiego: conglomerato cementizio; fornitura: autobetoniera; classe di 	consistenza [classe] = S4 | classe di resistenza [classe] = C25/30 | classe di esposizione [classe] = XC1/XC2
+	SPECIFICHE TECNICHE: confezionato in impianto di betonaggio, materie prime in possesso di marcatura ce
+LV1 LAVORO: Getto con pompa. Incluso: vibratura. Escluso: casseri; ferro.
+SPECIFICHE TECNICHE: quantità di calcestruzzo gettato [mc] > 30.
+	RP2 Vibratore per calcestruzzo;  diametro testa [mm] = 45 ;  potenza [kW] = 1;  peso [kg] = 14; criterio di misurazione: ore di presenza in cantiere
+	RP2 Pompa autocarrata
+	SPECIFICHE TECNICHE: per quantità di calcestruzzo [m³] > 30 ; criterio di misurazione: per metro cubo pompato di calcestruzzo""" ;
+  ci:descriptionGeneral """OPERA: Struttura di conglomerato cementizio; impiego: pilastri | travi | corree | solette | murature vani scala-ascensori; spessore [cm] ≥ 17; resistenza a compressione [classe] = C25/30 | esposizione [classe] =  XC1/XC2.
+LAVORO: Getto con pompa. Incluso: vibratura. Escluso: casseri; ferro.
+SPECIFICHE TECNICHE: quantità di calcestruzzo gettato [mc] > 30.""" ;
+  ci:hasUnit <http://qudt.org/vocab/unit/M3> ;
+  ci:quantityUnitOfMeasure 1 ;
+  ci:unitPrice 525.81 ;
+.
 <http://example.org/test001#ConstructionComponent_OC.EEA.Pa10.E5100.J0001.0000.b>
   rdf:type ci:ConstructionComponent ;
   ci:descriptionDetail """OP1 OPERA: Fondazione di conglomerato cementizio; resistenza a compressione [classe] = C25/30 | classe di esposizione [classe] = XC2. 
@@ -102,13 +121,67 @@ SPECIFICHE TECNICHE: per quantità di calcestruzzo [m³] ≤ 30; criterio di mis
   cterm:hasPerformanceParameter unnamed:PerformanceParameter_6 ;
   cterm:hasPhysicalParameter unnamed:PhysicalParameter_1 ;
 .
+<http://example.org/test001#Formwork_LOM241.LP.EEA.Pa04.A1020.Qa000.0000.->
+  rdf:type ci:CostItem ;
+  rdf:type ci:ProductionResult ;
+  ci:code "LOM241.LP.EEA.Pa04.A1020.Qa000.0000.-" ;
+  ci:descriptionDetail """OS1 OPERA STRUMENTALE: Cassaforma, tradizionale di legno naturale generico; impiego: fondazioni continue; spessore [m]  =  0,025 ÷ 0,027. Incluso: disarmante, chiodi.
+	RT2 Cassaforma tradizionale in legno; impiego:  fondazioni continue; incluso: ogni elemento necessario al suo completamento (es.: sottomisure in legno di abete 	o pannelli compensati multistrato, picchetti, filo di ferro, travi squadrate di legno, orditura metallica d'irrigidimento, sbadacchi)
+	SPECIFICHE TECNICHE: spessore paramento [m]  =  0,025 ÷ 0,027; criterio di misurazione: valutato a superficie effettiva bagnata dal getto
+LV1 LAVORO: Formazione.""" ;
+  ci:descriptionGeneral """OPERA STRUMENTALE: Cassaforma, tradizionale di legno naturale generico; impiego: fondazioni continue; spessore [m]  =  0,025 ÷ 0,027. Incluso: disarmante, chiodi.
+LAVORO: Formazione.""" ;
+  ci:hasUnit <https://qudt.org/vocab/unit/M2> ;
+  ci:quantityUnitOfMeasure 1 ;
+  ci:unitPrice 19.38 ;
+.
+<http://example.org/test001#Formwork_LOM241.LP.EEA.Pa04.A1020.Qa000.0015.->
+  rdf:type ci:CostItem ;
+  rdf:type ci:ProductionResult ;
+  ci:code "LOM241.LP.EEA.Pa04.A1020.Qa000.0015.-" ;
+  ci:descriptionDetail """OS1 OPERA STRUMENTALE: Cassaforma, tradizionale di legno naturale generico; impiego: pareti in elevazione; spessore [m]  =  0,025 ÷ 0,027 | altezza [m] < =  3,5; pressione [kN/m²] < =  40. Incluso: disarmante, chiodi.
+RT2 Cassaforma tradizionale in legno; impiego:  pareti in elevazione;  altezza [m]  <=  3,50;  pressione [kN/m²]  <=  40 ; incluso: ogni elemento necessario al suo completamento (es.:  sottomisure in legno di abete o pannelli compensati multistrato, picchetti, filo di ferro, travi squadrate di legno);  escluso: puntelli
+SPECIFICHE TECNICHE: spessore paramento [m]  =  0,025 ÷ 0,027; criterio di misurazione: valutato a superficie effettiva bagnata dal getto
+LV1 LAVORO: Formazione.""" ;
+  ci:descriptionGeneral """OPERA STRUMENTALE: Cassaforma, tradizionale di legno naturale generico; impiego: pareti in elevazione; spessore [m]  =  0,025 ÷ 0,027 | altezza [m] < =  3,5; pressione [kN/m²] < =  40. Incluso: disarmante, chiodi.
+LAVORO: Formazione.""" ;
+  ci:hasUnit <https://qudt.org/vocab/unit/M2> ;
+  ci:quantityUnitOfMeasure 1 ;
+  ci:unitPrice 22.03 ;
+.
+<http://example.org/test001#Formwork_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.->
+  rdf:type ci:CostItem ;
+  rdf:type ci:ProductionResult ;
+  ci:code "LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-" ;
+  ci:descriptionDetail """OS1 OPERA STRUMENTALE: Cassaforma, tradizionale di legno naturale generico; impiego: pilastri a sezione rettangolare; spessore [m]  =  0,025 ÷ 0,027. Incluso: disarmante, chiodi.
+	RT2 Cassaforma tradizionale in legno | Impiego:  pilastri a sezione rettangolare/quadrata | altezza [m]  <=  3,50 | pressione [kN/mq]  <=  40  | Inclusi: ogni elemento 	necessario al suo completamento (es.:  sottomisure in legno di abete o pannelli compensati multistrato, cravatte) | Specifiche tecniche: spessore paramento [m]  	=  0,025 ÷ 0,027 | Criterio di misurazione: valutato a superficie effettiva bagnata dal getto
+LV1 LAVORO: Formazione.""" ;
+  ci:descriptionGeneral """OPERA STRUMENTALE: Cassaforma, tradizionale di legno naturale generico; impiego: pilastri a sezione rettangolare; spessore [m]  =  0,025 ÷ 0,027. Incluso: disarmante, chiodi.
+LAVORO: Formazione.""" ;
+  ci:hasUnit <https://qudt.org/vocab/unit/M2> ;
+  ci:quantityUnitOfMeasure 1 ;
+  ci:unitPrice 21.18 ;
+.
+<http://example.org/test001#Formwork_LOM241.LP.EEA.Pa04.A1020.Qa000.0035.->
+  rdf:type ci:CostItem ;
+  rdf:type ci:ProductionResult ;
+  ci:code "LOM241.LP.EEA.Pa04.A1020.Qa000.0035.-" ;
+  ci:descriptionDetail """OS1 OPERA STRUMENTALE: Cassaforma, tradizionale di legno naturale generico; impiego: solaio misto con travi in spessore per strutture piane; spessore [m]  =  0,025 ÷ 0,027 | altezza [m] < =  3,5; pressione [kN/m²] < =  70. Incluso: disarmante, chiodi, puntelli.
+	RT2 Cassaforma tradizionale in legno | Impiego:  solaio misto con travi in spessore per strutture piane | interpiano rustico [m]  <=  3,50 | pressione [kN/mq]  <=  70  	| Inclusi: ogni elemento necessario al suo completamento (es.:  sottomisure in legno di abete o pannelli compensati multistrato, orditure di legno)  | Escluso: 	puntelli | Specifiche tecniche: spessore paramento [m]  =  0,025 ÷ 0,027 | Criterio di misurazione: valutato a superficie effettiva bagnata dal getto
+	RT2 Puntello metallico;  altezza [m]  =  1,80 ÷ 3,60
+	SPECIFICHE TECNICHE: testa piatta o a T; criterio di misurazione: valutato cadauno
+LV1 LAVORO: Formazione.""" ;
+  ci:descriptionGeneral """OPERA STRUMENTALE: Cassaforma, tradizionale di legno naturale generico; impiego: solaio misto con travi in spessore per strutture piane; spessore [m]  =  0,025 ÷ 0,027 | altezza [m] < =  3,5; pressione [kN/m²] < =  70. Incluso: disarmante, chiodi, puntelli.
+LAVORO: Formazione.""" ;
+  ci:hasUnit <https://qudt.org/vocab/unit/M2> ;
+  ci:quantityUnitOfMeasure 1 ;
+  ci:unitPrice 23.24 ;
+.
 <http://example.org/test001#Foundation_LOM241.OC.EEA.Pa10.E5100.J0001.0000.b>
   rdf:type ci:CostItem ;
   rdf:type ci:ProductionResult ;
-  ci:hasPart <http://example.org/test001#ConstructionComponent_OC.EEA.Pa10.E5100.J0001.0000.b> ;
-  ci:unitPrice 263.68 ;
-  cr:code "LOM241.OC.EEA.Pa10.E5100.J0001.0000.b" ;
-  cr:descriptionDetail """OP1 OPERA: Fondazione di conglomerato cementizio; resistenza a compressione [classe] = C25/30 | classe di esposizione [classe] = XC2. 
+  ci:code "LOM241.OC.EEA.Pa10.E5100.J0001.0000.b" ;
+  ci:descriptionDetail """OP1 OPERA: Fondazione di conglomerato cementizio; resistenza a compressione [classe] = C25/30 | classe di esposizione [classe] = XC2. 
 	RM2 Impasto preconfezionato di cemento generico; geometria: sfuso; funzione: strutturale; impiego: conglomerato cementizio; fornitura: autobetoniera; classe di 	consistenza [classe] = S3 | classe di resistenza [classe] = C25/30. Componenti: legante idraulico, aggregato, legante idraulico riciclato 
 	SPECIFICHE TECNICHE: semifluido, test slump [mm] = 100 ÷ 150 
 LV1 LAVORO: Getto con pompa. Incluso: vibratura. Escluso: ferro; casseri. 
@@ -116,9 +189,13 @@ SPECIFICHE TECNICHE: getto per quantità di calcestruzzo [mc] ≤ 30.
 	RP2 Vibratore per calcestruzzo; diametro testa [mm] = 45 ; potenza [kW] = 1; peso [kg] = 14; criterio di misurazione: ore di presenza in cantiere 
 	RP2 Pompa autocarrata 
 	SPECIFICHE TECNICHE: per quantità di calcestruzzo [m³] ≤ 30 ; criterio di misurazione: per metro cubo pompato di calcestruzzo""" ;
-  cr:descriptionGeneral """OPERA: Fondazione di conglomerato cementizio; resistenza a compressione [classe] = C25/30 | classe di esposizione [classe] = XC2. 
+  ci:descriptionGeneral """OPERA: Fondazione di conglomerato cementizio; resistenza a compressione [classe] = C25/30 | classe di esposizione [classe] = XC2. 
 LAVORO: Getto con pompa. Incluso: vibratura. Escluso: ferro; casseri. 
 SPECIFICHE TECNICHE: getto per quantità di calcestruzzo [mc] ≤ 30.""" ;
+  ci:hasPart <http://example.org/test001#ConstructionComponent_OC.EEA.Pa10.E5100.J0001.0000.b> ;
+  ci:hasUnit <http://qudt.org/vocab/unit/M3> ;
+  ci:quantityUnitOfMeasure 1 ;
+  ci:unitPrice 263.68 ;
 .
 <http://example.org/test001#LabourResource_RU.00.00.00.0005.->
   rdf:type cr:LabourResource ;
@@ -254,6 +331,75 @@ unnamed:PhysicalParameter_1
   cterm:parameterSymbol1 "=" ;
   cterm:parameterType cterm:Weight ;
   cterm:parameterValue1 "14" ;
+.
+<http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.->
+  rdf:type ci:CostItem ;
+  rdf:type ci:ProductionResult ;
+  ci:code "LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-" ;
+  ci:descriptionDetail """OP1 OPERA: Armatura, barre nervate di lega ferrosa acciaio B450C; impiego: strutture in conglomerato cementizio armato. Incluso: sormonti; sfrido; legature.
+	RM2 Barra nervata di lega ferrosa acciaio B450C; funzione: strutturale; impiego: strutture in conglomerato cementizio armato
+	SPECIFICHE TECNICHE: prodotto con sistemi di controllo di produzione in stabilimento
+	RM2 Ferramenta filo di metallo ferro
+	SPECIFICHE TECNICHE: filo di metallo ferro cotto
+LV1 LAVORO: Posa.""" ;
+  ci:descriptionGeneral """OPERA: Armatura, barre nervate di lega ferrosa acciaio B450C; impiego: strutture in conglomerato cementizio armato. Incluso: sormonti; sfrido; legature.
+LAVORO: Posa.""" ;
+  ci:hasUnit <http://qudt.org/vocab/unit/KiloGM> ;
+  ci:quantityUnitOfMeasure 1 ;
+  ci:unitPrice 1.71 ;
+.
+<http://example.org/test001#ReinforcmentMesh_LOM241.OC.EEA.Pa02.E9700.Sb017.0500.->
+  rdf:type ci:CostItem ;
+  rdf:type ci:ProductionResult ;
+  ci:code "LOM241.OC.EEA.Pa02.E9700.Sb017.0500.-" ;
+  ci:descriptionDetail """OP1 OPERA: Armatura, rete elettrosaldata di lega ferrosa acciaio B450C; impiego: strutture in conglomerato cementizio armato.
+SPECIFICHE TECNICHE: prodotto con sistemi di controllo di produzione in stabilimento di cui al D.M.17/01/2018.
+	RM2 Rete elettrosaldata di lega ferrosa acciaio B450C; finitura: nervata; funzione: strutturale; impiego: armature
+LV1 LAVORO: Posa. Incluso: sormonti, tagli, sfridi, legature.""" ;
+  ci:descriptionGeneral """OPERA: Armatura, rete elettrosaldata di lega ferrosa acciaio B450C; impiego: strutture in conglomerato cementizio armato.
+LAVORO: Posa. Incluso: sormonti, tagli, sfridi, legature.
+SPECIFICHE TECNICHE: prodotto con sistemi di controllo di produzione in stabilimento di cui al D.M.17/01/2018.""" ;
+  ci:hasUnit <http://qudt.org/vocab/unit/KiloGM> ;
+  ci:quantityUnitOfMeasure 1 ;
+  ci:unitPrice 1.34 ;
+.
+<http://example.org/test001#SubFoundation_LOM241.OC.EEA.Pa10.A6415.J0001.0025.->
+  rdf:type ci:CostItem ;
+  rdf:type ci:ProductionResult ;
+  ci:code "LOM241.OC.EEA.Pa10.A6415.J0001.0025.-" ;
+  ci:descriptionDetail """OP1 OPERA: Sottofondazione di conglomerato cementizio; resistenza a compressione [classe] = C16/20 | esposizione [classe] = X0.
+	RM2 Impasto preconfezionato di cemento generico; funzione: strutturale; impiego: conglomerato cementizio; fornitura: autobetoniera; classe di consistenza 	[classe] = S4 | classe di resistenza [classe] = C16/20 | classe di esposizione [classe] = X0. Componenti: legante generico, aggregato generico, legante riciclato
+	SPECIFICHE TECNICHE: confezionato in impianto di betonaggio; materie prime in possesso di marcatura CE
+LV1 LAVORO: Getto.
+SPECIFICHE TECNICHE: calcestruzzo confezionato in impianto di betonaggio.
+	RP2 Gru a torre a rotazione in alto; altezza sotto gancio [m] ≤ 34,0 | sbraccio [m] ≤ 31,0; portata [t] ≤ 1,0; escluso: f.e.m., escluso basamento
+	SPECIFICHE TECNICHE: già installata; criterio di misurazione: giorno di presenza in cantiere""" ;
+  ci:descriptionGeneral """OPERA: Sottofondazione di conglomerato cementizio; resistenza a compressione [classe] = C16/20 | esposizione [classe] = X0.
+LAVORO: Getto.
+SPECIFICHE TECNICHE: calcestruzzo confezionato in impianto di betonaggio.""" ;
+  ci:hasUnit <http://qudt.org/vocab/unit/M3> ;
+  ci:quantityUnitOfMeasure 1 ;
+  ci:unitPrice 261.87 ;
+.
+<http://example.org/test001#Wall_LOM241.OC.EEA.Pa10.C0102.J0001.0005.b>
+  rdf:type ci:CostItem ;
+  rdf:type ci:ProductionResult ;
+  ci:code "LOM241.OC.EEA.Pa10.C0102.J0001.0005.b" ;
+  ci:descriptionDetail """OP1 OPERA: Strato di muratura, armato di conglomerato cementizio; resistenza a compressione [classe] = C25/30 | classe di esposizione [classe] =  XC1/XC2.
+SPECIFICHE TECNICHE: murature entro e fuori terra.
+	RM2 Impasto preconfezionato di cemento generico; geometria: sfuso; funzione: strutturale; impiego: conglomerato cementizio; fornitura: autobetoniera; classe di 	consistenza [classe] = S4 | classe di resistenza [classe] = C25/30 | classe di esposizione [classe] = XC1/XC2. Componenti: legante generico, aggregato generico, 	legante riciclato
+	SPECIFICHE TECNICHE: confezionato in impianto di betonaggio; materie prime in possesso di marcatura CE
+LV1 LAVORO: Getto con pompa. Incluso: vibratura. Escluso: esclusi casseri; ferro.
+SPECIFICHE TECNICHE: quantità di calcestruzzo gettato [mc] > 30.
+	RP2 Vibratore per calcestruzzo;  diametro testa [mm] = 45 ;  potenza [kW] = 1;  peso [kg] = 14; criterio di misurazione: ore di presenza in cantiere
+	RP2 Pompa autocarrata
+	SPECIFICHE TECNICHE: per quantità di calcestruzzo [m³] > 30 ; criterio di misurazione: per metro cubo pompato di calcestruzzo""" ;
+  ci:descriptionGeneral """OPERA: Strato di muratura, armato di conglomerato cementizio; resistenza a compressione [classe] = C25/30 | classe di esposizione [classe] =  XC1/XC2.
+LAVORO: Getto con pompa. Incluso: vibratura. Escluso: esclusi casseri; ferro.
+SPECIFICHE TECNICHE: murature entro e fuori terra.; quantità di calcestruzzo gettato [mc] > 30.""" ;
+  ci:hasUnit <http://qudt.org/vocab/unit/M3> ;
+  ci:quantityUnitOfMeasure 1 ;
+  ci:unitPrice 246.99 ;
 .
 <http://example.org/test001#WorkOfConstructionComponent_OP.E5100.J0001.0000.b>
   rdf:type ci:WorkOfConstructionComponent ;
