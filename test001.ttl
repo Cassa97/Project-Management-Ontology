@@ -21,8 +21,11 @@
   rdf:type ci:Activity ;
   ci:code "LV.Pa10.E5100.3750.-" ;
   ci:descriptionGeneral "Getto con pompa. Incluso: vibratura. Escluso: ferro; casseri. SPECIFICHE TECNICHE: getto per quantità di calcestruzzo [mc] ≤ 30." ;
-  ci:hasSubComponent unnamed:EquipmentResource_ ;
+  ci:hasSubComponent <http://example.org/test001#EquipmentResource_RP.00.30.05.0010.a> ;
   ci:hasSubComponent <http://example.org/test001#EquipmentResource_RP.01.00.00.0040.a> ;
+  ci:hasSubComponent <http://example.org/test001#LabourResource_RU.00.00.00.0005.-> ;
+  ci:hasSubComponent <http://example.org/test001#LabourResource_RU.00.00.00.0010.-> ;
+  ci:hasSubComponent <http://example.org/test001#LabourResource_RU.00.00.00.0015.-> ;
   ci:quantityUnitOfMeasure 1 ;
   cterm:hasCategory cterm:Realization ;
   cterm:hasFamily cterm:Production ;
@@ -63,14 +66,25 @@ unnamed:DimensionParameter_2
   cterm:parameterType cterm:HeadDiameter ;
   cterm:parameterValue1 "45" ;
 .
-unnamed:EquipmentResource_
+<http://example.org/test001#EquipmentResource_RP.00.30.05.0010.a>
   rdf:type cr:EquipmentResource ;
+  cr:code "RP.00.30.05.0010.a" ;
+  cr:descriptionGeneral """Pompa autocarrata
+SPECIFICHE TECNICHE: per quantità di calcestruzzo [m³] ≤ 30; criterio di misurazione: per metro cubo pompato di calcestruzzo""" ;
+  cr:hasUnit <http://qudt.org/vocab/unit/M3> ;
+  cr:quantityUnitOfMeasure 1 ;
+  cr:techSpecs "per quantità di calcestruzzo [m³] ≤ 30" ;
+  cterm:hasCategory cterm:MechanizedHandling ;
+  cterm:hasFamily cterm:Handling ;
+  cterm:hasObject cterm:ConcretePumps ;
+  cterm:hasType cterm:Truck-MountedPump ;
 .
 <http://example.org/test001#EquipmentResource_RP.01.00.00.0040.a>
   rdf:type cr:EquipmentResource ;
   cr:accessory "false"^^xsd:boolean ;
   cr:code "RP.01.00.00.0040.a" ;
   cr:descriptionGeneral "Vibratore per calcestruzzo; diametro testa [mm] = 45; potenza [kW] = 1; peso [kg] = 14" ;
+  cr:hasUnit <http://qudt.org/vocab/unit/HR> ;
   cr:quantityUnitOfMeasure 1 ;
   cterm:hasCategory cterm:Mixing ;
   cterm:hasDimensionParameter unnamed:DimensionParameter_2 ;
@@ -96,6 +110,38 @@ SPECIFICHE TECNICHE: getto per quantità di calcestruzzo [mc] ≤ 30.
   cr:descriptionGeneral """OPERA: Fondazione di conglomerato cementizio; resistenza a compressione [classe] = C25/30 | classe di esposizione [classe] = XC2. 
 LAVORO: Getto con pompa. Incluso: vibratura. Escluso: ferro; casseri. 
 SPECIFICHE TECNICHE: getto per quantità di calcestruzzo [mc] ≤ 30.""" ;
+.
+<http://example.org/test001#LabourResource_RU.00.00.00.0005.->
+  rdf:type cr:LabourResource ;
+  cr:code "RU.00.00.00.0005.-" ;
+  cr:descriptionGeneral "Operaio edile di livello 3°; qualifica: specializzato" ;
+  cr:hasUnit <http://qudt.org/vocab/unit/HR> ;
+  cterm:hasCategory cterm:Building ;
+  cterm:hasFamily cterm:Construction ;
+  cterm:hasObject cterm:Worker ;
+  cterm:hasType cterm:Level3 ;
+.
+<http://example.org/test001#LabourResource_RU.00.00.00.0010.->
+  rdf:type cr:LabourResource ;
+  cr:code "RU.00.00.00.0010.-" ;
+  cr:descriptionGeneral "Operaio edile di livello 2°; qualifica: qualificato" ;
+  cr:hasUnit <http://qudt.org/vocab/unit/HR> ;
+  cr:quantityUnitOfMeasure 1 ;
+  cterm:hasCategory cterm:Building ;
+  cterm:hasFamily cterm:Construction ;
+  cterm:hasObject cterm:Worker ;
+  cterm:hasType cterm:Level2 ;
+.
+<http://example.org/test001#LabourResource_RU.00.00.00.0015.->
+  rdf:type cr:LabourResource ;
+  cr:code "RU.00.00.00.0015.-" ;
+  cr:descriptionGeneral "Operaio edile di livello 1°; qualifica: comune" ;
+  cr:hasUnit <http://qudt.org/vocab/unit/HR> ;
+  cr:quantityUnitOfMeasure 1 ;
+  cterm:hasCategory cterm:Building ;
+  cterm:hasFamily cterm:Construction ;
+  cterm:hasObject cterm:Worker ;
+  cterm:hasType cterm:Level1 ;
 .
 <http://example.org/test001#MaterialResource_RM.00.00.00.G0000.0290.b_CAM>
   rdf:type cr:MaterialResource ;
