@@ -128,7 +128,7 @@ cr:CostItemToGeometryAssignment
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:onProperty cr:refGeometry ;
-      owl:someValuesFrom <http://ifcowl.openbimstandards.org/IFC4_ADD2#IfcProduct> ;
+      owl:someValuesFrom <https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2/OW#IfcProduct> ;
     ] ;
   owl:disjointWith cr:ResourceToCostItemAssignment ;
   owl:disjointWith cr:ResourceToTaskAssignment ;
@@ -595,14 +595,16 @@ cr:ref
 .
 cr:refCostItem
   rdf:type owl:ObjectProperty ;
-  rdfs:domain cr:Assignment ;
+  rdfs:domain cr:CostItemToGeometryAssignment ;
+  rdfs:domain cr:ResourceToCostItemAssignment ;
   rdfs:label "ref cost item" ;
   rdfs:range ci:ProductionResult ;
   rdfs:subPropertyOf cr:ref ;
 .
 cr:refGeometry
   rdf:type owl:ObjectProperty ;
-  rdfs:domain cr:Assignment ;
+  rdfs:domain cr:CostItemToGeometryAssignment ;
+  rdfs:domain cr:TaskToGeometryAssignment ;
   rdfs:label "ref geometry" ;
   rdfs:range <http://ifcowl.openbimstandards.org/IFC4_ADD2#IfcProduct> ;
   rdfs:subPropertyOf cr:ref ;
@@ -630,14 +632,16 @@ cr:refParameter
 .
 cr:refResource
   rdf:type owl:ObjectProperty ;
-  rdfs:domain cr:Assignment ;
+  rdfs:domain cr:ResourceToCostItemAssignment ;
+  rdfs:domain cr:ResourceToTaskAssignment ;
   rdfs:label "ref resource" ;
   rdfs:range cr:Resource ;
   rdfs:subPropertyOf cr:ref ;
 .
 cr:refTask
   rdf:type owl:ObjectProperty ;
-  rdfs:domain cr:Assignment ;
+  rdfs:domain cr:ResourceToTaskAssignment ;
+  rdfs:domain cr:TaskToGeometryAssignment ;
   rdfs:label "ref task" ;
   rdfs:range <https://dtc-ontology.cms.ed.tum.de/ontology#Task> ;
   rdfs:subPropertyOf cr:ref ;

@@ -1,5 +1,6 @@
 # baseURI: http://example.org/test001
 # imports: http://w3id.org/cr
+# imports: https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#
 # prefix: unnamed
 
 @prefix : <http://example.org/test001#> .
@@ -15,6 +16,7 @@
 <http://example.org/test001>
   rdf:type owl:Ontology ;
   owl:imports <http://w3id.org/cr> ;
+  owl:imports <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#> ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
 <http://example.org/test001#Activity_LV.Pa10.E5100.3750.->
@@ -53,6 +55,13 @@ SPECIFICHE TECNICHE: getto per quantità di calcestruzzo [mc] ≤ 30.""" ;
   cterm:hasFamily cterm:Construction ;
   cterm:hasMaterial cterm:CementitiousCompound ;
   cterm:hasObject cterm:Residences ;
+.
+unnamed:CostItemToGeometryAssignment_1
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 1" ;
+  cr:refCostItem <http://example.org/test001#Foundation_LOM241.OC.EEA.Pa10.E5100.J0001.0000.b> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcSlab_905> ;
+  cr:refParamQuantity "25"^^xsd:decimal ;
 .
 unnamed:DimensionParameter_1
   rdf:type cterm:DimensionParameter ;
