@@ -609,15 +609,17 @@ cr:refGeometry
 .
 cr:refParamQuantity
   rdf:type owl:DatatypeProperty ;
+  rdfs:comment "The quantity calculated from the geometrical element that is applied to the cost item and its unitary price." ;
   rdfs:domain cr:CostItemToGeometryAssignment ;
-  rdfs:label "ref param quantity" ;
+  rdfs:label "quantity" ;
   rdfs:range xsd:decimal ;
   rdfs:subPropertyOf cr:refParameter ;
 .
 cr:refParamUtilizationRate
   rdf:type owl:DatatypeProperty ;
+  rdfs:comment "The utilization rate of a (equipment) resource that is applied in a task." ;
   rdfs:domain cr:ResourceToTaskAssignment ;
-  rdfs:label "ref param quantity" ;
+  rdfs:label "utilization rate" ;
   rdfs:range xsd:decimal ;
   rdfs:subPropertyOf cr:refParameter ;
 .
