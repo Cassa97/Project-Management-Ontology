@@ -117,13 +117,18 @@ cr:CostItemToGeometryAssignment
   rdfs:subClassOf cr:Assignment ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:onProperty cr:refCostItem ;
-      owl:someValuesFrom <http://ifcowl.openbimstandards.org/IFC4_ADD2#IfcProduct> ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty cr:refParamQuantity ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:onProperty cr:refCostItem ;
-      owl:someValuesFrom ci:ProductionResult ;
+      owl:someValuesFrom ci:CostItem ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cr:refGeometry ;
+      owl:someValuesFrom <http://ifcowl.openbimstandards.org/IFC4_ADD2#IfcProduct> ;
     ] ;
   owl:disjointWith cr:ResourceToCostItemAssignment ;
   owl:disjointWith cr:ResourceToTaskAssignment ;
@@ -446,6 +451,12 @@ cr:ResourceToTaskAssignment
   rdfs:subClassOf cr:Assignment ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:decimal ;
+      owl:onProperty cr:refParamUtilizationRate ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
       owl:onProperty cr:refResource ;
       owl:someValuesFrom cr:Resource ;
     ] ;
@@ -595,6 +606,25 @@ cr:refGeometry
   rdfs:label "ref geometry" ;
   rdfs:range <http://ifcowl.openbimstandards.org/IFC4_ADD2#IfcProduct> ;
   rdfs:subPropertyOf cr:ref ;
+.
+cr:refParamQuantity
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:CostItemToGeometryAssignment ;
+  rdfs:label "ref param quantity" ;
+  rdfs:range xsd:decimal ;
+  rdfs:subPropertyOf cr:refParameter ;
+.
+cr:refParamUtilizationRate
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:ResourceToTaskAssignment ;
+  rdfs:label "ref param quantity" ;
+  rdfs:range xsd:decimal ;
+  rdfs:subPropertyOf cr:refParameter ;
+.
+cr:refParameter
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:ResourceToCostItemAssignment ;
+  rdfs:label "ref parameter" ;
 .
 cr:refResource
   rdf:type owl:ObjectProperty ;
