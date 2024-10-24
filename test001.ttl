@@ -80,14 +80,1603 @@ unnamed:CostItemToGeometryAssignment_1
   rdfs:label "Cost item to geometry assignment 1" ;
   cr:refCostItem <http://example.org/test001#Foundation_LOM241.OC.EEA.Pa10.E5100.J0001.0000.b> ;
   cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcSlab_905> ;
-  cr:refParamQuantity "25"^^xsd:decimal ;
+  cr:refParamQuantity 130.6624 ;
 .
 unnamed:CostItemToGeometryAssignment_2
   rdf:type cr:CostItemToGeometryAssignment ;
   rdfs:label "Cost item to geometry assignment 2" ;
-  cr:refCostItem <http://example.org/test001#Formwork_LOM241.LP.EEA.Pa04.A1020.Qa000.0000.-> ;
+  cr:refCostItem <http://example.org/test001#FormworkFoundation_LOM241.LP.EEA.Pa04.A1020.Qa000.0000.-> ;
   cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcSlab_905> ;
-  cr:refParamQuantity "25"^^xsd:decimal ;
+  cr:refParamQuantity 38.5128 ;
+.
+unnamed:CostItemToGeometryAssignment_3
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 3" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcSlab_905> ;
+  cr:refParamQuantity 11878.4 ;
+.
+unnamed:CostItemToGeometryAssignment_4
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 4" ;
+  cr:refCostItem <http://example.org/test001#Foundation_LOM241.OC.EEA.Pa10.E5100.J0001.0000.b> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcSlab_2362> ;
+  cr:refParamQuantity 3.0921 ;
+.
+unnamed:CostItemToGeometryAssignment_5
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 5" ;
+  cr:refCostItem <http://example.org/test001#FormworkFoundation_LOM241.LP.EEA.Pa04.A1020.Qa000.0000.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcSlab_2362> ;
+  cr:refParamQuantity 4.5 ;
+.
+unnamed:CostItemToGeometryAssignment_6
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 6" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcSlab_2362> ;
+  cr:refParamQuantity 281.1 ;
+.
+unnamed:CostItemToGeometryAssignment_7
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 7" ;
+  cr:refCostItem <http://example.org/test001#SubFoundation_LOM241.OC.EEA.Pa10.a6415.J0001.0025.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcSlab_2649> ;
+  cr:refParamQuantity 0.8019 ;
+.
+unnamed:CostItemToGeometryAssignment_8
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 8" ;
+  cr:refCostItem <http://example.org/test001#FormworkFoundation_LOM241.LP.EEA.Pa04.A1020.Qa000.0000.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcSlab_2649> ;
+  cr:refParamQuantity 1.08 ;
+.
+unnamed:CostItemToGeometryAssignment_9
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 9" ;
+  cr:refCostItem <http://example.org/test001#SubFoundation_LOM241.OC.EEA.Pa10.a6415.J0001.0025.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcSlab_1051> ;
+  cr:refParamQuantity 29.8067 ;
+.
+unnamed:CostItemToGeometryAssignment_10
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 10" ;
+  cr:refCostItem <http://example.org/test001#FormworkFoundation_LOM241.LP.EEA.Pa04.A1020.Qa000.0000.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcSlab_1051> ;
+  cr:refParamQuantity 8.6784 ;
+.
+unnamed:CostItemToGeometryAssignment_11
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 11" ;
+  cr:refCostItem <http://example.org/test001#Wall_LOM241.OC.EEA.Pa10.C0102.J0001.0005.b> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_2212> ;
+  cr:refParamQuantity 3.9721 ;
+.
+unnamed:CostItemToGeometryAssignment_12
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 12" ;
+  cr:refCostItem <http://example.org/test001#FormworkWall_LOM241.LP.EEA.Pa04.A1020.Qa000.0015.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_2212> ;
+  cr:refParamQuantity 29.3388 ;
+.
+unnamed:CostItemToGeometryAssignment_13
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 13" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_2212> ;
+  cr:refParamQuantity 722.2 ;
+.
+unnamed:CostItemToGeometryAssignment_14
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 14" ;
+  cr:refCostItem <http://example.org/test001#Wall_LOM241.OC.EEA.Pa10.C0102.J0001.0005.b> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_2262> ;
+  cr:refParamQuantity 1.1957 ;
+.
+unnamed:CostItemToGeometryAssignment_15
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 15" ;
+  cr:refCostItem <http://example.org/test001#FormworkWall_LOM241.LP.EEA.Pa04.A1020.Qa000.0015.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_2262> ;
+  cr:refParamQuantity 9 ;
+.
+unnamed:CostItemToGeometryAssignment_16
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 16" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_2262> ;
+  cr:refParamQuantity 217.4 ;
+.
+unnamed:CostItemToGeometryAssignment_17
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 17" ;
+  cr:refCostItem <http://example.org/test001#Wall_LOM241.OC.EEA.Pa10.C0102.J0001.0005.b> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_2312> ;
+  cr:refParamQuantity 3.9721 ;
+.
+unnamed:CostItemToGeometryAssignment_18
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 18" ;
+  cr:refCostItem <http://example.org/test001#FormworkWall_LOM241.LP.EEA.Pa04.A1020.Qa000.0015.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_2312> ;
+  cr:refParamQuantity 29.3388 ;
+.
+unnamed:CostItemToGeometryAssignment_19
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 19" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_2312> ;
+  cr:refParamQuantity 722.2 ;
+.
+unnamed:CostItemToGeometryAssignment_20
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 20" ;
+  cr:refCostItem <http://example.org/test001#Wall_LOM241.OC.EEA.Pa10.C0102.J0001.0005.b> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_2140> ;
+  cr:refParamQuantity 1.5906 ;
+.
+unnamed:CostItemToGeometryAssignment_21
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 21" ;
+  cr:refCostItem <http://example.org/test001#FormworkWall_LOM241.LP.EEA.Pa04.A1020.Qa000.0015.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_2140> ;
+  cr:refParamQuantity 11.568 ;
+.
+unnamed:CostItemToGeometryAssignment_22
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 22" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_2140> ;
+  cr:refParamQuantity 289.2 ;
+.
+unnamed:CostItemToGeometryAssignment_23
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 23" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_340> ;
+  cr:refParamQuantity 0.8635 ;
+.
+unnamed:CostItemToGeometryAssignment_24
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 24" ;
+  cr:refCostItem <http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_340> ;
+  cr:refParamQuantity 7.85 ;
+.
+unnamed:CostItemToGeometryAssignment_25
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 25" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_340> ;
+  cr:refParamQuantity 196.25 ;
+.
+unnamed:CostItemToGeometryAssignment_26
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 26" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_187> ;
+  cr:refParamQuantity 0.8635 ;
+.
+unnamed:CostItemToGeometryAssignment_27
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 27" ;
+  cr:refCostItem <http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_187> ;
+  cr:refParamQuantity 7.85 ;
+.
+unnamed:CostItemToGeometryAssignment_28
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 28" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_187> ;
+  cr:refParamQuantity 196.25 ;
+.
+unnamed:CostItemToGeometryAssignment_29
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 29" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_656> ;
+  cr:refParamQuantity 0.8635 ;
+.
+unnamed:CostItemToGeometryAssignment_30
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 30" ;
+  cr:refCostItem <http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_656> ;
+  cr:refParamQuantity 7.85 ;
+.
+unnamed:CostItemToGeometryAssignment_31
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 31" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_656> ;
+  cr:refParamQuantity 196.25 ;
+.
+unnamed:CostItemToGeometryAssignment_32
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 32" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_1941> ;
+  cr:refParamQuantity 0.5181 ;
+.
+unnamed:CostItemToGeometryAssignment_33
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 33" ;
+  cr:refCostItem <http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_1941> ;
+  cr:refParamQuantity 5.338 ;
+.
+unnamed:CostItemToGeometryAssignment_34
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 34" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_1941> ;
+  cr:refParamQuantity 117.75 ;
+.
+unnamed:CostItemToGeometryAssignment_35
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 35" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_452> ;
+  cr:refParamQuantity 0.5181 ;
+.
+unnamed:CostItemToGeometryAssignment_36
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 36" ;
+  cr:refCostItem <http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_452> ;
+  cr:refParamQuantity 5.338 ;
+.
+unnamed:CostItemToGeometryAssignment_37
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 37" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_452> ;
+  cr:refParamQuantity 117.75 ;
+.
+unnamed:CostItemToGeometryAssignment_38
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 38" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_721> ;
+  cr:refParamQuantity 0.5181 ;
+.
+unnamed:CostItemToGeometryAssignment_39
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 39" ;
+  cr:refCostItem <http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_721> ;
+  cr:refParamQuantity 5.338 ;
+.
+unnamed:CostItemToGeometryAssignment_40
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 40" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_721> ;
+  cr:refParamQuantity 117.75 ;
+.
+unnamed:CostItemToGeometryAssignment_41
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 41" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_1833> ;
+  cr:refParamQuantity 0.5181 ;
+.
+unnamed:CostItemToGeometryAssignment_42
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 42" ;
+  cr:refCostItem <http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_1833> ;
+  cr:refParamQuantity 5.338 ;
+.
+unnamed:CostItemToGeometryAssignment_43
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 43" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_1833> ;
+  cr:refParamQuantity 117.75 ;
+.
+unnamed:CostItemToGeometryAssignment_44
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 44" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_274> ;
+  cr:refParamQuantity 0.5181 ;
+.
+unnamed:CostItemToGeometryAssignment_45
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 45" ;
+  cr:refCostItem <http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_274> ;
+  cr:refParamQuantity 5.338 ;
+.
+unnamed:CostItemToGeometryAssignment_46
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 46" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_274> ;
+  cr:refParamQuantity 117.75 ;
+.
+unnamed:CostItemToGeometryAssignment_47
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 47" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_1779> ;
+  cr:refParamQuantity 0.5181 ;
+.
+unnamed:CostItemToGeometryAssignment_48
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 48" ;
+  cr:refCostItem <http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_1779> ;
+  cr:refParamQuantity 5.338 ;
+.
+unnamed:CostItemToGeometryAssignment_49
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 49" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_1779> ;
+  cr:refParamQuantity 117.75 ;
+.
+unnamed:CostItemToGeometryAssignment_50
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 50" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_518> ;
+  cr:refParamQuantity 0.5181 ;
+.
+unnamed:CostItemToGeometryAssignment_51
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 51" ;
+  cr:refCostItem <http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_518> ;
+  cr:refParamQuantity 5.338 ;
+.
+unnamed:CostItemToGeometryAssignment_52
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 52" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_518> ;
+  cr:refParamQuantity 117.75 ;
+.
+unnamed:CostItemToGeometryAssignment_53
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 53" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_1661> ;
+  cr:refParamQuantity 1.8645 ;
+.
+unnamed:CostItemToGeometryAssignment_54
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 54" ;
+  cr:refCostItem <http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_1661> ;
+  cr:refParamQuantity 15.255 ;
+.
+unnamed:CostItemToGeometryAssignment_55
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 55" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_1661> ;
+  cr:refParamQuantity 423.75 ;
+.
+unnamed:CostItemToGeometryAssignment_56
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 56" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_1726> ;
+  cr:refParamQuantity 1.8645 ;
+.
+unnamed:CostItemToGeometryAssignment_57
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 57" ;
+  cr:refCostItem <http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_1726> ;
+  cr:refParamQuantity 15.255 ;
+.
+unnamed:CostItemToGeometryAssignment_58
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 58" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_1726> ;
+  cr:refParamQuantity 423.75 ;
+.
+unnamed:CostItemToGeometryAssignment_59
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 59" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_395> ;
+  cr:refParamQuantity 0.5148 ;
+.
+unnamed:CostItemToGeometryAssignment_60
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 60" ;
+  cr:refCostItem <http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_395> ;
+  cr:refParamQuantity 5.61 ;
+.
+unnamed:CostItemToGeometryAssignment_61
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 61" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_395> ;
+  cr:refParamQuantity 117 ;
+.
+unnamed:CostItemToGeometryAssignment_62
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 62" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_1887> ;
+  cr:refParamQuantity 0.5148 ;
+.
+unnamed:CostItemToGeometryAssignment_63
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 63" ;
+  cr:refCostItem <http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_1887> ;
+  cr:refParamQuantity 5.61 ;
+.
+unnamed:CostItemToGeometryAssignment_64
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 64" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_1887> ;
+  cr:refParamQuantity 117 ;
+.
+unnamed:CostItemToGeometryAssignment_65
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 65" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_982> ;
+  cr:refParamQuantity 0.5137 ;
+.
+unnamed:CostItemToGeometryAssignment_66
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 66" ;
+  cr:refCostItem <http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_982> ;
+  cr:refParamQuantity 5.61 ;
+.
+unnamed:CostItemToGeometryAssignment_67
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 67" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_982> ;
+  cr:refParamQuantity 116.75 ;
+.
+unnamed:CostItemToGeometryAssignment_68
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 68" ;
+  cr:refCostItem <http://example.org/test001#Wall_LOM241.OC.EEA.Pa10.C0102.J0001.0005.b> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_2090> ;
+  cr:refParamQuantity 2.0009 ;
+.
+unnamed:CostItemToGeometryAssignment_69
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 69" ;
+  cr:refCostItem <http://example.org/test001#FormworkWall_LOM241.LP.EEA.Pa04.A1020.Qa000.0015.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_2090> ;
+  cr:refParamQuantity 20.5884 ;
+.
+unnamed:CostItemToGeometryAssignment_70
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 70" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_2090> ;
+  cr:refParamQuantity 363.8 ;
+.
+unnamed:CostItemToGeometryAssignment_71
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 71" ;
+  cr:refCostItem <http://example.org/test001#Wall_LOM241.OC.EEA.Pa10.C0102.J0001.0005.b> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_2040> ;
+  cr:refParamQuantity 3.1603 ;
+.
+unnamed:CostItemToGeometryAssignment_72
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 72" ;
+  cr:refCostItem <http://example.org/test001#FormworkWall_LOM241.LP.EEA.Pa04.A1020.Qa000.0015.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_2040> ;
+  cr:refParamQuantity 29.526 ;
+.
+unnamed:CostItemToGeometryAssignment_73
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 73" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_2040> ;
+  cr:refParamQuantity 574.6 ;
+.
+unnamed:CostItemToGeometryAssignment_74
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 74" ;
+  cr:refCostItem <http://example.org/test001#Wall_LOM241.OC.EEA.Pa10.C0102.J0001.0005.b> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_1582> ;
+  cr:refParamQuantity 1.4487 ;
+.
+unnamed:CostItemToGeometryAssignment_75
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 75" ;
+  cr:refCostItem <http://example.org/test001#FormworkWall_LOM241.LP.EEA.Pa04.A1020.Qa000.0015.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_1582> ;
+  cr:refParamQuantity 14.763 ;
+.
+unnamed:CostItemToGeometryAssignment_76
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 76" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_1582> ;
+  cr:refParamQuantity 263.4 ;
+.
+unnamed:CostItemToGeometryAssignment_77
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 77" ;
+  cr:refCostItem <http://example.org/test001#Wall_LOM241.OC.EEA.Pa10.C0102.J0001.0005.b> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_1990> ;
+  cr:refParamQuantity 1.5367 ;
+.
+unnamed:CostItemToGeometryAssignment_78
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 78" ;
+  cr:refCostItem <http://example.org/test001#FormworkWall_LOM241.LP.EEA.Pa04.A1020.Qa000.0015.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_1990> ;
+  cr:refParamQuantity 16.359 ;
+.
+unnamed:CostItemToGeometryAssignment_79
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 79" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_1990> ;
+  cr:refParamQuantity 279.4 ;
+.
+unnamed:CostItemToGeometryAssignment_80
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 80" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_2822> ;
+  cr:refParamQuantity 0.8228 ;
+.
+unnamed:CostItemToGeometryAssignment_81
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 81" ;
+  cr:refCostItem <http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_2822> ;
+  cr:refParamQuantity 7.475 ;
+.
+unnamed:CostItemToGeometryAssignment_82
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 82" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_2822> ;
+  cr:refParamQuantity 187 ;
+.
+unnamed:CostItemToGeometryAssignment_83
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 83" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_2714> ;
+  cr:refParamQuantity 0.8228 ;
+.
+unnamed:CostItemToGeometryAssignment_84
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 84" ;
+  cr:refCostItem <http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_2714> ;
+  cr:refParamQuantity 7.475 ;
+.
+unnamed:CostItemToGeometryAssignment_85
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 85" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_2714> ;
+  cr:refParamQuantity 187 ;
+.
+unnamed:CostItemToGeometryAssignment_86
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 86" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_3034> ;
+  cr:refParamQuantity 0.8228 ;
+.
+unnamed:CostItemToGeometryAssignment_87
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 87" ;
+  cr:refCostItem <http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_3034> ;
+  cr:refParamQuantity 7.475 ;
+.
+unnamed:CostItemToGeometryAssignment_88
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 88" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_3034> ;
+  cr:refParamQuantity 187 ;
+.
+unnamed:CostItemToGeometryAssignment_89
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 89" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_3458> ;
+  cr:refParamQuantity 0.4939 ;
+.
+unnamed:CostItemToGeometryAssignment_90
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 90" ;
+  cr:refCostItem <http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_3458> ;
+  cr:refParamQuantity 5.083 ;
+.
+unnamed:CostItemToGeometryAssignment_91
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 91" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_3458> ;
+  cr:refParamQuantity 112.25 ;
+.
+unnamed:CostItemToGeometryAssignment_92
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 92" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_2829> ;
+  cr:refParamQuantity 0.4939 ;
+.
+unnamed:CostItemToGeometryAssignment_93
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 93" ;
+  cr:refCostItem <http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_2829> ;
+  cr:refParamQuantity 5.083 ;
+.
+unnamed:CostItemToGeometryAssignment_94
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 94" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_2829> ;
+  cr:refParamQuantity 112.25 ;
+.
+unnamed:CostItemToGeometryAssignment_95
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 95" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_3087> ;
+  cr:refParamQuantity 0.4939 ;
+.
+unnamed:CostItemToGeometryAssignment_96
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 96" ;
+  cr:refCostItem <http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_3087> ;
+  cr:refParamQuantity 5.083 ;
+.
+unnamed:CostItemToGeometryAssignment_97
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 97" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_3087> ;
+  cr:refParamQuantity 112.25 ;
+.
+unnamed:CostItemToGeometryAssignment_98
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 98" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_3352> ;
+  cr:refParamQuantity 0.4939 ;
+.
+unnamed:CostItemToGeometryAssignment_99
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 99" ;
+  cr:refCostItem <http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_3352> ;
+  cr:refParamQuantity 5.083 ;
+.
+unnamed:CostItemToGeometryAssignment_100
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 100" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_3352> ;
+  cr:refParamQuantity 112.25 ;
+.
+unnamed:CostItemToGeometryAssignment_101
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 101" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_2769> ;
+  cr:refParamQuantity 0.4939 ;
+.
+unnamed:CostItemToGeometryAssignment_102
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 102" ;
+  cr:refCostItem <http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_2769> ;
+  cr:refParamQuantity 5.083 ;
+.
+unnamed:CostItemToGeometryAssignment_103
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 103" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_2769> ;
+  cr:refParamQuantity 112.25 ;
+.
+unnamed:CostItemToGeometryAssignment_104
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 104" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_3299> ;
+  cr:refParamQuantity 0.4939 ;
+.
+unnamed:CostItemToGeometryAssignment_105
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 105" ;
+  cr:refCostItem <http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_3299> ;
+  cr:refParamQuantity 5.083 ;
+.
+unnamed:CostItemToGeometryAssignment_106
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 106" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_3299> ;
+  cr:refParamQuantity 112.25 ;
+.
+unnamed:CostItemToGeometryAssignment_107
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 107" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_2981> ;
+  cr:refParamQuantity 0.4939 ;
+.
+unnamed:CostItemToGeometryAssignment_108
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 108" ;
+  cr:refCostItem <http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_2981> ;
+  cr:refParamQuantity 5.083 ;
+.
+unnamed:CostItemToGeometryAssignment_109
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 109" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_2981> ;
+  cr:refParamQuantity 112.25 ;
+.
+unnamed:CostItemToGeometryAssignment_110
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 110" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_3193> ;
+  cr:refParamQuantity 1.6445 ;
+.
+unnamed:CostItemToGeometryAssignment_111
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 111" ;
+  cr:refCostItem <http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_3193> ;
+  cr:refParamQuantity 13.455 ;
+.
+unnamed:CostItemToGeometryAssignment_112
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 112" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_3193> ;
+  cr:refParamQuantity 373.75 ;
+.
+unnamed:CostItemToGeometryAssignment_122
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 122" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_3246> ;
+  cr:refParamQuantity 1.6445 ;
+.
+unnamed:CostItemToGeometryAssignment_123
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 123" ;
+  cr:refCostItem <http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_3246> ;
+  cr:refParamQuantity 13.455 ;
+.
+unnamed:CostItemToGeometryAssignment_124
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 124" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_3246> ;
+  cr:refParamQuantity 373.75 ;
+.
+unnamed:CostItemToGeometryAssignment_125
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 125" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_2875> ;
+  cr:refParamQuantity 0.4114 ;
+.
+unnamed:CostItemToGeometryAssignment_126
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 126" ;
+  cr:refCostItem <http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_2875> ;
+  cr:refParamQuantity 4.485 ;
+.
+unnamed:CostItemToGeometryAssignment_127
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 127" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_2875> ;
+  cr:refParamQuantity 93.5 ;
+.
+unnamed:CostItemToGeometryAssignment_128
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 128" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_3405> ;
+  cr:refParamQuantity 0.4114 ;
+.
+unnamed:CostItemToGeometryAssignment_129
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 129" ;
+  cr:refCostItem <http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_3405> ;
+  cr:refParamQuantity 4.485 ;
+.
+unnamed:CostItemToGeometryAssignment_130
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 130" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_3405> ;
+  cr:refParamQuantity 93.5 ;
+.
+unnamed:CostItemToGeometryAssignment_131
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 131" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_3140> ;
+  cr:refParamQuantity 0.4114 ;
+.
+unnamed:CostItemToGeometryAssignment_132
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 132" ;
+  cr:refCostItem <http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_3140> ;
+  cr:refParamQuantity 4.485 ;
+.
+unnamed:CostItemToGeometryAssignment_133
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 133" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_3140> ;
+  cr:refParamQuantity 93.5 ;
+.
+unnamed:CostItemToGeometryAssignment_134
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 134" ;
+  cr:refCostItem <http://example.org/test001#Wall_LOM241.OC.EEA.Pa10.C0102.J0001.0005.b> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_3726> ;
+  cr:refParamQuantity 1.4993 ;
+.
+unnamed:CostItemToGeometryAssignment_135
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 135" ;
+  cr:refCostItem <http://example.org/test001#FormworkWall_LOM241.LP.EEA.Pa04.A1020.Qa000.0015.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_3726> ;
+  cr:refParamQuantity 15.4284 ;
+.
+unnamed:CostItemToGeometryAssignment_136
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 136" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_3726> ;
+  cr:refParamQuantity 272.6 ;
+.
+unnamed:CostItemToGeometryAssignment_137
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 137" ;
+  cr:refCostItem <http://example.org/test001#Wall_LOM241.OC.EEA.Pa10.C0102.J0001.0005.b> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_3649> ;
+  cr:refParamQuantity 2.475 ;
+.
+unnamed:CostItemToGeometryAssignment_138
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 138" ;
+  cr:refCostItem <http://example.org/test001#FormworkWall_LOM241.LP.EEA.Pa04.A1020.Qa000.0015.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_3649> ;
+  cr:refParamQuantity 23.976 ;
+.
+unnamed:CostItemToGeometryAssignment_139
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 139" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_3649> ;
+  cr:refParamQuantity 450 ;
+.
+unnamed:CostItemToGeometryAssignment_140
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 140" ;
+  cr:refCostItem <http://example.org/test001#Wall_LOM241.OC.EEA.Pa10.C0102.J0001.0005.b> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_3506> ;
+  cr:refParamQuantity 1.4993 ;
+.
+unnamed:CostItemToGeometryAssignment_141
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 141" ;
+  cr:refCostItem <http://example.org/test001#FormworkWall_LOM241.LP.EEA.Pa04.A1020.Qa000.0015.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_3506> ;
+  cr:refParamQuantity 15.4284 ;
+.
+unnamed:CostItemToGeometryAssignment_142
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 142" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_3506> ;
+  cr:refParamQuantity 272.6 ;
+.
+unnamed:CostItemToGeometryAssignment_143
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 143" ;
+  cr:refCostItem <http://example.org/test001#Wall_LOM241.OC.EEA.Pa10.C0102.J0001.0005.b> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_3558> ;
+  cr:refParamQuantity 1.2474 ;
+.
+unnamed:CostItemToGeometryAssignment_144
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 144" ;
+  cr:refCostItem <http://example.org/test001#FormworkWall_LOM241.LP.EEA.Pa04.A1020.Qa000.0015.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_3558> ;
+  cr:refParamQuantity 13.284 ;
+.
+unnamed:CostItemToGeometryAssignment_145
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 145" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_3558> ;
+  cr:refParamQuantity 226.8 ;
+.
+unnamed:CostItemToGeometryAssignment_146
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 146" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_3889> ;
+  cr:refParamQuantity 0.8173 ;
+.
+unnamed:CostItemToGeometryAssignment_147
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 147" ;
+  cr:refCostItem <http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_3889> ;
+  cr:refParamQuantity 7.425 ;
+.
+unnamed:CostItemToGeometryAssignment_148
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 148" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_3889> ;
+  cr:refParamQuantity 185.75 ;
+.
+unnamed:CostItemToGeometryAssignment_149
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 149" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_3781> ;
+  cr:refParamQuantity 0.8173 ;
+.
+unnamed:CostItemToGeometryAssignment_150
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 150" ;
+  cr:refCostItem <http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_3781> ;
+  cr:refParamQuantity 7.425 ;
+.
+unnamed:CostItemToGeometryAssignment_151
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 151" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_3781> ;
+  cr:refParamQuantity 185.75 ;
+.
+unnamed:CostItemToGeometryAssignment_152
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 152" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_4101> ;
+  cr:refParamQuantity 0.8173 ;
+.
+unnamed:CostItemToGeometryAssignment_153
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 153" ;
+  cr:refCostItem <http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_4101> ;
+  cr:refParamQuantity 7.425 ;
+.
+unnamed:CostItemToGeometryAssignment_154
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 154" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_4101> ;
+  cr:refParamQuantity 185.75 ;
+.
+unnamed:CostItemToGeometryAssignment_155
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 155" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_4366> ;
+  cr:refParamQuantity 0.4906 ;
+.
+unnamed:CostItemToGeometryAssignment_156
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 156" ;
+  cr:refCostItem <http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_4366> ;
+  cr:refParamQuantity 5.049 ;
+.
+unnamed:CostItemToGeometryAssignment_157
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 157" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_4366> ;
+  cr:refParamQuantity 111.5 ;
+.
+unnamed:CostItemToGeometryAssignment_158
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 158" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_3995> ;
+  cr:refParamQuantity 0.4906 ;
+.
+unnamed:CostItemToGeometryAssignment_159
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 159";
+  cr:refCostItem <http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_3995> ;
+  cr:refParamQuantity 5.049 ;
+.
+unnamed:CostItemToGeometryAssignment_160
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 160";
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_3995> ;
+  cr:refParamQuantity 111.5 ;
+.
+unnamed:CostItemToGeometryAssignment_161
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 161" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_4154> ;
+  cr:refParamQuantity 0.4906 ;
+.
+unnamed:CostItemToGeometryAssignment_162
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 162" ;
+  cr:refCostItem <http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_4154> ;
+  cr:refParamQuantity 5.049 ;
+.
+unnamed:CostItemToGeometryAssignment_163
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 163" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_4154> ;
+  cr:refParamQuantity 111.5 ;
+.
+unnamed:CostItemToGeometryAssignment_164
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 164" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_4313> ;
+  cr:refParamQuantity 0.4906 ;
+.
+unnamed:CostItemToGeometryAssignment_165
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 165" ;
+  cr:refCostItem <http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_4313> ;
+  cr:refParamQuantity 5.049 ;
+.
+unnamed:CostItemToGeometryAssignment_166
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 166" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_4313> ;
+  cr:refParamQuantity 111.5 ;
+.
+unnamed:CostItemToGeometryAssignment_167
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 167" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_3836> ;
+  cr:refParamQuantity 0.4906 ;
+.
+unnamed:CostItemToGeometryAssignment_168
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 168" ;
+  cr:refCostItem <http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_3836> ;
+  cr:refParamQuantity 5.049 ;
+.
+unnamed:CostItemToGeometryAssignment_169
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 169" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_3836> ;
+  cr:refParamQuantity 111.5 ;
+.
+unnamed:CostItemToGeometryAssignment_170
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 170" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_4260> ;
+  cr:refParamQuantity 0.4906 ;
+.
+unnamed:CostItemToGeometryAssignment_171
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 171" ;
+  cr:refCostItem <http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_4260> ;
+  cr:refParamQuantity 5.049 ;
+.
+unnamed:CostItemToGeometryAssignment_172
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 172" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_4260> ;
+  cr:refParamQuantity 111.5 ;
+.
+unnamed:CostItemToGeometryAssignment_173
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 173" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_4048> ;
+  cr:refParamQuantity 0.4906 ;
+.
+unnamed:CostItemToGeometryAssignment_174
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 174" ;
+  cr:refCostItem <http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_4048> ;
+  cr:refParamQuantity 5.049 ;
+.
+unnamed:CostItemToGeometryAssignment_175
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 175" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_4048> ;
+  cr:refParamQuantity 111.5 ;
+.
+unnamed:CostItemToGeometryAssignment_176
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 176" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_4419> ;
+  cr:refParamQuantity 0.4906 ;
+.
+unnamed:CostItemToGeometryAssignment_177
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 177" ;
+  cr:refCostItem <http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_4419> ;
+  cr:refParamQuantity 5.049 ;
+.
+unnamed:CostItemToGeometryAssignment_178
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 178" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_4419> ;
+  cr:refParamQuantity 111.5 ;
+.
+unnamed:CostItemToGeometryAssignment_179
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 179" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_3942> ;
+  cr:refParamQuantity 0.4081 ;
+.
+unnamed:CostItemToGeometryAssignment_180
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 180" ;
+  cr:refCostItem <http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_3942> ;
+  cr:refParamQuantity 4.455 ;
+.
+unnamed:CostItemToGeometryAssignment_181
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 181" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_3942> ;
+  cr:refParamQuantity 92.75 ;
+.
+unnamed:CostItemToGeometryAssignment_182
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 182" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_4207> ;
+  cr:refParamQuantity 0.4081 ;
+.
+unnamed:CostItemToGeometryAssignment_183
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 183" ;
+  cr:refCostItem <http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_4207> ;
+  cr:refParamQuantity 4.455 ;
+.
+unnamed:CostItemToGeometryAssignment_184
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 184" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_4207> ;
+  cr:refParamQuantity 92.75 ;
+.
+unnamed:CostItemToGeometryAssignment_185
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 185" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_4525> ;
+  cr:refParamQuantity 0.2046 ;
+.
+unnamed:CostItemToGeometryAssignment_186
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 186" ;
+  cr:refCostItem <http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_4525> ;
+  cr:refParamQuantity 2.97 ;
+.
+unnamed:CostItemToGeometryAssignment_187
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 187" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_4525> ;
+  cr:refParamQuantity 46.5 ;
+.
+unnamed:CostItemToGeometryAssignment_188
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 188" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_4472> ;
+  cr:refParamQuantity 0.2046 ;
+.
+unnamed:CostItemToGeometryAssignment_189
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 189" ;
+  cr:refCostItem <http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_4472> ;
+  cr:refParamQuantity 2.97 ;
+.
+unnamed:CostItemToGeometryAssignment_190
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 190" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcColumn_4472> ;
+  cr:refParamQuantity 46.5 ;
+.
+unnamed:CostItemToGeometryAssignment_191
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 191" ;
+  cr:refCostItem <http://example.org/test001#Wall_LOM241.OC.EEA.Pa10.C0102.J0001.0005.b> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_4929> ;
+  cr:refParamQuantity 0.9988 ;
+.
+unnamed:CostItemToGeometryAssignment_192
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 192" ;
+  cr:refCostItem <http://example.org/test001#FormworkWall_LOM241.LP.EEA.Pa04.A1020.Qa000.0015.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_4929> ;
+  cr:refParamQuantity 12.475 ;
+.
+unnamed:CostItemToGeometryAssignment_193
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 193" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_4929> ;
+  cr:refParamQuantity 181.6 ;
+.
+unnamed:CostItemToGeometryAssignment_194
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 194" ;
+  cr:refCostItem <http://example.org/test001#Wall_LOM241.OC.EEA.Pa10.C0102.J0001.0005.b> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_4829> ;
+  cr:refParamQuantity 1.7919 ;
+.
+unnamed:CostItemToGeometryAssignment_195
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 195" ;
+  cr:refCostItem <http://example.org/test001#FormworkWall_LOM241.LP.EEA.Pa04.A1020.Qa000.0015.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_4829> ;
+  cr:refParamQuantity 22.1 ;
+.
+unnamed:CostItemToGeometryAssignment_196
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 196" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_4829> ;
+  cr:refParamQuantity 325.8 ;
+.
+unnamed:CostItemToGeometryAssignment_197
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 197" ;
+  cr:refCostItem <http://example.org/test001#Wall_LOM241.OC.EEA.Pa10.C0102.J0001.0005.b> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_4879> ;
+  cr:refParamQuantity 1.0725 ;
+.
+unnamed:CostItemToGeometryAssignment_198
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 198" ;
+  cr:refCostItem <http://example.org/test001#FormworkWall_LOM241.LP.EEA.Pa04.A1020.Qa000.0015.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_4879> ;
+  cr:refParamQuantity 13.375 ;
+.
+unnamed:CostItemToGeometryAssignment_199
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 199" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_4879> ;
+  cr:refParamQuantity 195 ;
+.
+unnamed:CostItemToGeometryAssignment_200
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 200" ;
+  cr:refCostItem <http://example.org/test001#Wall_LOM241.OC.EEA.Pa10.C0102.J0001.0005.b> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_4677> ;
+  cr:refParamQuantity 1.5312 ;
+.
+unnamed:CostItemToGeometryAssignment_201
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 201" ;
+  cr:refCostItem <http://example.org/test001#FormworkWall_LOM241.LP.EEA.Pa04.A1020.Qa000.0015.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_4677> ;
+  cr:refParamQuantity 14.637 ;
+.
+unnamed:CostItemToGeometryAssignment_202
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 202" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_4677> ;
+  cr:refParamQuantity 278.4 ;
+.
+unnamed:CostItemToGeometryAssignment_203
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 203" ;
+  cr:refCostItem <http://example.org/test001#Wall_LOM241.OC.EEA.Pa10.C0102.J0001.0005.b> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_4573> ;
+  cr:refParamQuantity 1.2958 ;
+.
+unnamed:CostItemToGeometryAssignment_204
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 204" ;
+  cr:refCostItem <http://example.org/test001#FormworkWall_LOM241.LP.EEA.Pa04.A1020.Qa000.0015.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_4573> ;
+  cr:refParamQuantity 13.209 ;
+.
+unnamed:CostItemToGeometryAssignment_205
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 205" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_4573> ;
+  cr:refParamQuantity 235.6 ;
+.
+unnamed:CostItemToGeometryAssignment_206
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 206" ;
+  cr:refCostItem <http://example.org/test001#Wall_LOM241.OC.EEA.Pa10.C0102.J0001.0005.b> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_4626> ;
+  cr:refParamQuantity 1.375 ;
+.
+unnamed:CostItemToGeometryAssignment_207
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 207" ;
+  cr:refCostItem <http://example.org/test001#FormworkWall_LOM241.LP.EEA.Pa04.A1020.Qa000.0015.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_4626> ;
+  cr:refParamQuantity 14.637 ;
+.
+unnamed:CostItemToGeometryAssignment_208
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 208" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_4626> ;
+  cr:refParamQuantity 250 ;
+.
+unnamed:CostItemToGeometryAssignment_209
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 209" ;
+  cr:refCostItem <http://example.org/test001#Wall_LOM241.OC.EEA.Pa10.C0102.J0001.0005.b> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_1392> ;
+  cr:refParamQuantity 1.4212 ;
+.
+unnamed:CostItemToGeometryAssignment_210
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 210" ;
+  cr:refCostItem <http://example.org/test001#FormworkWall_LOM241.LP.EEA.Pa04.A1020.Qa000.0015.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_1392> ;
+  cr:refParamQuantity 17.22 ;
+.
+unnamed:CostItemToGeometryAssignment_211
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 211" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_1392> ;
+  cr:refParamQuantity 258 ;
+.
+unnamed:CostItemToGeometryAssignment_212
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 212" ;
+  cr:refCostItem <http://example.org/test001#Wall_LOM241.OC.EEA.Pa10.C0102.J0001.0005.b> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_4479> ;
+  cr:refParamQuantity 0.5775 ;
+.
+unnamed:CostItemToGeometryAssignment_213
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 213" ;
+  cr:refCostItem <http://example.org/test001#FormworkWall_LOM241.LP.EEA.Pa04.A1020.Qa000.0015.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_4479> ;
+  cr:refParamQuantity 7.2765 ;
+.
+unnamed:CostItemToGeometryAssignment_214
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 214" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_4479> ;
+  cr:refParamQuantity 105 ;
+.
+unnamed:CostItemToGeometryAssignment_215
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 215" ;
+  cr:refCostItem <http://example.org/test001#Wall_LOM241.OC.EEA.Pa10.C0102.J0001.0005.b> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_1532> ;
+  cr:refParamQuantity 1.1286 ;
+.
+unnamed:CostItemToGeometryAssignment_216
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 216" ;
+  cr:refCostItem <http://example.org/test001#FormworkWall_LOM241.LP.EEA.Pa04.A1020.Qa000.0015.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_1532> ;
+  cr:refParamQuantity 13.7767 ;
+.
+unnamed:CostItemToGeometryAssignment_217
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 217" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_1532> ;
+  cr:refParamQuantity 205.2 ;
+.
+unnamed:CostItemToGeometryAssignment_218
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 218" ;
+  cr:refCostItem <http://example.org/test001#Wall_LOM241.OC.EEA.Pa10.C0102.J0001.0005.b> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_1482> ;
+  cr:refParamQuantity 0.5478 ;
+.
+unnamed:CostItemToGeometryAssignment_219
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 219" ;
+  cr:refCostItem <http://example.org/test001#FormworkWall_LOM241.LP.EEA.Pa04.A1020.Qa000.0015.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_1482> ;
+  cr:refParamQuantity 6.748 ;
+.
+unnamed:CostItemToGeometryAssignment_220
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 220" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcWall_1482> ;
+  cr:refParamQuantity 99.6 ;
+.
+unnamed:CostItemToGeometryAssignment_221
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 221" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcSlab_572> ;
+  cr:refParamQuantity 46.6466 ;
+.
+unnamed:CostItemToGeometryAssignment_222
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 222" ;
+  cr:refCostItem <http://example.org/test001#FormworkSlab_LOM241.LP.EEA.Pa04.A1020.Qa000.0035.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcSlab_572> ;
+  cr:refParamQuantity 19.66 ;
+.
+unnamed:CostItemToGeometryAssignment_223
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 223" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcSlab_572> ;
+  cr:refParamQuantity 8481.2 ;
+.
+unnamed:CostItemToGeometryAssignment_224
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 224" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcSlab_787> ;
+  cr:refParamQuantity 61.9058 ;
+.
+unnamed:CostItemToGeometryAssignment_225
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 225" ;
+  cr:refCostItem <http://example.org/test001#FormworkSlab_LOM241.LP.EEA.Pa04.A1020.Qa000.0035.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcSlab_787> ;
+  cr:refParamQuantity 21.885 ;
+.
+unnamed:CostItemToGeometryAssignment_226
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 226" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcSlab_787> ;
+  cr:refParamQuantity 11255.6 ;
+.
+unnamed:CostItemToGeometryAssignment_227
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 227" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcSlab_845> ;
+  cr:refParamQuantity 57.9898 ;
+.
+unnamed:CostItemToGeometryAssignment_228
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 228" ;
+  cr:refCostItem <http://example.org/test001#FormworkSlab_LOM241.LP.EEA.Pa04.A1020.Qa000.0035.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcSlab_845> ;
+  cr:refParamQuantity 18.61425 ;
+.
+unnamed:CostItemToGeometryAssignment_229
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 229" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcSlab_845> ;
+  cr:refParamQuantity 10543.6 ;
+.
+unnamed:CostItemToGeometryAssignment_230
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 230" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcBeam_1338> ;
+  cr:refParamQuantity 0.5236 ;
+.
+unnamed:CostItemToGeometryAssignment_231
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 231" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcBeam_1338> ;
+  cr:refParamQuantity 119 ;
+.
+unnamed:CostItemToGeometryAssignment_232
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 232" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcBeam_1254> ;
+  cr:refParamQuantity 0.6204 ;
+.
+unnamed:CostItemToGeometryAssignment_233
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 233" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcBeam_1254> ;
+  cr:refParamQuantity 141 ;
+.
+unnamed:CostItemToGeometryAssignment_234
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 234" ;
+  cr:refCostItem <http://example.org/test001#ColumnBeamSlab_LOM241.OC.EEA.Pa10.E0000.J0001.0045.c> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcBeam_1157> ;
+  cr:refParamQuantity 0.7128 ;
+.
+unnamed:CostItemToGeometryAssignment_235
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 235" ;
+  cr:refCostItem <http://example.org/test001#ReinfocmentBar_LOM241.OC.EEA.Pa02.E9700.Sb017.0255.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcBeam_1157> ;
+  cr:refParamQuantity 162 ;
+.
+unnamed:CostItemToGeometryAssignment_236
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 236" ;
+  cr:refCostItem <http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcBeam_1338> ;
+  cr:refParamQuantity 2.9375 ;
+.
+unnamed:CostItemToGeometryAssignment_237
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 237" ;
+  cr:refCostItem <http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcBeam_1254> ;
+  cr:refParamQuantity 4.895 ;
+.
+unnamed:CostItemToGeometryAssignment_238
+  rdf:type cr:CostItemToGeometryAssignment ;
+  rdfs:label "Cost item to geometry assignment 238" ;
+  cr:refCostItem <http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-> ;
+  cr:refGeometry <https://icdd.vm.rub.de/convert/ifc/22acca53-1a47-48f0-bb11-a41965eaed7e#IfcBeam_1157> ;
+  cr:refParamQuantity 3.55 ;
 .
 unnamed:DimensionParameter_1
   rdf:type cterm:DimensionParameter ;
@@ -128,7 +1717,20 @@ SPECIFICHE TECNICHE: per quantità di calcestruzzo [m³] ≤ 30; criterio di mis
   cterm:hasPerformanceParameter unnamed:PerformanceParameter_6 ;
   cterm:hasPhysicalParameter unnamed:PhysicalParameter_1 ;
 .
-<http://example.org/test001#Formwork_LOM241.LP.EEA.Pa04.A1020.Qa000.0000.->
+<http://example.org/test001#FormworkColumnRectangular_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.->
+  rdf:type ci:CostItem ;
+  rdf:type ci:ProductionResult ;
+  ci:code "LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-" ;
+  ci:descriptionDetail """OS1 OPERA STRUMENTALE: Cassaforma, tradizionale di legno naturale generico; impiego: pilastri a sezione rettangolare; spessore [m]  =  0,025 ÷ 0,027. Incluso: disarmante, chiodi.
+	RT2 Cassaforma tradizionale in legno | Impiego:  pilastri a sezione rettangolare/quadrata | altezza [m]  <=  3,50 | pressione [kN/mq]  <=  40  | Inclusi: ogni elemento 	necessario al suo completamento (es.:  sottomisure in legno di abete o pannelli compensati multistrato, cravatte) | Specifiche tecniche: spessore paramento [m]  	=  0,025 ÷ 0,027 | Criterio di misurazione: valutato a superficie effettiva bagnata dal getto
+LV1 LAVORO: Formazione.""" ;
+  ci:descriptionGeneral """OPERA STRUMENTALE: Cassaforma, tradizionale di legno naturale generico; impiego: pilastri a sezione rettangolare; spessore [m]  =  0,025 ÷ 0,027. Incluso: disarmante, chiodi.
+LAVORO: Formazione.""" ;
+  ci:hasUnit <https://qudt.org/vocab/unit/M2> ;
+  ci:quantityUnitOfMeasure 1 ;
+  ci:unitPrice 21.18 ;
+.
+<http://example.org/test001#FormworkFoundation_LOM241.LP.EEA.Pa04.A1020.Qa000.0000.->
   rdf:type ci:CostItem ;
   rdf:type ci:ProductionResult ;
   ci:code "LOM241.LP.EEA.Pa04.A1020.Qa000.0000.-" ;
@@ -142,34 +1744,7 @@ LAVORO: Formazione.""" ;
   ci:quantityUnitOfMeasure 1 ;
   ci:unitPrice 19.38 ;
 .
-<http://example.org/test001#Formwork_LOM241.LP.EEA.Pa04.A1020.Qa000.0015.->
-  rdf:type ci:CostItem ;
-  rdf:type ci:ProductionResult ;
-  ci:code "LOM241.LP.EEA.Pa04.A1020.Qa000.0015.-" ;
-  ci:descriptionDetail """OS1 OPERA STRUMENTALE: Cassaforma, tradizionale di legno naturale generico; impiego: pareti in elevazione; spessore [m]  =  0,025 ÷ 0,027 | altezza [m] < =  3,5; pressione [kN/m²] < =  40. Incluso: disarmante, chiodi.
-RT2 Cassaforma tradizionale in legno; impiego:  pareti in elevazione;  altezza [m]  <=  3,50;  pressione [kN/m²]  <=  40 ; incluso: ogni elemento necessario al suo completamento (es.:  sottomisure in legno di abete o pannelli compensati multistrato, picchetti, filo di ferro, travi squadrate di legno);  escluso: puntelli
-SPECIFICHE TECNICHE: spessore paramento [m]  =  0,025 ÷ 0,027; criterio di misurazione: valutato a superficie effettiva bagnata dal getto
-LV1 LAVORO: Formazione.""" ;
-  ci:descriptionGeneral """OPERA STRUMENTALE: Cassaforma, tradizionale di legno naturale generico; impiego: pareti in elevazione; spessore [m]  =  0,025 ÷ 0,027 | altezza [m] < =  3,5; pressione [kN/m²] < =  40. Incluso: disarmante, chiodi.
-LAVORO: Formazione.""" ;
-  ci:hasUnit <https://qudt.org/vocab/unit/M2> ;
-  ci:quantityUnitOfMeasure 1 ;
-  ci:unitPrice 22.03 ;
-.
-<http://example.org/test001#Formwork_LOM241.LP.EEA.Pa04.A1020.Qa000.0030.->
-  rdf:type ci:CostItem ;
-  rdf:type ci:ProductionResult ;
-  ci:code "LOM241.LP.EEA.Pa04.A1020.Qa000.0030.-" ;
-  ci:descriptionDetail """OS1 OPERA STRUMENTALE: Cassaforma, tradizionale di legno naturale generico; impiego: pilastri a sezione rettangolare; spessore [m]  =  0,025 ÷ 0,027. Incluso: disarmante, chiodi.
-	RT2 Cassaforma tradizionale in legno | Impiego:  pilastri a sezione rettangolare/quadrata | altezza [m]  <=  3,50 | pressione [kN/mq]  <=  40  | Inclusi: ogni elemento 	necessario al suo completamento (es.:  sottomisure in legno di abete o pannelli compensati multistrato, cravatte) | Specifiche tecniche: spessore paramento [m]  	=  0,025 ÷ 0,027 | Criterio di misurazione: valutato a superficie effettiva bagnata dal getto
-LV1 LAVORO: Formazione.""" ;
-  ci:descriptionGeneral """OPERA STRUMENTALE: Cassaforma, tradizionale di legno naturale generico; impiego: pilastri a sezione rettangolare; spessore [m]  =  0,025 ÷ 0,027. Incluso: disarmante, chiodi.
-LAVORO: Formazione.""" ;
-  ci:hasUnit <https://qudt.org/vocab/unit/M2> ;
-  ci:quantityUnitOfMeasure 1 ;
-  ci:unitPrice 21.18 ;
-.
-<http://example.org/test001#Formwork_LOM241.LP.EEA.Pa04.A1020.Qa000.0035.->
+<http://example.org/test001#FormworkSlab_LOM241.LP.EEA.Pa04.A1020.Qa000.0035.->
   rdf:type ci:CostItem ;
   rdf:type ci:ProductionResult ;
   ci:code "LOM241.LP.EEA.Pa04.A1020.Qa000.0035.-" ;
@@ -183,6 +1758,20 @@ LAVORO: Formazione.""" ;
   ci:hasUnit <https://qudt.org/vocab/unit/M2> ;
   ci:quantityUnitOfMeasure 1 ;
   ci:unitPrice 23.24 ;
+.
+<http://example.org/test001#FormworkWall_LOM241.LP.EEA.Pa04.A1020.Qa000.0015.->
+  rdf:type ci:CostItem ;
+  rdf:type ci:ProductionResult ;
+  ci:code "LOM241.LP.EEA.Pa04.A1020.Qa000.0015.-" ;
+  ci:descriptionDetail """OS1 OPERA STRUMENTALE: Cassaforma, tradizionale di legno naturale generico; impiego: pareti in elevazione; spessore [m]  =  0,025 ÷ 0,027 | altezza [m] < =  3,5; pressione [kN/m²] < =  40. Incluso: disarmante, chiodi.
+RT2 Cassaforma tradizionale in legno; impiego:  pareti in elevazione;  altezza [m]  <=  3,50;  pressione [kN/m²]  <=  40 ; incluso: ogni elemento necessario al suo completamento (es.:  sottomisure in legno di abete o pannelli compensati multistrato, picchetti, filo di ferro, travi squadrate di legno);  escluso: puntelli
+SPECIFICHE TECNICHE: spessore paramento [m]  =  0,025 ÷ 0,027; criterio di misurazione: valutato a superficie effettiva bagnata dal getto
+LV1 LAVORO: Formazione.""" ;
+  ci:descriptionGeneral """OPERA STRUMENTALE: Cassaforma, tradizionale di legno naturale generico; impiego: pareti in elevazione; spessore [m]  =  0,025 ÷ 0,027 | altezza [m] < =  3,5; pressione [kN/m²] < =  40. Incluso: disarmante, chiodi.
+LAVORO: Formazione.""" ;
+  ci:hasUnit <https://qudt.org/vocab/unit/M2> ;
+  ci:quantityUnitOfMeasure 1 ;
+  ci:unitPrice 22.03 ;
 .
 <http://example.org/test001#Foundation_LOM241.OC.EEA.Pa10.E5100.J0001.0000.b>
   rdf:type ci:CostItem ;
